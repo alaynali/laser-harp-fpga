@@ -21,7 +21,7 @@ assign DistY = DrawY - CursorY;
 assign Size = CursorS;
 
 always_comb
-begin:Cursor_on_proc
+begin:Cursor_on_proc // determines whether we need to draw the cursor (within bounds of circle)
 	if ( (DistX*DistX + DistY*DistY) <= (Size * Size) )
 		cursor_on = 1'b1;
 	else 
@@ -42,9 +42,14 @@ always_ff @ (posedge vga_clk) begin
 
 	if (blank) begin  // This is when the non-blanking interval begins
 	    if ((cursor_on == 1'b1)) begin 
+			// or import cursor palette
             Red = 4'hf;
             Green = 4'h7;
             Blue = 4'h0;
+			/*
+			DrawCursorX = DrawX // how to make drawcursor x to from 0 to width of cursor depending on drawX?
+			
+			*/
         end    
 	    else begin
 		  // Background colors 
@@ -69,10 +74,29 @@ rom picture (
 //);
 
 lasers_palette lasers_palette (
+
 	.index (rom_q),
 	.red   (palette_red),
 	.green (palette_green),
 	.blue  (palette_blue)
+	
 );
+
+// instantiate cursor palette
+/*
+cursor_rom cursor_rom (
+	.clka   (negedge_vga_clk),
+	.addra (rom_address),
+	.douta  (rom_q_cursor)
+);
+
+cursor_palette cursor_palette (
+	.index (rom_q_cursor),
+	.red   (palette_red),
+	.green (palette_green),
+	.blue  (palette_blue)
+);
+*/
+
 
 endmodule
