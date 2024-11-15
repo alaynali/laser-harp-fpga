@@ -41,21 +41,17 @@ always_ff @ (posedge vga_clk) begin
 	blue <= 4'h0;
 
 	if (blank) begin  // This is when the non-blanking interval begins
-	
-	    
-	    //if
-	       // Put cursor on screen
-	       
-	    //else
+	    if ((cursor_on == 1'b1)) begin 
+            Red = 4'hf;
+            Green = 4'h7;
+            Blue = 4'h0;
+        end    
+	    else begin
 		  // Background colors 
 		  red <= palette_red;
 		  green <= palette_green;
 		  blue <= palette_blue;
-		
-		
-		
-		
-		
+		end
 	end
 end
 
