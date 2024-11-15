@@ -2,9 +2,11 @@ module lasers_example (
 	input logic vga_clk,
 	input logic [9:0] DrawX, DrawY,
 	input logic blank,
+	input  logic [9:0] CursorX, CursorY, CursorS,
 	output logic [3:0] red, green, blue,
-	input keycode
 );
+
+logic cursor_on;
 
 logic [17:0] rom_address;
 logic [2:0] rom_q;
@@ -12,6 +14,19 @@ logic [2:0] rom_q;
 logic [3:0] palette_red, palette_green, palette_blue;
 
 logic negedge_vga_clk;
+
+int DistX, DistY, Size;
+assign DistX = DrawX - CursorX;
+assign DistY = DrawY - CursorY;
+assign Size = CursorS;
+
+always_comb
+begin:Cursor_on_proc
+	if ( (DistX*DistX + DistY*DistY) <= (Size * Size) )
+		cursor_on = 1'b1;
+	else 
+		cursor_on = 1'b0;
+end
 
 // read from ROM on negedge, set pixel on posedge
 assign negedge_vga_clk = ~vga_clk;
