@@ -3,11 +3,7 @@ module lasers_example (
 	input logic [9:0] DrawX, DrawY,
 	input logic blank,
 	input  logic [9:0] CursorX, CursorY, CursorS,
-	output logic [3:0] red, green, blue,
-<<<<<<< HEAD
-	input [31:0] keycode
-=======
->>>>>>> a5c743d67567c18c1635d066ce0d6ea96d6c126a
+	output logic [3:0] red, green, blue
 );
 
 logic cursor_on;

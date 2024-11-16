@@ -24,7 +24,7 @@ module cursor_impl(
 
     input  logic        Reset, 
     input  logic        frame_clk,
-    input  logic [31:0]  keycode,
+    input  logic [7:0]  keycode,
 
     output logic [9:0]  CursorX, 
     output logic [9:0]  CursorY, 
