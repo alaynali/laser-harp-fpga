@@ -24,8 +24,8 @@ module cursor_impl(
 
     input  logic        Reset, 
     input  logic        frame_clk,
-    // input  logic [31:0]  keycode,
-    input logic [7:0]   keycode,
+    input  logic [31:0]  keycode,
+    // input logic [7:0]   keycode,
 
     output logic [9:0]  CursorX, 
     output logic [9:0]  CursorY, 
@@ -55,40 +55,40 @@ module cursor_impl(
     logic [9:0] Cursor_X_next;
     logic [9:0] Cursor_Y_next;
 
-    // assign btn_keycode = keycode[7:0];
-    // assign x_keycode = keycode[15:8];
-    // assign y_keycode = keycode[23:16];
-    // assign wheel_keycode = keycode[31:24];
+    assign btn_keycode = keycode[7:0];
+    assign x_keycode = keycode[15:8];
+    assign y_keycode = keycode[23:16];
+    assign wheel_keycode = keycode[31:24];
 
 
     always_comb begin
-        Cursor_Y_Motion_next = Cursor_Y_Motion; // set default motion to be same as prev clock cycle 
-        Cursor_X_Motion_next = Cursor_X_Motion;
+        Cursor_Y_Motion_next = 10'd0; Cursor_Y_Motion; // set default motion to be same as prev clock cycle 
+        Cursor_X_Motion_next = 10'd0; Cursor_X_Motion;
 
-        if (keycode == 8'h1A)  // W
-            begin
-                Cursor_Y_Motion_next = -10'd1;
-                Cursor_X_Motion_next = 10'd0;
-            end
-        if (keycode == 8'h04) // A
-             begin
-                Cursor_X_Motion_next = -10'd1;
-                Cursor_Y_Motion_next = 10'd0;
-            end
-        if (keycode == 8'h07) // D
-            begin
-                Cursor_X_Motion_next = 10'd1;
-                Cursor_Y_Motion_next = 10'd0;
-            end
-        if (keycode == 8'h16) // S
-            begin
-                Cursor_Y_Motion_next = 10'd1;
-                Cursor_X_Motion_next = 10'd0;
-            end
+        // if (keycode == 8'h1A)  // W
+        //     begin
+        //         Cursor_Y_Motion_next = -10'd1;
+        //         Cursor_X_Motion_next = 10'd0;
+        //     end
+        // if (keycode == 8'h04) // A
+        //      begin
+        //         Cursor_X_Motion_next = -10'd1;
+        //         Cursor_Y_Motion_next = 10'd0;
+        //     end
+        // if (keycode == 8'h07) // D
+        //     begin
+        //         Cursor_X_Motion_next = 10'd1;
+        //         Cursor_Y_Motion_next = 10'd0;
+        //     end
+        // if (keycode == 8'h16) // S
+        //     begin
+        //         Cursor_Y_Motion_next = 10'd1;
+        //         Cursor_X_Motion_next = 10'd0;
+        //     end
 
         // modify to control Cursor motion with the keycode
         // x dir
-        // Cursor_X_Motion_next = x_keycode;
+        Cursor_X_Motion_next = x_keycode;
         // if (x_keycode < 0) // x_keycode[7] == 1'b1
         //     begin
         //         Cursor_X_Motion_next = x_keycode[7:0];
@@ -102,7 +102,7 @@ module cursor_impl(
         //         Cursor_X_Motion_next = 10'd0; 
         //     end
         // y dir
-        // Cursor_Y_Motion_next = y_keycode;
+        Cursor_Y_Motion_next = y_keycode;
 
         if ( (CursorY + CursorS) >= Cursor_Y_Max )  // Cursor is at the bottom edge, BOUNCE!
             begin
@@ -126,7 +126,7 @@ module cursor_impl(
             end
      end
 
-    assign CursorS = 16;  // default Cursor size
+    assign CursorS = 4;  // default Cursor size
     assign Cursor_X_next = (CursorX + Cursor_X_Motion_next);
     assign Cursor_Y_next = (CursorY + Cursor_Y_Motion_next);
    
