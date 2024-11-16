@@ -470,3 +470,212 @@ con
 ----------------End of Script----------------
 
 15:27:22 INFO  : Disconnected from the channel tcfchan#2.
+16:18:21 DEBUG : Logs will be stored at 'C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/IDE.log'.
+16:18:22 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\estel\project\laser-harp-fpga\laser_harp_test\workspace\temp_xsdb_launch_script.tcl
+16:18:25 INFO  : Registering command handlers for Vitis TCF services
+16:18:26 INFO  : XSCT server has started successfully.
+16:18:26 INFO  : plnx-install-location is set to ''
+16:18:26 INFO  : Platform repository initialization has completed.
+16:18:29 INFO  : Successfully done setting XSCT server connection channel  
+16:18:29 INFO  : Successfully done query RDI_DATADIR 
+16:18:29 INFO  : Successfully done setting workspace for the tool. 
+16:19:02 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+16:19:33 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+16:19:33 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/estel/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm;mb_usb_hdmi_top|C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+16:19:34 INFO  : Checking for BSP changes to sync application flags for project 'lw_usb'...
+16:19:38 INFO  : The hardware specification used by project 'lw_usb' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:19:38 INFO  : The file 'C:\Users\estel\project\laser-harp-fpga\laser_harp_test\workspace\lw_usb\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+16:19:38 INFO  : The file 'C:\Users\estel\project\laser-harp-fpga\laser_harp_test\workspace\lw_usb\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+16:19:38 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\estel\project\laser-harp-fpga\laser_harp_test\workspace\lw_usb\_ide\bitstream' in project 'lw_usb'.
+16:20:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:20:40 INFO  : Jtag cable 'RealDigital Boo 887100000004A' is selected.
+16:20:40 INFO  : 'jtag frequency' command is executed.
+16:20:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:20:42 INFO  : Device configured successfully with "C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:20:42 INFO  : Context for processor 'microblaze_0' is selected.
+16:20:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:20:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:20:42 INFO  : Context for processor 'microblaze_0' is selected.
+16:20:42 INFO  : System reset is completed.
+16:20:45 INFO  : 'after 3000' command is executed.
+16:20:45 INFO  : Context for processor 'microblaze_0' is selected.
+16:20:45 INFO  : The application 'C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/Debug/lw_usb.elf' is downloaded to processor 'microblaze_0'.
+16:20:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/Debug/lw_usb.elf
+----------------End of Script----------------
+
+16:20:45 INFO  : Context for processor 'microblaze_0' is selected.
+16:20:45 INFO  : 'con' command is executed.
+16:20:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:20:45 INFO  : Disconnected from the channel tcfchan#2.
+16:21:50 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+16:22:03 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+16:22:16 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+16:22:16 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/estel/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm;mb_usb_hdmi_top|C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+16:22:18 INFO  : Checking for BSP changes to sync application flags for project 'lw_usb'...
+16:22:21 INFO  : The hardware specification used by project 'lw_usb' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:22:21 INFO  : The file 'C:\Users\estel\project\laser-harp-fpga\laser_harp_test\workspace\lw_usb\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+16:22:21 INFO  : The file 'C:\Users\estel\project\laser-harp-fpga\laser_harp_test\workspace\lw_usb\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+16:22:21 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\estel\project\laser-harp-fpga\laser_harp_test\workspace\lw_usb\_ide\bitstream' in project 'lw_usb'.
+16:22:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:22:31 INFO  : Jtag cable 'RealDigital Boo 887100000004A' is selected.
+16:22:31 INFO  : 'jtag frequency' command is executed.
+16:22:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:22:32 INFO  : Device configured successfully with "C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:22:32 INFO  : Context for processor 'microblaze_0' is selected.
+16:22:33 INFO  : Hardware design and registers information is loaded from 'C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:22:33 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:22:33 INFO  : Context for processor 'microblaze_0' is selected.
+16:22:33 INFO  : System reset is completed.
+16:22:36 INFO  : 'after 3000' command is executed.
+16:22:36 INFO  : Context for processor 'microblaze_0' is selected.
+16:22:36 INFO  : The application 'C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/Debug/lw_usb.elf' is downloaded to processor 'microblaze_0'.
+16:22:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/Debug/lw_usb.elf
+----------------End of Script----------------
+
+16:22:36 INFO  : Context for processor 'microblaze_0' is selected.
+16:22:36 INFO  : 'con' command is executed.
+16:22:36 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:22:36 INFO  : Disconnected from the channel tcfchan#4.
+16:37:14 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+16:37:48 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+16:37:48 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/estel/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm;mb_usb_hdmi_top|C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+16:37:50 INFO  : Checking for BSP changes to sync application flags for project 'lw_usb'...
+16:37:53 INFO  : The hardware specification used by project 'lw_usb' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:37:53 INFO  : The file 'C:\Users\estel\project\laser-harp-fpga\laser_harp_test\workspace\lw_usb\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+16:37:53 INFO  : The file 'C:\Users\estel\project\laser-harp-fpga\laser_harp_test\workspace\lw_usb\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+16:37:53 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\estel\project\laser-harp-fpga\laser_harp_test\workspace\lw_usb\_ide\bitstream' in project 'lw_usb'.
+16:39:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:39:48 INFO  : Jtag cable 'RealDigital Boo 887100000004A' is selected.
+16:39:48 INFO  : 'jtag frequency' command is executed.
+16:39:48 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:39:49 INFO  : Device configured successfully with "C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:39:49 INFO  : Context for processor 'microblaze_0' is selected.
+16:39:49 INFO  : Hardware design and registers information is loaded from 'C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:39:49 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:39:49 INFO  : Context for processor 'microblaze_0' is selected.
+16:39:49 INFO  : System reset is completed.
+16:39:52 INFO  : 'after 3000' command is executed.
+16:39:52 INFO  : Context for processor 'microblaze_0' is selected.
+16:39:52 INFO  : The application 'C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/Debug/lw_usb.elf' is downloaded to processor 'microblaze_0'.
+16:39:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/Debug/lw_usb.elf
+----------------End of Script----------------
+
+16:39:52 INFO  : Context for processor 'microblaze_0' is selected.
+16:39:53 INFO  : 'con' command is executed.
+16:39:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:39:53 INFO  : Disconnected from the channel tcfchan#6.
+16:41:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:41:23 INFO  : Jtag cable 'RealDigital Boo 887100000004A' is selected.
+16:41:23 INFO  : 'jtag frequency' command is executed.
+16:41:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:41:24 INFO  : Device configured successfully with "C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:41:24 INFO  : Context for processor 'microblaze_0' is selected.
+16:41:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:41:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:41:24 INFO  : Context for processor 'microblaze_0' is selected.
+16:41:24 INFO  : System reset is completed.
+16:41:27 INFO  : 'after 3000' command is executed.
+16:41:27 INFO  : Context for processor 'microblaze_0' is selected.
+16:41:28 INFO  : The application 'C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/Debug/lw_usb.elf' is downloaded to processor 'microblaze_0'.
+16:41:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/Debug/lw_usb.elf
+----------------End of Script----------------
+
+16:41:28 INFO  : Context for processor 'microblaze_0' is selected.
+16:41:28 INFO  : 'con' command is executed.
+16:41:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:41:28 INFO  : Disconnected from the channel tcfchan#7.
+16:42:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:42:01 INFO  : Jtag cable 'RealDigital Boo 887100000004A' is selected.
+16:42:01 INFO  : 'jtag frequency' command is executed.
+16:42:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:42:02 INFO  : Device configured successfully with "C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+16:42:02 INFO  : Context for processor 'microblaze_0' is selected.
+16:42:02 INFO  : Hardware design and registers information is loaded from 'C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+16:42:02 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:42:02 INFO  : Context for processor 'microblaze_0' is selected.
+16:42:02 INFO  : System reset is completed.
+16:42:05 INFO  : 'after 3000' command is executed.
+16:42:05 INFO  : Context for processor 'microblaze_0' is selected.
+16:42:05 INFO  : The application 'C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/Debug/lw_usb.elf' is downloaded to processor 'microblaze_0'.
+16:42:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/estel/project/laser-harp-fpga/laser_harp_test/workspace/lw_usb/Debug/lw_usb.elf
+----------------End of Script----------------
+
+16:42:05 INFO  : Context for processor 'microblaze_0' is selected.
+16:42:05 INFO  : 'con' command is executed.
+16:42:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:42:05 INFO  : Disconnected from the channel tcfchan#8.

@@ -151,7 +151,7 @@ logic [9:0] CursorX, CursorY, CursorS;
     
     cursor_impl cursor(
         .Reset(reset_ah),
-        .frame_clk(vga_clk),
+        .frame_clk(vsync),
         .keycode(keycode0_gpio[7:0]),
         .CursorX(CursorX),
         .CursorY(CursorY),

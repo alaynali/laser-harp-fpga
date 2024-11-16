@@ -43,12 +43,11 @@ always_ff @ (posedge vga_clk) begin
 	if (blank) begin  // This is when the non-blanking interval begins
 	    if ((cursor_on == 1'b1)) begin 
 			// or import cursor palette
-            red = 4'hf;
-            green = 4'hf;
-            blue = 4'hf;
+            red <= 4'hf;
+            green <= 4'hf;
+            blue <= 4'hf;
 			/*
 			DrawCursorX = DrawX // how to make drawcursor x to from 0 to width of cursor depending on drawX?
-			
 			*/
         end    
 	    else begin
