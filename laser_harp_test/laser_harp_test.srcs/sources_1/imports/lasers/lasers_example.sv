@@ -3,7 +3,7 @@ module lasers_example (
 	input logic [9:0] DrawX, DrawY,
 	input logic blank,
 	output logic [3:0] red, green, blue,
-	input keycode
+	input [31:0] keycode
 );
 
 logic [17:0] rom_address;

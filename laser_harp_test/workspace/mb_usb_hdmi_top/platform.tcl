@@ -19,3 +19,4 @@ platform active {mb_usb_hdmi_top}
 platform generate -quick
 platform clean
 platform generate
+platform generate
