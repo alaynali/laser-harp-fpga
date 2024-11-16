@@ -133,6 +133,9 @@ module mb_usb_hdmi_top(
         .TMDS_DATA_N(hdmi_tmds_data_n)          
     );
 
+
+logic [9:0] CursorX, CursorY, CursorS;
+
     lasers_example screen(
         .vga_clk(clk_25MHz),
         .DrawX(drawX),
@@ -140,13 +143,19 @@ module mb_usb_hdmi_top(
         .blank(vde),
         .red(red),
         .green(green),
-        .blue(blue)
+        .blue(blue),
+        .CursorX(CursorX),
+        .CursorY(CursorY),
+        .CursorS(CursorS)
     );
     
     cursor_impl cursor(
         .Reset(reset_ah),
         .frame_clk(vga_clk),
-        .keycode(keycode0_gpio[31:0])
+        .keycode(keycode0_gpio),
+        .CursorX(CursorX),
+        .CursorY(CursorY),
+        .CursorS(CursorS)
     );
     //Ball Module
 //    ball ball_instance(

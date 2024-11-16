@@ -20,3 +20,13 @@ platform generate -quick
 platform clean
 platform generate
 platform generate
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/estel/project/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa}
+platform generate -domains standalone_microblaze_0 
+platform config -updatehw {C:/Users/estel/project/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/estel/project/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform active {mb_usb_hdmi_top}
+platform config -updatehw {C:/Users/estel/project/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa}
+platform generate -domains 
