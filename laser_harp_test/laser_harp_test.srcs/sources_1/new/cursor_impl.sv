@@ -30,7 +30,6 @@ module cursor_impl(
     output logic [9:0]  CursorX, 
     output logic [9:0]  CursorY, 
     output logic [9:0]  CursorS
-
     );
 
     parameter [9:0] Cursor_X_Center=320;  // Center position on the X axis
@@ -62,51 +61,23 @@ module cursor_impl(
 
 
     always_comb begin
-        Cursor_Y_Motion_next = 10'd0; Cursor_Y_Motion; // set default motion to be same as prev clock cycle 
-        Cursor_X_Motion_next = 10'd0; Cursor_X_Motion;
+        Cursor_Y_Motion_next = 10'd0; //Cursor_Y_Motion; // set default motion to be same as prev clock cycle 
+        Cursor_X_Motion_next = 10'd0; //Cursor_X_Motion;
 
-        // if (keycode == 8'h1A)  // W
-        //     begin
-        //         Cursor_Y_Motion_next = -10'd1;
-        //         Cursor_X_Motion_next = 10'd0;
-        //     end
-        // if (keycode == 8'h04) // A
-        //      begin
-        //         Cursor_X_Motion_next = -10'd1;
-        //         Cursor_Y_Motion_next = 10'd0;
-        //     end
-        // if (keycode == 8'h07) // D
-        //     begin
-        //         Cursor_X_Motion_next = 10'd1;
-        //         Cursor_Y_Motion_next = 10'd0;
-        //     end
-        // if (keycode == 8'h16) // S
-        //     begin
-        //         Cursor_Y_Motion_next = 10'd1;
-        //         Cursor_X_Motion_next = 10'd0;
-        //     end
-
-        // modify to control Cursor motion with the keycode
+        
         // x dir
-        Cursor_X_Motion_next = x_keycode;
-        // if (x_keycode < 0) // x_keycode[7] == 1'b1
-        //     begin
-        //         Cursor_X_Motion_next = x_keycode[7:0];
-        //     end
-        // else if (x_keycode > 0) // x_keycode[15] == 1'b0
-        //     begin
-        //         Cursor_X_Motion_next = x; 
-        //     end
-        // else 
-        //     begin
-        //         Cursor_X_Motion_next = 10'd0; 
-        //     end
-        // y dir
-        Cursor_Y_Motion_next = y_keycode;
+        if (x_keycode != 8'h0) begin
+            Cursor_X_Motion_next = { {2{x_keycode[7]}}, x_keycode };
+        end
+
+        if (y_keycode != 8'h0) begin
+            Cursor_Y_Motion_next = { {2{y_keycode[7]}}, y_keycode };
+        end
 
         if ( (CursorY + CursorS) >= Cursor_Y_Max )  // Cursor is at the bottom edge, BOUNCE!
             begin
                 Cursor_Y_Motion_next = (~ (Cursor_Y_Step) + 1'b1);  // set to -1 via 2's complement.
+                // need to move ball slightly so that it isn't stuck to the wall
             end
         else if ( (CursorY - CursorS) <= Cursor_Y_Min )  // Cursor is at the top edge, BOUNCE!
             begin
@@ -134,8 +105,8 @@ module cursor_impl(
     begin: Move_Cursor
         if (Reset)
         begin 
-            Cursor_Y_Motion <= 10'd0; //Cursorall_Y_Step;
-			Cursor_X_Motion <= 10'd1; //Cursorall_X_Step;
+            Cursor_Y_Motion <= Cursor_Y_Step;
+			Cursor_X_Motion <= Cursor_X_Step;
             
 			CursorY <= Cursor_Y_Center;
 			CursorX <= Cursor_X_Center;
@@ -146,7 +117,7 @@ module cursor_impl(
 			Cursor_Y_Motion <= Cursor_Y_Motion_next; 
 			Cursor_X_Motion <= Cursor_X_Motion_next; 
 
-            CursorY <= Cursor_Y_next;  // Update Cursorall position
+            CursorY <= Cursor_Y_next;  // Update Cursor position
             CursorX <= Cursor_X_next;
 			
 		end  

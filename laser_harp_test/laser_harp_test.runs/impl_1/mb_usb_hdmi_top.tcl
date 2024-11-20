@@ -122,6 +122,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 3
   set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
@@ -143,6 +144,7 @@ OPTRACE "add files" START { }
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
   add_files C:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd
+  read_ip -quiet c:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci
   read_ip -quiet C:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
   read_ip -quiet C:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_ip -quiet C:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/rom/rom.xci

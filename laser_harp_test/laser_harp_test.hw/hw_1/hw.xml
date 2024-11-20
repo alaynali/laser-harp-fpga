@@ -4,14 +4,125 @@
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7s50_0" gui_info=""/>
+  <device name="xc7s50_0" gui_info="dashboard1=hw_ila_1[xc7s50_0/hw_ila_1/Settings=ILA_SETTINGS_1;xc7s50_0/hw_ila_1/Status=ILA_STATUS_1;xc7s50_0/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7s50_0/hw_ila_1/Waveform=ILA_WAVE_1;xc7s50_0/hw_ila_1/Capture Setup=ILA_CAPTURE_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7s50_0" gui_info="">
-      <Properties Property="FULL_PROBES.FILE" value=""/>
-      <Properties Property="PROBES.FILE" value=""/>
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/debug_nets.ltx"/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/mb_usb_hdmi_top.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>
-  <probeset name="hw project" active="false"/>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="ila" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="BINARY"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="ila"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="keycode0_gpio[31]"/>
+        <net name="keycode0_gpio[30]"/>
+        <net name="keycode0_gpio[29]"/>
+        <net name="keycode0_gpio[28]"/>
+        <net name="keycode0_gpio[27]"/>
+        <net name="keycode0_gpio[26]"/>
+        <net name="keycode0_gpio[25]"/>
+        <net name="keycode0_gpio[24]"/>
+        <net name="keycode0_gpio[23]"/>
+        <net name="keycode0_gpio[22]"/>
+        <net name="keycode0_gpio[21]"/>
+        <net name="keycode0_gpio[20]"/>
+        <net name="keycode0_gpio[19]"/>
+        <net name="keycode0_gpio[18]"/>
+        <net name="keycode0_gpio[17]"/>
+        <net name="keycode0_gpio[16]"/>
+        <net name="keycode0_gpio[15]"/>
+        <net name="keycode0_gpio[14]"/>
+        <net name="keycode0_gpio[13]"/>
+        <net name="keycode0_gpio[12]"/>
+        <net name="keycode0_gpio[11]"/>
+        <net name="keycode0_gpio[10]"/>
+        <net name="keycode0_gpio[9]"/>
+        <net name="keycode0_gpio[8]"/>
+        <net name="keycode0_gpio[7]"/>
+        <net name="keycode0_gpio[6]"/>
+        <net name="keycode0_gpio[5]"/>
+        <net name="keycode0_gpio[4]"/>
+        <net name="keycode0_gpio[3]"/>
+        <net name="keycode0_gpio[2]"/>
+        <net name="keycode0_gpio[1]"/>
+        <net name="keycode0_gpio[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="BINARY"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="ila"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="keycode1_gpio[31]"/>
+        <net name="keycode1_gpio[30]"/>
+        <net name="keycode1_gpio[29]"/>
+        <net name="keycode1_gpio[28]"/>
+        <net name="keycode1_gpio[27]"/>
+        <net name="keycode1_gpio[26]"/>
+        <net name="keycode1_gpio[25]"/>
+        <net name="keycode1_gpio[24]"/>
+        <net name="keycode1_gpio[23]"/>
+        <net name="keycode1_gpio[22]"/>
+        <net name="keycode1_gpio[21]"/>
+        <net name="keycode1_gpio[20]"/>
+        <net name="keycode1_gpio[19]"/>
+        <net name="keycode1_gpio[18]"/>
+        <net name="keycode1_gpio[17]"/>
+        <net name="keycode1_gpio[16]"/>
+        <net name="keycode1_gpio[15]"/>
+        <net name="keycode1_gpio[14]"/>
+        <net name="keycode1_gpio[13]"/>
+        <net name="keycode1_gpio[12]"/>
+        <net name="keycode1_gpio[11]"/>
+        <net name="keycode1_gpio[10]"/>
+        <net name="keycode1_gpio[9]"/>
+        <net name="keycode1_gpio[8]"/>
+        <net name="keycode1_gpio[7]"/>
+        <net name="keycode1_gpio[6]"/>
+        <net name="keycode1_gpio[5]"/>
+        <net name="keycode1_gpio[4]"/>
+        <net name="keycode1_gpio[3]"/>
+        <net name="keycode1_gpio[2]"/>
+        <net name="keycode1_gpio[1]"/>
+        <net name="keycode1_gpio[0]"/>
+      </nets>
+    </probe>
+  </probeset>
 </hwsession>

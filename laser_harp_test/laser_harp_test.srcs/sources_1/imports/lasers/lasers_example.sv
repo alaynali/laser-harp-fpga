@@ -3,10 +3,13 @@ module lasers_example (
 	input logic [9:0] DrawX, DrawY,
 	input logic blank,
 	input  logic [9:0] CursorX, CursorY, CursorS,
+	input logic [7:0] btn_keycode,
 	output logic [3:0] red, green, blue
 );
 
 logic cursor_on;
+logic r_click;
+logic l_click;
 
 logic [17:0] rom_address;
 logic [2:0] rom_q;
@@ -26,6 +29,28 @@ begin:Cursor_on_proc // determines whether we need to draw the cursor (within bo
 		cursor_on = 1'b1;
 	else 
 		cursor_on = 1'b0;
+end
+
+always_comb
+begin
+    case (btn_keycode)
+        8'b00000001:    begin
+                            r_click = 1'b0;
+                            l_click = 1'b1;
+                        end
+        8'b00000010:    begin
+                            r_click = 1'b1;
+                            l_click = 1'b0;
+                        end
+        8'b00000011:    begin
+                            r_click = 1'b1;
+                            l_click = 1'b1;
+                        end
+        default:        begin
+                            r_click = 1'b0;
+                            l_click = 1'b0;
+                        end
+    endcase
 end
 
 // read from ROM on negedge, set pixel on posedge

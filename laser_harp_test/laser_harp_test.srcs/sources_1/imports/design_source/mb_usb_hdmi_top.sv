@@ -56,7 +56,7 @@ module mb_usb_hdmi_top(
     hex_driver HexA (
         .clk(Clk),
         .reset(reset_ah),
-        .in({keycode0_gpio[31:28], keycode0_gpio[27:24], keycode0_gpio[23:20], keycode0_gpio[19:16]}),
+        .in({keycode1_gpio[31:28], keycode1_gpio[27:24], keycode1_gpio[23:20], keycode1_gpio[19:16]}),
         .hex_seg(hex_segA),
         .hex_grid(hex_gridA)
     );
@@ -64,7 +64,7 @@ module mb_usb_hdmi_top(
     hex_driver HexB (
         .clk(Clk),
         .reset(reset_ah),
-        .in({keycode0_gpio[15:12], keycode0_gpio[11:8], keycode0_gpio[7:4], keycode0_gpio[3:0]}),
+        .in({keycode1_gpio[15:12], keycode1_gpio[11:8], keycode1_gpio[7:4], keycode1_gpio[3:0]}),
         .hex_seg(hex_segB),
         .hex_grid(hex_gridB)
     );
@@ -146,16 +146,23 @@ logic [9:0] CursorX, CursorY, CursorS;
         .blue(blue),
         .CursorX(CursorX),
         .CursorY(CursorY),
-        .CursorS(CursorS)
+        .CursorS(CursorS),
+        .btn_keycode(keycode1_gpio[7:0])
     );
     
     cursor_impl cursor(
         .Reset(reset_ah),
         .frame_clk(vsync),
-        .keycode(keycode0_gpio[31:0]),
+        .keycode(keycode1_gpio[31:0]),
         .CursorX(CursorX),
         .CursorY(CursorY),
         .CursorS(CursorS)
+    );
+    
+    ila_0 ila (
+        .clk(Clk),
+        .probe0(keycode0_gpio[31:0]),
+        .probe1(keycode1_gpio[31:0])
     );
     //Ball Module
 //    ball ball_instance(

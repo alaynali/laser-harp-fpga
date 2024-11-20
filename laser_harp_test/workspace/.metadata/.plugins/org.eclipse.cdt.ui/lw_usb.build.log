@@ -1,4 +1,4 @@
-16:37:50 **** Incremental Build of configuration Debug for project lw_usb ****
+20:20:01 **** Incremental Build of configuration Debug for project lw_usb ****
 make all 
 'Building file: ../src/lw_usb/MAX3421E.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -70,9 +70,9 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/estel/project/laser-harp-fpga/las
 'Invoking: MicroBlaze Print Size'
 mb-size lw_usb.elf  |tee "lw_usb.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  24424	    488	   3672	  28584	   6fa8	lw_usb.elf
+  24528	    488	   3672	  28688	   7010	lw_usb.elf
 'Finished building: lw_usb.elf.size'
 ' '
 
-16:37:52 Build Finished (took 1s.993ms)
+20:20:04 Build Finished (took 2s.937ms)
 

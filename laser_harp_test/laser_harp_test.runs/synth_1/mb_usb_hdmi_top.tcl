@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
@@ -141,6 +142,12 @@ set_property used_in_implementation false [get_files -all c:/Users/estel/project
 set_property used_in_implementation false [get_files -all c:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_spi_usb_0/mb_usb_spi_usb_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/mb_usb_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/data/mb_bootloop_le.elf]
+
+read_ip -quiet c:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci
+set_property used_in_synthesis false [get_files -all c:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/ip/ila_0/ila_0_ooc.xdc]
 
 read_ip -quiet C:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
 

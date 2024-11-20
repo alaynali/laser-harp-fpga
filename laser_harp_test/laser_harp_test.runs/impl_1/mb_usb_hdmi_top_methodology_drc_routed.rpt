@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Sat Nov 16 16:35:55 2024
+| Date         : Tue Nov 19 20:18:13 2024
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_methodology -file mb_usb_hdmi_top_methodology_drc_routed.rpt -pb mb_usb_hdmi_top_methodology_drc_routed.pb -rpx mb_usb_hdmi_top_methodology_drc_routed.rpx
 | Design       : mb_usb_hdmi_top
@@ -23,20 +23,22 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 109
-+-----------+------------------+------------------------------------------------------------------+------------+
-| Rule      | Severity         | Description                                                      | Violations |
-+-----------+------------------+------------------------------------------------------------------+------------+
-| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree               | 2          |
-| TIMING-17 | Critical Warning | Non-clocked sequential cell                                      | 40         |
-| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin                        | 2          |
-| CKLD-2    | Warning          | Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads | 1          |
-| DPIR-1    | Warning          | Asynchronous driver check                                        | 20         |
-| LUTAR-1   | Warning          | LUT drives async reset alert                                     | 4          |
-| SYNTH-10  | Warning          | Wide multiplier                                                  | 6          |
-| TIMING-9  | Warning          | Unknown CDC Logic                                                | 1          |
-| TIMING-18 | Warning          | Missing input or output delay                                    | 33         |
-+-----------+------------------+------------------------------------------------------------------+------------+
+             Violations found: 100
++-----------+------------------+----------------------------------------------------+------------+
+| Rule      | Severity         | Description                                        | Violations |
++-----------+------------------+----------------------------------------------------+------------+
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 2          |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 1          |
+| TIMING-7  | Critical Warning | No common node between related clocks              | 1          |
+| TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 20         |
+| TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 2          |
+| DPIR-1    | Warning          | Asynchronous driver check                          | 20         |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 4          |
+| PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 10         |
+| SYNTH-10  | Warning          | Wide multiplier                                    | 6          |
+| TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
+| TIMING-18 | Warning          | Missing input or output delay                      | 33         |
++-----------+------------------+----------------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -48,6 +50,16 @@ Related violations: <none>
 TIMING-4#2 Critical Warning
 Invalid primary clock redefinition on a clock tree  
 Invalid clock redefinition on a clock tree. The primary clock mb_block_i/clk_wiz_1/inst/clk_in1 is defined downstream of clock clk_100 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-6#1 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_out1_mb_usb_clk_wiz_1_0 and clk_100 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_mb_usb_clk_wiz_1_0] -to [get_clocks clk_100]
+Related violations: <none>
+
+TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_out1_mb_usb_clk_wiz_1_0 and clk_100 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_mb_usb_clk_wiz_1_0] -to [get_clocks clk_100]
 Related violations: <none>
 
 TIMING-17#1 Critical Warning
@@ -150,106 +162,6 @@ Non-clocked sequential cell
 The clock pin cursor/CursorY_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
-TIMING-17#21 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_X_Motion_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#22 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_X_Motion_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#23 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_X_Motion_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#24 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_X_Motion_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#25 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_X_Motion_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#26 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_X_Motion_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#27 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_X_Motion_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#28 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_X_Motion_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#29 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_X_Motion_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#30 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_X_Motion_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#31 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_Y_Motion_reg[0]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#32 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_Y_Motion_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#33 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_Y_Motion_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#34 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_Y_Motion_reg[3]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#35 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_Y_Motion_reg[4]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#36 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_Y_Motion_reg[5]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#37 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_Y_Motion_reg[6]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#38 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_Y_Motion_reg[7]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#39 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_Y_Motion_reg[8]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#40 Critical Warning
-Non-clocked sequential cell  
-The clock pin cursor/Cursor_Y_Motion_reg[9]/C is not reached by a timing clock
-Related violations: <none>
-
 TIMING-27#1 Critical Warning
 Invalid primary clock on hierarchical pin  
 A primary clock clk_wiz/inst/clk_in1 is created on an inappropriate internal pin clk_wiz/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
@@ -258,11 +170,6 @@ Related violations: <none>
 TIMING-27#2 Critical Warning
 Invalid primary clock on hierarchical pin  
 A primary clock mb_block_i/clk_wiz_1/inst/clk_in1 is created on an inappropriate internal pin mb_block_i/clk_wiz_1/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
-Related violations: <none>
-
-CKLD-2#1 Warning
-Clock Net has IO Driver, not a Clock Buf, and/or non-Clock loads  
-Clock net Clk_IBUF is directly driven by an IO rather than a Clock Buffer or may be an IO driving a mix of Clock Buffer and non-Clock loads. This connectivity should be reviewed and corrected as appropriate. Driver(s): Clk_IBUF_inst/O, HexA/Clk, clk_wiz/clk_in1, mb_block_i/clk_100MHz
 Related violations: <none>
 
 DPIR-1#1 Warning
@@ -395,6 +302,56 @@ vga_to_hdmi/inst/encr/dout_reg[6]/CLR,
 vga_to_hdmi/inst/encr/dout_reg[7]/CLR,
 vga_to_hdmi/inst/encr/dout_reg[8]/CLR,
 vga_to_hdmi/inst/encr/dout_reg[9]/CLR (the first 15 of 42 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+PDRC-190#1 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X40Y57 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#2 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X40Y55 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#3 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X41Y55 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#4 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X42Y55 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#5 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X44Y55 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#6 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X45Y53 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#7 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X45Y55 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#8 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X48Y61 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#9 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X43Y57 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+Related violations: <none>
+
+PDRC-190#10 Warning
+Suboptimally placed synchronized register chain  
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X42Y57 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 SYNTH-10#1 Warning
