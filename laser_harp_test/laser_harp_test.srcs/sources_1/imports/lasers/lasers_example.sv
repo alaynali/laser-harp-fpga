@@ -60,23 +60,24 @@ logic [3:0] r [63:0];
 logic [3:0] g [63:0];
 logic [3:0] b [63:0];
 
-logic [17:0] pix_address_array[63:0];
-logic [2:0] countI = 0;
-logic [2:0] countJ = 0;
+logic [17:0] pix_address [63:0];
+
+always_comb begin
+    for (integer i = 0; i < 8; i++) begin
+        for (integer j = 0; j < 8; j++) begin
+            pix_address[i*8 + j] = ((CursorX+i-Size) * 480 / 640) + (((CursorY+j-Size) * 480 / 480) * 480);
+        end
+    end
+end
 
 generate
 	genvar i;
 	genvar j;
-	for (i = CursorX-Size; i < CursorX+Size; i++) begin
-		for (j = CursorY-Size; j < CursorY+Size; j++) begin
-			assign pix_address_array[countI*2*Size + countJ] = ((i * 480) / 640) + (((j * 480) / 480) * 480);
-
-			// romq
-			rom romgen ( .addra(pix_address_array[countI*2*Size + countJ]), .clka(negedge_vga_clk), .douta(q[countI*2*Size + countJ]) );
-			lasers_palette palettegen ( .index(q[countI*2*Size + countJ]), .red(r[countI*2*Size + countJ]), .green(g[countI*2*Size + countJ]), .blue(b[countI*2*Size + countJ]) );
-			assign countJ += 1;
+	for (i = 0; i < 8; i++) begin
+		for (j = 0; j < 8; j++) begin
+			rom romgen ( .addra(pix_address[i*8+j]), .clka(negedge_vga_clk), .douta(q[i*8+j]) );
+			lasers_palette palettegen ( .index(q[i*8+j]), .red(r[i*8+j]), .green(g[i*8+j]), .blue(b[i*8+j]) );
 		end
-		assign countI += 1;
 	end
 endgenerate
 
@@ -85,8 +86,8 @@ begin:laser_interrupt
 	colors = '{default:1'b1};
 	integer i;
 	integer j;
-	for (i = 0; i < Size*2; i++) begin
-		for (j = 0; j < Size*2; j++) begin
+	for (i = 0; i < 8; i++) begin
+		for (j = 0; j < 8; j++) begin
 						/*
 				rgb colors from laser_palette
 				{4'hF, 4'h8, 4'h1},
@@ -97,7 +98,7 @@ begin:laser_interrupt
 				{4'h3, 4'h3, 4'h8},
 				{4'hA, 4'hD, 4'h3}
 			*/
-			case ({r[j+i*2*Size],g[j+i*2*Size],b[j+i*2*Size]})
+			case ({r[j+i*8],g[j+i*8],b[j+i*8]})
 				16'hF81	:	colors[0] = colors[0] & 1'b0;
 				16'h638	:   colors[1] = colors[1] & 1'b0; 
 				16'h1BE	:	colors[2] = colors[2] & 1'b0;
@@ -140,14 +141,14 @@ always_ff @ (posedge vga_clk) begin
 		  // draw lasers
 			
 			case ({palette_red,palette_green,palette_blue})
-				16'hF81	:	assign color_on = colors[0];
-				16'h638	:   assign color_on = colors[1]; 
-				16'h1BE	:	assign color_on = colors[2];
-				16'hFE1	:	assign color_on = colors[3];
-				16'hD22	:	assign color_on = colors[4];
-				16'h338	:	assign color_on = colors[5];
-				16'hAD3	:	assign color_on = colors[6];
-				default	:	assign color_on = 0; // colors = colors;
+				16'hF81	:	color_on = colors[0];
+				16'h638	:   color_on = colors[1]; 
+				16'h1BE	:	color_on = colors[2];
+				16'hFE1	:	color_on = colors[3];
+				16'hD22	:	color_on = colors[4];
+				16'h338	:	color_on = colors[5];
+				16'hAD3	:	color_on = colors[6];
+				default	:	color_on = 0; // colors = colors;
 			endcase	
 
 			if ((!color_on) && (DrawY < CursorY)) begin // being interrupted and above the cursor
