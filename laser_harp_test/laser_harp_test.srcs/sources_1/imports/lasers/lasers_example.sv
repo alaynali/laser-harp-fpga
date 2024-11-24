@@ -70,11 +70,11 @@ always_comb begin
     end
 end
 
-generate
+generate // instatiate rom and palette for each pixel covered by the cursor
 	genvar i;
 	genvar j;
-	for (i = 0; i < 8; i++) begin
-		for (j = 0; j < 8; j++) begin
+	for (i = 0; i < 8; i++) begin:gen_loop1
+		for (j = 0; j < 8; j++) begin:gen_loop2
 			rom romgen ( .addra(pix_address[i*8+j]), .clka(negedge_vga_clk), .douta(q[i*8+j]) );
 			lasers_palette palettegen ( .index(q[i*8+j]), .red(r[i*8+j]), .green(g[i*8+j]), .blue(b[i*8+j]) );
 		end
@@ -82,7 +82,7 @@ generate
 endgenerate
 
 always_comb
-begin:laser_interrupt
+begin:laser_interrupt // assign color on/off
 	colors = '{default:1'b1};
 	integer i;
 	integer j;
@@ -98,7 +98,7 @@ begin:laser_interrupt
 				{4'h3, 4'h3, 4'h8},
 				{4'hA, 4'hD, 4'h3}
 			*/
-			case ({r[j+i*8],g[j+i*8],b[j+i*8]})
+			case ({r[j+i*8],g[j+i*8],b[j+i*8]}) 
 				16'hF81	:	colors[0] = colors[0] & 1'b0;
 				16'h638	:   colors[1] = colors[1] & 1'b0; 
 				16'h1BE	:	colors[2] = colors[2] & 1'b0;
@@ -142,7 +142,7 @@ always_ff @ (posedge vga_clk) begin
 			
 			case ({palette_red,palette_green,palette_blue})
 				16'hF81	:	color_on = colors[0];
-				16'h638	:   color_on = colors[1]; 
+				16'h638	:   color_on = colors[1];  // not sure about blocking/non-blocking assignments here
 				16'h1BE	:	color_on = colors[2];
 				16'hFE1	:	color_on = colors[3];
 				16'hD22	:	color_on = colors[4];
