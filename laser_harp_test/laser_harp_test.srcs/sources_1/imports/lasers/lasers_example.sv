@@ -18,7 +18,7 @@ logic [3:0] palette_red, palette_green, palette_blue;
 
 logic negedge_vga_clk;
 
-logic [6:0] colors; // 0 if the color is being interrupted, 1 otherwise
+logic [6:0] colors; // 0 if the color is being interrupted, 1 otherwise (default)
 assign colors = '{default:1'b1};
 
 int DistX, DistY, Size;
@@ -61,7 +61,7 @@ begin: laser_interrupt
 	genvar i;
 	genvar j;
 	for (i = BallX-Size; i < BallX+Size; i++) begin
-		for (j = BallY-Size, j < BallY+Size; i++) begin
+		for (j = BallY-Size, j < BallY+Size; j++) begin
 			logic pix_address = ((i * 480) / 640) + (((j * 480) / 480) * 480);
 			// romq
 			logic [2:0] q;
@@ -139,7 +139,6 @@ always_ff @ (posedge vga_clk) begin
 				red <= palette_red;
 				green <= palette_green;
 				blue <= palette_blue;
-
 			end
 
 		end
