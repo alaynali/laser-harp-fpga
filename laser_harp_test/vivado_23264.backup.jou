@@ -1,0 +1,46 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sat Nov 16 16:07:26 2024
+# Process ID: 23264
+# Current directory: C:/Users/estel/project/laser-harp-fpga/laser_harp_test
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10808 C:\Users\estel\project\laser-harp-fpga\laser_harp_test\laser_harp_test.xpr
+# Log file: C:/Users/estel/project/laser-harp-fpga/laser_harp_test/vivado.log
+# Journal file: C:/Users/estel/project/laser-harp-fpga/laser_harp_test\vivado.jou
+# Running On: MSI, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 6, Host memory: 34172 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.xpr
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+open_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Users/estel/project/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa
+write_hw_platform -fixed -include_bit -force -file C:/Users/estel/project/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/mb_usb_hdmi_top.bit} [get_hw_devices xc7s50_0]
+current_hw_device [get_hw_devices xc7s50_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7s50_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7s50_0]
+set_property PROGRAM.FILE {C:/Users/estel/project/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/mb_usb_hdmi_top.bit} [get_hw_devices xc7s50_0]
+program_hw_devices [get_hw_devices xc7s50_0]
+refresh_hw_device [lindex [get_hw_devices xc7s50_0] 0]
+create_project audio_test C:/Users/estel/project/laser-harp-fpga/audio_test -part xc7s50csga324-1
+current_project laser_harp_test
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Users/estel/project/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa
+close_project
+file mkdir C:/Users/estel/project/laser-harp-fpga/audio_test/audio_test.srcs/constrs_1
+file mkdir C:/Users/estel/project/laser-harp-fpga/audio_test/audio_test.srcs/constrs_1/new
+close [ open C:/Users/estel/project/laser-harp-fpga/audio_test/audio_test.srcs/constrs_1/new/constraints.xdc w ]
+add_files -fileset constrs_1 C:/Users/estel/project/laser-harp-fpga/audio_test/audio_test.srcs/constrs_1/new/constraints.xdc
+file mkdir C:/Users/estel/project/laser-harp-fpga/audio_test/audio_test.srcs/sources_1/new
+close [ open C:/Users/estel/project/laser-harp-fpga/audio_test/audio_test.srcs/sources_1/new/top_level.sv w ]
+add_files C:/Users/estel/project/laser-harp-fpga/audio_test/audio_test.srcs/sources_1/new/top_level.sv
+update_compile_order -fileset sources_1

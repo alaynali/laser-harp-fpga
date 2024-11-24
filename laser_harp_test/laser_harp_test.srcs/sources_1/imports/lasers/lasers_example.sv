@@ -84,10 +84,9 @@ endgenerate
 always_comb
 begin:laser_interrupt // assign color on/off
 	colors = '{default:1'b1};
-	integer i;
-	integer j;
-	for (i = 0; i < 8; i++) begin
-		for (j = 0; j < 8; j++) begin
+	for (integer i = 0; i < 8; i++) begin
+		for (integer j = 0; j < 8; j++) begin
+		  
 						/*
 				rgb colors from laser_palette
 				{4'hF, 4'h8, 4'h1},
