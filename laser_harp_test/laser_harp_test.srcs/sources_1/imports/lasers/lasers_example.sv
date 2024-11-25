@@ -150,13 +150,13 @@ logic color_on;
 always_comb begin:color_on_proc
 	case ({palette_red,palette_green,palette_blue})
 		12'hF81	:	color_on = colors[0];
-		12'h638	:   color_on = colors[1];  // not sure about blocking/non-blocking assignments here
+		12'h638	:   color_on = colors[1]; 
 		12'h1BE	:	color_on = colors[2];
 		12'hFE1	:	color_on = colors[3];
 		12'hD22	:	color_on = colors[4];
 		12'h338	:	color_on = colors[5];
 		12'hAD3	:	color_on = colors[6];
-		default	:	color_on = 0; // colors = colors;
+		default	:	color_on = 1;
 	endcase	
 end
 
