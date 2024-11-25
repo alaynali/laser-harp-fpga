@@ -123,7 +123,8 @@ logic [17:0] pix_address;
 assign pix_address = (CursorX * 480 / 640) + ((CursorY * 480 / 480) * 480);
 
 rom cursor_picture ( .addra(pix_address), .clka(negedge_vga_clk), .douta(q) );
-laser_palette cursor_palette ( .index(q), .red(r), .green(g), .blue(b) );
+lasers_palette cursor_palette ( .index(q), .red(r), .green(g), .blue(b) );
+
 always_comb begin
 	case ({r,g,b}) 
 		12'hF81	:	colors[0] = colors[0] & 1'b0;
@@ -146,6 +147,19 @@ assign rom_address = ((DrawX * 480) / 640) + (((DrawY * 480) / 480) * 480);
 
 logic color_on;
 
+always_comb begin:color_on_proc
+	case ({palette_red,palette_green,palette_blue})
+		12'hF81	:	color_on = colors[0];
+		12'h638	:   color_on = colors[1];  // not sure about blocking/non-blocking assignments here
+		12'h1BE	:	color_on = colors[2];
+		12'hFE1	:	color_on = colors[3];
+		12'hD22	:	color_on = colors[4];
+		12'h338	:	color_on = colors[5];
+		12'hAD3	:	color_on = colors[6];
+		default	:	color_on = 0; // colors = colors;
+	endcase	
+end
+
 always_ff @ (posedge vga_clk) begin
 	red <= 4'h0;
 	green <= 4'h0;
@@ -163,18 +177,6 @@ always_ff @ (posedge vga_clk) begin
         end    
 	    else begin
 		  // draw lasers
-			
-			case ({palette_red,palette_green,palette_blue})
-				12'hF81	:	color_on = colors[0];
-				12'h638	:   color_on = colors[1];  // not sure about blocking/non-blocking assignments here
-				12'h1BE	:	color_on = colors[2];
-				12'hFE1	:	color_on = colors[3];
-				12'hD22	:	color_on = colors[4];
-				12'h338	:	color_on = colors[5];
-				12'hAD3	:	color_on = colors[6];
-				default	:	color_on = 0; // colors = colors;
-			endcase	
-
 			if ((!color_on) && (DrawY < CursorY)) begin // being interrupted and above the cursor
 				// draw background instead of lasers -- may need to add unique bg rom instead of just black later
 				red <= 4'h0;
