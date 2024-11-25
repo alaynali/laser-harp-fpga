@@ -55,61 +55,86 @@ begin
     endcase
 end
 
-logic [2:0] q [35:0]; // r=4, so d=8, 8*8=64
-logic [3:0] r [35:0]; 
-logic [3:0] g [35:0];
-logic [3:0] b [35:0];
+// check every pixel of cursor
+// logic [2:0] q [35:0]; // r=4, so d=8, 8*8=64
+// logic [3:0] r [35:0]; 
+// logic [3:0] g [35:0];
+// logic [3:0] b [35:0];
 
-logic [17:0] pix_address [35:0];
+// logic [17:0] pix_address [35:0];
 
-always_comb begin
-    for (integer i = 0; i < 6; i++) begin
-        for (integer j = 0; j < 6; j++) begin
-            pix_address[i*6 + j] = ((CursorX+i-Size) * 480 / 640) + (((CursorY+j-Size) * 480 / 480) * 480);
-        end
-    end
-end
+// always_comb begin
+//     for (integer i = 0; i < 6; i++) begin
+//         for (integer j = 0; j < 6; j++) begin
+//             pix_address[i*6 + j] = ((CursorX+i-Size) * 480 / 640) + (((CursorY+j-Size) * 480 / 480) * 480);
+//         end
+//     end
+// end
 
-generate // instatiate rom and palette for each pixel covered by the cursor
-	genvar i;
-	genvar j;
-	for (i = 0; i < 6; i++) begin:gen_loop1
-		for (j = 0; j < 6; j++) begin:gen_loop2
-			rom romgen ( .addra(pix_address[i*6+j]), .clka(negedge_vga_clk), .douta(q[i*6+j]) );
-			lasers_palette palettegen ( .index(q[i*6+j]), .red(r[i*6+j]), .green(g[i*6+j]), .blue(b[i*6+j]) );
-		end
-	end
-endgenerate
-
-always_comb
-begin:laser_interrupt // assign color on/off
-	colors = '{default:1'b1};
-	for (integer i = 0; i < 6; i++) begin
-		for (integer j = 0; j < 6; j++) begin
+// generate // instatiate rom and palette for each pixel covered by the cursor
+// 	genvar i;
+// 	genvar j;
+// 	for (i = 0; i < 6; i++) begin:gen_loop1
+// 		for (j = 0; j < 6; j++) begin:gen_loop2
+// 			rom romgen ( .addra(pix_address[i*6+j]), .clka(negedge_vga_clk), .douta(q[i*6+j]) );
+// 			lasers_palette palettegen ( .index(q[i*6+j]), .red(r[i*6+j]), .green(g[i*6+j]), .blue(b[i*6+j]) );
+// 		end
+// 	end
+// endgenerate
+//
+// always_comb
+// begin:laser_interrupt // assign color on/off
+// 	colors = '{default:1'b1};
+// 	for (integer i = 0; i < 6; i++) begin
+// 		for (integer j = 0; j < 6; j++) begin
 		  
-						/*
-				rgb colors from laser_palette
-				{4'hF, 4'h8, 4'h1},
-				{4'h6, 4'h3, 4'h8},
-				{4'h1, 4'hB, 4'hE},
-				{4'hF, 4'hE, 4'h1},
-				{4'hD, 4'h2, 4'h2},
-				{4'h3, 4'h3, 4'h8},
-				{4'hA, 4'hD, 4'h3}
-			*/
-			case ({r[j+i*6],g[j+i*6],b[j+i*6]}) 
-				16'hF81	:	colors[0] = colors[0] & 1'b0;
-				16'h638	:   colors[1] = colors[1] & 1'b0; 
-				16'h1BE	:	colors[2] = colors[2] & 1'b0;
-				16'hFE1	:	colors[3] = colors[3] & 1'b0;
-				16'hD22	:	colors[4] = colors[4] & 1'b0;
-				16'h338	:	colors[5] = colors[5] & 1'b0;
-				16'hAD3	:	colors[6] = colors[6] & 1'b0;
-				default	:	; // colors = colors;
-			endcase
-		end
-	end
+// 						/*
+// 				rgb colors from laser_palette
+// 				{4'hF, 4'h8, 4'h1},
+// 				{4'h6, 4'h3, 4'h8},
+// 				{4'h1, 4'hB, 4'hE},
+// 				{4'hF, 4'hE, 4'h1},
+// 				{4'hD, 4'h2, 4'h2},
+// 				{4'h3, 4'h3, 4'h8},
+// 				{4'hA, 4'hD, 4'h3}
+// 			*/
+// 			case ({r[j+i*6],g[j+i*6],b[j+i*6]}) 
+// 				16'hF81	:	colors[0] = colors[0] & 1'b0;
+// 				16'h638	:   colors[1] = colors[1] & 1'b0; 
+// 				16'h1BE	:	colors[2] = colors[2] & 1'b0;
+// 				16'hFE1	:	colors[3] = colors[3] & 1'b0;
+// 				16'hD22	:	colors[4] = colors[4] & 1'b0;
+// 				16'h338	:	colors[5] = colors[5] & 1'b0;
+// 				16'hAD3	:	colors[6] = colors[6] & 1'b0;
+// 				default	:	; // colors = colors;
+// 			endcase
+// 		end
+// 	end
 
+// end
+
+// check only center of cursor
+logic [2:0] q; // r=4, so d=8, 8*8=64
+logic [3:0] r; 
+logic [3:0] g;
+logic [3:0] b;
+logic [17:0] pix_address;
+
+assign pix_address = (CursorX * 480 / 640) + ((CursorY * 480 / 480) * 480);
+
+rom cursor_picture ( .addra(pix_address), .clka(negedge_vga_clk), .douta(q) );
+laser_palette cursor_palette ( .index(q), .red(r), .green(g), .blue(b) );
+always_comb begin
+	case ({r,g,b}) 
+		16'hF81	:	colors[0] = colors[0] & 1'b0;
+		16'h638	:   colors[1] = colors[1] & 1'b0; 
+		16'h1BE	:	colors[2] = colors[2] & 1'b0;
+		16'hFE1	:	colors[3] = colors[3] & 1'b0;
+		16'hD22	:	colors[4] = colors[4] & 1'b0;
+		16'h338	:	colors[5] = colors[5] & 1'b0;
+		16'hAD3	:	colors[6] = colors[6] & 1'b0;
+		default	:	; // colors = colors;
+	endcase	
 end
 
 // read from ROM on negedge, set pixel on posedge
