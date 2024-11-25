@@ -76,24 +76,24 @@ module cursor_impl(
 
         if ( (CursorY + CursorS) >= Cursor_Y_Max )  // Cursor is at the bottom edge, BOUNCE!
             begin
-                Cursor_Y_Motion_next = Cursor_Y_Max - (CursorY + CursorS + 1'b1);//(~ (Cursor_Y_Step) + 1'b1);  // set to -1 via 2's complement.
+                Cursor_Y_Motion_next = (~ (Cursor_Y_Step) + 1'b1); // Cursor_Y_Max - (CursorY + CursorS + 1'b1);  // set to -1 via 2's complement.
                 // need to move ball slightly so that it isn't stuck to the wall
             end
         else if ( (CursorY - CursorS) <= Cursor_Y_Min )  // Cursor is at the top edge, BOUNCE!
             begin
-                Cursor_Y_Motion_next = Cursor_Y_Min - (CursorY - CursorS - 1'b1); // Cursor_Y_Step;
+                Cursor_Y_Motion_next = Cursor_Y_Step; // Cursor_Y_Min - (CursorY - CursorS - 1'b1);  
             end 
 
        //fill in the rest of the motion equations here to bounce left and right
 
         if ( (CursorX + CursorS) >= Cursor_X_Max) // Cursor is at the right edge
             begin
-                Cursor_X_Motion_next = Cursor_X_Max - (CursorX + CursorS + 1'b1); //(~ (Cursor_X_Step) + 1'b1);
+                Cursor_X_Motion_next = (~ (Cursor_X_Step) + 1'b1); // Cursor_X_Max - (CursorX + CursorS + 1'b1);
             end
 
         else if ( (CursorX - CursorS) <= Cursor_X_Min) // Cursor is at the left edge
             begin
-                Cursor_X_Motion_next = Cursor_X_Min - (CursorX - CursorS - 1'b1)// Cursor_X_Step;
+                Cursor_X_Motion_next = Cursor_X_Step; // Cursor_X_Min - (CursorX - CursorS - 1'b1); 
             end
      end
 
