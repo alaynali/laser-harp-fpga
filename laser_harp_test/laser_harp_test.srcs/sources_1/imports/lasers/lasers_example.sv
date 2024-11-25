@@ -126,13 +126,13 @@ rom cursor_picture ( .addra(pix_address), .clka(negedge_vga_clk), .douta(q) );
 laser_palette cursor_palette ( .index(q), .red(r), .green(g), .blue(b) );
 always_comb begin
 	case ({r,g,b}) 
-		16'hF81	:	colors[0] = colors[0] & 1'b0;
-		16'h638	:   colors[1] = colors[1] & 1'b0; 
-		16'h1BE	:	colors[2] = colors[2] & 1'b0;
-		16'hFE1	:	colors[3] = colors[3] & 1'b0;
-		16'hD22	:	colors[4] = colors[4] & 1'b0;
-		16'h338	:	colors[5] = colors[5] & 1'b0;
-		16'hAD3	:	colors[6] = colors[6] & 1'b0;
+		12'hF81	:	colors[0] = colors[0] & 1'b0;
+		12'h638	:   colors[1] = colors[1] & 1'b0; 
+		12'h1BE	:	colors[2] = colors[2] & 1'b0;
+		12'hFE1	:	colors[3] = colors[3] & 1'b0;
+		12'hD22	:	colors[4] = colors[4] & 1'b0;
+		12'h338	:	colors[5] = colors[5] & 1'b0;
+		12'hAD3	:	colors[6] = colors[6] & 1'b0;
 		default	:	; // colors = colors;
 	endcase	
 end
@@ -165,13 +165,13 @@ always_ff @ (posedge vga_clk) begin
 		  // draw lasers
 			
 			case ({palette_red,palette_green,palette_blue})
-				16'hF81	:	color_on = colors[0];
-				16'h638	:   color_on = colors[1];  // not sure about blocking/non-blocking assignments here
-				16'h1BE	:	color_on = colors[2];
-				16'hFE1	:	color_on = colors[3];
-				16'hD22	:	color_on = colors[4];
-				16'h338	:	color_on = colors[5];
-				16'hAD3	:	color_on = colors[6];
+				12'hF81	:	color_on = colors[0];
+				12'h638	:   color_on = colors[1];  // not sure about blocking/non-blocking assignments here
+				12'h1BE	:	color_on = colors[2];
+				12'hFE1	:	color_on = colors[3];
+				12'hD22	:	color_on = colors[4];
+				12'h338	:	color_on = colors[5];
+				12'hAD3	:	color_on = colors[6];
 				default	:	color_on = 0; // colors = colors;
 			endcase	
 
