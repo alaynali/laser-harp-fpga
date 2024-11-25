@@ -55,17 +55,17 @@ begin
     endcase
 end
 
-logic [2:0] q [63:0]; // r=4, so d=8, 8*8=64
-logic [3:0] r [63:0]; 
-logic [3:0] g [63:0];
-logic [3:0] b [63:0];
+logic [2:0] q [35:0]; // r=4, so d=8, 8*8=64
+logic [3:0] r [35:0]; 
+logic [3:0] g [35:0];
+logic [3:0] b [35:0];
 
-logic [17:0] pix_address [63:0];
+logic [17:0] pix_address [35:0];
 
 always_comb begin
-    for (integer i = 0; i < 8; i++) begin
-        for (integer j = 0; j < 8; j++) begin
-            pix_address[i*8 + j] = ((CursorX+i-Size) * 480 / 640) + (((CursorY+j-Size) * 480 / 480) * 480);
+    for (integer i = 0; i < 6; i++) begin
+        for (integer j = 0; j < 6; j++) begin
+            pix_address[i*6 + j] = ((CursorX+i-Size) * 480 / 640) + (((CursorY+j-Size) * 480 / 480) * 480);
         end
     end
 end
@@ -73,10 +73,10 @@ end
 generate // instatiate rom and palette for each pixel covered by the cursor
 	genvar i;
 	genvar j;
-	for (i = 0; i < 8; i++) begin:gen_loop1
-		for (j = 0; j < 8; j++) begin:gen_loop2
-			rom romgen ( .addra(pix_address[i*8+j]), .clka(negedge_vga_clk), .douta(q[i*8+j]) );
-			lasers_palette palettegen ( .index(q[i*8+j]), .red(r[i*8+j]), .green(g[i*8+j]), .blue(b[i*8+j]) );
+	for (i = 0; i < 6; i++) begin:gen_loop1
+		for (j = 0; j < 6; j++) begin:gen_loop2
+			rom romgen ( .addra(pix_address[i*6+j]), .clka(negedge_vga_clk), .douta(q[i*6+j]) );
+			lasers_palette palettegen ( .index(q[i*6+j]), .red(r[i*6+j]), .green(g[i*6+j]), .blue(b[i*6+j]) );
 		end
 	end
 endgenerate
@@ -84,8 +84,8 @@ endgenerate
 always_comb
 begin:laser_interrupt // assign color on/off
 	colors = '{default:1'b1};
-	for (integer i = 0; i < 8; i++) begin
-		for (integer j = 0; j < 8; j++) begin
+	for (integer i = 0; i < 6; i++) begin
+		for (integer j = 0; j < 6; j++) begin
 		  
 						/*
 				rgb colors from laser_palette
@@ -97,7 +97,7 @@ begin:laser_interrupt // assign color on/off
 				{4'h3, 4'h3, 4'h8},
 				{4'hA, 4'hD, 4'h3}
 			*/
-			case ({r[j+i*8],g[j+i*8],b[j+i*8]}) 
+			case ({r[j+i*6],g[j+i*6],b[j+i*6]}) 
 				16'hF81	:	colors[0] = colors[0] & 1'b0;
 				16'h638	:   colors[1] = colors[1] & 1'b0; 
 				16'h1BE	:	colors[2] = colors[2] & 1'b0;
