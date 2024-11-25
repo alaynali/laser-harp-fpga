@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sun Nov 24 17:47:21 2024
-# Process ID: 21560
+# Start of session at: Sun Nov 24 18:06:59 2024
+# Process ID: 29264
 # Current directory: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1
 # Command line: vivado.exe -log mb_usb_hdmi_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source mb_usb_hdmi_top.tcl -notrace
 # Log file: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/mb_usb_hdmi_top.vdi
@@ -11,7 +11,7 @@
 # Running On: MSI, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 6, Host memory: 34172 MB
 #-----------------------------------------------------------
 source mb_usb_hdmi_top.tcl -notrace
-create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1001.879 ; gain = 117.648
+create_project: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1002.500 ; gain = 117.605
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/estel/laser-harp-fpga/laser_harp_test/RD_hdmi_ip2020'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
@@ -40,8 +40,8 @@ INFO: [Project 1-454] Reading design checkpoint 'c:/Users/estel/laser-harp-fpga/
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_ilmb_v10_0/mb_usb_ilmb_v10_0.dcp' for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_lmb_bram_0/mb_usb_lmb_bram_0.dcp' for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
 INFO: [Project 1-454] Reading design checkpoint 'c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/ip/rom/rom.dcp' for cell 'screen/gen_loop1[0].gen_loop2[0].romgen'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.511 . Memory (MB): peak = 1629.195 ; gain = 6.777
-INFO: [Netlist 29-17] Analyzing 3135 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.415 . Memory (MB): peak = 1591.758 ; gain = 4.953
+INFO: [Netlist 29-17] Analyzing 2207 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2022.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -61,7 +61,7 @@ Finished Parsing XDC File [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_
 Parsing XDC File [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0.xdc] for cell 'mb_block_i/clk_wiz_1/inst'
 INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0.xdc:57]
 INFO: [Timing 38-2] Deriving generated clocks [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0.xdc:57]
-get_clocks: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 2338.227 ; gain = 526.082
+get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2279.598 ; gain = 507.809
 Finished Parsing XDC File [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0.xdc] for cell 'mb_block_i/clk_wiz_1/inst'
 Parsing XDC File [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0_board.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M/U0'
 Finished Parsing XDC File [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0_board.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M/U0'
@@ -418,11 +418,11 @@ WARNING: [XPM_CDC_GRAY: TCL-1000] The source and destination clocks are the same
  2) Xilinx IP that contains XPM_CDC modules: Verify the connections to the IP to determine whether you can safely ignore this message.
  [C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl:16]
 INFO: [Project 1-1714] 14 XPM XDC files have been applied to the design.
-INFO: [Opt 31-138] Pushed 1 inverter(s) to 2990 load pin(s).
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 1702 load pin(s).
 WARNING: [Constraints 18-5572] Instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/IO0_I_REG has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
 Generating merged BMM file for the design top 'mb_usb_hdmi_top'...
 INFO: [Memdata 28-144] Successfully populated the BRAM INIT strings from the following elf files: c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/data/mb_bootloop_le.elf 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 2338.227 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 2279.598 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 307 instances were transformed.
   CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 60 instances
@@ -433,7 +433,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 37 Infos, 100 Warnings, 87 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:30 . Memory (MB): peak = 2338.227 ; gain = 1237.953
+link_design: Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 2279.598 ; gain = 1179.688
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
@@ -444,13 +444,13 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2338.227 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2279.598 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: 1e860cc36
+Ending Cache Timing Information Task | Checksum: 260ca2a08
 
-Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2338.227 ; gain = 0.000
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2279.598 ; gain = 0.000
 
 Starting Logic Optimization Task
 
@@ -458,36 +458,36 @@ Phase 1 Generate And Synthesize Debug Cores
 INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
 INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
 INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = 079b010c8fcafb65.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 2694.016 ; gain = 0.000
-Phase 1 Generate And Synthesize Debug Cores | Checksum: 1f133496c
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 2626.301 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 185a047c5
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:25 . Memory (MB): peak = 2694.016 ; gain = 19.832
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:23 . Memory (MB): peak = 2626.301 ; gain = 19.844
 
 Phase 2 Retarget
 INFO: [Opt 31-1287] Pulled Inverter mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Use_Serial_Unified_Completion.Completion_Status_Register.sample_1[15]_i_1 into driver instance mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/Use_BSCAN.FDC_I/Use_Serial_Unified_Completion.Completion_Status_Register.sample_1[15]_i_2, which resulted in an inversion of 14 pins
 INFO: [Opt 31-1287] Pulled Inverter mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1 into driver instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.RX_FIFO_II/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst//i_, which resulted in an inversion of 2 pins
 INFO: [Opt 31-1287] Pulled Inverter mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst/FSM_onehot_gen_rst_ic.curr_wrst_state[4]_i_1 into driver instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/FIFO_EXISTS.TX_FIFO_II/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/xpm_fifo_rst_inst//i_, which resulted in an inversion of 2 pins
 INFO: [Opt 31-1287] Pulled Inverter mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/LOCAL_TX_EMPTY_FIFO_12_GEN.stop_clock_reg_i_1 into driver instance mb_block_i/spi_usb/U0/NO_DUAL_QUAD_MODE.QSPI_NORMAL/QSPI_LEGACY_MD_GEN.QSPI_CORE_INTERFACE_I/LOGIC_FOR_MD_0_GEN.SPI_MODULE_I/SS_O[0]_i_2, which resulted in an inversion of 3 pins
-INFO: [Opt 31-138] Pushed 4 inverter(s) to 653 load pin(s).
+INFO: [Opt 31-138] Pushed 4 inverter(s) to 373 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 2 Retarget | Checksum: 14c52c819
+Phase 2 Retarget | Checksum: 1fca74bd2
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:27 . Memory (MB): peak = 2694.016 ; gain = 19.832
-INFO: [Opt 31-389] Phase Retarget created 225 cells and removed 342 cells
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:24 . Memory (MB): peak = 2626.301 ; gain = 19.844
+INFO: [Opt 31-389] Phase Retarget created 225 cells and removed 340 cells
 INFO: [Opt 31-1021] In phase Retarget, 69 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 3 Constant propagation
 INFO: [Opt 31-138] Pushed 8 inverter(s) to 14 load pin(s).
-Phase 3 Constant propagation | Checksum: 1f5d5ce47
+Phase 3 Constant propagation | Checksum: 2b43301df
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:27 . Memory (MB): peak = 2694.016 ; gain = 19.832
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:24 . Memory (MB): peak = 2626.301 ; gain = 19.844
 INFO: [Opt 31-389] Phase Constant propagation created 123 cells and removed 311 cells
 INFO: [Opt 31-1021] In phase Constant propagation, 51 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 4 Sweep
-Phase 4 Sweep | Checksum: 14a836072
+Phase 4 Sweep | Checksum: 21474408c
 
-Time (s): cpu = 00:00:07 ; elapsed = 00:00:29 . Memory (MB): peak = 2694.016 ; gain = 19.832
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:25 . Memory (MB): peak = 2626.301 ; gain = 19.844
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 321 cells
 INFO: [Opt 31-1021] In phase Sweep, 930 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
@@ -495,22 +495,22 @@ Phase 5 BUFG optimization
 INFO: [Opt 31-194] Inserted BUFG Clk_IBUF_BUFG_inst to drive 1811 load(s) on clock net Clk_IBUF_BUFG
 INFO: [Opt 31-194] Inserted BUFG mb_block_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG_inst to drive 40 load(s) on clock net mb_block_i/mdm_1/U0/Use_E2.BSCAN_I/Dbg_Update_0_BUFG
 INFO: [Opt 31-193] Inserted 2 BUFG(s) on clock nets
-Phase 5 BUFG optimization | Checksum: 16249625a
+Phase 5 BUFG optimization | Checksum: 1f9a1f6eb
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:29 . Memory (MB): peak = 2694.016 ; gain = 19.832
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:25 . Memory (MB): peak = 2626.301 ; gain = 19.844
 INFO: [Opt 31-662] Phase BUFG optimization created 2 cells of which 2 are BUFGs and removed 0 cells.
 
 Phase 6 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 6 Shift Register Optimization | Checksum: 16249625a
+Phase 6 Shift Register Optimization | Checksum: 1f9a1f6eb
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:29 . Memory (MB): peak = 2694.016 ; gain = 19.832
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:25 . Memory (MB): peak = 2626.301 ; gain = 19.844
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 7 Post Processing Netlist
-Phase 7 Post Processing Netlist | Checksum: 2462ba880
+Phase 7 Post Processing Netlist | Checksum: 1f9d8949b
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:29 . Memory (MB): peak = 2694.016 ; gain = 19.832
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:25 . Memory (MB): peak = 2626.301 ; gain = 19.844
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 INFO: [Opt 31-1021] In phase Post Processing Netlist, 59 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 Opt_design Change Summary
@@ -520,7 +520,7 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |             225  |             342  |                                             69  |
+|  Retarget                     |             225  |             340  |                                             69  |
 |  Constant propagation         |             123  |             311  |                                             51  |
 |  Sweep                        |               0  |             321  |                                            930  |
 |  BUFG optimization            |               2  |               0  |                                              0  |
@@ -532,10 +532,10 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.045 . Memory (MB): peak = 2694.016 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 281d2f875
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2626.301 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 1d0afb4f9
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 2694.016 ; gain = 19.832
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:26 . Memory (MB): peak = 2626.301 ; gain = 19.844
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
@@ -548,46 +548,46 @@ INFO: [Pwropt 34-10] Applying ODC optimizations ...
 
 
 Starting PowerOpt Patch Enables Task
-INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 1505 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 861 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
 INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
-Number of BRAM Ports augmented: 587 newly gated: 0 Total Ports: 3010
-Number of Flops added for Enable Generation: 195
+Number of BRAM Ports augmented: 335 newly gated: 0 Total Ports: 1722
+Number of Flops added for Enable Generation: 111
 
-Ending PowerOpt Patch Enables Task | Checksum: 20b2df82a
+Ending PowerOpt Patch Enables Task | Checksum: 13c635596
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 5458.266 ; gain = 0.000
-Ending Power Optimization Task | Checksum: 20b2df82a
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 4248.336 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 13c635596
 
-Time (s): cpu = 00:01:55 ; elapsed = 00:02:05 . Memory (MB): peak = 5458.266 ; gain = 2764.250
+Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 4248.336 ; gain = 1622.035
 
 Starting Final Cleanup Task
 
 Starting Logic Optimization Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Logic Optimization Task | Checksum: 233f1fdec
+Ending Logic Optimization Task | Checksum: 27f1e30ca
 
-Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 5458.266 ; gain = 0.000
-Ending Final Cleanup Task | Checksum: 233f1fdec
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 4248.336 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 27f1e30ca
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 5458.266 ; gain = 0.000
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 4248.336 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 5458.266 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 233f1fdec
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 4248.336 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 27f1e30ca
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 5458.266 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 4248.336 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
 77 Infos, 100 Warnings, 87 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:02:21 ; elapsed = 00:02:51 . Memory (MB): peak = 5458.266 ; gain = 3120.039
+opt_design: Time (s): cpu = 00:01:23 ; elapsed = 00:01:45 . Memory (MB): peak = 4248.336 ; gain = 1968.738
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 5458.266 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 4248.336 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/mb_usb_hdmi_top_opt.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 5458.266 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 4248.336 ; gain = 0.000
 INFO: [runtcl-4] Executing : report_drc -file mb_usb_hdmi_top_drc_opted.rpt -pb mb_usb_hdmi_top_drc_opted.pb -rpx mb_usb_hdmi_top_drc_opted.rpx
 Command: report_drc -file mb_usb_hdmi_top_drc_opted.rpt -pb mb_usb_hdmi_top_drc_opted.pb -rpx mb_usb_hdmi_top_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
@@ -603,9 +603,9 @@ INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 Running DRC as a precondition to command place_design
 INFO: [DRC 23-27] Running DRC with 2 threads
-ERROR: [DRC UTLZ-1] Resource utilization: RAMB18 and RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB18 and RAMB36/FIFO cells than are available in the target device. This design requires 2880 of such cell types but only 150 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
-ERROR: [DRC UTLZ-1] Resource utilization: RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB36/FIFO cells than are available in the target device. This design requires 1375 of such cell types but only 75 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
-ERROR: [DRC UTLZ-1] Resource utilization: RAMB36E1 over-utilized in Top Level Design (This design requires more RAMB36E1 cells than are available in the target device. This design requires 1375 of such cell types but only 75 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: RAMB18 and RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB18 and RAMB36/FIFO cells than are available in the target device. This design requires 1648 of such cell types but only 150 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: RAMB36/FIFO over-utilized in Top Level Design (This design requires more RAMB36/FIFO cells than are available in the target device. This design requires 787 of such cell types but only 75 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: RAMB36E1 over-utilized in Top Level Design (This design requires more RAMB36E1 cells than are available in the target device. This design requires 787 of such cell types but only 75 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
 INFO: [Vivado_Tcl 4-198] DRC finished with 3 Errors
 INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
 ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
@@ -614,4 +614,4 @@ INFO: [Common 17-83] Releasing license: Implementation
 place_design failed
 ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
 
-INFO: [Common 17-206] Exiting Vivado at Sun Nov 24 17:51:14 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 24 18:09:37 2024...

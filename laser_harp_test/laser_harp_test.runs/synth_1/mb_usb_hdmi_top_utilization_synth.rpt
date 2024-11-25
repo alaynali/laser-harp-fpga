@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Sun Nov 24 17:47:13 2024
+| Date         : Sun Nov 24 18:06:51 2024
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_utilization -file mb_usb_hdmi_top_utilization_synth.rpt -pb mb_usb_hdmi_top_utilization_synth.pb
 | Design       : mb_usb_hdmi_top
@@ -31,8 +31,8 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             | 5229 |     0 |          0 |     32600 | 16.04 |
-|   LUT as Logic          | 5229 |     0 |          0 |     32600 | 16.04 |
+| Slice LUTs*             | 3971 |     0 |          0 |     32600 | 12.18 |
+|   LUT as Logic          | 3971 |     0 |          0 |     32600 | 12.18 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
 | Slice Registers         |   88 |     0 |          0 |     65200 |  0.13 |
 |   Register as Flip Flop |   88 |     0 |          0 |     65200 |  0.13 |
@@ -82,8 +82,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------------+------+-------+------------+-----------+-------+
 |    Site Type   | Used | Fixed | Prohibited | Available | Util% |
 +----------------+------+-------+------------+-----------+-------+
-| DSPs           |   74 |     0 |          0 |       120 | 61.67 |
-|   DSP48E1 only |   74 |       |            |           |       |
+| DSPs           |   46 |     0 |          0 |       120 | 38.33 |
+|   DSP48E1 only |   46 |       |            |           |       |
 +----------------+------+-------+------------+-----------+-------+
 
 
@@ -148,15 +148,15 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT2     | 1933 |                 LUT |
-| LUT4     | 1636 |                 LUT |
-| CARRY4   | 1103 |          CarryLogic |
-| LUT3     | 1050 |                 LUT |
-| LUT6     |  930 |                 LUT |
-| LUT5     |  821 |                 LUT |
-| LUT1     |  435 |                 LUT |
-| DSP48E1  |   74 |    Block Arithmetic |
+| LUT2     | 1480 |                 LUT |
+| LUT4     | 1237 |                 LUT |
+| CARRY4   |  847 |          CarryLogic |
+| LUT3     |  805 |                 LUT |
+| LUT6     |  676 |                 LUT |
+| LUT5     |  638 |                 LUT |
+| LUT1     |  339 |                 LUT |
 | FDRE     |   48 |        Flop & Latch |
+| DSP48E1  |   46 |    Block Arithmetic |
 | OBUF     |   29 |                  IO |
 | FDCE     |   22 |        Flop & Latch |
 | FDSE     |   18 |        Flop & Latch |
@@ -170,7 +170,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +--------------------------------+------+
 |            Ref Name            | Used |
 +--------------------------------+------+
-| rom                            |   65 |
+| rom                            |   37 |
 | mb_usb_xbar_0                  |    1 |
 | mb_usb_timer_usb_axi_0         |    1 |
 | mb_usb_spi_usb_0               |    1 |
