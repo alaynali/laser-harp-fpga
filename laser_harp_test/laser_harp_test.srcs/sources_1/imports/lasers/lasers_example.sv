@@ -11,9 +11,9 @@ logic cursor_on;
 logic r_click;
 logic l_click;
 
-logic [17:0] rom_address;
-logic [2:0] rom_q;
-logic [2:0] rom_q_bg;
+logic [18:0] rom_address;
+logic [4:0] rom_q;
+logic [4:0] rom_q_bg;
 
 logic [3:0] palette_red, palette_green, palette_blue;
 logic [3:0] bg_red, bg_green, bg_blue;
@@ -103,8 +103,11 @@ assign pix_address = (CursorX * 480 / 640) + ((CursorY * 480 / 480) * 480);
 rom cursor_picture ( .addra(pix_address), .clka(negedge_vga_clk), .douta(q) );
 lasers_palette cursor_palette ( .index(q), .red(r), .green(g), .blue(b) );
 
-rom picture ( .addra(rom_address), .clka(negedge_vga_clk), .douta(rom_q) );
+rom lasers ( .addra(rom_address), .clka(negedge_vga_clk), .douta(rom_q) );
 lasers_palette lasers_palette ( .index(rom_q), .red(palette_red), .green (palette_green), .blue  (palette_blue) );
+
+rom_bkg background ( .addra(rom_address), .clka(negedge_vga_clk), .douta(rom_q_bg) );
+bg_palette bkg_palette ( .index(rom_q_bg), .red(palette_red), .green (palette_green), .blue  (palette_blue) );
 
 logic color_on;
 
