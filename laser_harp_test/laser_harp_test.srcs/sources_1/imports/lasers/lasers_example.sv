@@ -55,6 +55,13 @@ begin
     endcase
 end
 
+// read from ROM on negedge, set pixel on posedge
+assign negedge_vga_clk = ~vga_clk;
+
+// address into the rom = (x*xDim)/640 + ((y*yDim)/480) * xDim
+// this will stretch out the sprite across the entire screen
+assign rom_address = ((DrawX * 480) / 640) + (((DrawY * 480) / 480) * 480);
+
 // check every pixel of cursor
 // logic [2:0] q [35:0]; // r=4, so d=8, 8*8=64
 // logic [3:0] r [35:0]; 
@@ -115,9 +122,7 @@ end
 
 // check only center of cursor
 logic [2:0] q; // r=4, so d=8, 8*8=64
-logic [3:0] r; 
-logic [3:0] g;
-logic [3:0] b;
+logic [3:0] r, g, b;
 logic [17:0] pix_address;
 
 assign pix_address = (CursorX * 480 / 640) + ((CursorY * 480 / 480) * 480);
@@ -125,39 +130,49 @@ assign pix_address = (CursorX * 480 / 640) + ((CursorY * 480 / 480) * 480);
 rom cursor_picture ( .addra(pix_address), .clka(negedge_vga_clk), .douta(q) );
 lasers_palette cursor_palette ( .index(q), .red(r), .green(g), .blue(b) );
 
-always_comb begin
-	case ({r,g,b}) 
-		12'hF81	:	colors[0] = colors[0] & 1'b0;
-		12'h638	:   colors[1] = colors[1] & 1'b0; 
-		12'h1BE	:	colors[2] = colors[2] & 1'b0;
-		12'hFE1	:	colors[3] = colors[3] & 1'b0;
-		12'hD22	:	colors[4] = colors[4] & 1'b0;
-		12'h338	:	colors[5] = colors[5] & 1'b0;
-		12'hAD3	:	colors[6] = colors[6] & 1'b0;
-		default	:	; // colors = colors;
-	endcase	
-end
-
-// read from ROM on negedge, set pixel on posedge
-assign negedge_vga_clk = ~vga_clk;
-
-// address into the rom = (x*xDim)/640 + ((y*yDim)/480) * xDim
-// this will stretch out the sprite across the entire screen
-assign rom_address = ((DrawX * 480) / 640) + (((DrawY * 480) / 480) * 480);
+rom picture ( .addra(rom_address), .clka(negedge_vga_clk), .douta(rom_q) );
+lasers_palette lasers_palette ( .index(rom_q), .red(palette_red), .green (palette_green), .blue  (palette_blue) );
 
 logic color_on;
 
-always_comb begin:color_on_proc
-	case ({palette_red,palette_green,palette_blue})
-		12'hF81	:	color_on = colors[0];
-		12'h638	:   color_on = colors[1]; 
-		12'h1BE	:	color_on = colors[2];
-		12'hFE1	:	color_on = colors[3];
-		12'hD22	:	color_on = colors[4];
-		12'h338	:	color_on = colors[5];
-		12'hAD3	:	color_on = colors[6];
-		default	:	color_on = 1;
-	endcase	
+// logic [11:0] blocked_color;
+
+always_comb 
+begin:Color_on_proc
+	color_on = 1'b1;
+	if ({r,g,b} == {palette_red,palette_green,palette_blue}) begin
+		color_on = 1'b0;
+	end
+
+// 	case ({r,g,b}) 
+// 		colors[0] = 1'b1;
+// 		colors[1] = 1'b1;
+// 		colors[2] = 1'b1;
+// 		colors[3] = 1'b1;
+// 		colors[4] = 1'b1;
+// 		colors[5] = 1'b1;
+// 		colors[6] = 1'b1;
+
+// 		12'hF81	:	colors[0] = 1'b0;
+// 		12'h638	:   colors[1] = 1'b0; 
+// 		12'h1BE	:	colors[2] = 1'b0;
+// 		12'hFE1	:	colors[3] = 1'b0;
+// 		12'hD22	:	colors[4] = 1'b0;
+// 		12'h338	:	colors[5] = 1'b0;
+// 		12'hAD3	:	colors[6] = 1'b0;
+// 		default	:	; // colors = colors;
+// 	endcase	
+
+// 	case ({palette_red,palette_green,palette_blue})
+// 		12'hF81	:	color_on = colors[0];
+// 		12'h638	:   color_on = colors[1]; 
+// 		12'h1BE	:	color_on = colors[2];
+// 		12'hFE1	:	color_on = colors[3];
+// 		12'hD22	:	color_on = colors[4];
+// 		12'h338	:	color_on = colors[5];
+// 		12'hAD3	:	color_on = colors[6];
+// 		default	:	color_on = 1;
+// 	endcase	
 end
 
 always_ff @ (posedge vga_clk) begin
@@ -193,12 +208,7 @@ always_ff @ (posedge vga_clk) begin
 	end
 end
 
-rom picture (
-    .addra(rom_address),
-    .clka(negedge_vga_clk),
-    .douta(rom_q)
 
-);
 
 //lasers_rom lasers_rom (
 //	.clka   (negedge_vga_clk),
@@ -206,14 +216,6 @@ rom picture (
 //	.douta (rom_q)
 //);
 
-lasers_palette lasers_palette (
-
-	.index (rom_q),
-	.red   (palette_red),
-	.green (palette_green),
-	.blue  (palette_blue)
-	
-);
 
 // instantiate cursor palette
 /*
