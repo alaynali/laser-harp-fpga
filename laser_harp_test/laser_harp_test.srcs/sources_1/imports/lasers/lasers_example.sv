@@ -19,6 +19,7 @@ logic [3:0] palette_red, palette_green, palette_blue;
 logic negedge_vga_clk;
 
 logic [6:0] colors; // 0 if the color is being interrupted, 1 otherwise (default)
+assign colors = '{default:1'b1};
 
 int DistX, DistY, Size;
 assign DistX = DrawX - CursorX;
