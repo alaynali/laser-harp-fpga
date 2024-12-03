@@ -4,14 +4,14 @@ module lasers_palette (
 );
 
 localparam [0:7][11:0] palette = {
-	{4'h0, 4'h0, 4'h0},
-	{4'hF, 4'h8, 4'h1},
-	{4'h6, 4'h3, 4'h8},
-	{4'h1, 4'hB, 4'hE},
-	{4'hF, 4'hE, 4'h1},
-	{4'hD, 4'h2, 4'h2},
-	{4'h3, 4'h3, 4'h8},
-	{4'hA, 4'hD, 4'h3}
+	{4'h0, 4'h0, 4'h0}, // black
+	{4'hF, 4'h8, 4'h1}, // orange
+	{4'h6, 4'h3, 4'h8}, // indigo
+	{4'h1, 4'hB, 4'hE}, // blue
+	{4'hF, 4'hE, 4'h1}, // yellow
+	{4'hD, 4'h2, 4'h2}, // red
+	{4'h3, 4'h3, 4'h8}, // violet
+	{4'hA, 4'hD, 4'h3} // green
 };
 
 assign {red, green, blue} = palette[index];
