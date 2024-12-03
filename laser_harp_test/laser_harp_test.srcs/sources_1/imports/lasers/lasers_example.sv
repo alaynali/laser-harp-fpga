@@ -13,8 +13,10 @@ logic l_click;
 
 logic [17:0] rom_address;
 logic [2:0] rom_q;
+logic [2:0] rom_q_bg;
 
 logic [3:0] palette_red, palette_green, palette_blue;
+logic [3:0] bg_red, bg_green, bg_blue;
 
 logic negedge_vga_clk;
 
@@ -89,36 +91,6 @@ assign rom_address = ((DrawX * 480) / 640) + (((DrawY * 480) / 480) * 480);
 // 	end
 // endgenerate
 //
-// always_comb
-// begin:laser_interrupt // assign color on/off
-// 	colors = '{default:1'b1};
-// 	for (integer i = 0; i < 6; i++) begin
-// 		for (integer j = 0; j < 6; j++) begin
-		  
-// 						/*
-// 				rgb colors from laser_palette
-// 				{4'hF, 4'h8, 4'h1},
-// 				{4'h6, 4'h3, 4'h8},
-// 				{4'h1, 4'hB, 4'hE},
-// 				{4'hF, 4'hE, 4'h1},
-// 				{4'hD, 4'h2, 4'h2},
-// 				{4'h3, 4'h3, 4'h8},
-// 				{4'hA, 4'hD, 4'h3}
-// 			*/
-// 			case ({r[j+i*6],g[j+i*6],b[j+i*6]}) 
-// 				16'hF81	:	colors[0] = colors[0] & 1'b0;
-// 				16'h638	:   colors[1] = colors[1] & 1'b0; 
-// 				16'h1BE	:	colors[2] = colors[2] & 1'b0;
-// 				16'hFE1	:	colors[3] = colors[3] & 1'b0;
-// 				16'hD22	:	colors[4] = colors[4] & 1'b0;
-// 				16'h338	:	colors[5] = colors[5] & 1'b0;
-// 				16'hAD3	:	colors[6] = colors[6] & 1'b0;
-// 				default	:	; // colors = colors;
-// 			endcase
-// 		end
-// 	end
-
-// end
 
 // check only center of cursor
 logic [2:0] q; // r=4, so d=8, 8*8=64
@@ -135,44 +107,12 @@ lasers_palette lasers_palette ( .index(rom_q), .red(palette_red), .green (palett
 
 logic color_on;
 
-// logic [11:0] blocked_color;
-
 always_comb 
 begin:Color_on_proc
-	color_on = 1'b1;
-	if ({r,g,b} == {palette_red,palette_green,palette_blue}) begin
+	if ({r,g,b} == {palette_red,palette_green,palette_blue}) 
 		color_on = 1'b0;
-	end
-
-// 	case ({r,g,b}) 
-// 		colors[0] = 1'b1;
-// 		colors[1] = 1'b1;
-// 		colors[2] = 1'b1;
-// 		colors[3] = 1'b1;
-// 		colors[4] = 1'b1;
-// 		colors[5] = 1'b1;
-// 		colors[6] = 1'b1;
-
-// 		12'hF81	:	colors[0] = 1'b0;
-// 		12'h638	:   colors[1] = 1'b0; 
-// 		12'h1BE	:	colors[2] = 1'b0;
-// 		12'hFE1	:	colors[3] = 1'b0;
-// 		12'hD22	:	colors[4] = 1'b0;
-// 		12'h338	:	colors[5] = 1'b0;
-// 		12'hAD3	:	colors[6] = 1'b0;
-// 		default	:	; // colors = colors;
-// 	endcase	
-
-// 	case ({palette_red,palette_green,palette_blue})
-// 		12'hF81	:	color_on = colors[0];
-// 		12'h638	:   color_on = colors[1]; 
-// 		12'h1BE	:	color_on = colors[2];
-// 		12'hFE1	:	color_on = colors[3];
-// 		12'hD22	:	color_on = colors[4];
-// 		12'h338	:	color_on = colors[5];
-// 		12'hAD3	:	color_on = colors[6];
-// 		default	:	color_on = 1;
-// 	endcase	
+	else
+		color_on = 1'b1;
 end
 
 always_ff @ (posedge vga_clk) begin
@@ -193,10 +133,15 @@ always_ff @ (posedge vga_clk) begin
 	    else begin
 		  // draw lasers
 			if ((!color_on) && (DrawY < CursorY)) begin // being interrupted and above the cursor
-				// draw background instead of lasers -- may need to add unique bg rom instead of just black later
+				// draw background instead of lasers - NEED TO ADD BG ROM
+				// red <= bg_red;
+				// green <= bg_green;
+				// blue <= bg_blue;
+
 				red <= 4'h0;
 				green <= 4'h0;
 				blue <= 4'h0;
+				
 			end
 			else begin // not being interrupted
 				red <= palette_red;
@@ -215,6 +160,22 @@ end
 //	.addra (rom_address),
 //	.douta (rom_q)
 //);
+
+// instantiate background palette
+/*
+bg_rom bg_rom (
+	.clka   (negedge_vga_clk),
+	.addra (rom_address),
+	.douta  (rom_q_bg)
+);
+
+cursor_palette cursor_palette (
+	.index (rom_q_bq),
+	.red   (bg_red),
+	.green (bg_green),
+	.blue  (bg_blue)
+);
+*/
 
 
 // instantiate cursor palette
