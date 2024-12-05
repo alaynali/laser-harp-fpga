@@ -355,13 +355,14 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="rom_bkg_synth_1" Type="Ft3:Synth" SrcSet="rom_bkg" Part="xc7s50csga324-1" ConstrsSet="rom_bkg" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/rom_bkg_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/rom_bkg_synth_1">
+    <Run Id="rom_bkg_synth_1" Type="Ft3:Synth" SrcSet="rom_bkg" Part="xc7s50csga324-1" ConstrsSet="rom_bkg" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/rom_bkg_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/rom_bkg_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/rom_bkg_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>

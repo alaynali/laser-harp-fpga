@@ -107,7 +107,7 @@ rom lasers ( .addra(rom_address), .clka(negedge_vga_clk), .douta(rom_q) );
 lasers_palette lasers_palette ( .index(rom_q), .red(palette_red), .green (palette_green), .blue  (palette_blue) );
 
 rom_bkg background ( .addra(rom_address), .clka(negedge_vga_clk), .douta(rom_q_bg) );
-bg_palette bkg_palette ( .index(rom_q_bg), .red(palette_red), .green (palette_green), .blue  (palette_blue) );
+bg_palette bkg_palette ( .index(rom_q_bg), .red(bg_red), .green (bg_green), .blue  (bg_blue) );
 
 logic color_on;
 
