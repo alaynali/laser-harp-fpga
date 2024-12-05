@@ -8,6 +8,18 @@ module lasers_example (
 );
 
 logic cursor_on;
+
+logic red_on;
+logic orange_on;
+logic yellow_on;
+logic green_on;
+logic blue_on;
+logic indigo_on;
+logic violet_on;
+
+logic [1:0] thickness;
+assign thickness = 2'd3;
+
 logic r_click;
 logic l_click;
 
@@ -35,6 +47,57 @@ begin:Cursor_on_proc // determines whether we need to draw the cursor (within bo
 	else 
 		cursor_on = 1'b0;
 end
+
+always_comb
+begin:Red_on_proc
+	if (DrawY <= 2*DrawX+thickness && DrawY >= 2*DrawX-thickness)
+		red_on = 1'b1;
+	else
+		red_on = 1'b0;
+end
+always_comb
+begin:Orange_on_proc
+	if (DrawY <= 3*DrawX-240+thickness && DrawY >= 3*DrawX-240-thickness)
+		orange_on = 1'b1;
+	else
+		orange_on = 1'b0;
+end
+always_comb
+begin:Yellow_on_proc
+	if (DrawY <= 6*DrawX-960+thickness && DrawY >= 6*DrawX-960-thickness)
+		yellow_on = 1'b1;
+	else
+		yellow_on = 1'b0;
+end
+always_comb
+begin:Green_on_proc
+	if (DrawX <= 240+thickness && DrawX >= 240-thickness)
+		green_on = 1'b1;
+	else
+		green_on = 1'b0;
+end
+always_comb
+begin:Blue_on_proc
+	if (DrawY <= -6*DrawX+1920+thickness && -6*DrawX+1920-thickness)
+		blue_on = 1'b1;
+	else
+		blue_on = 1'b0;
+end
+always_comb
+begin:Indigo_on_proc
+	if (DrawY=-3*DrawX+1200+thickness && DrawY >= -3*DrawX+1200-thickness)
+		indigo_on = 1'b1;
+	else
+		indigo_on = 1'b0;
+end
+always_comb
+begin:Violet_on_proc
+	if (DrawY <= -2*DrawX+960+thickness && DrawY >= -2*DrawX+960-thickness)
+		violet_on = 1'b1;
+	else
+		violet_on = 1'b0;
+end
+
 
 always_comb
 begin
@@ -65,34 +128,6 @@ assign negedge_vga_clk = ~vga_clk;
 // this will stretch out the sprite across the entire screen
 assign rom_address = ((DrawX * 480) / 640) + (((DrawY * 480) / 480) * 480);
 
-// check every pixel of cursor
-// logic [2:0] q [35:0]; // r=4, so d=8, 8*8=64
-// logic [3:0] r [35:0]; 
-// logic [3:0] g [35:0];
-// logic [3:0] b [35:0];
-
-// logic [17:0] pix_address [35:0];
-
-// always_comb begin
-//     for (integer i = 0; i < 6; i++) begin
-//         for (integer j = 0; j < 6; j++) begin
-//             pix_address[i*6 + j] = ((CursorX+i-Size) * 480 / 640) + (((CursorY+j-Size) * 480 / 480) * 480);
-//         end
-//     end
-// end
-
-// generate // instatiate rom and palette for each pixel covered by the cursor
-// 	genvar i;
-// 	genvar j;
-// 	for (i = 0; i < 6; i++) begin:gen_loop1
-// 		for (j = 0; j < 6; j++) begin:gen_loop2
-// 			rom romgen ( .addra(pix_address[i*6+j]), .clka(negedge_vga_clk), .douta(q[i*6+j]) );
-// 			lasers_palette palettegen ( .index(q[i*6+j]), .red(r[i*6+j]), .green(g[i*6+j]), .blue(b[i*6+j]) );
-// 		end
-// 	end
-// endgenerate
-//
-
 // check only center of cursor
 logic [2:0] q; // r=4, so d=8, 8*8=64
 logic [3:0] r, g, b;
@@ -111,13 +146,13 @@ bg_palette bkg_palette ( .index(rom_q_bg), .red(bg_red), .green (bg_green), .blu
 
 logic color_on;
 
-always_comb 
-begin:Color_on_proc
-	if ({r,g,b} == {palette_red,palette_green,palette_blue}) 
-		color_on = 1'b0;
-	else
-		color_on = 1'b1;
-end
+// always_comb 
+// begin:Color_on_proc
+// 	if ({r,g,b} == {palette_red,palette_green,palette_blue}) 
+// 		color_on = 1'b0;
+// 	else
+// 		color_on = 1'b1;
+// end
 
 always_ff @ (posedge vga_clk) begin
 	red <= 4'h0;
@@ -136,21 +171,57 @@ always_ff @ (posedge vga_clk) begin
         end    
 	    else begin
 		  // draw lasers
-			if ((!color_on) && (DrawY < CursorY)) begin // being interrupted and above the cursor
-				// draw background instead of lasers - NEED TO ADD BG ROM
-				// red <= bg_red;
-				// green <= bg_green;
-				// blue <= bg_blue;
+			// if ((!color_on) && (DrawY < CursorY)) begin // being interrupted and above the cursor
+			// 	// draw background instead of lasers - NEED TO ADD BG ROM
+			// 	// red <= bg_red;
+			// 	// green <= bg_green;
+			// 	// blue <= bg_blue;
 
-				red <= 4'h0;
-				green <= 4'h0;
-				blue <= 4'h0;
+			// 	red <= 4'h0;
+			// 	green <= 4'h0;
+			// 	blue <= 4'h0;
 				
-			end
+			// end
+			if (red_on) begin
+				red <= 4'hF;
+				green <= 4'h3;
+				blue <= 4'h3;
+			end	
+			else if (orange_on) begin
+				red <= 4'hF;
+				green <= 4'h9;
+				blue <= 4'h4;
+			end	
+			else if (yellow_on) begin
+				
+				red <= 4'hF;
+				green <= 4'hD;
+				blue <= 4'h5;
+			end	
+			else if (green_on) begin
+				red <= 4'h7;
+				green <= 4'hD;
+				blue <= 4'h5;
+			end	
+			else if (blue_on) begin
+				red <= 4'h3;
+				green <= 4'hB;
+				blue <= 4'hF;
+			end	
+			else if (indigo_on) begin
+				red <= 4'h0;
+				green <= 4'h4;
+				blue <= 4'hA;
+			end	
+			else if (violet_on) begin
+				red <= 4'h5;
+				green <= 4'h1;
+				blue <= 4'hE;
+			end	
 			else begin // not being interrupted
-				red <= palette_red;
-				green <= palette_green;
-				blue <= palette_blue;
+				red <= bg_red;
+				green <= bg_green;
+				blue <= bg_blue;
 			end
 
 		end
