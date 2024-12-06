@@ -47,49 +47,49 @@ end
 
 always_comb
 begin:Red_on_proc
-	if (DrawY <= 2*DrawX && DrawY >= 2*DrawX-12 && DrawY <= 357)
+	if (DrawY <= 2*DrawX && DrawY >= 2*DrawX-12 && DrawY <= 360 && DrawY >= 11)
 		red_on = 1'b1;
 	else
 		red_on = 1'b0;
 end
 always_comb
 begin:Orange_on_proc
-	if (DrawY <= 3*DrawX-240 && DrawY >= 3*DrawX-258 && DrawY <= 357)
+	if (DrawY <= 3*DrawX-240 && DrawY >= 3*DrawX-258 && DrawY <= 360 && DrawY >= 11)
 		orange_on = 1'b1;
 	else
 		orange_on = 1'b0;
 end
 always_comb
 begin:Yellow_on_proc
-	if (DrawY <= 6*DrawX-960 && DrawY >= 6*DrawX-996 && DrawY <= 357)
+	if (DrawY <= 6*DrawX-960 && DrawY >= 6*DrawX-996 && DrawY <= 360 && DrawY >= 11)
 		yellow_on = 1'b1;
 	else
 		yellow_on = 1'b0;
 end
 always_comb
 begin:Green_on_proc
-	if (DrawX <= 246 && DrawX >= 240)
+	if (DrawX <= 246 && DrawX >= 240 && DrawY <= 360 && DrawY >= 11)
 		green_on = 1'b1;
 	else
 		green_on = 1'b0;
 end
 always_comb
 begin:Blue_on_proc
-	if (DrawY <= -6*DrawX+1956 && DrawY >= -6*DrawX+1920 && DrawY <= 357)
+	if (DrawY <= -6*DrawX+1956 && DrawY >= -6*DrawX+1920 && DrawY <= 360 && DrawY >= 11)
 		blue_on = 1'b1;
 	else
 		blue_on = 1'b0;
 end
 always_comb
 begin:Indigo_on_proc
-	if (DrawY <= -3*DrawX+1218 && DrawY >= -3*DrawX+1200 && DrawY <= 357)
+	if (DrawY <= -3*DrawX+1218 && DrawY >= -3*DrawX+1200 && DrawY <= 360 && DrawY >= 11)
 		indigo_on = 1'b1;
 	else
 		indigo_on = 1'b0;
 end
 always_comb
 begin:Violet_on_proc
-	if (DrawY <= -2*DrawX+972 && DrawY >= -2*DrawX+960 && DrawY <= 357)
+	if (DrawY <= -2*DrawX+972 && DrawY >= -2*DrawX+960 && DrawY <= 360 && DrawY >= 11)
 		violet_on = 1'b1;
 	else
 		violet_on = 1'b0;
@@ -142,8 +142,73 @@ bg_palette cursor_palette ( .index(q), .red(r), .green(g), .blue(b) );
 
 bg_rom background ( .addra(rom_address), .clka(negedge_vga_clk), .douta(rom_q_bg) );
 bg_palette bg_palette ( .index(rom_q_bg), .red(bg_red), .green (bg_green), .blue  (bg_blue) );
-
 logic color_on;
+
+always_comb 
+begin:Color_on_proc
+	if ({r,g,b} == {palette_red,palette_green,palette_blue} && {r,g,b} == {}) 
+		color_on = 1'b0;
+	else
+		color_on = 1'b1;
+end
+
+logic red_int;
+logic orange_int;
+logic yellow_int;
+logic green_int;
+logic blue_int;
+logic indigo_int;
+logic violet_int;
+
+always_comb
+begin:Red_int_proc
+	if (CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
+		red_int = 1'b1;
+	else
+		red_int = 1'b0;
+end
+always_comb
+begin:Orange_int_proc
+	if (CursorY <= 3*CursorX-240 && CursorY >= 3*Cursor-258 && CursorY <= 360 && CursorY >= 11)
+		orange_int = 1'b1;
+	else
+		orange_int = 1'b0;
+end
+always_comb
+begin:Yellow_int_proc
+	if (CursorY <= 6*CursorX-960 && CursorY >= 6*CursorX-996 && CursorY <= 360 && CursorY >= 11)
+		yellow_int = 1'b1;
+	else
+		yellow_int = 1'b0;
+end
+always_comb
+begin:Green_int_proc
+	if (CursorX <= 246 && CursorX >= 240 &&CursorY <= 360 && CursorY >= 11)
+		green_int = 1'b1;
+	else
+		green_int = 1'b0;
+end
+always_comb
+begin:Blue_int_proc
+	if (CursorY <= -6*CursorX+1956 && CursorY >= -6*CursorX+1920 && CursorY <= 360 && CursorY >= 11)
+		blue_int = 1'b1;
+	else
+		blue_int = 1'b0;
+end
+always_comb
+begin:Indigo_int_proc
+	if (CursorY <= -3*CursorX+1218 && CursorY >= -3*CursorX+1200 && CursorY <= 360 && CursorY >= 11)
+		indigo_int = 1'b1;
+	else
+		indigo_int = 1'b0;
+end
+always_comb
+begin:Violet_int_proc
+	if (CursorY <= -2*CursorX+972 && CursorY >= -2*CursorX+960 && CursorY <= 360 && CursorY >= 11)
+		violet_int = 1'b1;
+	else
+		violet_int = 1'b0;
+end
 
 // always_comb 
 // begin:Color_on_proc
@@ -181,38 +246,39 @@ always_ff @ (posedge vga_clk) begin
 			// 	blue <= 4'h0;
 				
 			// end
-			if (red_on) begin
+			// roygbiv: {4'hF, 4'h3, 4'h3}, {4'hF, 4'h9, 4'h4}, {4'hF, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h3, 4'hB, 4'hF}, {4'h0, 4'h4, 4'hA}, {4'h5, 4'h1, 4'hE}
+			if (red_on && (!red_int || DrawY > CursorY)) begin
 				red <= 4'hF;
 				green <= 4'h3;
 				blue <= 4'h3;
 			end	
-			else if (orange_on) begin
+			else if (orange_on && (!orange_int || DrawY > CursorY)) begin
 				red <= 4'hF;
 				green <= 4'h9;
 				blue <= 4'h4;
 			end	
-			else if (yellow_on) begin
+			else if (yellow_on && (!yellow_int || DrawY > CursorY)) begin
 				
 				red <= 4'hF;
 				green <= 4'hD;
 				blue <= 4'h5;
 			end	
-			else if (green_on) begin
+			else if (green_on && (!green_int || DrawY > CursorY)) begin
 				red <= 4'h7;
 				green <= 4'hD;
 				blue <= 4'h5;
 			end	
-			else if (blue_on) begin
+			else if (blue_on && (!blue_int || DrawY > CursorY)) begin
 				red <= 4'h3;
 				green <= 4'hB;
 				blue <= 4'hF;
 			end	
-			else if (indigo_on) begin
+			else if (indigo_on && (!indigo_int || DrawY > CursorY)) begin
 				red <= 4'h0;
 				green <= 4'h4;
 				blue <= 4'hA;
 			end	
-			else if (violet_on) begin
+			else if (violet_on && (!violet_int || DrawY > CursorY)) begin
 				red <= 4'h5;
 				green <= 4'h1;
 				blue <= 4'hE;
