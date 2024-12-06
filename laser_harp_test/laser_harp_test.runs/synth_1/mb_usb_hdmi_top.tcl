@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -90,7 +89,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 add_files C:/Users/estel/laser-harp-fpga/laser_harp_test/Images/lasers/lasers/lasers.COE
-add_files c:/Users/estel/laser-harp-fpga/laser_harp_test/Images/bg/bg.COE
+add_files C:/Users/estel/laser-harp-fpga/laser_harp_test/Images/bg/bg.COE
 read_verilog -library xil_defaultlib -sv {
   C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/VGA_controller.sv
   C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/hex_driver.sv
@@ -148,7 +147,7 @@ set_property used_in_implementation false [get_files -all c:/Users/estel/laser-h
 set_property used_in_implementation false [get_files -all c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/ip/ila_0/ila_v6_2/constraints/ila.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/ip/ila_0/ila_0_ooc.xdc]
 
-read_ip -quiet c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/bg_rom/bg_rom.xci
+read_ip -quiet C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/bg_rom/bg_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/ip/bg_rom/bg_rom_ooc.xdc]
 
 read_ip -quiet C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci

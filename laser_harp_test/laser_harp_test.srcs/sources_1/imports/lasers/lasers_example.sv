@@ -144,14 +144,6 @@ bg_rom background ( .addra(rom_address), .clka(negedge_vga_clk), .douta(rom_q_bg
 bg_palette bg_palette ( .index(rom_q_bg), .red(bg_red), .green (bg_green), .blue  (bg_blue) );
 logic color_on;
 
-always_comb 
-begin:Color_on_proc
-	if ({r,g,b} == {palette_red,palette_green,palette_blue} && {r,g,b} == {}) 
-		color_on = 1'b0;
-	else
-		color_on = 1'b1;
-end
-
 logic red_int;
 logic orange_int;
 logic yellow_int;
@@ -169,7 +161,7 @@ begin:Red_int_proc
 end
 always_comb
 begin:Orange_int_proc
-	if (CursorY <= 3*CursorX-240 && CursorY >= 3*Cursor-258 && CursorY <= 360 && CursorY >= 11)
+	if (CursorY <= 3*CursorX-240 && CursorY >= 3*CursorX-258 && CursorY <= 360 && CursorY >= 11)
 		orange_int = 1'b1;
 	else
 		orange_int = 1'b0;
