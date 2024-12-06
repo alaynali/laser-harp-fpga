@@ -17,9 +17,6 @@ logic blue_on;
 logic indigo_on;
 logic violet_on;
 
-logic [1:0] thickness;
-assign thickness = 2'd3;
-
 logic r_click;
 logic l_click;
 
@@ -50,49 +47,49 @@ end
 
 always_comb
 begin:Red_on_proc
-	if (DrawY <= 2*DrawX+thickness && DrawY >= 2*DrawX-thickness)
+	if (DrawY <= 2*DrawX && DrawY >= 2*DrawX-12 && DrawY <= 357)
 		red_on = 1'b1;
 	else
 		red_on = 1'b0;
 end
 always_comb
 begin:Orange_on_proc
-	if (DrawY <= 3*DrawX-240+thickness && DrawY >= 3*DrawX-240-thickness)
+	if (DrawY <= 3*DrawX-240 && DrawY >= 3*DrawX-258 && DrawY <= 357)
 		orange_on = 1'b1;
 	else
 		orange_on = 1'b0;
 end
 always_comb
 begin:Yellow_on_proc
-	if (DrawY <= 6*DrawX-960+thickness && DrawY >= 6*DrawX-960-thickness)
+	if (DrawY <= 6*DrawX-960 && DrawY >= 6*DrawX-996 && DrawY <= 357)
 		yellow_on = 1'b1;
 	else
 		yellow_on = 1'b0;
 end
 always_comb
 begin:Green_on_proc
-	if (DrawX <= 240+thickness && DrawX >= 240-thickness)
+	if (DrawX <= 246 && DrawX >= 240)
 		green_on = 1'b1;
 	else
 		green_on = 1'b0;
 end
 always_comb
 begin:Blue_on_proc
-	if (DrawY <= -6*DrawX+1920+thickness && DrawY >= -6*DrawX+1920-thickness)
+	if (DrawY <= -6*DrawX+1956 && DrawY >= -6*DrawX+1920 && DrawY <= 357)
 		blue_on = 1'b1;
 	else
 		blue_on = 1'b0;
 end
 always_comb
 begin:Indigo_on_proc
-	if (DrawY <= -3*DrawX+1200+thickness && DrawY >= -3*DrawX+1200-thickness)
+	if (DrawY <= -3*DrawX+1218 && DrawY >= -3*DrawX+1200 && DrawY <= 357)
 		indigo_on = 1'b1;
 	else
 		indigo_on = 1'b0;
 end
 always_comb
 begin:Violet_on_proc
-	if (DrawY <= -2*DrawX+960+thickness && DrawY >= -2*DrawX+960-thickness)
+	if (DrawY <= -2*DrawX+972 && DrawY >= -2*DrawX+960 && DrawY <= 357)
 		violet_on = 1'b1;
 	else
 		violet_on = 1'b0;
