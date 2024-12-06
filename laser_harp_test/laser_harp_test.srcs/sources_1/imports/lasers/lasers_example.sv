@@ -47,7 +47,7 @@ end
 
 always_comb
 begin:Red_on_proc
-	if (DrawY <= 2*DrawX && DrawY >= 2*DrawX-12 && DrawY <= 360 && DrawY >= 11)
+	if (DrawY <= 2.125*DrawX-30 && DrawY >= 2.125*DrawX-43 && DrawY <= 360 && DrawY >= 11)
 		red_on = 1'b1;
 	else
 		red_on = 1'b0;
@@ -154,7 +154,7 @@ logic violet_int;
 
 always_comb
 begin:Red_int_proc
-	if (CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
+	if (CursorY <= 2.125*DrawX-30 && CursorY >= 2.125*CursorX-43 && CursorY <= 360 && CursorY >= 11)//(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
 		red_int = 1'b1;
 	else
 		red_int = 1'b0;
