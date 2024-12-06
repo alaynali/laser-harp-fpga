@@ -1,2 +1,0 @@
-rom.v,verilog,xil_defaultlib,../../../../laser_harp_test.gen/sources_1/ip/rom/sim/rom.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

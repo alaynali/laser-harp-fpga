@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Mon Dec  2 23:25:11 2024
+-- Date        : Thu Dec  5 20:31:35 2024
 -- Host        : MSI running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/ip/rom_bkg/rom_bkg_stub.vhdl

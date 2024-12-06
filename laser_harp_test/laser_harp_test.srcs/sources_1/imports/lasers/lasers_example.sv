@@ -78,14 +78,14 @@ begin:Green_on_proc
 end
 always_comb
 begin:Blue_on_proc
-	if (DrawY <= -6*DrawX+1920+thickness && -6*DrawX+1920-thickness)
+	if (DrawY <= -6*DrawX+1920+thickness && DrawY >= -6*DrawX+1920-thickness)
 		blue_on = 1'b1;
 	else
 		blue_on = 1'b0;
 end
 always_comb
 begin:Indigo_on_proc
-	if (DrawY=-3*DrawX+1200+thickness && DrawY >= -3*DrawX+1200-thickness)
+	if (DrawY <= -3*DrawX+1200+thickness && DrawY >= -3*DrawX+1200-thickness)
 		indigo_on = 1'b1;
 	else
 		indigo_on = 1'b0;
@@ -126,7 +126,9 @@ assign negedge_vga_clk = ~vga_clk;
 
 // address into the rom = (x*xDim)/640 + ((y*yDim)/480) * xDim
 // this will stretch out the sprite across the entire screen
-assign rom_address = ((DrawX * 480) / 640) + (((DrawY * 480) / 480) * 480);
+// assign rom_address = ((DrawX * 480) / 640) + (((DrawY * 480) / 480) * 480);
+assign rom_address = ((DrawX * 640) / 640) + (((DrawY * 480) / 480) * 640);
+
 
 // check only center of cursor
 logic [2:0] q; // r=4, so d=8, 8*8=64
@@ -135,14 +137,14 @@ logic [17:0] pix_address;
 
 assign pix_address = (CursorX * 480 / 640) + ((CursorY * 480 / 480) * 480);
 
-rom cursor_picture ( .addra(pix_address), .clka(negedge_vga_clk), .douta(q) );
-lasers_palette cursor_palette ( .index(q), .red(r), .green(g), .blue(b) );
+bg_rom cursor_picture ( .addra(pix_address), .clka(negedge_vga_clk), .douta(q) );
+bg_palette cursor_palette ( .index(q), .red(r), .green(g), .blue(b) );
 
-rom lasers ( .addra(rom_address), .clka(negedge_vga_clk), .douta(rom_q) );
-lasers_palette lasers_palette ( .index(rom_q), .red(palette_red), .green (palette_green), .blue  (palette_blue) );
+//rom lasers ( .addra(rom_address), .clka(negedge_vga_clk), .douta(rom_q) );
+//lasers_palette lasers_palette ( .index(rom_q), .red(palette_red), .green (palette_green), .blue  (palette_blue) );
 
-rom_bkg background ( .addra(rom_address), .clka(negedge_vga_clk), .douta(rom_q_bg) );
-bg_palette bkg_palette ( .index(rom_q_bg), .red(bg_red), .green (bg_green), .blue  (bg_blue) );
+bg_rom background ( .addra(rom_address), .clka(negedge_vga_clk), .douta(rom_q_bg) );
+bg_palette bg_palette ( .index(rom_q_bg), .red(bg_red), .green (bg_green), .blue  (bg_blue) );
 
 logic color_on;
 
