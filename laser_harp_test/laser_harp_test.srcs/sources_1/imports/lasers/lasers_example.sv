@@ -47,7 +47,7 @@ end
 
 always_comb
 begin:Red_on_proc
-	if (DrawY <= 2*DrawX && DrawY >= 2*DrawX-12 && DrawY <= 360 && DrawY >= 11)
+	if (DrawY <= 2.125*DrawX-30 && DrawY >= 2.125*DrawX-43 && DrawY <= 360 && DrawY >= 11)
 		red_on = 1'b1;
 	else
 		red_on = 1'b0;
@@ -152,10 +152,45 @@ logic blue_int;
 logic indigo_int;
 logic violet_int;
 
+logic red_click;
+logic orange_click;
+logic yellow_click;
+logic green_click;
+logic blue_click;
+logic indigo_click;
+logic violet_click;
+
+input logic [9:0] RedY;
+input logic [9:0] OrangeY;
+input logic [9:0] YellowY;
+input logic [9:0] GreenY;
+input logic [9:0] BlueY;
+input logic [9:0] IndigoY;
+input logic [9:0] VioletY;
+
+
+assign red_click = 1'b0;
+assign orange_click = 1'b0;
+assign yellow_click = 1'b0;
+assign green_click = 1'b0;
+assign blue_click = 1'b0;
+assign indigo_click = 1'b0;
+assign violet_click = 1'b0;
+
 always_comb
 begin:Red_int_proc
-	if (CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
-		red_int = 1'b1;
+	if (CursorY <= 2.125*DrawX-30 && CursorY >= 2.125*CursorX-43 && CursorY <= 360 && CursorY >= 11)//(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
+		if (l_click) begin
+			if (red_click)
+				red_click = 1'b0;
+			else 
+				red_click = 1'b1;
+				RedX = CursorX;
+				RedY = CursorY;
+			red_int = 1'b0;
+		end
+		else 
+			red_int = 1'b1;
 	else
 		red_int = 1'b0;
 end
@@ -239,41 +274,95 @@ always_ff @ (posedge vga_clk) begin
 				
 			// end
 			// roygbiv: {4'hF, 4'h3, 4'h3}, {4'hF, 4'h9, 4'h4}, {4'hF, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h3, 4'hB, 4'hF}, {4'h0, 4'h4, 4'hA}, {4'h5, 4'h1, 4'hE}
-			if (red_on && (!red_int || DrawY > CursorY)) begin
-				red <= 4'hF;
-				green <= 4'h3;
-				blue <= 4'h3;
+			// translucent roygbiv: {4'h7, 4'h1, 4'h1}, {4'h8, 4'h5, 4'h3}, {4'h7, 4'h6, 4'h2}, {4'h3, 4'h6, 4'h2}, {4'h1, 4'h5, 4'h7}, {4'h0, 4'h2, 4'h5}, {4'h2, 4'h0, 4'h7},
+			if (red_on) begin
+				if (red_click && DrawY <= RedY) begin
+					red <= bg_red;
+					green <= bg_green;
+					blue <= bg_blue;
+				end
+				if ((!red_int || DrawY > CursorY)) begin
+					red <= 4'hF;
+					green <= 4'h3;
+					blue <= 4'h3;
+				end
+				else begin
+					red <= 4'h7;
+					green <= 4'h1;
+					blue <= 4'h1;
+				end
 			end	
-			else if (orange_on && (!orange_int || DrawY > CursorY)) begin
-				red <= 4'hF;
-				green <= 4'h9;
-				blue <= 4'h4;
+			else if (orange_on) begin
+				if (!orange_int || DrawY > CursorY) begin
+					red <= 4'hF;
+					green <= 4'h9;
+					blue <= 4'h4;
+				end
+				else begin
+					red <= 4'h8;
+					green <= 4'h5;
+					blue <= 4'h3;
+				end
 			end	
-			else if (yellow_on && (!yellow_int || DrawY > CursorY)) begin
-				
-				red <= 4'hF;
-				green <= 4'hD;
-				blue <= 4'h5;
+			else if (yellow_on) begin
+				if (!yellow_int || DrawY > CursorY) begin
+					red <= 4'hF;
+					green <= 4'hD;
+					blue <= 4'h5;
+				end
+				else begin
+					red <= 4'h7;
+					green <= 4'h6;
+					blue <= 4'h2;
+				end
 			end	
-			else if (green_on && (!green_int || DrawY > CursorY)) begin
-				red <= 4'h7;
-				green <= 4'hD;
-				blue <= 4'h5;
+			else if (green_on) begin
+				if (!green_int || DrawY > CursorY) begin
+					red <= 4'h7;
+					green <= 4'hD;
+					blue <= 4'h5;
+				end
+				else begin
+					red <= 4'h3;
+					green <= 4'h6;
+					blue <= 4'h2;
+				end
 			end	
-			else if (blue_on && (!blue_int || DrawY > CursorY)) begin
-				red <= 4'h3;
-				green <= 4'hB;
-				blue <= 4'hF;
+			else if (blue_on) begin
+				if (!blue_int || DrawY > CursorY) begin
+					red <= 4'h3;
+					green <= 4'hB;
+					blue <= 4'hF;
+				end
+				else begin
+					red <= 4'h1;
+					green <= 4'h5;
+					blue <= 4'h7;
+				end
 			end	
-			else if (indigo_on && (!indigo_int || DrawY > CursorY)) begin
-				red <= 4'h0;
-				green <= 4'h4;
-				blue <= 4'hA;
+			else if (indigo_on) begin
+				if (!indigo_int || DrawY > CursorY) begin
+					red <= 4'h0;
+					green <= 4'h4;
+					blue <= 4'hA;
+				end
+				else begin
+					red <= 4'h0;
+					green <= 4'h2;
+					blue <= 4'h5;
+				end
 			end	
-			else if (violet_on && (!violet_int || DrawY > CursorY)) begin
-				red <= 4'h5;
-				green <= 4'h1;
-				blue <= 4'hE;
+			else if (violet_on) begin
+				if (!violet_int || DrawY > CursorY) begin
+					red <= 4'h5;
+					green <= 4'h1;
+					blue <= 4'hE;
+				end
+				else begin
+					red <= 4'h2;
+					green <= 4'h0;
+					blue <= 4'h7;
+				end
 			end	
 			else begin // not being interrupted
 				red <= bg_red;
