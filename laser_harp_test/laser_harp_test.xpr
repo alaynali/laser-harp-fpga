@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.xpr">
+<Project Version="7" Minor="61" Path="C:/Users/alaynal2/ece385/laser-harp-fpga/laser_harp_test/laser_harp_test.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="04c5031e08914d2db970410148ff9fe4"/>

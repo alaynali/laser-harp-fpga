@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1'
+HD_PWD='C:/Users/alaynal2/ece385/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

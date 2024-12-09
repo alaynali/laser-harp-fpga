@@ -47,49 +47,49 @@ end
 
 always_comb
 begin:Red_on_proc
-	if (DrawY <= 2.125*DrawX-30 && DrawY >= 2.125*DrawX-43 && DrawY <= 360 && DrawY >= 11)
+	if (DrawY <= 2*DrawX && DrawY >= 2*DrawX-12 && DrawY <= 360 && DrawY >= RedY)
 		red_on = 1'b1;
 	else
 		red_on = 1'b0;
 end
 always_comb
 begin:Orange_on_proc
-	if (DrawY <= 3*DrawX-240 && DrawY >= 3*DrawX-258 && DrawY <= 360 && DrawY >= 11)
+	if (DrawY <= 3*DrawX-240 && DrawY >= 3*DrawX-258 && DrawY <= 360 && DrawY >= 10)
 		orange_on = 1'b1;
 	else
 		orange_on = 1'b0;
 end
 always_comb
 begin:Yellow_on_proc
-	if (DrawY <= 6*DrawX-960 && DrawY >= 6*DrawX-996 && DrawY <= 360 && DrawY >= 11)
+	if (DrawY <= 6*DrawX-960 && DrawY >= 6*DrawX-996 && DrawY <= 360 && DrawY >= 10)
 		yellow_on = 1'b1;
 	else
 		yellow_on = 1'b0;
 end
 always_comb
 begin:Green_on_proc
-	if (DrawX <= 246 && DrawX >= 240 && DrawY <= 360 && DrawY >= 11)
+	if (DrawX <= 246 && DrawX >= 240 && DrawY <= 360 && DrawY >= 10)
 		green_on = 1'b1;
 	else
 		green_on = 1'b0;
 end
 always_comb
 begin:Blue_on_proc
-	if (DrawY <= -6*DrawX+1956 && DrawY >= -6*DrawX+1920 && DrawY <= 360 && DrawY >= 11)
+	if (DrawY <= -6*DrawX+1956 && DrawY >= -6*DrawX+1920 && DrawY <= 360 && DrawY >= 10)
 		blue_on = 1'b1;
 	else
 		blue_on = 1'b0;
 end
 always_comb
 begin:Indigo_on_proc
-	if (DrawY <= -3*DrawX+1218 && DrawY >= -3*DrawX+1200 && DrawY <= 360 && DrawY >= 11)
+	if (DrawY <= -3*DrawX+1218 && DrawY >= -3*DrawX+1200 && DrawY <= 360 && DrawY >= 10)
 		indigo_on = 1'b1;
 	else
 		indigo_on = 1'b0;
 end
 always_comb
 begin:Violet_on_proc
-	if (DrawY <= -2*DrawX+972 && DrawY >= -2*DrawX+960 && DrawY <= 360 && DrawY >= 11)
+	if (DrawY <= -2*DrawX+972 && DrawY >= -2*DrawX+960 && DrawY <= 360 && DrawY >= 10)
 		violet_on = 1'b1;
 	else
 		violet_on = 1'b0;
@@ -152,6 +152,14 @@ logic blue_int;
 logic indigo_int;
 logic violet_int;
 
+logic red_click_next;
+logic orange_click_next;
+logic yellow_click_next;
+logic green_click_next;
+logic blue_click_next;
+logic indigo_click_next;
+logic violet_click_next;
+
 logic red_click;
 logic orange_click;
 logic yellow_click;
@@ -160,33 +168,34 @@ logic blue_click;
 logic indigo_click;
 logic violet_click;
 
-input logic [9:0] RedY;
-input logic [9:0] OrangeY;
-input logic [9:0] YellowY;
-input logic [9:0] GreenY;
-input logic [9:0] BlueY;
-input logic [9:0] IndigoY;
-input logic [9:0] VioletY;
+logic [9:0] RedY;
+logic [9:0] OrangeY;
+logic [9:0] YellowY;
+logic [9:0] GreenY;
+logic [9:0] BlueY;
+logic [9:0] IndigoY;
+logic [9:0] VioletY;
 
-
-assign red_click = 1'b0;
-assign orange_click = 1'b0;
-assign yellow_click = 1'b0;
-assign green_click = 1'b0;
-assign blue_click = 1'b0;
-assign indigo_click = 1'b0;
-assign violet_click = 1'b0;
+logic [9:0] RedY_next;
+logic [9:0] OrangeY_next;
+logic [9:0] YellowY_next;
+logic [9:0] GreenY_next;
+logic [9:0] BlueY_next;
+logic [9:0] IndigoY_next;
+logic [9:0] VioletY_next;
 
 always_comb
 begin:Red_int_proc
-	if (CursorY <= 2.125*DrawX-30 && CursorY >= 2.125*CursorX-43 && CursorY <= 360 && CursorY >= 11)//(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
+	if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11)//(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
 		if (l_click) begin
-			if (red_click)
-				red_click = 1'b0;
-			else 
-				red_click = 1'b1;
-				RedX = CursorX;
-				RedY = CursorY;
+			if (red_click) begin
+				red_click_next = 1'b0;
+				RedY_next = 9'd10;
+			end
+			else begin
+				red_click_next = 1'b1;
+				RedY_next = CursorY;
+			end
 			red_int = 1'b0;
 		end
 		else 
@@ -196,42 +205,42 @@ begin:Red_int_proc
 end
 always_comb
 begin:Orange_int_proc
-	if (CursorY <= 3*CursorX-240 && CursorY >= 3*CursorX-258 && CursorY <= 360 && CursorY >= 11)
+	if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11)
 		orange_int = 1'b1;
 	else
 		orange_int = 1'b0;
 end
 always_comb
 begin:Yellow_int_proc
-	if (CursorY <= 6*CursorX-960 && CursorY >= 6*CursorX-996 && CursorY <= 360 && CursorY >= 11)
+	if (CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 360 && CursorY >= 11)
 		yellow_int = 1'b1;
 	else
 		yellow_int = 1'b0;
 end
 always_comb
 begin:Green_int_proc
-	if (CursorX <= 246 && CursorX >= 240 &&CursorY <= 360 && CursorY >= 11)
+	if (CursorX >= 238 && CursorX <= 248 && CursorY <= 360 && CursorY >= 11)
 		green_int = 1'b1;
 	else
 		green_int = 1'b0;
 end
 always_comb
 begin:Blue_int_proc
-	if (CursorY <= -6*CursorX+1956 && CursorY >= -6*CursorX+1920 && CursorY <= 360 && CursorY >= 11)
+	if (CursorY >= -6*CursorX+1908 && CursorY <= -6*CursorX+1968 && CursorY <= 360 && CursorY >= 11)
 		blue_int = 1'b1;
 	else
 		blue_int = 1'b0;
 end
 always_comb
 begin:Indigo_int_proc
-	if (CursorY <= -3*CursorX+1218 && CursorY >= -3*CursorX+1200 && CursorY <= 360 && CursorY >= 11)
+	if ( CursorY >= -3*CursorX+1194 && CursorY <= -3*CursorX+1224 && CursorY <= 360 && CursorY >= 11)
 		indigo_int = 1'b1;
 	else
 		indigo_int = 1'b0;
 end
 always_comb
 begin:Violet_int_proc
-	if (CursorY <= -2*CursorX+972 && CursorY >= -2*CursorX+960 && CursorY <= 360 && CursorY >= 11)
+	if (CursorY >= -2*CursorX+956 && CursorY <= -2*CursorX+976 && CursorY <= 360 && CursorY >= 11)
 		violet_int = 1'b1;
 	else
 		violet_int = 1'b0;
@@ -249,8 +258,13 @@ always_ff @ (posedge vga_clk) begin
 	red <= 4'h0;
 	green <= 4'h0;
 	blue <= 4'h0;
+	
+	red_click <= 1'b0;
+	RedY <= 9'd10;
 
 	if (blank) begin  // This is when the non-blanking interval begins
+	   RedY <= RedY_next;
+	   red_click <= red_click_next;
 	    if ((cursor_on == 1'b1)) begin 
 			// or import cursor palette
             red <= 4'hf;
@@ -276,7 +290,7 @@ always_ff @ (posedge vga_clk) begin
 			// roygbiv: {4'hF, 4'h3, 4'h3}, {4'hF, 4'h9, 4'h4}, {4'hF, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h3, 4'hB, 4'hF}, {4'h0, 4'h4, 4'hA}, {4'h5, 4'h1, 4'hE}
 			// translucent roygbiv: {4'h7, 4'h1, 4'h1}, {4'h8, 4'h5, 4'h3}, {4'h7, 4'h6, 4'h2}, {4'h3, 4'h6, 4'h2}, {4'h1, 4'h5, 4'h7}, {4'h0, 4'h2, 4'h5}, {4'h2, 4'h0, 4'h7},
 			if (red_on) begin
-				if (red_click && DrawY <= RedY) begin
+				if (red_click && DrawY < RedY) begin
 					red <= bg_red;
 					green <= bg_green;
 					blue <= bg_blue;

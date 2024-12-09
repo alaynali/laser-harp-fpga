@@ -113,8 +113,8 @@ int main() {
 					printHex (0x00000000, 2);
 					continue;
 				} else if (rcode) {
-					xil_printf("Rcode: ");
-					xil_printf("%x \n", rcode);
+					xil_printf("Button: ");
+					xil_printf("%x \n", buf.button);
 					printHex (buf.button + 0x00000000, 2);
 					continue;
 				}
