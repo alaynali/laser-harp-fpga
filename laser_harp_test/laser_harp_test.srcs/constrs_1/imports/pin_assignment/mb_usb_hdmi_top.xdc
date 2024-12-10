@@ -73,7 +73,9 @@ set_property PACKAGE_PIN E3 [get_ports {hex_gridB[1]}]
 set_property PACKAGE_PIN F5 [get_ports {hex_gridB[2]}]
 set_property PACKAGE_PIN H5 [get_ports {hex_gridB[3]}]
 
-
+#AUDIO Signals
+set_property -dict {PACKAGE_PIN B13 IOSTANDARD LVCMOS33} [get_ports {SPKL}]
+set_property -dict {PACKAGE_PIN B14 IOSTANDARD LVCMOS33} [get_ports {SPKR}]
 
 #HDMI Signals
 set_property -dict { PACKAGE_PIN V17   IOSTANDARD TMDS_33 } [get_ports {hdmi_tmds_clk_n}]

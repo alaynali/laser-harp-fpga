@@ -4,8 +4,14 @@ module lasers_example (
 	input logic blank,
 	input  logic [9:0] CursorX, CursorY, CursorS,
 	input logic [7:0] btn_keycode,
-	output logic [3:0] red, green, blue
-	// use left click signal to drive the trigger in audio code
+	output logic [3:0] red, green, blue,
+	output logic red_click,
+  output logic orange_click,
+  output logic yellow_click
+  output logic green_click,
+  output logic blue_click,
+  output logic indigo_click,
+  output logic violet_click
 );
 
 logic cursor_on;
