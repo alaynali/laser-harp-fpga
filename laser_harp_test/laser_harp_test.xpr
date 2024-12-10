@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="61" Path="C:/Users/alaynal2/ece385/laser-harp-fpga/laser_harp_test/laser_harp_test.xpr">
+<Project Version="7" Minor="61" Path="C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="04c5031e08914d2db970410148ff9fe4"/>
@@ -181,6 +181,33 @@
       </File>
       <File Path="$PSRCDIR/sources_1/ip/bg_rom/bg_rom.xci">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/sine.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../audio_test/audio_test.srcs/sources_1/new/sine.sv"/>
+          <Attr Name="ImportTime" Val="1733517709"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/sync_debounce.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../audio_test/audio_test.srcs/sources_1/new/sync_debounce.sv"/>
+          <Attr Name="ImportTime" Val="1732999438"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/new/top_level.sv">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../audio_test/audio_test.srcs/sources_1/new/top_level.sv"/>
+          <Attr Name="ImportTime" Val="1733459588"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>

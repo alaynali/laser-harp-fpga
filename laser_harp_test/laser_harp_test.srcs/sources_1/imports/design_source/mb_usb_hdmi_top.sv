@@ -37,7 +37,9 @@ module mb_usb_hdmi_top(
     output logic [7:0] hex_segA,
     output logic [3:0] hex_gridA,
     output logic [7:0] hex_segB,
-    output logic [3:0] hex_gridB
+    output logic [3:0] hex_gridB,
+    output logic SPKR,
+    output logic SPKL
 );
     
     logic [31:0] keycode0_gpio, keycode1_gpio;
@@ -50,7 +52,19 @@ module mb_usb_hdmi_top(
     logic reset_ah;
     
     assign reset_ah = reset_rtl_0;
-    
+	
+    sound audio (
+    .clk(Clk),
+    .SPKR(SPKR),
+    .SPKL(SPKL),
+    .red_click(red_click),
+    .orange_click(orange_click),
+    .yellow_click(yellow_click),
+    .green_click(green_click),
+    .blue_click(blue_click),
+    .indigo_click(indigo_click),
+    .violet_click(violet_click)
+    );
     
     //Keycode HEX drivers
     hex_driver HexA (
@@ -136,6 +150,14 @@ module mb_usb_hdmi_top(
 
 logic [9:0] CursorX, CursorY, CursorS;
 
+logic red_click;
+logic orange_click;
+logic yellow_click;
+logic green_click;
+logic blue_click;
+logic indigo_click;
+logic violet_click;
+
     lasers_example screen(
         .vga_clk(clk_25MHz),
         .DrawX(drawX),
@@ -147,7 +169,14 @@ logic [9:0] CursorX, CursorY, CursorS;
         .CursorX(CursorX),
         .CursorY(CursorY),
         .CursorS(CursorS),
-        .btn_keycode(keycode1_gpio[7:0])
+        .btn_keycode(keycode1_gpio[7:0]),
+        .red_click(red_click),
+        .orange_click(orange_click),
+        .yellow_click(yellow_click),
+        .green_click(green_click),
+        .blue_click(blue_click),
+        .indigo_click(indigo_click),
+        .violet_click(violet_click)
     );
     
     cursor_impl cursor(
