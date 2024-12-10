@@ -5,6 +5,7 @@ module lasers_example (
 	input  logic [9:0] CursorX, CursorY, CursorS,
 	input logic [7:0] btn_keycode,
 	output logic [3:0] red, green, blue
+	// use left click signal to drive the trigger in audio code
 );
 
 logic cursor_on;
@@ -168,8 +169,70 @@ logic [9:0] BlueY_next;
 logic [9:0] IndigoY_next;
 logic [9:0] VioletY_next;
 
+logic RedCarrot_on;
+logic OrangeCarrot_on;
+logic YellowCarrot_on;
+logic GreenCarrot_on;
+logic BlueCarrot_on;
+logic IndigoCarrot_on;
+logic VioletCarrot_on;
+
+always_comb 
+begin:Carrot_on_proc
+	// red
+	if (DrawY <= 348 && DrawY >= 3*DrawX-192 && DrawY <= -3*DrawX+870) begin
+		RedCarrot_on = 1'b1;
+	end
+	else begin
+		RedCarrot_on = 1'b0;
+	end
+	// orange
+	if (DrawY <= 348 && DrawY >= 3*DrawX-258 && DrawY <= -3*DrawX+936) begin
+		OrangeCarrot_on = 1'b1;
+	end
+	else begin
+		OrangeCarrot_on = 1'b0;
+	end
+	// yellow
+	if (DrawY <= 348 && DrawY >= 3*DrawX-324 && DrawY <= -3*DrawX+1002) begin
+		YellowCarrot_on = 1'b1;
+	end
+	else begin
+		YellowCarrot_on = 1'b0;
+	end
+	// green
+	if (DrawY <= 348 && DrawY >= 3*DrawX-390 && DrawY <= -3*DrawX+1068) begin
+		GreenCarrot_on = 1'b1;
+	end
+	else begin
+		GreenCarrot_on = 1'b0;
+	end
+	// blue
+	if (DrawY <= 348 && DrawY >= 3*DrawX-456 && DrawY <= -3*DrawX+1134) begin
+		BlueCarrot_on = 1'b1;
+	end
+	else begin
+		BlueCarrot_on = 1'b0;
+	end
+	// indigo
+	if (DrawY <= 348 && DrawY >= 3*DrawX-522 && DrawY <= -3*DrawX+1200) begin
+		IndigoCarrot_on = 1'b1;
+	end
+	else begin
+		IndigoCarrot_on = 1'b0;
+	end
+	// violet
+	if (DrawY <= 348 && DrawY >= 3*DrawX-588 && DrawY <= -3*DrawX+1266) begin
+		VioletCarrot_on = 1'b1;
+	end
+	else begin
+		VioletCarrot_on = 1'b0;
+	end
+end
+
 always_comb
 begin:Red_int_proc
+// old
 	if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11)//(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
 		if (l_click) begin
 			if (red_click) begin
@@ -180,52 +243,144 @@ begin:Red_int_proc
 				red_click_next = 1'b1;
 				RedY_next = CursorY;
 			end
-			red_int = 1'b0;
 		end
 		else 
 			red_int = 1'b1;
 	else
 		red_int = 1'b0;
+// new
+	// if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11) begin //(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
+	// 	if (l_click) begin
+	// 		// if (red_click) begin
+	// 		// 	red_click_next = 1'b0;
+	// 		// 	RedY_next = 9'd10;
+	// 		// end
+	// 		// else begin
+	// 		// 	red_click_next = 1'b1;
+	// 		// 	RedY_next = CursorY;
+	// 		// end
+	// 		red_click_next = 1'b1;
+	// 		RedY_next = CursorY;
+	// 	end
+	// 	else 
+	// 		red_int = 1'b1;
+	// end
+	// else
+	// 	red_int = 1'b0;
+
+	// if (CursorY <= 350 && CursorY >= 341 && CursorX >= 172 && CursorX <= 182) begin// clicking the carrot
+	// 	if (l_click && red_click) begin
+	// 		red_click_next = 1'b0;
+	// 		RedY_next = 9'd10;
+	// 	end
+	// end
+
 end
 always_comb
 begin:Orange_int_proc
 	if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11)
-		orange_int = 1'b1;
+		if (l_click) begin
+			if (orange_click) begin
+				orange_click_next = 1'b0;
+				OrangeY_next = 9'd10;
+			end
+			else begin
+				orange_click_next = 1'b1;
+				OrangeY_next = CursorY;
+			end
+		end
+		else 
+			orange_int = 1'b1;
 	else
 		orange_int = 1'b0;
 end
 always_comb
 begin:Yellow_int_proc
 	if (CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 360 && CursorY >= 11)
-		yellow_int = 1'b1;
+		if (l_click) begin
+			if (yellow_click) begin
+				yellow_click_next = 1'b0;
+				YellowY_next = 9'd10;
+			end
+			else begin
+				yellow_click_next = 1'b1;
+				YellowY_next = CursorY;
+			end
+		end
+		else 
+			yellow_int = 1'b1;
 	else
 		yellow_int = 1'b0;
 end
 always_comb
 begin:Green_int_proc
 	if (CursorX >= 238 && CursorX <= 248 && CursorY <= 360 && CursorY >= 11)
-		green_int = 1'b1;
+		if (l_click) begin
+			if (green_click) begin
+				green_click_next = 1'b0;
+				GreenY_next = 9'd10;
+			end
+			else begin
+				green_click_next = 1'b1;
+				GreenY_next = CursorY;
+			end
+		end
+		else 
+			green_int = 1'b1;
 	else
 		green_int = 1'b0;
 end
 always_comb
 begin:Blue_int_proc
 	if (CursorY >= -6*CursorX+1908 && CursorY <= -6*CursorX+1968 && CursorY <= 360 && CursorY >= 11)
-		blue_int = 1'b1;
+		if (l_click) begin
+			if (blue_click) begin
+				blue_click_next = 1'b0;
+				BlueY_next = 9'd10;
+			end
+			else begin
+				blue_click_next = 1'b1;
+				BlueY_next = CursorY;
+			end
+		end
+		else 
+			blue_int = 1'b1;
 	else
 		blue_int = 1'b0;
 end
 always_comb
 begin:Indigo_int_proc
 	if ( CursorY >= -3*CursorX+1194 && CursorY <= -3*CursorX+1224 && CursorY <= 360 && CursorY >= 11)
-		indigo_int = 1'b1;
+		if (l_click) begin
+			if (indigo_click) begin
+					indigo_click_next = 1'b0;
+					IndigoY_next = 9'd10;
+			end
+			else begin
+				indigo_click_next = 1'b1;
+				IndigoY_next = CursorY;
+			end
+		end
+		else 
+			indigo_int = 1'b1;
 	else
 		indigo_int = 1'b0;
 end
 always_comb
 begin:Violet_int_proc
 	if (CursorY >= -2*CursorX+956 && CursorY <= -2*CursorX+976 && CursorY <= 360 && CursorY >= 11)
-		violet_int = 1'b1;
+		if (l_click) begin
+			if (violet_click) begin
+					violet_click_next = 1'b0;
+					VioletY_next = 9'd10;
+			end
+			else begin
+				violet_click_next = 1'b1;
+				VioletY_next = CursorY;
+			end
+		end
+		else 
+			violet_int = 1'b1;
 	else
 		violet_int = 1'b0;
 end
@@ -293,6 +448,12 @@ always_ff @ (posedge vga_clk) begin
 					green <= bg_green;
 					blue <= bg_blue;
 				end
+				// // carrot 
+				// else if (red_click && RedCarrot_on) begin
+				// 	red <= 4'hf;
+				// 	green <= 4'hf;
+				// 	blue <= 4'hf;
+				// end
 				// dim color
 				else if ((red_int && (DrawY < CursorY)) || (red_int && red_click && DrawY > RedY)) begin
 					red <= 4'h7;
@@ -378,7 +539,7 @@ always_ff @ (posedge vga_clk) begin
 					blue <= 4'h7;
 				end
 			end	
-			else begin // not being interrupted
+			else begin // not drawing lasers
 				red <= bg_red;
 				green <= bg_green;
 				blue <= bg_blue;
