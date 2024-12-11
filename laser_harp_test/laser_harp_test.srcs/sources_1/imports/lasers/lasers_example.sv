@@ -428,21 +428,21 @@ always_comb
 begin:Violet_int_proc
 	if (l_click) begin
 	   if (CursorY >= 347 && CursorY <= 357 && CursorX >= 302 && CursorX <= 3012) begin
-			indigo_click_next = 1'b0;
-			IndigoY_next = 9'd10;
+			violet_click_next = 1'b0;
+			VioletY_next = 9'd10;
 		end
 		else if (CursorY >= -2*CursorX+956 && CursorY <= -2*CursorX+976 && CursorY <= 355 && CursorY >= 11) begin
-			indigo_click_next = 1'b1;
-			IndigoY_next = CursorY;
+			violet_click_next = 1'b1;
+			VioletY_next = CursorY;
 		end
 	end
 	else begin
 		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 302 && CursorX <= 312) 
-			indigo_int = 1'b0;
+			violet_int = 1'b0;
 		else if (CursorY >= -2*CursorX+956 && CursorY <= -2*CursorX+976 && CursorY <= 355 && CursorY >= 11)
-			indigo_int = 1'b1;
+			violet_int = 1'b1;
 		else
-			indigo_int = 1'b0;
+			violet_int = 1'b0;
 	end
 end
 
