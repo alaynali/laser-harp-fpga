@@ -7,7 +7,7 @@ module lasers_example (
 	output logic [3:0] red, green, blue,
 	output logic red_click,
   output logic orange_click,
-  output logic yellow_click
+  output logic yellow_click,
   output logic green_click,
   output logic blue_click,
   output logic indigo_click,

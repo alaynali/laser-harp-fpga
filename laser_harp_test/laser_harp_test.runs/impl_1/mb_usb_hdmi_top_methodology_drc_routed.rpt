@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue Dec 10 17:38:17 2024
+| Date         : Tue Dec 10 19:05:15 2024
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_methodology -file mb_usb_hdmi_top_methodology_drc_routed.rpt -pb mb_usb_hdmi_top_methodology_drc_routed.pb -rpx mb_usb_hdmi_top_methodology_drc_routed.rpx
 | Design       : mb_usb_hdmi_top
@@ -23,23 +23,23 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 210
+             Violations found: 256
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
 | TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 2          |
-| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 3          |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 2          |
 | TIMING-7  | Critical Warning | No common node between related clocks              | 2          |
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 20         |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 2          |
 | DPIR-1    | Warning          | Asynchronous driver check                          | 80         |
-| LUTAR-1   | Warning          | LUT drives async reset alert                       | 4          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 11         |
 | PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 10         |
 | SYNTH-10  | Warning          | Wide multiplier                                    | 6          |
 | TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
-| TIMING-16 | Warning          | Large setup violation                              | 31         |
+| TIMING-16 | Warning          | Large setup violation                              | 32         |
 | TIMING-18 | Warning          | Missing input or output delay                      | 35         |
-| TIMING-20 | Warning          | Non-clocked latch                                  | 13         |
+| TIMING-20 | Warning          | Non-clocked latch                                  | 52         |
 | LATCH-1   | Advisory         | Existing latches in the design                     | 1          |
 +-----------+------------------+----------------------------------------------------+------------+
 
@@ -63,11 +63,6 @@ Related violations: <none>
 TIMING-6#2 Critical Warning
 No common primary clock between related clocks  
 The clocks clk_out1_mb_usb_clk_wiz_1_0 and clk_100 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_mb_usb_clk_wiz_1_0] -to [get_clocks clk_100]
-Related violations: <none>
-
-TIMING-6#3 Critical Warning
-No common primary clock between related clocks  
-The clocks clk_out1_mb_usb_clk_wiz_1_0 and clk_out1_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_mb_usb_clk_wiz_1_0] -to [get_clocks clk_out1_clk_wiz_0]
 Related violations: <none>
 
 TIMING-7#1 Critical Warning
@@ -607,6 +602,41 @@ Related violations: <none>
 
 LUTAR-1#4 Warning
 LUT drives async reset alert  
+LUT cell screen/blue_int_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) screen/blue_int_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell screen/green_int_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) screen/green_int_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell screen/indigo_int_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) screen/indigo_int_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
+LUT drives async reset alert  
+LUT cell screen/orange_int_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) screen/orange_int_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#8 Warning
+LUT drives async reset alert  
+LUT cell screen/red_int_reg_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) screen/red_int_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#9 Warning
+LUT drives async reset alert  
+LUT cell screen/violet_int_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) screen/violet_int_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#10 Warning
+LUT drives async reset alert  
+LUT cell screen/yellow_int_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) screen/yellow_int_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#11 Warning
+LUT drives async reset alert  
 LUT cell vga_to_hdmi/inst/encr/oserdes_m_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) vga_to_hdmi/inst/encg/dout_reg[9]/CLR,
 vga_to_hdmi/inst/encr/cnt_reg[1]/CLR, vga_to_hdmi/inst/encr/cnt_reg[2]/CLR,
 vga_to_hdmi/inst/encr/cnt_reg[3]/CLR, vga_to_hdmi/inst/encr/cnt_reg[4]/CLR,
@@ -624,52 +654,52 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X63Y12 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X51Y40 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X64Y12 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X49Y41 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X65Y12 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X49Y43 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X64Y14 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X50Y40 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X63Y15 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X54Y39 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X62Y17 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X55Y39 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X62Y15 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X54Y37 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X64Y18 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X59Y31 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X62Y22 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X61Y31 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X62Y20 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X60Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 SYNTH-10#1 Warning
@@ -709,157 +739,162 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -73.395 ns between audio/sine_wave/phase_2_reg[0]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[6]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.093 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[10]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -73.469 ns between audio/sine_wave/phase_2_reg[0]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[7]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.389 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[0]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -73.642 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[10]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.427 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[12]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -73.702 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[11]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.461 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[14]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -73.731 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[1]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.471 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[1]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -73.912 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[2]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.525 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[15]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -74.057 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[12]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.531 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[13]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -74.065 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[3]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.547 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[2]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -74.073 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[14]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.588 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[3]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -74.147 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[15]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.652 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[7]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -74.168 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[13]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.731 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[16]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -74.252 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[4]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.772 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[18]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -74.262 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[16]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.808 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[5]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -74.278 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[18]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.816 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[4]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#15 Warning
 Large setup violation  
-There is a large setup violation of -74.352 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[19]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.835 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[17]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#16 Warning
 Large setup violation  
-There is a large setup violation of -74.373 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[17]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.836 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[19]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#17 Warning
 Large setup violation  
-There is a large setup violation of -74.493 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[20]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.858 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[9]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#18 Warning
 Large setup violation  
-There is a large setup violation of -74.507 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[8]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.949 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[6]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#19 Warning
 Large setup violation  
-There is a large setup violation of -74.604 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[21]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.960 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[20]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#20 Warning
 Large setup violation  
-There is a large setup violation of -74.622 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[22]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.980 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[22]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#21 Warning
 Large setup violation  
-There is a large setup violation of -74.651 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[5]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.998 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[8]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#22 Warning
 Large setup violation  
-There is a large setup violation of -74.722 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[9]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.056 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[23]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#23 Warning
 Large setup violation  
-There is a large setup violation of -74.726 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[23]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.064 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[21]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#24 Warning
 Large setup violation  
-There is a large setup violation of -74.995 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[24]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.076 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[11]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#25 Warning
 Large setup violation  
-There is a large setup violation of -75.011 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[26]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.077 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[24]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#26 Warning
 Large setup violation  
-There is a large setup violation of -75.085 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[27]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.097 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[26]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#27 Warning
 Large setup violation  
-There is a large setup violation of -75.106 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[25]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.173 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[27]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#28 Warning
 Large setup violation  
-There is a large setup violation of -75.108 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[28]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.181 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[25]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#29 Warning
 Large setup violation  
-There is a large setup violation of -75.124 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[30]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.194 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[28]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#30 Warning
 Large setup violation  
-There is a large setup violation of -75.198 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[31]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.214 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[30]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#31 Warning
 Large setup violation  
-There is a large setup violation of -75.219 ns between audio/sine_wave/phase_2_reg[7]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[29]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.290 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[31]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#32 Warning
+Large setup violation  
+There is a large setup violation of -79.298 ns between audio/sine_wave/phase_2_reg[1]/C (clocked by clk_100) and audio/sine_wave/phase_2_reg[29]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -1039,72 +1074,267 @@ Related violations: <none>
 
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch audio/resolution_reg[4] cannot be properly analyzed as its control pin audio/resolution_reg[4]/G is not reached by a timing clock
+The latch audio/resolution_reg[0] cannot be properly analyzed as its control pin audio/resolution_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning
 Non-clocked latch  
-The latch audio/resolution_reg[7] cannot be properly analyzed as its control pin audio/resolution_reg[7]/G is not reached by a timing clock
+The latch audio/resolution_reg[1] cannot be properly analyzed as its control pin audio/resolution_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[0] cannot be properly analyzed as its control pin screen/RedY_next_reg[0]/G is not reached by a timing clock
+The latch audio/resolution_reg[2] cannot be properly analyzed as its control pin audio/resolution_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[1] cannot be properly analyzed as its control pin screen/RedY_next_reg[1]/G is not reached by a timing clock
+The latch audio/resolution_reg[3] cannot be properly analyzed as its control pin audio/resolution_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[2] cannot be properly analyzed as its control pin screen/RedY_next_reg[2]/G is not reached by a timing clock
+The latch audio/resolution_reg[4] cannot be properly analyzed as its control pin audio/resolution_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[3] cannot be properly analyzed as its control pin screen/RedY_next_reg[3]/G is not reached by a timing clock
+The latch audio/resolution_reg[5] cannot be properly analyzed as its control pin audio/resolution_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[4] cannot be properly analyzed as its control pin screen/RedY_next_reg[4]/G is not reached by a timing clock
+The latch audio/resolution_reg[6] cannot be properly analyzed as its control pin audio/resolution_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[5] cannot be properly analyzed as its control pin screen/RedY_next_reg[5]/G is not reached by a timing clock
+The latch audio/resolution_reg[7] cannot be properly analyzed as its control pin audio/resolution_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[6] cannot be properly analyzed as its control pin screen/RedY_next_reg[6]/G is not reached by a timing clock
+The latch audio/resolution_reg[8] cannot be properly analyzed as its control pin audio/resolution_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#10 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[7] cannot be properly analyzed as its control pin screen/RedY_next_reg[7]/G is not reached by a timing clock
+The latch screen/OrangeY_next_reg[0] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[8] cannot be properly analyzed as its control pin screen/RedY_next_reg[8]/G is not reached by a timing clock
+The latch screen/OrangeY_next_reg[1] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[9] cannot be properly analyzed as its control pin screen/RedY_next_reg[9]/G is not reached by a timing clock
+The latch screen/OrangeY_next_reg[2] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#13 Warning
 Non-clocked latch  
+The latch screen/OrangeY_next_reg[3] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch screen/OrangeY_next_reg[4] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch screen/OrangeY_next_reg[5] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch screen/OrangeY_next_reg[6] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch screen/OrangeY_next_reg[7] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch screen/OrangeY_next_reg[8] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch screen/OrangeY_next_reg[9] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch screen/RedY_next_reg[0] cannot be properly analyzed as its control pin screen/RedY_next_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch screen/RedY_next_reg[1] cannot be properly analyzed as its control pin screen/RedY_next_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch screen/RedY_next_reg[2] cannot be properly analyzed as its control pin screen/RedY_next_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch screen/RedY_next_reg[3] cannot be properly analyzed as its control pin screen/RedY_next_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch screen/RedY_next_reg[4] cannot be properly analyzed as its control pin screen/RedY_next_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch screen/RedY_next_reg[5] cannot be properly analyzed as its control pin screen/RedY_next_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch screen/RedY_next_reg[6] cannot be properly analyzed as its control pin screen/RedY_next_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch screen/RedY_next_reg[7] cannot be properly analyzed as its control pin screen/RedY_next_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch screen/RedY_next_reg[8] cannot be properly analyzed as its control pin screen/RedY_next_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch screen/RedY_next_reg[9] cannot be properly analyzed as its control pin screen/RedY_next_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch screen/YellowY_next_reg[0] cannot be properly analyzed as its control pin screen/YellowY_next_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch screen/YellowY_next_reg[1] cannot be properly analyzed as its control pin screen/YellowY_next_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch screen/YellowY_next_reg[2] cannot be properly analyzed as its control pin screen/YellowY_next_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch screen/YellowY_next_reg[3] cannot be properly analyzed as its control pin screen/YellowY_next_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch screen/YellowY_next_reg[4] cannot be properly analyzed as its control pin screen/YellowY_next_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch screen/YellowY_next_reg[5] cannot be properly analyzed as its control pin screen/YellowY_next_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch screen/YellowY_next_reg[6] cannot be properly analyzed as its control pin screen/YellowY_next_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch screen/YellowY_next_reg[7] cannot be properly analyzed as its control pin screen/YellowY_next_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch screen/YellowY_next_reg[8] cannot be properly analyzed as its control pin screen/YellowY_next_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch screen/YellowY_next_reg[9] cannot be properly analyzed as its control pin screen/YellowY_next_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch screen/blue_click_next_reg cannot be properly analyzed as its control pin screen/blue_click_next_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch screen/blue_int_reg cannot be properly analyzed as its control pin screen/blue_int_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch screen/green_click_next_reg cannot be properly analyzed as its control pin screen/green_click_next_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch screen/green_int_reg cannot be properly analyzed as its control pin screen/green_int_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#44 Warning
+Non-clocked latch  
+The latch screen/indigo_int_reg cannot be properly analyzed as its control pin screen/indigo_int_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#45 Warning
+Non-clocked latch  
+The latch screen/orange_click_next_reg cannot be properly analyzed as its control pin screen/orange_click_next_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#46 Warning
+Non-clocked latch  
+The latch screen/orange_int_reg cannot be properly analyzed as its control pin screen/orange_int_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#47 Warning
+Non-clocked latch  
 The latch screen/red_click_next_reg cannot be properly analyzed as its control pin screen/red_click_next_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#48 Warning
+Non-clocked latch  
+The latch screen/red_int_reg cannot be properly analyzed as its control pin screen/red_int_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#49 Warning
+Non-clocked latch  
+The latch screen/violet_click_next_reg cannot be properly analyzed as its control pin screen/violet_click_next_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#50 Warning
+Non-clocked latch  
+The latch screen/violet_int_reg cannot be properly analyzed as its control pin screen/violet_int_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#51 Warning
+Non-clocked latch  
+The latch screen/yellow_click_next_reg cannot be properly analyzed as its control pin screen/yellow_click_next_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#52 Warning
+Non-clocked latch  
+The latch screen/yellow_int_reg cannot be properly analyzed as its control pin screen/yellow_int_reg/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 13 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 52 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 
