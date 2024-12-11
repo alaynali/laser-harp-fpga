@@ -195,7 +195,7 @@ always_comb begin
     end
     else 
     begin
-         phase_increment = 0;   // SW0
+         phase_increment = 2;   // SW0
     end
 end
 

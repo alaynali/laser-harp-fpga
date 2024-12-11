@@ -77,3 +77,7 @@ platform active {mb_usb_hdmi_top}
 platform config -updatehw {C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa}
 platform config -updatehw {C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa}
 platform generate -domains standalone_microblaze_0 
+platform config -updatehw {C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa}
+platform generate -domains 
