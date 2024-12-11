@@ -293,22 +293,40 @@ begin:Red_int_proc
 end
 always_comb
 begin:Orange_int_proc
-	if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11) begin
-		if (l_click) begin
-			if (orange_click) begin
-				orange_click_next = 1'b0;
-				OrangeY_next = 9'd10;
-			end
-			else begin
-				orange_click_next = 1'b1;
-				OrangeY_next = CursorY;
-			end
+	if (l_click) begin
+		if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11) begin
+			orange_click_next = 1'b1;
+			OrangeY = CursorY;
 		end
-		else 
-			orange_int = 1'b1;
+		if (CursorY <= OrangeY && CursorY >= 3*CursorX-258 && CursorY >= -3*CursorX+936 && orange_click) begin
+			orange_click_next = 1'b0;
+			OrangeY = 9'd10;
+		end
 	end
-	else
-		orange_int = 1'b0;
+	else begin
+		if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11) begin
+			orange_int = 1'b1;
+		end	
+		else begin
+			orange_int = 1'b0;
+		end
+	end
+	// if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11) begin
+	// 	if (l_click) begin
+	// 		if (orange_click) begin
+	// 			orange_click_next = 1'b0;
+	// 			OrangeY_next = 9'd10;
+	// 		end
+	// 		else begin
+	// 			orange_click_next = 1'b1;
+	// 			OrangeY_next = CursorY;
+	// 		end
+	// 	end
+	// 	else 
+	// 		orange_int = 1'b1;
+	// end
+	// else
+	// 	orange_int = 1'b0;
 end
 always_comb
 begin:Yellow_int_proc
@@ -491,9 +509,9 @@ always_ff @ (posedge vga_clk) begin
 			else if (orange_on) begin
 				// carrot
 				if (orange_click && OrangeCarrot_on) begin
-						red <= 4'hf;
-						green <= 4'hf;
-						blue <= 4'hf;
+					red <= 4'hf;
+					green <= 4'hf;
+					blue <= 4'hf;
 				end
 				// no color
 				else if (orange_click && DrawY < OrangeY) begin
