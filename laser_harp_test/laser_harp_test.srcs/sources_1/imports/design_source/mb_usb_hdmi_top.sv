@@ -68,8 +68,8 @@ module mb_usb_hdmi_top(
     .clk(Clk),
     .SPKR(SPKR),
     .SPKL(SPKL),
-    .SW(SW)
-//    .keycode(keycode1_gpio[7:0])
+    .SW(SW),
+    .keycode(keycode1_gpio[7:0])
 //    .red_click(red_click),
 //    .orange_click(orange_click),
 //    .yellow_click(yellow_click),

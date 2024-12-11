@@ -1384,3 +1384,582 @@ selectCodeEditor("mb_usb_hdmi_top.sv", 545, 296, false, true, false, false, fals
 // TclEventType: FILE_SET_CHANGE
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
 // HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 80 MB. Current time: 12/11/24, 3:08:19 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 830 seconds
+selectCodeEditor("top_level.sv", 469, 139); // ac
+// Elapsed time: 30 seconds
+selectCodeEditor("top_level.sv", 325, 374); // ac
+selectCodeEditor("top_level.sv", 246, 222); // ac
+selectCodeEditor("top_level.sv", 246, 222, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("top_level.sv", 246, 222); // ac
+selectCodeEditor("top_level.sv", 246, 222, false, false, false, false, true); // ac - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lasers_example.sv", 4); // o
+// Elapsed time: 10 seconds
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // E
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, lasers_palette (lasers_palette.sv)]", 2, false); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv), screen : lasers_example (lasers_example.sv)]", 9, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv), screen : lasers_example (lasers_example.sv), background : bg_rom (bg_rom.xci)]", 10, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("lasers_example.sv", 476, 203, false, false, false, true, false); // ac - Popup Trigger
+selectCodeEditor("lasers_example.sv", 356, 285); // ac
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 13, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/utils_1/imports/synth_1/mb_intro_top.dcp with file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/mb_usb_hdmi_top.dcp 
+// 'cw' command handler elapsed time: 4 seconds
+dismissDialog("Resetting Runs"); // bq
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Dec 11 15:22:14 2024] Launched synth_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/runme.log [Wed Dec 11 15:22:14 2024] Launched impl_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  1045 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 708 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // S.a
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("FINISH", "Finish"); // JButton
+dismissDialog("Export Hardware Platform"); // e
+// Tcl Message: write_hw_platform -fixed -include_bit -force -file C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+// Tcl Message: INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa ... 
+// Tcl Message: INFO: [Project 1-1943] The Hardware Platform can be used for Hardware INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+dismissDialog("Export Hardware Platform"); // bq
+// Elapsed time: 90 seconds
+selectCodeEditor("lasers_example.sv", 1016, 104); // ac
+selectCodeEditor("lasers_example.sv", 402, 220); // ac
+// Elapsed time: 47 seconds
+selectCodeEditor("lasers_example.sv", 152, 177); // ac
+selectCodeEditor("lasers_example.sv", 152, 312); // ac
+selectCodeEditor("lasers_example.sv", 179, 265); // ac
+selectCodeEditor("lasers_example.sv", 154, 265); // ac
+// Elapsed time: 84 seconds
+selectCodeEditor("lasers_example.sv", 357, 304); // ac
+selectCodeEditor("lasers_example.sv", 290, 306); // ac
+selectCodeEditor("lasers_example.sv", 282, 326); // ac
+selectCodeEditor("lasers_example.sv", 264, 328); // ac
+selectCodeEditor("lasers_example.sv", 236, 252); // ac
+selectCodeEditor("lasers_example.sv", 222, 239); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 82 MB. Current time: 12/11/24, 3:38:20 PM CST
+selectCodeEditor("lasers_example.sv", 191, 355); // ac
+selectCodeEditor("lasers_example.sv", 266, 359); // ac
+// Elapsed time: 21 seconds
+selectCodeEditor("lasers_example.sv", 209, 115); // ac
+selectCodeEditor("lasers_example.sv", 209, 115); // ac
+selectCodeEditor("lasers_example.sv", 209, 115, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("lasers_example.sv", 209, 115); // ac
+selectCodeEditor("lasers_example.sv", 209, 115); // ac
+selectCodeEditor("lasers_example.sv", 209, 115, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("lasers_example.sv", 701, 118); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("lasers_example.sv", 368, 200); // ac
+selectCodeEditor("lasers_example.sv", 368, 200, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("lasers_example.sv", 215, 119); // ac
+selectCodeEditor("lasers_example.sv", 215, 119, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("lasers_example.sv", 364, 197); // ac
+selectCodeEditor("lasers_example.sv", 364, 197, false, false, false, false, true); // ac - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("lasers_example.sv", 80, 343); // ac
+selectCodeEditor("lasers_example.sv", 103, 413); // ac
+selectCodeEditor("lasers_example.sv", 67, 348); // ac
+selectCodeEditor("lasers_example.sv", 72, 351); // ac
+selectCodeEditor("lasers_example.sv", 72, 351, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("lasers_example.sv", 72, 351); // ac
+// Elapsed time: 95 seconds
+selectCodeEditor("lasers_example.sv", 255, 131); // ac
+selectCodeEditor("lasers_example.sv", 223, 335); // ac
+selectCodeEditor("lasers_example.sv", 209, 360); // ac
+selectCodeEditor("lasers_example.sv", 150, 402); // ac
+// Elapsed time: 73 seconds
+selectCodeEditor("lasers_example.sv", 134, 113); // ac
+// Elapsed time: 62 seconds
+selectCodeEditor("lasers_example.sv", 986, 222); // ac
+// WARNING: HEventQueue.dispatchEvent() is taking  1640 ms.
+// Elapsed time: 12 seconds
+selectCodeEditor("lasers_example.sv", 106, 266); // ac
+selectCodeEditor("lasers_example.sv", 104, 287); // ac
+selectCodeEditor("lasers_example.sv", 354, 290); // ac
+// WARNING: HEventQueue.dispatchEvent() is taking  1622 ms.
+// Elapsed time: 13 seconds
+selectCodeEditor("lasers_example.sv", 319, 328); // ac
+selectCodeEditor("lasers_example.sv", 115, 381); // ac
+selectCodeEditor("lasers_example.sv", 109, 383); // ac
+selectCodeEditor("lasers_example.sv", 287, 416); // ac
+selectCodeEditor("lasers_example.sv", 135, 370); // ac
+selectCodeEditor("lasers_example.sv", 108, 392); // ac
+selectCodeEditor("lasers_example.sv", 104, 384); // ac
+selectCodeEditor("lasers_example.sv", 237, 268); // ac
+typeControlKey((HResource) null, "lasers_example.sv", 'v'); // ac
+selectCodeEditor("lasers_example.sv", 107, 304); // ac
+selectCodeEditor("lasers_example.sv", 107, 398); // ac
+selectCodeEditor("lasers_example.sv", 29, 329); // ac
+selectCodeEditor("lasers_example.sv", 51, 335); // ac
+selectCodeEditor("lasers_example.sv", 51, 335, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("lasers_example.sv", 34, 326); // ac
+selectCodeEditor("lasers_example.sv", 93, 414); // ac
+selectCodeEditor("lasers_example.sv", 26, 348); // ac
+selectCodeEditor("lasers_example.sv", 76, 411); // ac
+selectCodeEditor("lasers_example.sv", 76, 411, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("lasers_example.sv", 124, 259); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("lasers_example.sv", 80, 437); // ac
+selectCodeEditor("lasers_example.sv", 33, 437); // ac
+selectCodeEditor("lasers_example.sv", 33, 437, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("lasers_example.sv", 127, 153); // ac
+selectCodeEditor("lasers_example.sv", 120, 203); // ac
+selectCodeEditor("lasers_example.sv", 116, 235); // ac
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 13, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/utils_1/imports/synth_1/mb_intro_top.dcp with file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/mb_usb_hdmi_top.dcp 
+dismissDialog("Resetting Runs"); // bq
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date 
+// Tcl Message: [Wed Dec 11 15:45:28 2024] Launched synth_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/runme.log [Wed Dec 11 15:45:28 2024] Launched impl_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 328 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // S.a
+// Elapsed time: 71 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("FINISH", "Finish"); // JButton
+// 'n' command handler elapsed time: 13 seconds
+dismissDialog("Export Hardware Platform"); // e
+// Tcl Message: write_hw_platform -fixed -include_bit -force -file C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+// Tcl Message: INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa ... 
+// Tcl Message: INFO: [Project 1-1943] The Hardware Platform can be used for Hardware INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+dismissDialog("Export Hardware Platform"); // bq
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 13, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // f: FALSE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/utils_1/imports/synth_1/mb_intro_top.dcp with file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/mb_usb_hdmi_top.dcp 
+dismissDialog("Resetting Runs"); // bq
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date 
+// Tcl Message: [Wed Dec 11 15:52:32 2024] Launched synth_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/runme.log [Wed Dec 11 15:52:32 2024] Launched impl_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 13, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// TclEventType: RUN_STATUS_CHANGE
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // f: FALSE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // u
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// 'cw' command handler elapsed time: 4 seconds
+dismissDialog("Resetting Runs"); // bq
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Dec 11 15:52:39 2024] Launched synth_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/runme.log [Wed Dec 11 15:52:39 2024] Launched impl_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 64 seconds
+selectCodeEditor("lasers_example.sv", 1032, 51); // ac
+selectCodeEditor("lasers_example.sv", 696, 180); // ac
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 84 seconds
+selectCodeEditor("lasers_example.sv", 252, 136); // ac
+selectCodeEditor("lasers_example.sv", 243, 133); // ac
+selectCodeEditor("lasers_example.sv", 219, 118); // ac
+selectCodeEditor("lasers_example.sv", 195, 118); // ac
+// Elapsed time: 15 seconds
+selectCodeEditor("lasers_example.sv", 163, 119); // ac
+selectCodeEditor("lasers_example.sv", 218, 178); // ac
+selectCodeEditor("lasers_example.sv", 177, 154); // ac
+selectCodeEditor("lasers_example.sv", 165, 181); // ac
+selectCodeEditor("lasers_example.sv", 167, 290); // ac
+selectCodeEditor("lasers_example.sv", 105, 413); // ac
+selectCodeEditor("lasers_example.sv", 81, 447); // ac
+selectCodeEditor("lasers_example.sv", 75, 438); // ac
+// Elapsed time: 28 seconds
+selectCodeEditor("lasers_example.sv", 728, 83); // ac
+// Elapsed time: 15 seconds
+selectCodeEditor("lasers_example.sv", 152, 155); // ac
+selectCodeEditor("lasers_example.sv", 883, 175); // ac
+selectCodeEditor("lasers_example.sv", 910, 162); // ac
+selectCodeEditor("lasers_example.sv", 910, 162, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("lasers_example.sv", 193, 160); // ac
+selectCodeEditor("lasers_example.sv", 154, 154); // ac
+typeControlKey((HResource) null, "lasers_example.sv", 'c'); // ac
+selectCodeEditor("lasers_example.sv", 874, 72); // ac
+typeControlKey((HResource) null, "lasers_example.sv", 'v'); // ac
+selectCodeEditor("lasers_example.sv", 175, 134); // ac
+selectCodeEditor("lasers_example.sv", 159, 324); // ac
+selectCodeEditor("lasers_example.sv", 159, 324, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("lasers_example.sv", 159, 324); // ac
+selectCodeEditor("lasers_example.sv", 159, 324, false, false, false, true, false); // ac - Popup Trigger
+selectCodeEditor("lasers_example.sv", 94, 284); // ac
+selectCodeEditor("lasers_example.sv", 148, 326); // ac
+selectCodeEditor("lasers_example.sv", 148, 326, false, false, false, true, false); // ac - Popup Trigger
+selectCodeEditor("lasers_example.sv", 97, 283); // ac
+selectCodeEditor("lasers_example.sv", 106, 273); // ac
+selectCodeEditor("lasers_example.sv", 106, 269); // ac
+selectCodeEditor("lasers_example.sv", 156, 218); // ac
+selectCodeEditor("lasers_example.sv", 97, 165); // ac
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // S.a
+selectCodeEditor("lasers_example.sv", 212, 188); // ac
+selectCodeEditor("lasers_example.sv", 212, 188, false, false, false, false, true); // ac - Double Click
+selectCodeEditor("lasers_example.sv", 212, 188); // ac
+selectCodeEditor("lasers_example.sv", 154, 174); // ac
+selectCodeEditor("lasers_example.sv", 152, 206); // ac
+selectCodeEditor("lasers_example.sv", 152, 218); // ac
+// WARNING: HEventQueue.dispatchEvent() is taking  1184 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("FINISH", "Finish"); // JButton
+// 'n' command handler elapsed time: 3 seconds
+dismissDialog("Export Hardware Platform"); // e
+// Tcl Message: write_hw_platform -fixed -include_bit -force -file C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+// Tcl Message: INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa ... 
+// Tcl Message: INFO: [Project 1-1943] The Hardware Platform can be used for Hardware INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+dismissDialog("Export Hardware Platform"); // bq
+// Elapsed time: 14 seconds
+selectCodeEditor("lasers_example.sv", 1057, 80); // ac
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 13, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // f: FALSE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/utils_1/imports/synth_1/mb_intro_top.dcp with file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/mb_usb_hdmi_top.dcp 
+dismissDialog("Resetting Runs"); // bq
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Dec 11 15:58:09 2024] Launched synth_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/runme.log [Wed Dec 11 15:58:09 2024] Launched impl_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 133 seconds
+selectCodeEditor("lasers_example.sv", 335, 114); // ac
+selectCodeEditor("lasers_example.sv", 293, 129); // ac
+// Elapsed time: 72 seconds
+selectCodeEditor("lasers_example.sv", 261, 311); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 88 seconds
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "violet"); // d.c
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // S.a
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("FINISH", "Finish"); // JButton
+dismissDialog("Export Hardware Platform"); // e
+// Tcl Message: write_hw_platform -fixed -include_bit -force -file C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+// Tcl Message: INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa ... 
+// Tcl Message: INFO: [Project 1-1943] The Hardware Platform can be used for Hardware INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+dismissDialog("Export Hardware Platform"); // bq
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 13, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // f: FALSE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/utils_1/imports/synth_1/mb_intro_top.dcp with file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/mb_usb_hdmi_top.dcp 
+dismissDialog("Resetting Runs"); // bq
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date 
+// Tcl Message: [Wed Dec 11 16:03:18 2024] Launched synth_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/runme.log [Wed Dec 11 16:03:19 2024] Launched impl_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bq
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 75 seconds
+selectCodeEditor("lasers_example.sv", 1063, 46); // ac
+selectCodeEditor("lasers_example.sv", 183, 93); // ac
+selectCodeEditor("lasers_example.sv", 187, 64); // ac
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+selectCodeEditor("lasers_example.sv", 362, 79); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("lasers_example.sv", 181, 236); // ac
+selectCodeEditor("lasers_example.sv", 164, 221); // ac
+selectCodeEditor("lasers_example.sv", 147, 221); // ac
+selectCodeEditor("lasers_example.sv", 248, 225); // ac
+selectCodeEditor("lasers_example.sv", 155, 227); // ac
+selectCodeEditor("lasers_example.sv", 388, 220); // ac
+selectCodeEditor("lasers_example.sv", 554, 222); // ac
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 48 seconds
+selectCodeEditor("lasers_example.sv", 466, 202); // ac
+selectCodeEditor("lasers_example.sv", 175, 190); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 89 MB. Current time: 12/11/24, 4:08:21 PM CST
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 139 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // S.a
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("FINISH", "Finish"); // JButton
+// 'n' command handler elapsed time: 8 seconds
+dismissDialog("Export Hardware Platform"); // e
+// Tcl Message: write_hw_platform -fixed -include_bit -force -file C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+// Tcl Message: INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa ... 
+// Tcl Message: INFO: [Project 1-1943] The Hardware Platform can be used for Hardware INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+dismissDialog("Export Hardware Platform"); // bq
+// Elapsed time: 36 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 13, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectCheckBox(RDIResource.MessageWithOptionDialog_DONT_SHOW_THIS_DIALOG_AGAIN, "Don't show this dialog again", false); // f: FALSE
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/utils_1/imports/synth_1/mb_intro_top.dcp with file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/mb_usb_hdmi_top.dcp 
+dismissDialog("Resetting Runs"); // bq
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date 
+// Tcl Message: [Wed Dec 11 16:09:26 2024] Launched synth_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/runme.log [Wed Dec 11 16:09:26 2024] Launched impl_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 245 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 31, 252); // ac
+// Elapsed time: 16 seconds
+selectCodeEditor("top_level.sv", 71, 207); // ac
+selectCodeEditor("top_level.sv", 87, 238); // ac
+selectCodeEditor("top_level.sv", 58, 287); // ac
+selectCodeEditor("top_level.sv", 50, 57); // ac
+selectCodeEditor("top_level.sv", 150, 420); // ac
+selectCodeEditor("top_level.sv", 162, 310); // ac
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 26 seconds
+dismissDialog("Bitstream Generation Completed"); // S.a
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a
+selectButton("FINISH", "Finish"); // JButton
+// 'n' command handler elapsed time: 9 seconds
+dismissDialog("Save Project"); // W.d
+dismissDialog("Save Constraints"); // bq
+dismissDialog("Export Hardware Platform"); // e
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: write_hw_platform -fixed -include_bit -force -file C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+// Tcl Message: INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa ... 
+// Tcl Message: INFO: [Project 1-1943] The Hardware Platform can be used for Hardware INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+dismissDialog("Export Hardware Platform"); // bq

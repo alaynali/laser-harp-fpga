@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Wed Dec 11 16:13:55 2024
+| Date         : Wed Dec 11 16:39:11 2024
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_methodology -file mb_usb_hdmi_top_methodology_drc_routed.rpt -pb mb_usb_hdmi_top_methodology_drc_routed.pb -rpx mb_usb_hdmi_top_methodology_drc_routed.rpx
 | Design       : mb_usb_hdmi_top
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 304
+             Violations found: 289
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
@@ -33,11 +33,11 @@ Table of Contents
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 20         |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 2          |
 | DPIR-1    | Warning          | Asynchronous driver check                          | 96         |
-| LUTAR-1   | Warning          | LUT drives async reset alert                       | 4          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 5          |
 | PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 10         |
 | SYNTH-10  | Warning          | Wide multiplier                                    | 30         |
 | TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
-| TIMING-18 | Warning          | Missing input or output delay                      | 51         |
+| TIMING-18 | Warning          | Missing input or output delay                      | 35         |
 | TIMING-20 | Warning          | Non-clocked latch                                  | 85         |
 | LATCH-1   | Advisory         | Existing latches in the design                     | 1          |
 +-----------+------------------+----------------------------------------------------+------------+
@@ -656,20 +656,25 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell audio/flag_next_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) audio/flag_next_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
 LUT drives async reset alert  
 LUT cell vga_to_hdmi/inst/encr/oserdes_m_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) vga_to_hdmi/inst/encg/dout_reg[9]/CLR,
 vga_to_hdmi/inst/encr/cnt_reg[1]/CLR, vga_to_hdmi/inst/encr/cnt_reg[2]/CLR,
@@ -688,42 +693,42 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X60Y14 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X65Y8 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X61Y14 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X65Y10 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X62Y11 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X64Y8 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X62Y13 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X64Y10 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X63Y15 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X61Y9 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X62Y15 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X60Y9 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X61Y12 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X62Y9 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X65Y17 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X65Y13 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
@@ -733,7 +738,7 @@ Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X65Y21 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X64Y16 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 SYNTH-10#1 Warning
@@ -893,262 +898,182 @@ Related violations: <none>
 
 TIMING-18#1 Warning
 Missing input or output delay  
-An input delay is missing on SW[0] relative to clock(s) clk_100
+An input delay is missing on gpio_usb_int_tri_i[0] relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#2 Warning
 Missing input or output delay  
-An input delay is missing on SW[10] relative to clock(s) clk_100
+An input delay is missing on reset_rtl_0 relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An input delay is missing on SW[11] relative to clock(s) clk_100
+An input delay is missing on uart_rtl_0_rxd relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An input delay is missing on SW[12] relative to clock(s) clk_100
+An input delay is missing on usb_spi_miso relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An input delay is missing on SW[13] relative to clock(s) clk_100
+An output delay is missing on SPKL relative to clock(s) clk_100
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An input delay is missing on SW[14] relative to clock(s) clk_100
+An output delay is missing on SPKR relative to clock(s) clk_100
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An input delay is missing on SW[15] relative to clock(s) clk_100
+An output delay is missing on gpio_usb_rst_tri_o relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#8 Warning
 Missing input or output delay  
-An input delay is missing on SW[1] relative to clock(s) clk_100
+An output delay is missing on hex_gridA[0] relative to clock(s) clk_100
 Related violations: <none>
 
 TIMING-18#9 Warning
 Missing input or output delay  
-An input delay is missing on SW[2] relative to clock(s) clk_100
+An output delay is missing on hex_gridA[1] relative to clock(s) clk_100
 Related violations: <none>
 
 TIMING-18#10 Warning
 Missing input or output delay  
-An input delay is missing on SW[3] relative to clock(s) clk_100
+An output delay is missing on hex_gridA[2] relative to clock(s) clk_100
 Related violations: <none>
 
 TIMING-18#11 Warning
 Missing input or output delay  
-An input delay is missing on SW[4] relative to clock(s) clk_100
+An output delay is missing on hex_gridA[3] relative to clock(s) clk_100
 Related violations: <none>
 
 TIMING-18#12 Warning
 Missing input or output delay  
-An input delay is missing on SW[5] relative to clock(s) clk_100
+An output delay is missing on hex_gridB[0] relative to clock(s) clk_100
 Related violations: <none>
 
 TIMING-18#13 Warning
 Missing input or output delay  
-An input delay is missing on SW[6] relative to clock(s) clk_100
+An output delay is missing on hex_gridB[1] relative to clock(s) clk_100
 Related violations: <none>
 
 TIMING-18#14 Warning
 Missing input or output delay  
-An input delay is missing on SW[7] relative to clock(s) clk_100
+An output delay is missing on hex_gridB[2] relative to clock(s) clk_100
 Related violations: <none>
 
 TIMING-18#15 Warning
 Missing input or output delay  
-An input delay is missing on SW[8] relative to clock(s) clk_100
+An output delay is missing on hex_gridB[3] relative to clock(s) clk_100
 Related violations: <none>
 
 TIMING-18#16 Warning
 Missing input or output delay  
-An input delay is missing on SW[9] relative to clock(s) clk_100
+An output delay is missing on hex_segA[0] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#17 Warning
 Missing input or output delay  
-An input delay is missing on gpio_usb_int_tri_i[0] relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
+An output delay is missing on hex_segA[1] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#18 Warning
 Missing input or output delay  
-An input delay is missing on reset_rtl_0 relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
+An output delay is missing on hex_segA[2] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#19 Warning
 Missing input or output delay  
-An input delay is missing on uart_rtl_0_rxd relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
+An output delay is missing on hex_segA[3] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#20 Warning
 Missing input or output delay  
-An input delay is missing on usb_spi_miso relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
+An output delay is missing on hex_segA[4] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#21 Warning
 Missing input or output delay  
-An output delay is missing on SPKL relative to clock(s) clk_100
+An output delay is missing on hex_segA[5] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#22 Warning
 Missing input or output delay  
-An output delay is missing on SPKR relative to clock(s) clk_100
+An output delay is missing on hex_segA[6] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#23 Warning
 Missing input or output delay  
-An output delay is missing on gpio_usb_rst_tri_o relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
+An output delay is missing on hex_segA[7] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#24 Warning
 Missing input or output delay  
-An output delay is missing on hex_gridA[0] relative to clock(s) clk_100
+An output delay is missing on hex_segB[0] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#25 Warning
 Missing input or output delay  
-An output delay is missing on hex_gridA[1] relative to clock(s) clk_100
+An output delay is missing on hex_segB[1] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#26 Warning
 Missing input or output delay  
-An output delay is missing on hex_gridA[2] relative to clock(s) clk_100
+An output delay is missing on hex_segB[2] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#27 Warning
 Missing input or output delay  
-An output delay is missing on hex_gridA[3] relative to clock(s) clk_100
+An output delay is missing on hex_segB[3] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#28 Warning
 Missing input or output delay  
-An output delay is missing on hex_gridB[0] relative to clock(s) clk_100
+An output delay is missing on hex_segB[4] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#29 Warning
 Missing input or output delay  
-An output delay is missing on hex_gridB[1] relative to clock(s) clk_100
+An output delay is missing on hex_segB[5] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#30 Warning
 Missing input or output delay  
-An output delay is missing on hex_gridB[2] relative to clock(s) clk_100
+An output delay is missing on hex_segB[6] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#31 Warning
 Missing input or output delay  
-An output delay is missing on hex_gridB[3] relative to clock(s) clk_100
+An output delay is missing on hex_segB[7] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#32 Warning
 Missing input or output delay  
-An output delay is missing on hex_segA[0] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
+An output delay is missing on uart_rtl_0_txd relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#33 Warning
 Missing input or output delay  
-An output delay is missing on hex_segA[1] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
+An output delay is missing on usb_spi_mosi relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-18#34 Warning
 Missing input or output delay  
-An output delay is missing on hex_segA[2] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#35 Warning
-Missing input or output delay  
-An output delay is missing on hex_segA[3] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#36 Warning
-Missing input or output delay  
-An output delay is missing on hex_segA[4] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#37 Warning
-Missing input or output delay  
-An output delay is missing on hex_segA[5] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#38 Warning
-Missing input or output delay  
-An output delay is missing on hex_segA[6] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#39 Warning
-Missing input or output delay  
-An output delay is missing on hex_segA[7] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#40 Warning
-Missing input or output delay  
-An output delay is missing on hex_segB[0] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#41 Warning
-Missing input or output delay  
-An output delay is missing on hex_segB[1] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#42 Warning
-Missing input or output delay  
-An output delay is missing on hex_segB[2] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#43 Warning
-Missing input or output delay  
-An output delay is missing on hex_segB[3] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#44 Warning
-Missing input or output delay  
-An output delay is missing on hex_segB[4] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#45 Warning
-Missing input or output delay  
-An output delay is missing on hex_segB[5] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#46 Warning
-Missing input or output delay  
-An output delay is missing on hex_segB[6] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#47 Warning
-Missing input or output delay  
-An output delay is missing on hex_segB[7] relative to clock(s) clk_100, mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#48 Warning
-Missing input or output delay  
-An output delay is missing on uart_rtl_0_txd relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#49 Warning
-Missing input or output delay  
-An output delay is missing on usb_spi_mosi relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#50 Warning
-Missing input or output delay  
 An output delay is missing on usb_spi_sclk relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
-TIMING-18#51 Warning
+TIMING-18#35 Warning
 Missing input or output delay  
 An output delay is missing on usb_spi_ss relative to clock(s) mb_block_i/clk_wiz_1/inst/clk_in1
 Related violations: <none>
 
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch audio/harmonics_reg cannot be properly analyzed as its control pin audio/harmonics_reg/G is not reached by a timing clock
+The latch audio/flag_next_reg cannot be properly analyzed as its control pin audio/flag_next_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning

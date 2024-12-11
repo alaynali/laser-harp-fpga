@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Dec 11 16:09:29 2024
-# Process ID: 28980
+# Start of session at: Wed Dec 11 16:33:59 2024
+# Process ID: 31300
 # Current directory: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1
 # Command line: vivado.exe -log mb_usb_hdmi_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_usb_hdmi_top.tcl
 # Log file: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/mb_usb_hdmi_top.vds
@@ -11,7 +11,7 @@
 # Running On: MSI, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 6, Host memory: 34172 MB
 #-----------------------------------------------------------
 source mb_usb_hdmi_top.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1001.523 ; gain = 116.570
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1002.613 ; gain = 117.898
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/estel/laser-harp-fpga/laser_harp_test/RD_hdmi_ip2020'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
@@ -27,11 +27,11 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 26152
+INFO: [Synth 8-7075] Helper process launched with PID 26436
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'q' is not allowed [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/sync_debounce.sv:20]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1867.906 ; gain = 408.359
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1871.277 ; gain = 407.367
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'mb_usb_hdmi_top' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:14]
 INFO: [Synth 8-6157] synthesizing module 'sound' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/top_level.sv:66]
@@ -51,22 +51,22 @@ INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [C:/Users/estel/laser-h
 INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/hex_driver.sv:11]
 INFO: [Synth 8-6155] done synthesizing module 'hex_driver' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/hex_driver.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'mb_usb' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:936]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_uartlite_0_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_uartlite_0_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_clk_wiz_1_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_clk_wiz_1_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_gpio_usb_int_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_gpio_usb_int_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_gpio_usb_int_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_gpio_usb_int_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_gpio_usb_keycode_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_gpio_usb_keycode_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_gpio_usb_keycode_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_gpio_usb_keycode_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_gpio_usb_rst_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_gpio_usb_rst_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_gpio_usb_rst_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_gpio_usb_rst_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_mdm_1_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_mdm_1_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_microblaze_0_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_microblaze_0_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_microblaze_0_axi_intc_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_microblaze_0_axi_intc_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_uartlite_0_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_uartlite_0_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_clk_wiz_1_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_clk_wiz_1_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_gpio_usb_int_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_gpio_usb_int_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_gpio_usb_int_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_gpio_usb_int_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_gpio_usb_keycode_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_gpio_usb_keycode_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_gpio_usb_keycode_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_gpio_usb_keycode_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_gpio_usb_rst_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_gpio_usb_rst_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_gpio_usb_rst_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_gpio_usb_rst_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_mdm_1_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_mdm_1_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_microblaze_0_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_microblaze_0_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_microblaze_0_axi_intc_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_microblaze_0_axi_intc_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_microblaze_0_axi_intc_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'mb_usb_microblaze_0_axi_periph_0' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1602]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1CNVJ1L' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1CNVJ1L' (0#1) [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:12]
@@ -84,46 +84,46 @@ INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1Y6O2J1' [c:/Users/es
 INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1Y6O2J1' (0#1) [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:804]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_16FJ1YW' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2926]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_16FJ1YW' (0#1) [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2926]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_xbar_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_xbar_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_xbar_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_xbar_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_xbar_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_xbar_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'mb_usb_xbar_0' is unconnected for instance 'xbar' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2651]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'mb_usb_xbar_0' is unconnected for instance 'xbar' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2651]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'mb_usb_xbar_0' has 40 connections declared, but only 38 given [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2651]
 INFO: [Synth 8-6155] done synthesizing module 'mb_usb_microblaze_0_axi_periph_0' (0#1) [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1602]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_4XV58R' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2692]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_dlmb_bram_if_cntlr_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_dlmb_v10_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_dlmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_dlmb_v10_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_dlmb_bram_if_cntlr_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_dlmb_v10_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_dlmb_v10_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_dlmb_v10_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_usb_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2838]
 WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'mb_usb_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2838]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_ilmb_bram_if_cntlr_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_ilmb_v10_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_ilmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_ilmb_v10_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_ilmb_bram_if_cntlr_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_ilmb_v10_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_ilmb_v10_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_ilmb_v10_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_usb_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2884]
 WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'mb_usb_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2884]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_lmb_bram_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_lmb_bram_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_lmb_bram_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_lmb_bram_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_lmb_bram_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_lmb_bram_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_usb_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2909]
 WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_usb_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2909]
 WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'mb_usb_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2909]
 INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_4XV58R' (0#1) [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2692]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_rst_clk_wiz_1_100M_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_rst_clk_wiz_1_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_rst_clk_wiz_1_100M_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_rst_clk_wiz_1_100M_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_usb_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1532]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_usb_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1532]
 WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'mb_usb_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1532]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_spi_usb_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_spi_usb_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_spi_usb_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_spi_usb_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_spi_usb_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_spi_usb_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_spi_usb_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_spi_usb_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'io0_t' of module 'mb_usb_spi_usb_0' is unconnected for instance 'spi_usb' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1541]
 WARNING: [Synth 8-7071] port 'io1_o' of module 'mb_usb_spi_usb_0' is unconnected for instance 'spi_usb' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1541]
 WARNING: [Synth 8-7071] port 'io1_t' of module 'mb_usb_spi_usb_0' is unconnected for instance 'spi_usb' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1541]
 WARNING: [Synth 8-7071] port 'sck_t' of module 'mb_usb_spi_usb_0' is unconnected for instance 'spi_usb' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1541]
 WARNING: [Synth 8-7071] port 'ss_t' of module 'mb_usb_spi_usb_0' is unconnected for instance 'spi_usb' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1541]
 WARNING: [Synth 8-7023] instance 'spi_usb' of module 'mb_usb_spi_usb_0' has 33 connections declared, but only 28 given [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1541]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_timer_usb_axi_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_timer_usb_axi_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_timer_usb_axi_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/mb_usb_timer_usb_axi_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_timer_usb_axi_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_timer_usb_axi_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_timer_usb_axi_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/mb_usb_timer_usb_axi_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'generateout0' of module 'mb_usb_timer_usb_axi_0' is unconnected for instance 'timer_usb_axi' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1570]
 WARNING: [Synth 8-7071] port 'generateout1' of module 'mb_usb_timer_usb_axi_0' is unconnected for instance 'timer_usb_axi' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1570]
 WARNING: [Synth 8-7071] port 'pwm0' of module 'mb_usb_timer_usb_axi_0' is unconnected for instance 'timer_usb_axi' [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1570]
@@ -133,27 +133,28 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/es
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'mb_usb_xlconcat_0_0' (0#1) [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_xlconcat_0_0/synth/mb_usb_xlconcat_0_0.v:53]
 INFO: [Synth 8-6155] done synthesizing module 'mb_usb' (0#1) [c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.v:936]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
 INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
 WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:124]
 WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:124]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/hdmi_tx_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'lasers_example' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/lasers/lasers_example.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'bg_rom' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/bg_rom_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'bg_rom' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/bg_rom_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'bg_rom' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/bg_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'bg_rom' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/bg_rom_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'bg_palette' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/Images/bg/bg/bg_palette.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'bg_palette' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/Images/bg/bg/bg_palette.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'lasers_example' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/lasers/lasers_example.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'cursor_impl' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/new/cursor_impl.sv:23]
 INFO: [Synth 8-6155] done synthesizing module 'cursor_impl' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/new/cursor_impl.sv:23]
 WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:204]
-INFO: [Synth 8-6157] synthesizing module 'ila_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/ila_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'ila_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-28980-MSI/realtime/ila_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'ila_0' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/ila_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ila_0' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-31300-MSI/realtime/ila_0_stub.v:5]
 INFO: [Synth 8-6155] done synthesizing module 'mb_usb_hdmi_top' (0#1) [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:14]
 WARNING: [Synth 8-6014] Unused sequential element outL_reg was removed.  [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/sine.sv:1657]
+WARNING: [Synth 8-87] always_comb on 'flag_next_reg' did not result in combinational logic [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/top_level.sv:182]
 WARNING: [Synth 8-87] always_comb on 'harmonics_reg' did not result in combinational logic [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/top_level.sv:97]
 WARNING: [Synth 8-87] always_comb on 'red_click_next_reg' did not result in combinational logic [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/lasers/lasers_example.sv:251]
 WARNING: [Synth 8-87] always_comb on 'RedY_next_reg' did not result in combinational logic [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/lasers/lasers_example.sv:252]
@@ -184,6 +185,7 @@ INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance '
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'screen'. This will prevent further optimization [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:174]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'HexB'. This will prevent further optimization [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:91]
 INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'HexA'. This will prevent further optimization [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:83]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'audio'. This will prevent further optimization [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:67]
 WARNING: [Synth 8-7129] Port keycode[31] in module cursor_impl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port keycode[30] in module cursor_impl is either unconnected or has no load
 WARNING: [Synth 8-7129] Port keycode[29] in module cursor_impl is either unconnected or has no load
@@ -286,18 +288,18 @@ WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_4_xlconcat is eithe
 WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1982.105 ; gain = 522.559
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1985.949 ; gain = 522.039
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1982.105 ; gain = 522.559
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2003.852 ; gain = 539.941
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1982.105 ; gain = 522.559
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2003.852 ; gain = 539.941
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1982.105 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.069 . Memory (MB): peak = 2003.852 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -447,25 +449,25 @@ Parsing XDC File [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test
 Finished Parsing XDC File [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2055.320 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2116.578 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 2055.320 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2116.578 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/spi_usb' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2056.062 ; gain = 596.516
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2056.062 ; gain = 596.516
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -513,11 +515,12 @@ Applied set_property KEEP_HIERARCHY = SOFT for vga_to_hdmi. (constraint file  au
 Applied set_property KEEP_HIERARCHY = SOFT for clk_wiz. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for screen/background. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2056.062 ; gain = 596.516
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6040] Register phase_1_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6040] Register phase_2_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 WARNING: [Synth 8-6040] Register phase_3_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-327] inferring latch for variable 'flag_next_reg' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/top_level.sv:182]
 WARNING: [Synth 8-327] inferring latch for variable 'harmonics_reg' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/top_level.sv:97]
 WARNING: [Synth 8-327] inferring latch for variable 'red_click_next_reg' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/lasers/lasers_example.sv:251]
 WARNING: [Synth 8-327] inferring latch for variable 'RedY_next_reg' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/lasers/lasers_example.sv:252]
@@ -541,7 +544,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'VioletY_next_reg' [C:/Users
 WARNING: [Synth 8-327] inferring latch for variable 'violet_int_reg' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/lasers/lasers_example.sv:392]
 WARNING: [Synth 8-327] inferring latch for variable 'indigo_int_reg' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/lasers/lasers_example.sv:371]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 2056.062 ; gain = 596.516
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -562,7 +565,7 @@ Detailed RTL Component Info :
 	               12 Bit    Registers := 2     
 	               10 Bit    Registers := 11    
 	                4 Bit    Registers := 3     
-	                1 Bit    Registers := 58    
+	                1 Bit    Registers := 59    
 +---Multipliers : 
 	              32x32  Multipliers := 9     
 +---ROMs : 
@@ -571,14 +574,12 @@ Detailed RTL Component Info :
 	   2 Input   10 Bit        Muxes := 13    
 	   4 Input    8 Bit        Muxes := 2     
 	   2 Input    8 Bit        Muxes := 2     
-	  17 Input    5 Bit        Muxes := 1     
 	   5 Input    4 Bit        Muxes := 2     
 	   3 Input    4 Bit        Muxes := 9     
 	   2 Input    4 Bit        Muxes := 19    
 	   2 Input    3 Bit        Muxes := 6     
 	   2 Input    2 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 18    
-	  17 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 20    
 	   4 Input    1 Bit        Muxes := 2     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -596,6 +597,9 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-6040] Register sine_wave/phase_1_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register sine_wave/phase_2_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register sine_wave/phase_3_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
 DSP Report: Generating DSP red2, operation Mode is: A*B.
 DSP Report: operator red2 is absorbed into DSP red2.
 DSP Report: Generating DSP red3, operation Mode is: A*B.
@@ -754,29 +758,24 @@ DSP Report: operator blue_click_next5 is absorbed into DSP violet_click_next5.
 DSP Report: Generating DSP rom_address, operation Mode is: C+A*(B:0x280).
 DSP Report: operator rom_address is absorbed into DSP rom_address.
 DSP Report: operator rom_address0 is absorbed into DSP rom_address.
-WARNING: [Synth 8-3936] Found unconnected internal register 'audio/sine_wave/phase_1_reg' and it is trimmed from '32' to '8' bits. [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/sine.sv:1643]
-WARNING: [Synth 8-3936] Found unconnected internal register 'audio/sine_wave/phase_2_reg' and it is trimmed from '32' to '8' bits. [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/sine.sv:1644]
-WARNING: [Synth 8-3936] Found unconnected internal register 'audio/sine_wave/phase_3_reg' and it is trimmed from '32' to '10' bits. [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/sine.sv:1645]
-WARNING: [Synth 8-6040] Register audio/sine_wave/phase_1_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6040] Register audio/sine_wave/phase_2_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
-WARNING: [Synth 8-6040] Register audio/sine_wave/phase_3_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-3332] Sequential element (harmonics_reg) is unused and will be removed from module sound.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2056.062 ; gain = 596.516
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 ROM: Preliminary Mapping Report
-+----------------+------------------------------+---------------+----------------+
-|Module Name     | RTL Object                   | Depth x Width | Implemented As | 
-+----------------+------------------------------+---------------+----------------+
-|bg_palette      | palette                      | 32x12         | LUT            | 
-|lasers_example  | bg_palette/palette           | 32x12         | LUT            | 
-|mb_usb_hdmi_top | audio/sine_wave/sample_1_reg | 256x13        | Block RAM      | 
-|mb_usb_hdmi_top | audio/sine_wave/sample_2_reg | 256x12        | Block RAM      | 
-|mb_usb_hdmi_top | audio/sine_wave/sample_3_reg | 256x12        | Block RAM      | 
-+----------------+------------------------------+---------------+----------------+
++---------------+------------------------+---------------+----------------+
+|Module Name    | RTL Object             | Depth x Width | Implemented As | 
++---------------+------------------------+---------------+----------------+
+|bg_palette     | palette                | 32x12         | LUT            | 
+|sound          | sine_wave/sample_1_reg | 256x13        | Block RAM      | 
+|sound          | sine_wave/sample_2_reg | 256x12        | Block RAM      | 
+|sound          | sine_wave/sample_3_reg | 256x12        | Block RAM      | 
+|lasers_example | bg_palette/palette     | 32x12         | LUT            | 
++---------------+------------------------+---------------+----------------+
 
 
 DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
@@ -847,22 +846,20 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'Clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 2056.062 ; gain = 596.516
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:41 . Memory (MB): peak = 2071.535 ; gain = 611.988
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-7052] The timing for the instance audio/sine_wave/sample_1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance audio/sine_wave/sample_2_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance audio/sine_wave/sample_3_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:00:44 . Memory (MB): peak = 2082.059 ; gain = 622.512
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -880,37 +877,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 2096.832 ; gain = 637.285
+Finished IO Insertion : Time (s): cpu = 00:00:53 ; elapsed = 00:00:59 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 2096.832 ; gain = 637.285
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:53 ; elapsed = 00:00:59 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2096.832 ; gain = 637.285
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2096.832 ; gain = 637.285
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:01:00 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2096.859 ; gain = 637.312
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2096.859 ; gain = 637.312
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -1019,46 +1016,49 @@ Report Cell Usage:
 |19    |mb_usb_spi_usb               |     1|
 |20    |mb_usb_timer_usb_axi         |     1|
 |21    |mb_usb_xbar                  |     1|
-|22    |CARRY4                       |   471|
+|22    |CARRY4                       |   387|
 |23    |DSP48E1                      |    44|
-|25    |LUT1                         |   214|
-|26    |LUT2                         |   700|
-|27    |LUT3                         |   194|
-|28    |LUT4                         |   639|
-|29    |LUT5                         |   167|
-|30    |LUT6                         |   242|
-|31    |RAMB18E1                     |     3|
-|34    |FDCE                         |    22|
-|35    |FDRE                         |   476|
-|36    |FDSE                         |    24|
-|37    |LD                           |    85|
-|38    |IBUF                         |    20|
-|39    |OBUF                         |    31|
+|25    |LUT1                         |   176|
+|26    |LUT2                         |   648|
+|27    |LUT3                         |   177|
+|28    |LUT4                         |   611|
+|29    |LUT5                         |   155|
+|30    |LUT6                         |   233|
+|31    |RAMB18E1                     |     1|
+|32    |FDCE                         |    22|
+|33    |FDRE                         |   141|
+|34    |FDSE                         |    24|
+|35    |LD                           |    84|
+|36    |LDP                          |     1|
+|37    |IBUF                         |     4|
+|38    |OBUF                         |    31|
 +------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2096.859 ; gain = 637.312
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2116.578 ; gain = 652.668
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 73 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:47 . Memory (MB): peak = 2096.859 ; gain = 563.355
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 2096.859 ; gain = 637.312
+Synthesis finished with 0 errors, 0 critical warnings and 72 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:57 . Memory (MB): peak = 2116.578 ; gain = 539.941
+Synthesis Optimization Complete : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2116.578 ; gain = 652.668
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 2108.922 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 603 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.062 . Memory (MB): peak = 2116.578 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 517 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'mb_usb_hdmi_top' is not ideal for floorplanning, since the cellview 'lasers_example' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2112.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2116.578 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 85 instances were transformed.
-  LD => LDCE: 85 instances
+  LD => LDCE: 84 instances
+  LDP => LDPE: 1 instance 
 
-Synth Design complete, checksum: 79f235b1
+Synth Design complete, checksum: 341d5b23
 INFO: [Common 17-83] Releasing license: Synthesis
-131 Infos, 276 Warnings, 1 Critical Warnings and 0 Errors encountered.
+130 Infos, 277 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:56 . Memory (MB): peak = 2112.566 ; gain = 1018.926
+synth_design: Time (s): cpu = 00:01:00 ; elapsed = 00:01:07 . Memory (MB): peak = 2116.578 ; gain = 1018.082
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/mb_usb_hdmi_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mb_usb_hdmi_top_utilization_synth.rpt -pb mb_usb_hdmi_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 11 16:10:40 2024...
+INFO: [Common 17-206] Exiting Vivado at Wed Dec 11 16:35:25 2024...

@@ -67,7 +67,7 @@ module sound(
     input logic clk,
     output logic SPKR,
     output logic SPKL,
-    input  logic [15:0] SW   // Switch input
+    input  logic [15:0] SW,   // Switch input
 //    input logic red_click,
 //    input logic orange_click,
 //    input logic yellow_click,
@@ -75,7 +75,7 @@ module sound(
 //    input logic blue_click,
 //    input logic indigo_click,
 //    input logic violet_click
-//    input logic [7:0] keycode
+    input logic [7:0] keycode
 );
 
 logic [15:0] SW_s;
@@ -97,103 +97,109 @@ sine sine_wave (
     .harmonics(harmonics)
 );
 
-always_comb begin
-    case (SW_s)
-        16'b0000000000000001: 
-        begin
-        phase_increment = 1;   // SW0
-        harmonics = 0;
-        end
-        16'b0000000000000010: begin
-        phase_increment = 2;   // SW0
-        harmonics = 0;
-        end
-        16'b0000000000000100: begin
-        phase_increment = 3;   // SW0
-        harmonics = 0;
-        end
-        16'b0000000000001000: begin
-        phase_increment = 4;   // SW0
-        harmonics = 0;
-        end
-        16'b0000000000010000: begin
-        phase_increment = 5;   // SW0
-        harmonics = 0;
-        end
-        16'b0000000000100000: begin
-        phase_increment = 6;   // SW0
-        harmonics = 0;
-        end
-        16'b0000000001000000: begin
-        phase_increment = 7;   // SW0
-        harmonics = 0;
-        end
-        16'b0000000010000000: begin
-        phase_increment = 8;   // SW0
-        harmonics = 0;
-        end
-        16'b0000000100000000: begin
-        phase_increment = 1;   // SW0
-        harmonics = 1;
-        end
-        16'b0000001000000000: begin
-        phase_increment = 2;   // SW0
-        harmonics = 1;
-        end
-        16'b0000010000000000: begin
-        phase_increment = 3;   // SW0
-        harmonics = 1;
-        end
-        16'b0000100000000000: begin
-        phase_increment = 4;   // SW0
-        harmonics = 1;
-        end
-        16'b0001000000000000: begin
-        phase_increment = 5;   // SW0
-        harmonics = 1;
-        end
-        16'b0010000000000000: begin
-        phase_increment = 6;   // SW0
-        harmonics = 1;
-        end
-        16'b0100000000000000: begin
-        phase_increment = 7;   // SW0
-        harmonics = 1;
-        end
-        16'b1000000000000000: begin
-        phase_increment = 8;   // SW0
-        harmonics = 1;
-        end
-        default: phase_increment = 0;       // Default to 0 if no switch is active
-    endcase
+//always_comb begin
+//    case (SW_s)
+//        16'b0000000000000001: 
+//        begin
+//        phase_increment = 1;   // SW0
+//        harmonics = 0;
+//        end
+//        16'b0000000000000010: begin
+//        phase_increment = 2;   // SW0
+//        harmonics = 0;
+//        end
+//        16'b0000000000000100: begin
+//        phase_increment = 3;   // SW0
+//        harmonics = 0;
+//        end
+//        16'b0000000000001000: begin
+//        phase_increment = 4;   // SW0
+//        harmonics = 0;
+//        end
+//        16'b0000000000010000: begin
+//        phase_increment = 5;   // SW0
+//        harmonics = 0;
+//        end
+//        16'b0000000000100000: begin
+//        phase_increment = 6;   // SW0
+//        harmonics = 0;
+//        end
+//        16'b0000000001000000: begin
+//        phase_increment = 7;   // SW0
+//        harmonics = 0;
+//        end
+//        16'b0000000010000000: begin
+//        phase_increment = 8;   // SW0
+//        harmonics = 0;
+//        end
+//        16'b0000000100000000: begin
+//        phase_increment = 1;   // SW0
+//        harmonics = 1;
+//        end
+//        16'b0000001000000000: begin
+//        phase_increment = 2;   // SW0
+//        harmonics = 1;
+//        end
+//        16'b0000010000000000: begin
+//        phase_increment = 3;   // SW0
+//        harmonics = 1;
+//        end
+//        16'b0000100000000000: begin
+//        phase_increment = 4;   // SW0
+//        harmonics = 1;
+//        end
+//        16'b0001000000000000: begin
+//        phase_increment = 5;   // SW0
+//        harmonics = 1;
+//        end
+//        16'b0010000000000000: begin
+//        phase_increment = 6;   // SW0
+//        harmonics = 1;
+//        end
+//        16'b0100000000000000: begin
+//        phase_increment = 7;   // SW0
+//        harmonics = 1;
+//        end
+//        16'b1000000000000000: begin
+//        phase_increment = 8;   // SW0
+//        harmonics = 1;
+//        end
+//        default: phase_increment = 0;       // Default to 0 if no switch is active
+//    endcase
+//end
+
+logic flag;
+logic flag_next;
+
+always_ff @ (posedge clk) 
+begin
+    flag <= flag_next;  
 end
 
-//integer flag;
+always_comb begin
+    if (keycode == 8'b00000001)
+        begin
+           flag_next = 1'b1;   
+        end
+        else if (keycode == 8'b00000010)
+        begin
+           flag_next = 1'b0;
+        end   
+end 
+              
+always_comb begin
+    if (flag) 
+    begin
+         phase_increment = 1;   // SW0
+         harmonics = 0;  
+    end
+    else 
+    begin
+         phase_increment = 0;   // SW0
+    end
+end
 
-//always_comb begin
-//    if (flag == 1) 
-//    begin
-//         phase_increment = 1;   // SW0
-//         harmonics = 0;  
-//    end
-//    else if (flag == 0) 
-//    begin
-//         phase_increment = 0;   // SW0
-//    end
-//end
 
-//always_ff @ (posedge clk) 
-//begin
-//    if (keycode == 8'b00000001)
-//        begin 	// left-click
-//           flag = 1;   
-//        end
-//    else if (keycode == 8'b00000010)
-//    begin
-//        flag = 0;
-//    end                  
-
-//end
 
 //always_comb begin
 //    if(red_click)
