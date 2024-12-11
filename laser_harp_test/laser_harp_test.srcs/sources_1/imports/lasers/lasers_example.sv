@@ -294,14 +294,15 @@ end
 always_comb
 begin:Orange_int_proc
 	if (l_click) begin
-		if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11) begin
-			orange_click_next = 1'b1;
-			OrangeY = CursorY;
-		end
-		if (CursorY <= OrangeY && CursorY >= 3*CursorX-258 && CursorY >= -3*CursorX+936 && orange_click) begin
+	    if (CursorY <= OrangeY && CursorY >= 3*CursorX-258 && CursorY >= -3*CursorX+936 && orange_click) begin
 			orange_click_next = 1'b0;
-			OrangeY = 9'd10;
+			OrangeY_next = 9'd10;
 		end
+		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11) begin
+			orange_click_next = 1'b1;
+			OrangeY_next = CursorY;
+		end
+		
 	end
 	else begin
 		if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11) begin
