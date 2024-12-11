@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue Dec 10 19:02:53 2024
+| Date         : Tue Dec 10 19:55:32 2024
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_drc -file mb_usb_hdmi_top_drc_opted.rpt -pb mb_usb_hdmi_top_drc_opted.pb -rpx mb_usb_hdmi_top_drc_opted.rpx
 | Design       : mb_usb_hdmi_top
@@ -115,32 +115,32 @@ Related violations: <none>
 
 DPIP-1#17 Warning
 Input pipelining  
-DSP screen/red6 input screen/red6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP screen/red5 input screen/red5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#18 Warning
 Input pipelining  
-DSP screen/red6__0 input screen/red6__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP screen/red5__0 input screen/red5__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#19 Warning
 Input pipelining  
-DSP screen/red6__1 input screen/red6__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP screen/red6 input screen/red6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#20 Warning
 Input pipelining  
-DSP screen/red6__2 input screen/red6__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP screen/red6__0 input screen/red6__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#21 Warning
 Input pipelining  
-DSP screen/red6__3 input screen/red6__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP screen/red6__1 input screen/red6__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#22 Warning
 Input pipelining  
-DSP screen/red6__4 input screen/red6__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP screen/red6__2 input screen/red6__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#23 Warning

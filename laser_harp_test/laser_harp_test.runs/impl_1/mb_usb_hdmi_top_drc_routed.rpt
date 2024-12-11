@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Tue Dec 10 19:05:09 2024
+| Date         : Tue Dec 10 19:57:33 2024
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_drc -file mb_usb_hdmi_top_drc_routed.rpt -pb mb_usb_hdmi_top_drc_routed.pb -rpx mb_usb_hdmi_top_drc_routed.rpx
 | Design       : mb_usb_hdmi_top
@@ -118,32 +118,32 @@ Related violations: <none>
 
 DPIP-1#17 Warning
 Input pipelining  
-DSP screen/red6 input screen/red6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP screen/red5 input screen/red5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#18 Warning
 Input pipelining  
-DSP screen/red6__0 input screen/red6__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP screen/red5__0 input screen/red5__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#19 Warning
 Input pipelining  
-DSP screen/red6__1 input screen/red6__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP screen/red6 input screen/red6/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#20 Warning
 Input pipelining  
-DSP screen/red6__2 input screen/red6__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP screen/red6__0 input screen/red6__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#21 Warning
 Input pipelining  
-DSP screen/red6__3 input screen/red6__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP screen/red6__1 input screen/red6__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#22 Warning
 Input pipelining  
-DSP screen/red6__4 input screen/red6__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+DSP screen/red6__2 input screen/red6__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPIP-1#23 Warning
@@ -168,17 +168,17 @@ Related violations: <none>
 
 PDCN-1569#1 Warning
 LUT equation term check  
-Used physical LUT pin 'A4' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O5=(A1*A2)+(A1*(~A2)*(~A3))+((~A1))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A1' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O5=(A4*A3)+(A4*(~A3)*(~A5))+((~A4))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#2 Warning
 LUT equation term check  
-Used physical LUT pin 'A5' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I1) is not included in the LUT equation: 'O5=(A1*A2)+(A1*(~A2)*(~A3))+((~A1))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A2' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/temp_curid[31]_i_1/I0) is not included in the LUT equation: 'O5=(A4*A3)+(A4*(~A3)*(~A5))+((~A4))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDCN-1569#3 Warning
 LUT equation term check  
-Used physical LUT pin 'A5' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1/I0) is not included in the LUT equation: 'O6=(A6+~A6)*((A2))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
+Used physical LUT pin 'A2' of cell dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1 (pin dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.id_state[0]_i_1/I0) is not included in the LUT equation: 'O6=(A6+~A6)*((A4))'. If this cell is a user instantiated LUT in the design, please remove connectivity to the pin or change the equation and/or INIT string of the LUT to prevent this issue. If the cell is inferred or IP created LUT, please regenerate the IP and/or resynthesize the design to attempt to correct the issue.
 Related violations: <none>
 
 PDRC-153#1 Warning
@@ -188,42 +188,42 @@ Related violations: <none>
 
 PDRC-153#2 Warning
 Gated clock check  
-Net screen/RedY_next__0 is a gated clock net sourced by a combinational pin screen/RedY_next_reg[9]_i_2/O, cell screen/RedY_next_reg[9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net screen/OrangeY_next__0 is a gated clock net sourced by a combinational pin screen/OrangeY_next_reg[9]_i_2/O, cell screen/OrangeY_next_reg[9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#3 Warning
 Gated clock check  
-Net screen/YellowY_next__0 is a gated clock net sourced by a combinational pin screen/YellowY_next_reg[9]_i_2/O, cell screen/YellowY_next_reg[9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net screen/RedY_next__0 is a gated clock net sourced by a combinational pin screen/RedY_next_reg[9]_i_1/O, cell screen/RedY_next_reg[9]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#4 Warning
 Gated clock check  
-Net screen/blue_click_next__0 is a gated clock net sourced by a combinational pin screen/blue_click_next_reg_i_2/O, cell screen/blue_click_next_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net screen/YellowY_next__0 is a gated clock net sourced by a combinational pin screen/YellowY_next_reg[9]_i_2/O, cell screen/YellowY_next_reg[9]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#5 Warning
 Gated clock check  
-Net screen/green_click_next__0 is a gated clock net sourced by a combinational pin screen/green_click_next_reg_i_2/O, cell screen/green_click_next_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net screen/blue_click_next__0 is a gated clock net sourced by a combinational pin screen/blue_click_next_reg_i_2/O, cell screen/blue_click_next_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#6 Warning
 Gated clock check  
-Net screen/orange_click_next__0 is a gated clock net sourced by a combinational pin screen/orange_click_next_reg_i_2/O, cell screen/orange_click_next_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net screen/green_click_next__0 is a gated clock net sourced by a combinational pin screen/green_click_next_reg_i_2/O, cell screen/green_click_next_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#7 Warning
 Gated clock check  
-Net screen/red_int_reg_i_2_n_0 is a gated clock net sourced by a combinational pin screen/red_int_reg_i_2/O, cell screen/red_int_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net screen/orange_click_next__0 is a gated clock net sourced by a combinational pin screen/orange_click_next_reg_i_2/O, cell screen/orange_click_next_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#8 Warning
 Gated clock check  
-Net screen/violet_click_next__0 is a gated clock net sourced by a combinational pin screen/violet_click_next_reg_i_2/O, cell screen/violet_click_next_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net screen/red_int_reg_i_2_n_0 is a gated clock net sourced by a combinational pin screen/red_int_reg_i_2/O, cell screen/red_int_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#9 Warning
 Gated clock check  
-Net screen/yellow_click_next__0 is a gated clock net sourced by a combinational pin screen/yellow_click_next_reg_i_2/O, cell screen/yellow_click_next_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net screen/violet_click_next__0 is a gated clock net sourced by a combinational pin screen/violet_click_next_reg_i_2/O, cell screen/violet_click_next_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 RTSTAT-10#1 Warning

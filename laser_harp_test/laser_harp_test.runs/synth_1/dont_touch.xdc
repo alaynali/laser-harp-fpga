@@ -68,7 +68,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_usb_xlco
 # IP: ip/ila_0/ila_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ila_0 || ORIG_REF_NAME==ila_0} -quiet] -quiet
 
-# IP: ip/bg_rom/bg_rom.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bg_rom || ORIG_REF_NAME==bg_rom} -quiet] -quiet
-
 # XDC: c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/mb_usb_ooc.xdc

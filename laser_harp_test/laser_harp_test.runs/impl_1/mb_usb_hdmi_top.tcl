@@ -123,6 +123,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
+  set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7s50csga324-1
   set_property design_mode GateLvl [current_fileset]
@@ -143,9 +144,9 @@ OPTRACE "add files" START { }
   set_param project.isImplRun true
   add_files C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd
   read_ip -quiet C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci
-  read_ip -quiet C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/bg_rom/bg_rom.xci
   read_ip -quiet C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
   read_ip -quiet C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  read_ip -quiet C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/bg_rom/bg_rom.xci
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/constrs_1/imports/pin_assignment/mb_intro_top.xdc
