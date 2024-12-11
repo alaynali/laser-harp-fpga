@@ -495,15 +495,15 @@ always_ff @ (posedge vga_clk) begin
 			// roygbiv: {4'hF, 4'h3, 4'h3}, {4'hF, 4'h9, 4'h4}, {4'hF, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h3, 4'hB, 4'hF}, {4'h0, 4'h4, 4'hA}, {4'h5, 4'h1, 4'hE}
 			// translucent roygbiv: {4'h7, 4'h1, 4'h1}, {4'h8, 4'h5, 4'h3}, {4'h7, 4'h6, 4'h2}, {4'h3, 4'h6, 4'h2}, {4'h1, 4'h5, 4'h7}, {4'h0, 4'h2, 4'h5}, {4'h2, 4'h0, 4'h7},
 			// bright roygbiv: {4'hF, 4'h9, 4'h9}, {4'hF, 4'hC, 4'hA}, {4'hF, 4'hE, 4'h9}, {4'hB, 4'hF, 4'h9}, {4'hA, 4'hD, 4'hF}, {4'h6, 4'h8, 4'hA}, {4'hB, 4'hA, 4'hE}
-			if (red_on) begin
-				// carrot
-				if (red_click && RedCarrot_on) begin
+			// carrot
+			if (red_click && RedCarrot_on) begin
 					red <= 4'hf;
 					green <= 4'h9;
 					blue <= 4'h9;
-				end
+			end
+			else if (red_on) begin
 				// no color
-				else if (red_click && DrawY < RedY) begin
+				if (red_click && DrawY < RedY) begin
 					red <= bg_red;
 					green <= bg_green;
 					blue <= bg_blue;
@@ -521,15 +521,15 @@ always_ff @ (posedge vga_clk) begin
 					blue <= 4'h3;
 				end
 			end	
-			else if (orange_on) begin
-				// carrot
-				if (orange_click && OrangeCarrot_on) begin
+			// carrot
+			else if (orange_click && OrangeCarrot_on) begin
 					red <= 4'hf;
 					green <= 4'hc;
 					blue <= 4'ha;
-				end
+			end
+			else if (orange_on) begin
 				// no color
-				else if (orange_click && DrawY < OrangeY) begin
+				if (orange_click && DrawY < OrangeY) begin
 					red <= bg_red;
 					green <= bg_green;
 					blue <= bg_blue;
@@ -547,15 +547,15 @@ always_ff @ (posedge vga_clk) begin
 					blue <= 4'h4;
 				end
 			end	
+			// carrot
+			else if (yellow_click && YellowCarrot_on) begin
+				red <= 4'hf;
+				green <= 4'he;
+				blue <= 4'h9;
+			end
 			else if (yellow_on) begin
-				// carrot
-				if (yellow_click && YellowCarrot_on) begin
-					red <= 4'hf;
-					green <= 4'he;
-					blue <= 4'h9;
-				end
 				// no color
-				else if (yellow_click && DrawY < YellowY) begin
+				if (yellow_click && DrawY < YellowY) begin
 					red <= bg_red;
 					green <= bg_green;
 					blue <= bg_blue;
