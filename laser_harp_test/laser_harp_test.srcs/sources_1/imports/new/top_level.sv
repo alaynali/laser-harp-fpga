@@ -88,24 +88,31 @@ sine sine_wave (
     .harmonics(harmonics)
 );
 
-always_comb
+integer flag;
+
+always_comb begin
+    if (flag == 1) 
+    begin
+         phase_increment = 1;   // SW0
+         harmonics = 0;  
+    end
+    else if (flag == 0) 
+    begin
+         phase_increment = 0;   // SW0
+    end
+end
+
+always_ff @ (posedge clk) 
 begin
-    case (keycode)
-        8'b00000001	:   
+    if (keycode == 8'b00000001)
         begin 	// left-click
-           phase_increment = 1;   // SW0
-           harmonics = 0;              
-        end                             
-        8'b00000010	:   begin 	// right-click
-           phase_increment = 2;   // SW0
-           harmonics = 0;  
-                        end
-        8'b00000011	:   begin	// left and right click
-           phase_increment = 3;   // SW0
-           harmonics = 0;  
-                        end
-        default:  phase_increment = 0;
-    endcase
+           flag = 1;   
+        end
+    else if (keycode == 8'b00000010)
+    begin
+        flag = 0;
+    end                  
+
 end
 
 //always_comb begin

@@ -152,3 +152,516 @@ Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Tcl Message: Scanning sources... Finished scanning sources 
 // Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/estel/laser-harp-fpga/laser_harp_test/RD_hdmi_ip2020'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'. 
 // [GUI Memory]: 119 MB (+2823kb) [00:00:21]
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:11 . Memory (MB): peak = 1810.512 ; gain = 389.379 
+// Project name: laser_harp_test; location: C:/Users/estel/laser-harp-fpga/laser_harp_test; part: xc7s50csga324-1
+dismissDialog("Open Project"); // bq
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // D
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 0); // D
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // f - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // f - Node
+// [GUI Memory]: 128 MB (+3191kb) [00:00:32]
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv)]", 1); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv), screen : lasers_example (lasers_example.sv)]", 9); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv), audio : sound (top_level.sv)]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv), audio : sound (top_level.sv)]", 2, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv), audio : sound (top_level.sv)]", 2, true, false, false, false, false, true); // D - Double Click - Node
+selectCodeEditor("top_level.sv", 1, 10); // ac
+// Elapsed time: 23 seconds
+selectCodeEditor("top_level.sv", 343, 170); // ac
+selectCodeEditor("top_level.sv", 31, 10); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 30 seconds
+selectCodeEditor("top_level.sv", 454, 249); // ac
+selectCodeEditor("top_level.sv", 217, 81); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 27, 326); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 33, 271); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 194, 115); // ac
+selectCodeEditor("top_level.sv", 75, 271); // ac
+selectCodeEditor("top_level.sv", 73, 137); // ac
+// Elapsed time: 16 seconds
+selectCodeEditor("top_level.sv", 95, 218); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 29, 181); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 160, 200); // ac
+selectCodeEditor("top_level.sv", 182, 157); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 65, 135); // ac
+selectCodeEditor("top_level.sv", 9, 113); // ac
+selectCodeEditor("top_level.sv", 170, 104); // ac
+selectCodeEditor("top_level.sv", 207, 99); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 348, 173); // ac
+selectCodeEditor("top_level.sv", 159, 186); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 179, 248); // ac
+selectCodeEditor("top_level.sv", 243, 60); // ac
+selectCodeEditor("top_level.sv", 198, 274); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 10, 95); // ac
+selectCodeEditor("top_level.sv", 17, 114); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 37, 154); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 145, 53); // ac
+selectCodeEditor("top_level.sv", 274, 79); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_level.sv", 75, 101); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 109, 182); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 69, 202); // ac
+selectCodeEditor("top_level.sv", 111, 223); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 69, 249); // ac
+selectCodeEditor("top_level.sv", 281, 220); // ac
+selectCodeEditor("top_level.sv", 105, 261); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 70, 288); // ac
+selectCodeEditor("top_level.sv", 275, 265); // ac
+selectCodeEditor("top_level.sv", 106, 183); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 74, 199); // ac
+selectCodeEditor("top_level.sv", 278, 179); // ac
+selectCodeEditor("top_level.sv", 107, 286); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 74, 309); // ac
+selectCodeEditor("top_level.sv", 283, 282); // ac
+selectCodeEditor("top_level.sv", 108, 198); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 71, 224); // ac
+selectCodeEditor("top_level.sv", 280, 201); // ac
+selectCodeEditor("top_level.sv", 106, 243); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 68, 269); // ac
+selectCodeEditor("top_level.sv", 277, 243); // ac
+selectCodeEditor("top_level.sv", 56, 262); // ac
+selectCodeEditor("top_level.sv", 29, 175); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 137 MB (+2419kb) [00:04:28]
+// Elapsed time: 25 seconds
+selectCodeEditor("top_level.sv", 1092, 198); // ac
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv), audio : sound (top_level.sv)]", 2); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv), audio : sound (top_level.sv), sine_wave : sine (sine.sv)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv), audio : sound (top_level.sv), sine_wave : sine (sine.sv)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv), audio : sound (top_level.sv), sine_wave : sine (sine.sv)]", 4, false, false, false, false, false, true); // D - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 25, 206); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+selectCodeEditor("sine.sv", 1, 96); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,702 MB. GUI used memory: 76 MB. Current time: 12/10/24, 10:29:30 PM CST
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "sine.sv", 'v'); // ac
+// Elapsed time: 13 seconds
+selectCodeEditor("sine.sv", 32, 305); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 38, 181); // ac
+selectCodeEditor("top_level.sv", 181, 126); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+// TclEventType: DG_GRAPH_STALE
+// Elapsed time: 15 seconds
+selectCodeEditor("top_level.sv", 15, 174); // ac
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/utils_1/imports/synth_1/mb_intro_top.dcp with file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/mb_usb_hdmi_top.dcp 
+dismissDialog("Resetting Runs"); // bq
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Tue Dec 10 22:30:37 2024] Launched synth_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/runme.log [Tue Dec 10 22:30:37 2024] Launched impl_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 262 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // S.a
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("NEXT", "Next >"); // JButton
+selectRadioButton(PAResourceEtoH.ExportFixedPlatformWizard_INCLUDE_BITSTREAM, "Include bitstream. This platform includes the complete hardware implementation and bitstream, in addition to the hardware specification for software tools."); // b
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("FINISH", "Finish"); // JButton
+// 'n' command handler elapsed time: 6 seconds
+dismissDialog("Export Hardware Platform"); // e
+// Tcl Message: write_hw_platform -fixed -include_bit -force -file C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+// Tcl Message: INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa ... 
+// [Engine Memory]: 1,867 MB (+131113kb) [00:10:54]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,867 MB. GUI used memory: 79 MB. Current time: 12/10/24, 10:35:10 PM CST
+// Tcl Message: INFO: [Project 1-1943] The Hardware Platform can be used for Hardware INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+// Tcl Message: INFO: [Hsi 55-2053] elapsed time for repository (C:/Xilinx/Vivado/2022.2/data/embeddedsw) loading 1 seconds 
+dismissDialog("Export Hardware Platform"); // bq
+// Elapsed time: 177 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 19 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv), screen : lasers_example (lasers_example.sv)]", 10, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv), screen : lasers_example (lasers_example.sv)]", 10, true, false, false, false, false, true); // D - Double Click - Node
+// Elapsed time: 40 seconds
+selectCodeEditor("lasers_example.sv", 71, 112); // ac
+selectCodeEditor("lasers_example.sv", 54, 191); // ac
+selectCodeEditor("lasers_example.sv", 61, 294); // ac
+selectCodeEditor("lasers_example.sv", 180, 189); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mb_usb_hdmi_top.sv", 3); // o
+selectCodeEditor("mb_usb_hdmi_top.sv", 37, 75); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 189, 39); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 210, 56); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 175, 96); // ac
+selectCodeEditor("top_level.sv", 56, 144); // ac
+selectCodeEditor("top_level.sv", 84, 134); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lasers_example.sv", 4); // o
+selectCodeEditor("lasers_example.sv", 35, 101); // ac
+typeControlKey((HResource) null, "lasers_example.sv", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 173, 135); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 220, 139); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lasers_example.sv", 4); // o
+selectCodeEditor("lasers_example.sv", 69, 110); // ac
+typeControlKey((HResource) null, "lasers_example.sv", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 35, 153); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 154, 161); // ac
+selectCodeEditor("top_level.sv", 71, 225); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_level.sv", 302, 188); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_level.sv", 239, 199); // ac
+selectCodeEditor("top_level.sv", 1, 74); // ac
+selectCodeEditor("top_level.sv", 31, 112); // ac
+selectCodeEditor("top_level.sv", 24, 106); // ac
+selectCodeEditor("top_level.sv", 16, 92); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mb_usb_hdmi_top.sv", 3); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 291, 201); // ac
+selectCodeEditor("top_level.sv", 37, 74); // ac
+selectCodeEditor("top_level.sv", 297, 191); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("top_level.sv", 70, 174); // ac
+selectCodeEditor("top_level.sv", 36, 130); // ac
+selectCodeEditor("top_level.sv", 37, 176); // ac
+selectCodeEditor("top_level.sv", 37, 78); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lasers_example.sv", 4); // o
+selectCodeEditor("lasers_example.sv", 37, 146); // ac
+selectCodeEditor("lasers_example.sv", 38, 97); // ac
+typeControlKey((HResource) null, "lasers_example.sv", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 25, 191); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 247, 259); // ac
+selectCodeEditor("top_level.sv", 41, 208); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mb_usb_hdmi_top.sv", 3); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lasers_example.sv", 4); // o
+selectCodeEditor("lasers_example.sv", 87, 163); // ac
+typeControlKey((HResource) null, "lasers_example.sv", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 69, 186); // ac
+selectCodeEditor("top_level.sv", 15, 262); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lasers_example.sv", 4); // o
+selectCodeEditor("lasers_example.sv", 38, 173); // ac
+typeControlKey((HResource) null, "lasers_example.sv", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 234, 218); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_level.sv", 144, 314); // ac
+selectCodeEditor("top_level.sv", 30, 268); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lasers_example.sv", 4); // o
+typeControlKey((HResource) null, "lasers_example.sv", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 55, 193); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 128, 264); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top_level.sv", 362, 169); // ac
+selectCodeEditor("top_level.sv", 131, 119); // ac
+selectCodeEditor("top_level.sv", 311, 170); // ac
+selectCodeEditor("top_level.sv", 129, 122); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 253, 119); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_level.sv", 218, 186); // ac
+selectCodeEditor("top_level.sv", 126, 111); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 246, 58); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 385, 77); // ac
+selectCodeEditor("top_level.sv", 516, 77); // ac
+selectCodeEditor("top_level.sv", 214, 77); // ac
+selectCodeEditor("top_level.sv", 214, 77); // ac
+selectCodeEditor("top_level.sv", 385, 117); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 250, 81); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 205, 80); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("top_level.sv", 322, 76); // ac
+selectCodeEditor("top_level.sv", 214, 35); // ac
+selectCodeEditor("top_level.sv", 280, 141); // ac
+selectCodeEditor("top_level.sv", 216, 141); // ac
+selectCodeEditor("top_level.sv", 247, 77); // ac
+selectCodeEditor("top_level.sv", 109, 73); // ac
+selectCodeEditor("top_level.sv", 90, 128); // ac
+selectCodeEditor("top_level.sv", 98, 126); // ac
+selectCodeEditor("top_level.sv", 89, 123); // ac
+selectCodeEditor("top_level.sv", 98, 141); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 97, 207); // ac
+selectCodeEditor("top_level.sv", 247, 223); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 248, 221); // ac
+selectCodeEditor("top_level.sv", 242, 227); // ac
+selectCodeEditor("top_level.sv", 227, 275, false, false, false, true, false); // ac - Popup Trigger
+selectCodeEditor("top_level.sv", 175, 238); // ac
+selectCodeEditor("top_level.sv", 252, 246); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 251, 244); // ac
+selectCodeEditor("top_level.sv", 259, 272); // ac
+selectCodeEditor("top_level.sv", 401, 292); // ac
+selectCodeEditor("top_level.sv", 258, 295); // ac
+selectCodeEditor("top_level.sv", 316, 271); // ac
+selectCodeEditor("top_level.sv", 177, 304); // ac
+selectCodeEditor("top_level.sv", 97, 247); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 159, 311); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 272, 160); // ac
+selectCodeEditor("top_level.sv", 271, 240); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 86 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Synthesis is Out-of-date"); // u
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+dismissDialog("Synthesis is Out-of-date"); // u
+selectCodeEditor("top_level.sv", 180, 72); // ac
+selectCodeEditor("top_level.sv", 205, 156); // ac
+selectCodeEditor("top_level.sv", 189, 254); // ac
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/utils_1/imports/synth_1/mb_intro_top.dcp with file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/mb_usb_hdmi_top.dcp 
+dismissDialog("Resetting Runs"); // bq
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date 
+// Tcl Message: [Tue Dec 10 22:46:33 2024] Launched synth_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/runme.log [Tue Dec 10 22:46:33 2024] Launched impl_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bq
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lasers_example.sv", 4); // o
+selectCodeEditor("lasers_example.sv", 464, 133); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mb_usb_hdmi_top.sv", 3); // o
+selectCodeEditor("mb_usb_hdmi_top.sv", 188, 180); // ac
+typeControlKey((HResource) null, "mb_usb_hdmi_top.sv", 'c'); // ac
+// Elapsed time: 15 seconds
+selectCodeEditor("mb_usb_hdmi_top.sv", 116, 179); // ac
+typeControlKey((HResource) null, "mb_usb_hdmi_top.sv", 'v'); // ac
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // g
+selectButton(PAResourceQtoS.StateMonitor_RESET_RUN, "Reset Run"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Cancel Implementation"); // aO
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run impl_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bq
+selectButton(PAResourceQtoS.StaleMoreAction_OUT_OF_DATE_DETAILS, "details"); // g
+selectButton(RDIResource.HPopupTitle_CLOSE, (String) null); // j
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/utils_1/imports/synth_1/mb_intro_top.dcp with file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/mb_usb_hdmi_top.dcp 
+dismissDialog("Resetting Runs"); // bq
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date 
+// Tcl Message: [Tue Dec 10 22:47:52 2024] Launched synth_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/runme.log [Tue Dec 10 22:47:52 2024] Launched impl_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bq
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// [GUI Memory]: 146 MB (+2972kb) [00:24:45]
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 271 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a
+dismissDialog("Bitstream Generation Completed"); // S.a
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("FINISH", "Finish"); // JButton
+// 'n' command handler elapsed time: 7 seconds
+dismissDialog("Export Hardware Platform"); // e
+// Tcl Message: write_hw_platform -fixed -include_bit -force -file C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+// Tcl Message: INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa ... 
+// Tcl Message: INFO: [Project 1-1943] The Hardware Platform can be used for Hardware INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+dismissDialog("Export Hardware Platform"); // bq
+// HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 85 MB. Current time: 12/10/24, 10:52:40 PM CST
