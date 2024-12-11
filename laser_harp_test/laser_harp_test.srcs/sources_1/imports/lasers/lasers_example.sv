@@ -240,9 +240,6 @@ always_comb
 begin:Red_int_proc
 
 // new
-
-	red_click = 1'b0;
-
 	if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11) begin //(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
 		if (l_click) begin
 			// if (red_click) begin
