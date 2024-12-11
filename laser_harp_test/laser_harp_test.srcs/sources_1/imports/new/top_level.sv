@@ -62,82 +62,93 @@
 //);
 
 // DO RE MI WORKS
+
 module sound(
     input logic clk,
     output logic SPKR,
     output logic SPKL,
-    input logic red_click,
-    input logic orange_click,
-    input logic yellow_click,
-    input logic green_click,
-    input logic blue_click,
-    input logic indigo_click,
-    input logic violet_click
+//    input logic red_click,
+//    input logic orange_click,
+//    input logic yellow_click,
+//    input logic green_click,
+//    input logic blue_click,
+//    input logic indigo_click,
+//    input logic violet_click
+    input logic [7:0] keycode
 );
 
 integer phase_increment;	
+logic harmonics;
 
 sine sine_wave (
     .clk(clk),
     .outR(SPKR),
     .outL(SPKL),
-    .resolution(resolution),
     .phase_increment(phase_increment),
     .harmonics(harmonics)
 );
 
-logic harmonics;
-integer resolution;
-
-always_comb begin
-    if(red_click)
-        begin
-            resolution = 382;   // SW0
-            phase_increment = 2;   // SW0
-            harmonics = 0;
-        end
-    else if (orange_click) 
-        begin
-            resolution = 340;   // SW0
-            phase_increment = 2;   // SW0
-            harmonics = 0;
-        end
-    else if (yellow_click) 
-        begin
-            resolution = 303;   // SW0
-            phase_increment = 2;   // SW0
-            harmonics = 0;
-        end
-    else if (green_click) 
-        begin
-            resolution = 288;   // SW0
-            phase_increment = 2;   // SW0
-            harmonics = 0;
-        end
-    else if (blue_click)
-        begin
-            resolution = 255;   // SW0
-            phase_increment = 2;   // SW0
-            harmonics = 0;
-        end
-    else if (indigo_click) 
-        begin
-            resolution = 227;   // SW0
-            phase_increment = 2;   // SW0
-            harmonics = 0;
-        end
-    else if (violet_click) 
-        begin
-            resolution = 202;   // SW0
-            phase_increment = 2;   // SW0
-            harmonics = 0;
-        end
-    else 
-        begin 
-            phase_increment = 0;  
-        end     // Default to 0 if no switch is active
+always_comb
+begin
+    case (keycode)
+        8'b00000001	:   
+        begin 	// left-click
+           phase_increment = 1;   // SW0
+           harmonics = 0;              
+        end                             
+        8'b00000010	:   begin 	// right-click
+           phase_increment = 2;   // SW0
+           harmonics = 0;  
+                        end
+        8'b00000011	:   begin	// left and right click
+           phase_increment = 3;   // SW0
+           harmonics = 0;  
+                        end
+        default:  phase_increment = 0;
+    endcase
 end
 
+//always_comb begin
+//    if(red_click)
+//        begin
+//            phase_increment = 1;   // SW0
+//            harmonics = 0;
+//        end
+//    else if (orange_click) 
+//        begin
+//            phase_increment = 2;   // SW0
+//            harmonics = 0;
+//        end
+//    else if (yellow_click) 
+//        begin
+//            phase_increment = 3;   // SW0
+//            harmonics = 0;
+//        end
+//    else if (green_click) 
+//        begin
+//            phase_increment = 4;   // SW0
+//            harmonics = 0;
+//        end
+//    else if (blue_click)
+//        begin
+//            phase_increment = 5;   // SW0
+//            harmonics = 0;
+//        end
+//    else if (indigo_click) 
+//        begin
+//            phase_increment = 6;   // SW0
+//            harmonics = 0;
+//        end
+//    else if (violet_click) 
+//        begin
+//            phase_increment = 7;   // SW0
+//            harmonics = 0;
+//        end
+//    else 
+//        begin 
+//            phase_increment = 0;  
+//        end     // Default to 0 if no switch is active
+//end
 
 //WORKING OVERALL 
 

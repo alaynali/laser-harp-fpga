@@ -838,14 +838,13 @@ module sine(
         input logic clk,
         output logic outR,
         output logic outL,
-        input integer resolution,
         input integer phase_increment,
         input logic harmonics
     );
 
-    
 parameter COUNTS_PER_INTERVAL = 4000;
-//parameter RESOLUTION = 256; // Samples per sine wave period
+parameter RESOLUTION = 256; // Samples per sine wave period
+
 // phase increment = fbase x resolution / sampling rate
 
 // counts per interval = fclock / f sampling
@@ -1118,7 +1117,7 @@ logic [15:0] sine_lut_1st [0:255] = {
     16'd1950
 };
 
-// Fundamental frequency table for 50kHz
+// Second Harmonic for 50kHz
 logic [15:0] sine_lut_2nd [0:255] = {
     16'd1000,
     16'd1024,
@@ -1644,9 +1643,9 @@ always_ff @(posedge clk)
         sample_1 <= sine_lut_1st[phase_1];
         sample_2 <= sine_lut_2nd[phase_2];
         sample_3 <= sine_lut_3rd[phase_3];
-        phase_1 <= (phase_1 + phase_increment) % resolution;
-        phase_2 <= (phase_2 + 2*phase_increment) % resolution;
-        phase_3 <= (phase_3 + 3*phase_increment) % resolution;
+        phase_1 <= (phase_1 + phase_increment) & (RESOLUTION - 1);
+        phase_2 <= (phase_2 + (phase_increment << 1))  & (RESOLUTION - 1);
+        phase_3 <= (phase_3 + (((phase_increment << 1) + phase_increment)) >> 2) & (RESOLUTION - 1);
     end else
         counter <= counter + 1;
 	
@@ -1654,18 +1653,15 @@ always_ff @(posedge clk)
 begin
     if (harmonics)
         begin
-        outR <= (counter < sample_1);
-    	outL <= (counter < sample_1);
-//            outR <= (counter < (sample_1 + sample_2/2 + sample_3/3));
-//            outL <= (counter < (sample_1 + sample_2/2 + sample_3/3));
+            outR <= (counter < (sample_1 + (sample_2 >> 1) + (sample_3 >> 2)));
+            outL <= (counter < (sample_1 + (sample_2 >> 1) + (sample_3 >> 2)));
         end
     else
     begin
-        outR <= (counter < sample_2);
-    	outL <= (counter < sample_2);
+        outR <= (counter < sample_1);
+    	outL <= (counter < sample_1);
     end
 end	
-
 // WORKS 
 //module sine(
 //        input logic clk,
