@@ -251,7 +251,7 @@ begin:Red_int_proc
 			red_click_next= 1'b0;
 			RedY_next = 9'd10;
 		end
-		else if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11) begin
+		else if (!r_click && CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11) begin
 			red_click_next = 1'b1;
 			RedY_next = CursorY;
 		end
@@ -273,7 +273,7 @@ begin:Orange_int_proc
 			orange_click_next = 1'b0;
 			OrangeY_next = 9'd10;
 		end
-		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin
+		else if (!r_click && CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin
 			orange_click_next = 1'b1;
 			OrangeY_next = CursorY;
 		end
@@ -296,7 +296,7 @@ begin:Yellow_int_proc
 			yellow_click_next = 1'b0;
 			YellowY_next = 9'd10;
 		end
-		else if (CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 355 && CursorY >= 11) begin
+		else if (!r_click && CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 355 && CursorY >= 11) begin
 			yellow_click_next = 1'b1;
 			YellowY_next = CursorY;
 		end
@@ -319,7 +319,7 @@ begin:Green_int_proc
 			green_click_next = 1'b0;
 			GreenY_next = 9'd10;
 		end
-		else if (CursorX >= 238 && CursorX <= 248 && CursorY <= 355 && CursorY >= 11) begin
+		else if (l_click && (CursorX >= 238 && CursorX <= 248 && CursorY <= 355 && CursorY >= 11)) begin
 			green_click_next = 1'b1;
 			GreenY_next = CursorY;
 		end
@@ -340,7 +340,7 @@ begin:Blue_int_proc
 			blue_click_next = 1'b0;
 			BlueY_next = 9'd10;
 		end
-		else if (CursorY >= -6*CursorX+1908 && CursorY <= -6*CursorX+1968 && CursorY <= 355 && CursorY >= 11) begin
+		else if (!r_click && CursorY >= -6*CursorX+1908 && CursorY <= -6*CursorX+1968 && CursorY <= 355 && CursorY >= 11) begin
 			blue_click_next = 1'b1;
 			BlueY_next = CursorY;
 		end
@@ -361,7 +361,7 @@ begin:Indigo_int_proc
 			indigo_click_next = 1'b0;
 			IndigoY_next = 9'd10;
 		end
-		else if (CursorY >= -3*CursorX+1194 && CursorY <= -3*CursorX+1224 && CursorY <= 355 && CursorY >= 11) begin
+		else if (!r_clik && CursorY >= -3*CursorX+1194 && CursorY <= -3*CursorX+1224 && CursorY <= 355 && CursorY >= 11) begin
 			indigo_click_next = 1'b1;
 			IndigoY_next = CursorY;
 		end
@@ -382,7 +382,7 @@ begin:Violet_int_proc
 			violet_click_next = 1'b0;
 			VioletY_next = 9'd10;
 		end
-		else if (CursorY >= -2*CursorX+956 && CursorY <= -2*CursorX+976 && CursorY <= 355 && CursorY >= 11) begin
+		else if (!r_click && CursorY >= -2*CursorX+956 && CursorY <= -2*CursorX+976 && CursorY <= 355 && CursorY >= 11) begin
 			violet_click_next = 1'b1;
 			VioletY_next = CursorY;
 		end
