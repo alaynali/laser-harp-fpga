@@ -39,7 +39,18 @@ module mb_usb_hdmi_top(
     output logic [7:0] hex_segB,
     output logic [3:0] hex_gridB,
     output logic SPKR,
-    output logic SPKL
+    output logic SPKL,
+    
+    input logic [15:0] SW,
+    
+    input logic JA1_P,
+	input logic JA1_N,
+	input logic JA2_P,
+	input logic JA2_N,
+	input logic JA3_P,
+	input logic JA3_N,
+	input logic JA4_P,
+	input logic JA4_N   
 );
     
     logic [31:0] keycode0_gpio, keycode1_gpio;
@@ -57,7 +68,8 @@ module mb_usb_hdmi_top(
     .clk(Clk),
     .SPKR(SPKR),
     .SPKL(SPKL),
-    .keycode(keycode1_gpio[7:0])
+    .SW(SW)
+//    .keycode(keycode1_gpio[7:0])
 //    .red_click(red_click),
 //    .orange_click(orange_click),
 //    .yellow_click(yellow_click),

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Tue Dec 10 23:54:41 2024
+| Date             : Wed Dec 11 12:29:50 2024
 | Host             : MSI running 64-bit major release  (build 9200)
 | Command          : report_power -file mb_usb_hdmi_top_power_routed.rpt -pb mb_usb_hdmi_top_power_summary_routed.pb -rpx mb_usb_hdmi_top_power_routed.rpx
 | Design           : mb_usb_hdmi_top
@@ -53,19 +53,19 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.023 |       13 |       --- |             --- |
-| Slice Logic              |     0.014 |    13285 |       --- |             --- |
-|   LUT as Logic           |     0.011 |     4863 |     32600 |           14.92 |
-|   CARRY4                 |     0.001 |      500 |      8150 |            6.13 |
+| Slice Logic              |     0.014 |    13886 |       --- |             --- |
+|   LUT as Logic           |     0.011 |     5001 |     32600 |           15.34 |
+|   CARRY4                 |     0.001 |      580 |      8150 |            7.12 |
 |   LUT as Distributed RAM |    <0.001 |      196 |      9600 |            2.04 |
-|   Register               |    <0.001 |     4898 |     65200 |            7.51 |
+|   Register               |    <0.001 |     5225 |     65200 |            8.01 |
 |   F7/F8 Muxes            |    <0.001 |       40 |     32600 |            0.12 |
 |   LUT as Shift Register  |    <0.001 |      233 |      9600 |            2.43 |
-|   Others                 |     0.000 |     1081 |       --- |             --- |
-| Signals                  |     0.019 |    11108 |       --- |             --- |
-| Block RAM                |     0.003 |     57.5 |        75 |           76.67 |
+|   Others                 |     0.000 |     1112 |       --- |             --- |
+| Signals                  |     0.018 |    11625 |       --- |             --- |
+| Block RAM                |     0.003 |     58.5 |        75 |           78.00 |
 | MMCM                     |     0.212 |        2 |         5 |           40.00 |
 | DSPs                     |     0.017 |       47 |       120 |           39.17 |
-| I/O                      |     0.140 |       44 |       210 |           20.95 |
+| I/O                      |     0.139 |       60 |       210 |           28.57 |
 | Static Power             |     0.078 |          |           |                 |
 | Total                    |     0.504 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
@@ -154,22 +154,21 @@ Table of Contents
 | Name                        | Power (W) |
 +-----------------------------+-----------+
 | mb_usb_hdmi_top             |     0.426 |
+|   audio                     |     0.003 |
 |   clk_wiz                   |     0.106 |
 |     inst                    |     0.106 |
 |   cursor                    |     0.003 |
 |   dbg_hub                   |     0.003 |
 |     inst                    |     0.003 |
 |       BSCANID.u_xsdbm_id    |     0.003 |
-|   ila                       |     0.009 |
-|     inst                    |     0.009 |
-|       ila_core_inst         |     0.009 |
-|   mb_block_i                |     0.133 |
+|   ila                       |     0.010 |
+|     inst                    |     0.010 |
+|       ila_core_inst         |     0.010 |
+|   mb_block_i                |     0.130 |
 |     clk_wiz_1               |     0.106 |
 |       inst                  |     0.106 |
-|     gpio_usb_keycode        |     0.001 |
-|       U0                    |     0.001 |
-|     microblaze_0            |     0.014 |
-|       U0                    |     0.014 |
+|     microblaze_0            |     0.013 |
+|       U0                    |     0.013 |
 |     microblaze_0_axi_intc   |     0.001 |
 |       U0                    |     0.001 |
 |     microblaze_0_axi_periph |     0.001 |
@@ -178,7 +177,7 @@ Table of Contents
 |       U0                    |     0.004 |
 |     timer_usb_axi           |     0.002 |
 |       U0                    |     0.002 |
-|   screen                    |     0.031 |
+|   screen                    |     0.030 |
 |     background              |     0.002 |
 |       U0                    |     0.002 |
 |   vga_to_hdmi               |     0.132 |
