@@ -238,22 +238,7 @@ end
 
 always_comb
 begin:Red_int_proc
-// old
-	if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11)//(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
-		if (l_click) begin
-			if (red_click) begin
-				red_click_next = 1'b0;
-				RedY_next = 9'd10;
-			end
-			else begin
-				red_click_next = 1'b1;
-				RedY_next = CursorY;
-			end
-		end
-		else 
-			red_int = 1'b1;
-	else
-		red_int = 1'b0;
+
 // new
 	// if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11) begin //(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
 	// 	if (l_click) begin
@@ -280,11 +265,27 @@ begin:Red_int_proc
 	// 		RedY_next = 9'd10;
 	// 	end
 	// end
-
+// old
+	if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11) begin//(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
+		if (l_click) begin
+			if (red_click) begin
+				red_click_next = 1'b0;
+				RedY_next = 9'd10;
+			end
+			else begin
+				red_click_next = 1'b1;
+				RedY_next = CursorY;
+			end
+		end
+		else 
+			red_int = 1'b1;
+	end
+	else
+		red_int = 1'b0;
 end
 always_comb
 begin:Orange_int_proc
-	if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11)
+	if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11) begin
 		if (l_click) begin
 			if (orange_click) begin
 				orange_click_next = 1'b0;
@@ -297,12 +298,13 @@ begin:Orange_int_proc
 		end
 		else 
 			orange_int = 1'b1;
+	end
 	else
 		orange_int = 1'b0;
 end
 always_comb
 begin:Yellow_int_proc
-	if (CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 360 && CursorY >= 11)
+	if (CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 360 && CursorY >= 11) begin
 		if (l_click) begin
 			if (yellow_click) begin
 				yellow_click_next = 1'b0;
@@ -315,12 +317,13 @@ begin:Yellow_int_proc
 		end
 		else 
 			yellow_int = 1'b1;
+	end
 	else
 		yellow_int = 1'b0;
 end
 always_comb
 begin:Green_int_proc
-	if (CursorX >= 238 && CursorX <= 248 && CursorY <= 360 && CursorY >= 11)
+	if (CursorX >= 238 && CursorX <= 248 && CursorY <= 360 && CursorY >= 11) begin
 		if (l_click) begin
 			if (green_click) begin
 				green_click_next = 1'b0;
@@ -333,12 +336,13 @@ begin:Green_int_proc
 		end
 		else 
 			green_int = 1'b1;
+	end
 	else
 		green_int = 1'b0;
 end
 always_comb
 begin:Blue_int_proc
-	if (CursorY >= -6*CursorX+1908 && CursorY <= -6*CursorX+1968 && CursorY <= 360 && CursorY >= 11)
+	if (CursorY >= -6*CursorX+1908 && CursorY <= -6*CursorX+1968 && CursorY <= 360 && CursorY >= 11) begin
 		if (l_click) begin
 			if (blue_click) begin
 				blue_click_next = 1'b0;
@@ -351,12 +355,13 @@ begin:Blue_int_proc
 		end
 		else 
 			blue_int = 1'b1;
+	end
 	else
 		blue_int = 1'b0;
 end
 always_comb
 begin:Indigo_int_proc
-	if ( CursorY >= -3*CursorX+1194 && CursorY <= -3*CursorX+1224 && CursorY <= 360 && CursorY >= 11)
+	if ( CursorY >= -3*CursorX+1194 && CursorY <= -3*CursorX+1224 && CursorY <= 360 && CursorY >= 11) begin
 		if (l_click) begin
 			if (indigo_click) begin
 					indigo_click_next = 1'b0;
@@ -369,12 +374,13 @@ begin:Indigo_int_proc
 		end
 		else 
 			indigo_int = 1'b1;
+	end
 	else
 		indigo_int = 1'b0;
 end
 always_comb
 begin:Violet_int_proc
-	if (CursorY >= -2*CursorX+956 && CursorY <= -2*CursorX+976 && CursorY <= 360 && CursorY >= 11)
+	if (CursorY >= -2*CursorX+956 && CursorY <= -2*CursorX+976 && CursorY <= 360 && CursorY >= 11) begin
 		if (l_click) begin
 			if (violet_click) begin
 					violet_click_next = 1'b0;
@@ -387,6 +393,7 @@ begin:Violet_int_proc
 		end
 		else 
 			violet_int = 1'b1;
+	end
 	else
 		violet_int = 1'b0;
 end
