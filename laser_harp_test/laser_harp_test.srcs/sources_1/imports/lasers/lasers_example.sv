@@ -53,7 +53,7 @@ end
 always_comb
 begin:Color_on_proc
 	// red
-	if (DrawY >= 2*DrawX-12 && DrawY <= 2*DrawX && DrawY <= 355 && DrawY >= 10)
+	if (DrawY >= 2*DrawX-10 && DrawY <= 2*DrawX+2 && DrawY <= 355 && DrawY >= 10)
 		red_on = 1'b1;
 	else
 		red_on = 1'b0;
