@@ -419,7 +419,7 @@ always_ff @ (posedge vga_clk) begin
 	green <= 4'h0;
 	blue <= 4'h0;
 	
-	// red_click <= 1'b0;
+	red_click <= 1'b0;
 	orange_click <= 1'b0;
 	yellow_click <= 1'b0;
 	green_click <= 1'b0;
@@ -463,17 +463,17 @@ always_ff @ (posedge vga_clk) begin
 			// roygbiv: {4'hF, 4'h3, 4'h3}, {4'hF, 4'h9, 4'h4}, {4'hF, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h3, 4'hB, 4'hF}, {4'h0, 4'h4, 4'hA}, {4'h5, 4'h1, 4'hE}
 			// translucent roygbiv: {4'h7, 4'h1, 4'h1}, {4'h8, 4'h5, 4'h3}, {4'h7, 4'h6, 4'h2}, {4'h3, 4'h6, 4'h2}, {4'h1, 4'h5, 4'h7}, {4'h0, 4'h2, 4'h5}, {4'h2, 4'h0, 4'h7},
 			if (red_on) begin
-				// no color
-				if (red_click && DrawY < RedY) begin
-					red <= bg_red;
-					green <= bg_green;
-					blue <= bg_blue;
-				end
-				// // carrot 
-				else if (red_click && RedCarrot_on) begin
+				// carrot
+				if (red_click && RedCarrot_on) begin
 					red <= 4'hf;
 					green <= 4'hf;
 					blue <= 4'hf;
+				end
+				// no color
+				else if (red_click && DrawY < RedY) begin
+					red <= bg_red;
+					green <= bg_green;
+					blue <= bg_blue;
 				end
 				// dim color
 				else if ((red_int && (DrawY < CursorY)) || (red_int && red_click && DrawY > RedY)) begin
@@ -489,16 +489,17 @@ always_ff @ (posedge vga_clk) begin
 				end
 			end	
 			else if (orange_on) begin
-				if (orange_click && DrawY < OrangeY) begin
+				// carrot
+				if (orange_click && OrangeCarrot_on) begin
+						red <= 4'hf;
+						green <= 4'hf;
+						blue <= 4'hf;
+				end
+				// no color
+				else if (orange_click && DrawY < OrangeY) begin
 					red <= bg_red;
 					green <= bg_green;
 					blue <= bg_blue;
-				end
-				// carrot
-				else if (orange_click && OrangeCarrot_on) begin
-					red <= 4'hf;
-					green <= 4'hf;
-					blue <= 4'hf;
 				end
 				// dim color
 				else if ((orange_int && (DrawY < CursorY)) || (orange_int && orange_click && DrawY > OrangeY)) begin
@@ -514,16 +515,17 @@ always_ff @ (posedge vga_clk) begin
 				end
 			end	
 			else if (yellow_on) begin
-				if (yellow_click && DrawY < YellowY) begin
-					red <= bg_red;
-					green <= bg_green;
-					blue <= bg_blue;
-				end
 				// carrot
-				else if (yellow_click && YellowCarrot_on) begin
+				if (yellow_click && YellowCarrot_on) begin
 					red <= 4'hf;
 					green <= 4'hf;
 					blue <= 4'hf;
+				end
+				// no color
+				else if (yellow_click && DrawY < YellowY) begin
+					red <= bg_red;
+					green <= bg_green;
+					blue <= bg_blue;
 				end
 				// dim color
 				else if ((yellow_int && (DrawY < CursorY)) || (yellow_int && yellow_click && DrawY > YellowY)) begin
