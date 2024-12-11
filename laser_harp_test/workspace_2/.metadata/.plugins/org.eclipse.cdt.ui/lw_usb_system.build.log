@@ -1,6 +1,6 @@
-12:33:12 **** Incremental Build of configuration Debug for project lw_usb_system ****
+16:15:17 **** Incremental Build of configuration Debug for project lw_usb_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
 
-12:33:12 Build Finished (took 179ms)
+16:15:17 Build Finished (took 206ms)
 

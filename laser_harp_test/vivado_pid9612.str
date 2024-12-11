@@ -1138,3 +1138,249 @@ dismissDialog("Export Hardware Platform"); // e
 // Tcl Message: INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa ... 
 // Tcl Message: INFO: [Project 1-1943] The Hardware Platform can be used for Hardware INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
 dismissDialog("Export Hardware Platform"); // bq
+// WARNING: HEventQueue.dispatchEvent() is taking  344932 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 79 MB. Current time: 12/11/24, 12:22:46 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  898936 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 78 MB. Current time: 12/11/24, 1:06:05 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  38889132 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 79 MB. Current time: 12/11/24, 11:54:18 AM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  1197 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 1055 ms. Increasing delay to 3165 ms.
+// WARNING: HSwingWorker (Refresh Filesets Swing Worker) is taking 2514 ms. Increasing delay to 7542 ms.
+// Elapsed time: 44163 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+// Elapsed time: 17 seconds
+selectCodeEditor("top_level.sv", 5, 221); // ac
+selectCodeEditor("top_level.sv", 42, 280); // ac
+selectCodeEditor("top_level.sv", 3, 223); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectCodeEditor("top_level.sv", 45, 212); // ac
+selectCodeEditor("top_level.sv", 4, 179); // ac
+selectCodeEditor("top_level.sv", 32, 310); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 55, 379); // ac
+selectCodeEditor("top_level.sv", 282, 242); // ac
+// Elapsed time: 15 seconds
+selectCodeEditor("top_level.sv", 282, 242); // ac
+selectCodeEditor("top_level.sv", 23, 248); // ac
+selectCodeEditor("top_level.sv", 292, 250); // ac
+// Elapsed time: 27 seconds
+selectCodeEditor("top_level.sv", 1005, 196); // ac
+selectCodeEditor("top_level.sv", 327, 239); // ac
+selectCodeEditor("top_level.sv", 229, 73); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 127, 224); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 29 seconds
+selectCodeEditor("top_level.sv", 1000, 271); // ac
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // f - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // f - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // o
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator]", 5, true); // f - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // f - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 12, true); // f - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug]", 12, true); // f - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 9, true); // f - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation]", 9, true); // f - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv)]", 3, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, mb_usb_hdmi_top (mb_usb_hdmi_top.sv)]", 3, true, false, false, false, false, true); // D - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 8); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1]", 9); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, mb_usb_hdmi_top.xdc]", 11, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, mb_usb_hdmi_top.xdc]", 11, false, false, false, false, false, true); // D - Double Click
+selectCodeEditor("mb_usb_hdmi_top.xdc", 43, 87); // ac
+typeControlKey((HResource) null, "mb_usb_hdmi_top.xdc", 'v'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 42, 189); // ac
+selectCodeEditor("top_level.sv", 90, 176); // ac
+// Elapsed time: 17 seconds
+selectCodeEditor("top_level.sv", 954, 161); // ac
+selectCodeEditor("top_level.sv", 21, 375); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 973, 233); // ac
+selectCodeEditor("top_level.sv", 14, 264); // ac
+typeControlKey((HResource) null, "top_level.sv", 'v'); // ac
+selectCodeEditor("top_level.sv", 237, 73); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 53 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 146, 282); // ac
+selectCodeEditor("top_level.sv", 104, 267); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 13, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+dismissDialog("Synthesis is Out-of-date"); // u
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// Tcl Message: INFO: [Project 1-1161] Replacing file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/utils_1/imports/synth_1/mb_intro_top.dcp with file C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/mb_usb_hdmi_top.dcp 
+dismissDialog("Resetting Runs"); // bq
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Dec 11 12:16:55 2024] Launched synth_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/runme.log [Wed Dec 11 12:16:55 2024] Launched impl_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 301 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // S.a
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-448] named port connection 'keycode' does not exist for instance 'audio' of module 'sound' [C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:60]. ]", 2, false); // u.d
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\estel\laser-harp-fpga\laser_harp_test\laser_harp_test.srcs\sources_1\imports\design_source\mb_usb_hdmi_top.sv;-;;-;16;-;line;-;60;-;;-;16;-;"); // u.d
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mb_usb_hdmi_top.sv", 3); // o
+selectCodeEditor("mb_usb_hdmi_top.sv", 20, 225); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 5, 218); // ac
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("mb_usb_hdmi_top.sv", 5, 217); // ac
+// Elapsed time: 14 seconds
+selectCodeEditor("mb_usb_hdmi_top.sv", 294, 212); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("mb_usb_hdmi_top.sv", 152, 202); // ac
+// TclEventType: DG_GRAPH_STALE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mb_usb_hdmi_top.sv", 3); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectCodeEditor("top_level.sv", 33, 129); // ac
+typeControlKey((HResource) null, "top_level.sv", 'c'); // ac
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "sine.sv", 2); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mb_usb_hdmi_top.sv", 3); // o
+typeControlKey((HResource) null, "mb_usb_hdmi_top.sv", 'v'); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 44, 311); // ac
+typeControlKey((HResource) null, "mb_usb_hdmi_top.sv", 'c'); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 120, 304); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 164, 283); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 206, 232); // ac
+typeControlKey((HResource) null, "mb_usb_hdmi_top.sv", 'v'); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 146, 288); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 251, 288); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 221, 261); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 206, 250); // ac
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 13, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // u
+// TclEventType: RUN_RESET
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+dismissDialog("Resetting Runs"); // bq
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 6 
+// Tcl Message: INFO: [Vivado 12-4149] The synthesis checkpoint for IP 'C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/ip/ila_0/ila_0.xci' is already up-to-date 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Dec 11 12:23:31 2024] Launched synth_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/runme.log [Wed Dec 11 12:23:31 2024] Launched impl_1... Run output will be captured here: C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 80 MB. Current time: 12/11/24, 12:24:22 PM CST
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// WARNING: HEventQueue.dispatchEvent() is taking  10810 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// Elapsed time: 452 seconds
+dismissDialog("Bitstream Generation Completed"); // S.a
+// Elapsed time: 72 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("CANCEL", "Cancel"); // JButton
+dismissDialog("Export Hardware Platform"); // e
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("NEXT", "Next >"); // JButton
+selectButton("OptionPane.button", "Yes"); // JButton
+// Tcl Command: 'get_property pfm_name [get_files -all {C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/bd/mb_usb/mb_usb.bd}]'
+selectButton("FINISH", "Finish"); // JButton
+// 'n' command handler elapsed time: 5 seconds
+dismissDialog("Export Hardware Platform"); // e
+// Tcl Message: write_hw_platform -fixed -include_bit -force -file C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+// Tcl Message: INFO: [Project 1-1918] Creating Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa ... 
+// Tcl Message: INFO: [Project 1-1943] The Hardware Platform can be used for Hardware INFO: [Project 1-1941] Successfully created Hardware Platform: C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa 
+dismissDialog("Export Hardware Platform"); // bq
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1778 ms. Increasing delay to 4000 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 81 MB. Current time: 12/11/24, 12:54:25 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 81 MB. Current time: 12/11/24, 1:24:27 PM CST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 80 MB. Current time: 12/11/24, 1:54:30 PM CST
+// Elapsed time: 5590 seconds
+selectCodeEditor("mb_usb_hdmi_top.sv", 243, 273); // ac
+// Elapsed time: 150 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, mb_usb_hdmi_top.xdc]", 7, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, mb_usb_hdmi_top.xdc]", 7, false, false, false, false, false, true); // D - Double Click
+typeControlKey((HResource) null, "mb_usb_hdmi_top.xdc", 'v'); // ac
+// Elapsed time: 60 seconds
+selectCodeEditor("mb_usb_hdmi_top.xdc", 1022, 144); // ac
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "mb_usb_hdmi_top.sv", 3); // o
+selectCodeEditor("mb_usb_hdmi_top.sv", 230, 282); // ac
+typeControlKey((HResource) null, "mb_usb_hdmi_top.sv", 'v'); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 198, 328); // ac
+selectCodeEditor("mb_usb_hdmi_top.sv", 247, 326); // ac
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("mb_usb_hdmi_top.sv", 8, 165); // ac
+// HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 81 MB. Current time: 12/11/24, 2:38:19 PM CST
+// WARNING: HEventQueue.dispatchEvent() is taking  899571 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  585852 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  151270 ms.
+// Elapsed time: 3430 seconds
+selectCodeEditor("mb_usb_hdmi_top.sv", 545, 296, false, true, false, false, false); // ac - Control Key
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level.sv", 1); // o
+// HMemoryUtils.trashcanNow. Engine heap size: 1,902 MB. GUI used memory: 80 MB. Current time: 12/11/24, 3:08:19 PM CST

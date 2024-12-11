@@ -68,7 +68,7 @@ begin:Color_on_proc
 	else
 		yellow_on = 1'b0;
 	// green
-	if (DrawX >= 240 && DrawX <= 246 && DrawY <= 355 && DrawY >= 10)
+	if (DrawX >= 241 && DrawX <= 246 && DrawY <= 355 && DrawY >= 10)
 		green_on = 1'b1;
 	else
 		green_on = 1'b0;
@@ -246,8 +246,8 @@ end
 
 always_comb
 begin:Red_int_proc
-	if (l_click) begin
-		if ( CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184) begin // if (CursorY <= 348 && CursorY >= 3*CursorX-192 && CursorY >= -3*CursorX+870 && red_click) begin 
+	if (l_click || r_click) begin
+		if ( CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184 || (r_click && CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11)) begin // if (CursorY <= 348 && CursorY >= 3*CursorX-192 && CursorY >= -3*CursorX+870 && red_click) begin 
 			red_click_next= 1'b0;
 			RedY_next = 9'd10;
 		end
@@ -255,12 +255,6 @@ begin:Red_int_proc
 			red_click_next = 1'b1;
 			RedY_next = CursorY;
 		end
-	end
-	else if (r_click) begin
-		if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11) begin
-			red_click_next= 1'b0;
-			RedY_next = 9'd10;
-		end	
 	end
 	else begin
 		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184)// if (CursorY <= 348 && CursorY >= 3*CursorX-192 && CursorY >= -3*CursorX+870 && red_click)
@@ -384,7 +378,7 @@ end
 always_comb
 begin:Violet_int_proc
 	if (l_click) begin
-	   if (CursorY >= 347 && CursorY <= 357 && CursorX >= 302 && CursorX <= 3012) begin
+	   if (CursorY >= 347 && CursorY <= 357 && CursorX >= 302 && CursorX <= 312) begin
 			violet_click_next = 1'b0;
 			VioletY_next = 9'd10;
 		end
@@ -447,7 +441,7 @@ always_ff @ (posedge vga_clk) begin
 	   yellow_click <= yellow_click_next;
 	   green_click <= green_click_next;
 	   blue_click <= blue_click_next;
-	   indigo_click <= violet_click_next;
+	   indigo_click <= indigo_click_next;
 	   violet_click <= violet_click_next;
 
 	    if ((cursor_on == 1'b1)) begin 
