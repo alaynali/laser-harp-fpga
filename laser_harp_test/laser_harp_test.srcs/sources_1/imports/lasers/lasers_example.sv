@@ -242,55 +242,6 @@ begin:Carrot_on_proc
 	else begin
 		VioletCarrot_on = 1'b0;
 	end
-	// // red
-	// if (DrawY <= 348 && DrawY >= 3*DrawX-192 && DrawY >= -3*DrawX+870) begin
-	// 	RedCarrot_on = 1'b1;
-	// end
-	// else begin
-	// 	RedCarrot_on = 1'b0;
-	// end
-	// // orange
-	// if (DrawY <= 348 && DrawY >= 3*DrawX-258 && DrawY >= -3*DrawX+936) begin
-	// 	OrangeCarrot_on = 1'b1;
-	// end
-	// else begin
-	// 	OrangeCarrot_on = 1'b0;
-	// end
-	// // yellow
-	// if (DrawY <= 348 && DrawY >= 3*DrawX-324 && DrawY >= -3*DrawX+1002) begin
-	// 	YellowCarrot_on = 1'b1;
-	// end
-	// else begin
-	// 	YellowCarrot_on = 1'b0;
-	// end
-	// // green
-	// if (DrawY <= 348 && DrawY >= 3*DrawX-390 && DrawY >= -3*DrawX+1068) begin
-	// 	GreenCarrot_on = 1'b1;
-	// end
-	// else begin
-	// 	GreenCarrot_on = 1'b0;
-	// end
-	// // blue
-	// if (DrawY <= 348 && DrawY >= 3*DrawX-456 && DrawY >= -3*DrawX+1134) begin
-	// 	BlueCarrot_on = 1'b1;
-	// end
-	// else begin
-	// 	BlueCarrot_on = 1'b0;
-	// end
-	// // indigo
-	// if (DrawY <= 348 && DrawY >= 3*DrawX-522 && DrawY >= -3*DrawX+1200) begin
-	// 	IndigoCarrot_on = 1'b1;
-	// end
-	// else begin
-	// 	IndigoCarrot_on = 1'b0;
-	// end
-	// // violet
-	// if (DrawY <= 348 && DrawY >= 3*DrawX-588 && DrawY >= -3*DrawX+1266) begin
-	// 	VioletCarrot_on = 1'b1;
-	// end
-	// else begin
-	// 	VioletCarrot_on = 1'b0;
-	// end
 end
 
 always_comb
@@ -304,6 +255,12 @@ begin:Red_int_proc
 			red_click_next = 1'b1;
 			RedY_next = CursorY;
 		end
+	end
+	else if (r_click) begin
+		if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11) begin
+			red_click_next= 1'b0;
+			RedY_next = 9'd10;
+		end	
 	end
 	else begin
 		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184)// if (CursorY <= 348 && CursorY >= 3*CursorX-192 && CursorY >= -3*CursorX+870 && red_click)
