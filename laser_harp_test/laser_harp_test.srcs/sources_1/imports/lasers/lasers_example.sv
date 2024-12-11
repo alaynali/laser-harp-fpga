@@ -240,48 +240,51 @@ always_comb
 begin:Red_int_proc
 
 // new
-	// if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11) begin //(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
-	// 	if (l_click) begin
-	// 		// if (red_click) begin
-	// 		// 	red_click_next = 1'b0;
-	// 		// 	RedY_next = 9'd10;
-	// 		// end
-	// 		// else begin
-	// 		// 	red_click_next = 1'b1;
-	// 		// 	RedY_next = CursorY;
-	// 		// end
-	// 		red_click_next = 1'b1;
-	// 		RedY_next = CursorY;
-	// 	end
-	// 	else 
-	// 		red_int = 1'b1;
-	// end
-	// else
-	// 	red_int = 1'b0;
 
-	// if (CursorY <= 350 && CursorY >= 341 && CursorX >= 172 && CursorX <= 182) begin// clicking the carrot
-	// 	if (l_click && red_click) begin
-	// 		red_click_next = 1'b0;
-	// 		RedY_next = 9'd10;
-	// 	end
-	// end
-// old
-	if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11) begin//(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
+	red_click = 1'b0;
+
+	if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11) begin //(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
 		if (l_click) begin
-			if (red_click) begin
-				red_click_next = 1'b0;
-				RedY_next = 9'd10;
-			end
-			else begin
-				red_click_next = 1'b1;
-				RedY_next = CursorY;
-			end
+			// if (red_click) begin
+			// 	red_click_next = 1'b0;
+			// 	RedY_next = 9'd10;
+			// end
+			// else begin
+			// 	red_click_next = 1'b1;
+			// 	RedY_next = CursorY;
+			// end
+			red_click = 1'b1;
+			RedY_next = CursorY;
 		end
 		else 
 			red_int = 1'b1;
 	end
 	else
 		red_int = 1'b0;
+
+	if (CursorY <= 350 && CursorY >= 341 && CursorX >= 172 && CursorX <= 182) begin// clicking the carrot
+		if (l_click && red_click) begin
+			red_click= 1'b0;
+			RedY_next = 9'd10;
+		end
+	end
+// old
+	// if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11) begin//(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
+	// 	if (l_click) begin
+	// 		if (red_click) begin
+	// 			red_click_next = 1'b0;
+	// 			RedY_next = 9'd10;
+	// 		end
+	// 		else begin
+	// 			red_click_next = 1'b1;
+	// 			RedY_next = CursorY;
+	// 		end
+	// 	end
+	// 	else 
+	// 		red_int = 1'b1;
+	// end
+	// else
+	// 	red_int = 1'b0;
 end
 always_comb
 begin:Orange_int_proc
@@ -411,7 +414,7 @@ always_ff @ (posedge vga_clk) begin
 	green <= 4'h0;
 	blue <= 4'h0;
 	
-	red_click <= 1'b0;
+	// red_click <= 1'b0;
 	orange_click <= 1'b0;
 	yellow_click <= 1'b0;
 	green_click <= 1'b0;
@@ -429,7 +432,7 @@ always_ff @ (posedge vga_clk) begin
 
 	if (blank) begin  // This is when the non-blanking interval begins
 
-	   RedY <= RedY_next;
+	//    RedY <= RedY_next;
 	   OrangeY <= OrangeY_next;
 	   YellowY <= YellowY_next;
 	   GreenY <= GreenY_next;
@@ -462,11 +465,11 @@ always_ff @ (posedge vga_clk) begin
 					blue <= bg_blue;
 				end
 				// // carrot 
-				// else if (red_click && RedCarrot_on) begin
-				// 	red <= 4'hf;
-				// 	green <= 4'hf;
-				// 	blue <= 4'hf;
-				// end
+				else if (red_click && RedCarrot_on) begin
+					red <= 4'hf;
+					green <= 4'hf;
+					blue <= 4'hf;
+				end
 				// dim color
 				else if ((red_int && (DrawY < CursorY)) || (red_int && red_click && DrawY > RedY)) begin
 					red <= 4'h7;
@@ -486,11 +489,19 @@ always_ff @ (posedge vga_clk) begin
 					green <= bg_green;
 					blue <= bg_blue;
 				end
+				// carrot
+				else if (orange_click && OrangeCarrot_on) begin
+					red <= 4'hf;
+					green <= 4'hf;
+					blue <= 4'hf;
+				end
+				// dim color
 				else if ((orange_int && (DrawY < CursorY)) || (orange_int && orange_click && DrawY > OrangeY)) begin
 					red <= 4'h8;
 					green <= 4'h5;
 					blue <= 4'h3;
 				end
+				// normal color
 				else begin
 					red <= 4'hF;
 					green <= 4'h9;
@@ -503,11 +514,19 @@ always_ff @ (posedge vga_clk) begin
 					green <= bg_green;
 					blue <= bg_blue;
 				end
+				// carrot
+				else if (yellow_click && YellowCarrot_on) begin
+					red <= 4'hf;
+					green <= 4'hf;
+					blue <= 4'hf;
+				end
+				// dim color
 				else if ((yellow_int && (DrawY < CursorY)) || (yellow_int && yellow_click && DrawY > YellowY)) begin
 					red <= 4'h7;
 					green <= 4'h6;
 					blue <= 4'h2;
 				end
+				// normal color
 				else begin
 					red <= 4'hF;
 					green <= 4'hD;
@@ -567,10 +586,11 @@ always_ff @ (posedge vga_clk) begin
 				green <= bg_green;
 				blue <= bg_blue;
 			end
-
 		end
 	end
 end
+
+
 
 
 endmodule
