@@ -170,13 +170,13 @@ logic violet_click;
         .CursorY(CursorY),
         .CursorS(CursorS),
         .btn_keycode(keycode1_gpio[7:0]),
-        .red_click(red_click),
-        .orange_click(orange_click),
-        .yellow_click(yellow_click),
-        .green_click(green_click),
-        .blue_click(blue_click),
-        .indigo_click(indigo_click),
-        .violet_click(violet_click)
+        .red_click_out(red_click),
+        .orange_click_out(orange_click),
+        .yellow_click_out(yellow_click),
+        .green_click_out(green_click),
+        .blue_click_out(blue_click),
+        .indigo_click_out(indigo_click),
+        .violet_click_out(violet_click)
     );
     
     cursor_impl cursor(

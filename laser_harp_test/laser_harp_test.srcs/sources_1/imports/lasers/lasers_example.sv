@@ -5,13 +5,13 @@ module lasers_example (
 	input  logic [9:0] CursorX, CursorY, CursorS,
 	input logic [7:0] btn_keycode,
 	output logic [3:0] red, green, blue,
-	output logic red_click,
-  output logic orange_click,
-  output logic yellow_click,
-  output logic green_click,
-  output logic blue_click,
-  output logic indigo_click,
-  output logic violet_click
+	output logic red_click_out,
+  output logic orange_click_out,
+  output logic yellow_click_out,
+  output logic green_click_out,
+  output logic blue_click_out,
+  output logic indigo_click_out,
+  output logic violet_click_out
 );
 
 logic cursor_on;
@@ -53,7 +53,7 @@ end
 always_comb
 begin:Color_on_proc
 	// red
-	if (DrawY >= 2*DrawX-12 && DrawY <= 2*DrawX && DrawY <= 360 && DrawY >= RedY)
+	if (DrawY >= 2*DrawX-12 && DrawY <= 2*DrawX && DrawY <= 360 && DrawY >= 10)
 		red_on = 1'b1;
 	else
 		red_on = 1'b0;
@@ -158,6 +158,14 @@ logic green_click;
 logic blue_click;
 logic indigo_click;
 logic violet_click;
+
+assign red_click_out = red_click;
+assign orange_click_out = orange_click;
+assign yellow_click_out = yellow_click;
+assign green_click_out = green_click;
+assign blue_click_out = blue_click;
+assign indigo_click_out = indigo_click;
+assign violet_click_out = violet_click;
 
 logic [9:0] RedY;
 logic [9:0] OrangeY;
