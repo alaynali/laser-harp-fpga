@@ -474,27 +474,37 @@ always_ff @ (posedge vga_clk) begin
 				end
 			end	
 			else if (orange_on) begin
-				if (!orange_int || DrawY > CursorY) begin
-					red <= 4'hF;
-					green <= 4'h9;
-					blue <= 4'h4;
+				if (orange_click && DrawY < OrangeY) begin
+					red <= bg_red;
+					green <= bg_green;
+					blue <= bg_blue;
 				end
-				else begin
+				else if ((orange_int && (DrawY < CursorY)) || (orange_int && orange_click && DrawY > OrangeY)) begin
 					red <= 4'h8;
 					green <= 4'h5;
 					blue <= 4'h3;
 				end
+				else begin
+					red <= 4'hF;
+					green <= 4'h9;
+					blue <= 4'h4;
+				end
 			end	
 			else if (yellow_on) begin
-				if (!yellow_int || DrawY > CursorY) begin
-					red <= 4'hF;
-					green <= 4'hD;
-					blue <= 4'h5;
+				if (yellow_click && DrawY < YellowY) begin
+					red <= bg_red;
+					green <= bg_green;
+					blue <= bg_blue;
 				end
-				else begin
+				else if ((yellow_int && (DrawY < CursorY)) || (yellow_int && yellow_click && DrawY > YellowY)) begin
 					red <= 4'h7;
 					green <= 4'h6;
 					blue <= 4'h2;
+				end
+				else begin
+					red <= 4'hF;
+					green <= 4'hD;
+					blue <= 4'h5;
 				end
 			end	
 			else if (green_on) begin
