@@ -186,49 +186,49 @@ logic VioletCarrot_on;
 always_comb 
 begin:Carrot_on_proc
 	// red
-	if (DrawY <= 348 && DrawY >= 3*DrawX-192 && DrawY <= -3*DrawX+870) begin
+	if (DrawY <= 348 && DrawY >= 3*DrawX-192 && DrawY >= -3*DrawX+870) begin
 		RedCarrot_on = 1'b1;
 	end
 	else begin
 		RedCarrot_on = 1'b0;
 	end
 	// orange
-	if (DrawY <= 348 && DrawY >= 3*DrawX-258 && DrawY <= -3*DrawX+936) begin
+	if (DrawY <= 348 && DrawY >= 3*DrawX-258 && DrawY >= -3*DrawX+936) begin
 		OrangeCarrot_on = 1'b1;
 	end
 	else begin
 		OrangeCarrot_on = 1'b0;
 	end
 	// yellow
-	if (DrawY <= 348 && DrawY >= 3*DrawX-324 && DrawY <= -3*DrawX+1002) begin
+	if (DrawY <= 348 && DrawY >= 3*DrawX-324 && DrawY >= -3*DrawX+1002) begin
 		YellowCarrot_on = 1'b1;
 	end
 	else begin
 		YellowCarrot_on = 1'b0;
 	end
 	// green
-	if (DrawY <= 348 && DrawY >= 3*DrawX-390 && DrawY <= -3*DrawX+1068) begin
+	if (DrawY <= 348 && DrawY >= 3*DrawX-390 && DrawY >= -3*DrawX+1068) begin
 		GreenCarrot_on = 1'b1;
 	end
 	else begin
 		GreenCarrot_on = 1'b0;
 	end
 	// blue
-	if (DrawY <= 348 && DrawY >= 3*DrawX-456 && DrawY <= -3*DrawX+1134) begin
+	if (DrawY <= 348 && DrawY >= 3*DrawX-456 && DrawY >= -3*DrawX+1134) begin
 		BlueCarrot_on = 1'b1;
 	end
 	else begin
 		BlueCarrot_on = 1'b0;
 	end
 	// indigo
-	if (DrawY <= 348 && DrawY >= 3*DrawX-522 && DrawY <= -3*DrawX+1200) begin
+	if (DrawY <= 348 && DrawY >= 3*DrawX-522 && DrawY >= -3*DrawX+1200) begin
 		IndigoCarrot_on = 1'b1;
 	end
 	else begin
 		IndigoCarrot_on = 1'b0;
 	end
 	// violet
-	if (DrawY <= 348 && DrawY >= 3*DrawX-588 && DrawY <= -3*DrawX+1266) begin
+	if (DrawY <= 348 && DrawY >= 3*DrawX-588 && DrawY >= -3*DrawX+1266) begin
 		VioletCarrot_on = 1'b1;
 	end
 	else begin
@@ -253,7 +253,7 @@ begin:Red_int_proc
 			// 	red_click_next = 1'b1;
 			// 	RedY_next = CursorY;
 			// end
-			red_click = 1'b1;
+			red_click_next = 1'b1;
 			RedY_next = CursorY;
 		end
 		else 
@@ -264,7 +264,7 @@ begin:Red_int_proc
 
 	if (CursorY <= 350 && CursorY >= 341 && CursorX >= 172 && CursorX <= 182) begin// clicking the carrot
 		if (l_click && red_click) begin
-			red_click= 1'b0;
+			red_click_next= 1'b0;
 			RedY_next = 9'd10;
 		end
 	end
@@ -432,7 +432,7 @@ always_ff @ (posedge vga_clk) begin
 
 	if (blank) begin  // This is when the non-blanking interval begins
 
-	//    RedY <= RedY_next;
+	   RedY <= RedY_next;
 	   OrangeY <= OrangeY_next;
 	   YellowY <= YellowY_next;
 	   GreenY <= GreenY_next;
