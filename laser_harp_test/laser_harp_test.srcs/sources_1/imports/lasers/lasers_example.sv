@@ -194,62 +194,109 @@ logic VioletCarrot_on;
 always_comb 
 begin:Carrot_on_proc
 	// red
-	if (DrawY <= 348 && DrawY >= 3*DrawX-192 && DrawY >= -3*DrawX+870) begin
+	if ((DrawX-179)*(DrawX-179) + (DrawY-353)*(DrawY-353) <= 20) begin
 		RedCarrot_on = 1'b1;
 	end
 	else begin
 		RedCarrot_on = 1'b0;
 	end
 	// orange
-	if (DrawY <= 348 && DrawY >= 3*DrawX-258 && DrawY >= -3*DrawX+936) begin
+	if ((DrawX-201)*(DrawX-201) + (DrawY-353)*(DrawY-353) <= 20) begin
 		OrangeCarrot_on = 1'b1;
 	end
 	else begin
 		OrangeCarrot_on = 1'b0;
 	end
 	// yellow
-	if (DrawY <= 348 && DrawY >= 3*DrawX-324 && DrawY >= -3*DrawX+1002) begin
+	if ((DrawX-222)*(DrawX-222) + (DrawY-353)*(DrawY-353) <= 20) begin
 		YellowCarrot_on = 1'b1;
 	end
 	else begin
 		YellowCarrot_on = 1'b0;
 	end
 	// green
-	if (DrawY <= 348 && DrawY >= 3*DrawX-390 && DrawY >= -3*DrawX+1068) begin
+	if ((DrawX-243)*(DrawX-243) + (DrawY-353)*(DrawY-353) <= 20) begin
 		GreenCarrot_on = 1'b1;
 	end
 	else begin
 		GreenCarrot_on = 1'b0;
 	end
 	// blue
-	if (DrawY <= 348 && DrawY >= 3*DrawX-456 && DrawY >= -3*DrawX+1134) begin
+	if ((DrawX-264)*(DrawX-264) + (DrawY-353)*(DrawY-353) <= 20) begin
 		BlueCarrot_on = 1'b1;
 	end
 	else begin
 		BlueCarrot_on = 1'b0;
 	end
 	// indigo
-	if (DrawY <= 348 && DrawY >= 3*DrawX-522 && DrawY >= -3*DrawX+1200) begin
+	if ((DrawX-285)*(DrawX-285) + (DrawY-353)*(DrawY-353) <= 20) begin
 		IndigoCarrot_on = 1'b1;
 	end
 	else begin
 		IndigoCarrot_on = 1'b0;
 	end
 	// violet
-	if (DrawY <= 348 && DrawY >= 3*DrawX-588 && DrawY >= -3*DrawX+1266) begin
+	if ((DrawX-307)*(DrawX-307) + (DrawY-353)*(DrawY-353) <= 20) begin
 		VioletCarrot_on = 1'b1;
 	end
 	else begin
 		VioletCarrot_on = 1'b0;
 	end
+	// // red
+	// if (DrawY <= 348 && DrawY >= 3*DrawX-192 && DrawY >= -3*DrawX+870) begin
+	// 	RedCarrot_on = 1'b1;
+	// end
+	// else begin
+	// 	RedCarrot_on = 1'b0;
+	// end
+	// // orange
+	// if (DrawY <= 348 && DrawY >= 3*DrawX-258 && DrawY >= -3*DrawX+936) begin
+	// 	OrangeCarrot_on = 1'b1;
+	// end
+	// else begin
+	// 	OrangeCarrot_on = 1'b0;
+	// end
+	// // yellow
+	// if (DrawY <= 348 && DrawY >= 3*DrawX-324 && DrawY >= -3*DrawX+1002) begin
+	// 	YellowCarrot_on = 1'b1;
+	// end
+	// else begin
+	// 	YellowCarrot_on = 1'b0;
+	// end
+	// // green
+	// if (DrawY <= 348 && DrawY >= 3*DrawX-390 && DrawY >= -3*DrawX+1068) begin
+	// 	GreenCarrot_on = 1'b1;
+	// end
+	// else begin
+	// 	GreenCarrot_on = 1'b0;
+	// end
+	// // blue
+	// if (DrawY <= 348 && DrawY >= 3*DrawX-456 && DrawY >= -3*DrawX+1134) begin
+	// 	BlueCarrot_on = 1'b1;
+	// end
+	// else begin
+	// 	BlueCarrot_on = 1'b0;
+	// end
+	// // indigo
+	// if (DrawY <= 348 && DrawY >= 3*DrawX-522 && DrawY >= -3*DrawX+1200) begin
+	// 	IndigoCarrot_on = 1'b1;
+	// end
+	// else begin
+	// 	IndigoCarrot_on = 1'b0;
+	// end
+	// // violet
+	// if (DrawY <= 348 && DrawY >= 3*DrawX-588 && DrawY >= -3*DrawX+1266) begin
+	// 	VioletCarrot_on = 1'b1;
+	// end
+	// else begin
+	// 	VioletCarrot_on = 1'b0;
+	// end
 end
 
 always_comb
 begin:Red_int_proc
-
-// new
 	if (l_click) begin
-		if (CursorY <= 348 && CursorY >= 3*CursorX-192 && CursorY >= -3*CursorX+870 && red_click) begin 
+		if ( CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184) begin // if (CursorY <= 348 && CursorY >= 3*CursorX-192 && CursorY >= -3*CursorX+870 && red_click) begin 
 			red_click_next= 1'b0;
 			RedY_next = 9'd10;
 		end
@@ -259,36 +306,19 @@ begin:Red_int_proc
 		end
 	end
 	else begin
-		if (CursorY <= 348 && CursorY >= 3*CursorX-192 && CursorY >= -3*CursorX+870 && red_click)
+		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184)// if (CursorY <= 348 && CursorY >= 3*CursorX-192 && CursorY >= -3*CursorX+870 && red_click)
 			red_int = 1'b0;
 		if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11)
 			red_int = 1'b1;
 		else
 			red_int = 1'b0;
 	end
-
-// old
-	// if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11) begin//(CursorY <= 2*CursorX && CursorY >= 2*CursorX-12 && CursorY <= 360 && CursorY >= 11)
-	// 	if (l_click) begin
-	// 		if (red_click) begin
-	// 			red_click_next = 1'b0;
-	// 			RedY_next = 9'd10;
-	// 		end
-	// 		else begin
-	// 			red_click_next = 1'b1;
-	// 			RedY_next = CursorY;
-	// 		end
-	// 	end
-	// 	else 
-	// 		red_int = 1'b1;
-	// end
-	// else
-	// 	red_int = 1'b0;
 end
+
 always_comb
 begin:Orange_int_proc
 	if (l_click) begin
-	    if (CursorY <= 350 && CursorY >= 341 && CursorX >= 194 && CursorX <= 204 && orange_click) begin
+	   if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206) begin // if (CursorY <= 350 && CursorY >= 341 && CursorX >= 194 && CursorX <= 204 && orange_click) begin
 			orange_click_next = 1'b0;
 			OrangeY_next = 9'd10;
 		end
@@ -299,49 +329,38 @@ begin:Orange_int_proc
 		
 	end
 	else begin
-		if (CursorY <= 350 && CursorY >= 341 && CursorX >= 194 && CursorX <= 204 && orange_click)
+		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206) // if (CursorY <= 350 && CursorY >= 341 && CursorX >= 194 && CursorX <= 204 && orange_click)
 			orange_int = 1'b0;
 		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11)
 			orange_int = 1'b1;
 		else
 			orange_int = 1'b0;
 	end
-	// if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11) begin
-	// 	if (l_click) begin
-	// 		if (orange_click) begin
-	// 			orange_click_next = 1'b0;
-	// 			OrangeY_next = 9'd10;
-	// 		end
-	// 		else begin
-	// 			orange_click_next = 1'b1;
-	// 			OrangeY_next = CursorY;
-	// 		end
-	// 	end
-	// 	else 
-	// 		orange_int = 1'b1;
-	// end
-	// else
-	// 	orange_int = 1'b0;
 end
+
 always_comb
 begin:Yellow_int_proc
-	if (CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 360 && CursorY >= 11) begin
-		if (l_click) begin
-			if (yellow_click) begin
-				yellow_click_next = 1'b0;
-				YellowY_next = 9'd10;
-			end
-			else begin
-				yellow_click_next = 1'b1;
-				YellowY_next = CursorY;
-			end
+	if (l_click) begin
+	   if (CursorY >= 347 && CursorY <= 357 && CursorX >= 217 && CursorX <= 227) begin
+			yellow_click_next = 1'b0;
+			YellowY_next = 9'd10;
 		end
-		else 
-			yellow_int = 1'b1;
+		else if (CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 360 && CursorY >= 11) begin
+			yellow_click_next = 1'b1;
+			YellowY_next = CursorY;
+		end
+		
 	end
-	else
-		yellow_int = 1'b0;
+	else begin
+		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 217 && CursorX <= 227) 
+			yellow_int = 1'b0;
+		else if (CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 360 && CursorY >= 11)
+			yellow_int = 1'b1;
+		else
+			yellow_int = 1'b0;
+	end
 end
+
 always_comb
 begin:Green_int_proc
 	if (CursorX >= 238 && CursorX <= 248 && CursorY <= 360 && CursorY >= 11) begin
@@ -475,12 +494,13 @@ always_ff @ (posedge vga_clk) begin
 	    else begin
 			// roygbiv: {4'hF, 4'h3, 4'h3}, {4'hF, 4'h9, 4'h4}, {4'hF, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h3, 4'hB, 4'hF}, {4'h0, 4'h4, 4'hA}, {4'h5, 4'h1, 4'hE}
 			// translucent roygbiv: {4'h7, 4'h1, 4'h1}, {4'h8, 4'h5, 4'h3}, {4'h7, 4'h6, 4'h2}, {4'h3, 4'h6, 4'h2}, {4'h1, 4'h5, 4'h7}, {4'h0, 4'h2, 4'h5}, {4'h2, 4'h0, 4'h7},
+			// bright roygbiv: {4'hF, 4'h9, 4'h9}, {4'hF, 4'hC, 4'hA}, {4'hF, 4'hE, 4'h9}, {4'hB, 4'hF, 4'h9}, {4'hA, 4'hD, 4'hF}, {4'h6, 4'h8, 4'hA}, {4'hB, 4'hA, 4'hE}
 			if (red_on) begin
 				// carrot
 				if (red_click && RedCarrot_on) begin
 					red <= 4'hf;
-					green <= 4'hf;
-					blue <= 4'hf;
+					green <= 4'h9;
+					blue <= 4'h9;
 				end
 				// no color
 				else if (red_click && DrawY < RedY) begin
@@ -505,8 +525,8 @@ always_ff @ (posedge vga_clk) begin
 				// carrot
 				if (orange_click && OrangeCarrot_on) begin
 					red <= 4'hf;
-					green <= 4'hf;
-					blue <= 4'hf;
+					green <= 4'hc;
+					blue <= 4'ha;
 				end
 				// no color
 				else if (orange_click && DrawY < OrangeY) begin
@@ -531,8 +551,8 @@ always_ff @ (posedge vga_clk) begin
 				// carrot
 				if (yellow_click && YellowCarrot_on) begin
 					red <= 4'hf;
-					green <= 4'hf;
-					blue <= 4'hf;
+					green <= 4'he;
+					blue <= 4'h9;
 				end
 				// no color
 				else if (yellow_click && DrawY < YellowY) begin
