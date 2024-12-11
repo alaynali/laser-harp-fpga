@@ -259,12 +259,12 @@ begin:Red_int_proc
 		end
 	end
 	else begin
-		if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11) begin
-			red_int = 1'b1;
-		end
-		else begin
+		if (CursorY <= 348 && CursorY >= 3*CursorX-192 && CursorY >= -3*CursorX+870 && red_click)
 			red_int = 1'b0;
-		end
+		if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 360 && CursorY >= 11)
+			red_int = 1'b1;
+		else
+			red_int = 1'b0;
 	end
 
 // old
@@ -299,12 +299,12 @@ begin:Orange_int_proc
 		
 	end
 	else begin
-		if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11) begin
-			orange_int = 1'b1;
-		end	
-		else begin
+		if (CursorY <= 350 && CursorY >= 341 && CursorX >= 194 && CursorX <= 204 && orange_click)
 			orange_int = 1'b0;
-		end
+		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11)
+			orange_int = 1'b1;
+		else
+			orange_int = 1'b0;
 	end
 	// if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 360 && CursorY >= 11) begin
 	// 	if (l_click) begin
