@@ -187,7 +187,7 @@ logic violet_click;
         .JAB_3(JAB_3),
         .JAB_4(JAB_4),
         .JAB_5(JAB_5),
-        .SW_s(SW_s),
+        .SW(SW),
         .red(red),
         .green(green),
         .blue(blue),
