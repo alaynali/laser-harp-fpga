@@ -143,6 +143,14 @@ logic blue_int;
 logic indigo_int;
 logic violet_int;
 
+logic red_int_next;
+logic orange_int_next;
+logic yellow_int_next;
+logic green_int_next;
+logic blue_int_next;
+logic indigo_int_next;
+logic violet_int_next;
+
 logic red_click_next;
 logic orange_click_next;
 logic yellow_click_next;
@@ -273,34 +281,34 @@ begin:Orange_int_proc
 		if (r_click) begin // reset
 			orange_click_next = 1'b0;
 			OrangeY_next = 9'd10;
-			orange_int = 1'b0;
+			orange_int_next = 1'b0;
 		end
 		else if (l_click) begin // click
 			orange_click_next = 1'b0;
 			OrangeY_next = 9'd10;
-			orange_int = 1'b0;
+			orange_int_next = 1'b0;
 		end
 		else begin // hover / interrupt
-			orange_int = 1'b1;
+			orange_int_next = 1'b1;
 		end
 	end
 	else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin // laser
 		if (r_click) begin // reset
 			orange_click_next = 1'b0;
 			OrangeY_next = 9'd10;
-			orange_int = 1'b0;
+			orange_int_next = 1'b0;
 		end
 		else if (l_click) begin // click
 			orange_click_next = 1'b1;
 			OrangeY_next = CursorY;
-			orange_int = 1'b0;
+			orange_int_next = 1'b0;
 		end
 		else begin // hover / interrupt
-			orange_int = 1'b1;
+			orange_int_next = 1'b1;
 		end
 	end
 	else // bg
-		orange_int = 1'b0;
+		orange_int_next = 1'b0;
 
     // if (!r_click && !l_click) begin
     //     if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206) // if (CursorY <= 350 && CursorY >= 341 && CursorX >= 194 && CursorX <= 204 && orange_click)
@@ -501,6 +509,8 @@ always_ff @ (posedge vga_clk) begin
 	   blue_click <= blue_click_next;
 	   indigo_click <= indigo_click_next;
 	   violet_click <= violet_click_next;
+
+	   orange_int <= orange_int_next
 
 	    if ((cursor_on == 1'b1)) begin 
 			// or import cursor palette
