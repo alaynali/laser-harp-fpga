@@ -251,7 +251,7 @@ begin:Red_int_proc
 			red_click_next= 1'b0;
 			RedY_next = 9'd10;
 		end
-		else if (!r_click && CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11) begin
+		else if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11) begin
 			red_click_next = 1'b1;
 			RedY_next = CursorY;
 		end
@@ -268,31 +268,65 @@ end
 
 always_comb
 begin:Orange_int_proc
-    if (!r_click && !l_click) begin
-        if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206) // if (CursorY <= 350 && CursorY >= 341 && CursorX >= 194 && CursorX <= 204 && orange_click)
-			orange_int = 1'b0;
-		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)
-			orange_int = 1'b1;
-		else
-			orange_int = 1'b0;
-    end
-    else begin
-        if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206 || (r_click && CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)) begin // if (CursorY <= 350 && CursorY >= 341 && CursorX >= 194 && CursorX <= 204 && orange_click) begin
+
+	if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206 && orange_click) begin // carrot
+		if (r_click) begin // reset
 			orange_click_next = 1'b0;
 			OrangeY_next = 9'd10;
+			orange_int = 1'b0;
 		end
-		else if (!r_click && CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin
+		else if (l_click) begin // click
+			orange_click_next = 1'b0;
+			OrangeY_next = 9'd10;
+			orange_int = 1'b0;
+		end
+		else begin // hover / interrupt
+			orange_int = 1'b1;
+		end
+	end
+	else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin // laser
+		if (r_click) begin // reset
+			orange_click_next = 1'b0;
+			OrangeY_next = 9'd10;
+			orange_int = 1'b0;
+		end
+		else if (l_click) begin // click
 			orange_click_next = 1'b1;
 			OrangeY_next = CursorY;
+			orange_int = 1'b0;
 		end
-    end
+		else begin // hover / interrupt
+			orange_int = 1'b1;
+		end
+	end
+	else // bg
+		orange_int = 1'b0;
+
+    // if (!r_click && !l_click) begin
+    //     if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206) // if (CursorY <= 350 && CursorY >= 341 && CursorX >= 194 && CursorX <= 204 && orange_click)
+	// 		orange_int = 1'b0;
+	// 	else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)
+	// 		orange_int = 1'b1;
+	// 	else
+	// 		orange_int = 1'b0;
+    // end
+    // else begin
+    //     if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206 || (r_click && CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)) begin // if (CursorY <= 350 && CursorY >= 341 && CursorX >= 194 && CursorX <= 204 && orange_click) begin
+	// 		orange_click_next = 1'b0;
+	// 		OrangeY_next = 9'd10;
+	// 	end
+	// 	else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin
+	// 		orange_click_next = 1'b1;
+	// 		OrangeY_next = CursorY;
+	// 	end
+    // end
     
 //	if (l_click || r_click) begin
 //	   if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206 || (r_click && CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)) begin // if (CursorY <= 350 && CursorY >= 341 && CursorX >= 194 && CursorX <= 204 && orange_click) begin
 //			orange_click_next = 1'b0;
 //			OrangeY_next = 9'd10;
 //		end
-//		else if (!r_click && CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin
+//		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin
 //			orange_click_next = 1'b1;
 //			OrangeY_next = CursorY;
 //		end
@@ -314,10 +348,15 @@ begin:Yellow_int_proc
 	   if (CursorY >= 347 && CursorY <= 357 && CursorX >= 217 && CursorX <= 227 || (r_click && CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 355 && CursorY >= 11)) begin
 			yellow_click_next = 1'b0;
 			YellowY_next = 9'd10;
+			yellow_int = 1'b0;
 		end
-		else if (!r_click && CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 355 && CursorY >= 11) begin
+		else if (CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 355 && CursorY >= 11) begin
 			yellow_click_next = 1'b1;
 			YellowY_next = CursorY;
+			yellow_int = 1'b0;
+		end
+		else begin
+			yellow_int = 1'b0;
 		end
 		
 	end
@@ -338,7 +377,7 @@ begin:Green_int_proc
 			green_click_next = 1'b0;
 			GreenY_next = 9'd10;
 		end
-		else if (l_click && (CursorX >= 238 && CursorX <= 248 && CursorY <= 355 && CursorY >= 11)) begin
+		else if (CursorX >= 238 && CursorX <= 248 && CursorY <= 355 && CursorY >= 11) begin
 			green_click_next = 1'b1;
 			GreenY_next = CursorY;
 		end
@@ -359,7 +398,7 @@ begin:Blue_int_proc
 			blue_click_next = 1'b0;
 			BlueY_next = 9'd10;
 		end
-		else if (!r_click && CursorY >= -6*CursorX+1908 && CursorY <= -6*CursorX+1968 && CursorY <= 355 && CursorY >= 11) begin
+		else if (CursorY >= -6*CursorX+1908 && CursorY <= -6*CursorX+1968 && CursorY <= 355 && CursorY >= 11) begin
 			blue_click_next = 1'b1;
 			BlueY_next = CursorY;
 		end
@@ -380,7 +419,7 @@ begin:Indigo_int_proc
 			indigo_click_next = 1'b0;
 			IndigoY_next = 9'd10;
 		end
-		else if (!r_click && CursorY >= -3*CursorX+1194 && CursorY <= -3*CursorX+1224 && CursorY <= 355 && CursorY >= 11) begin
+		else if (CursorY >= -3*CursorX+1194 && CursorY <= -3*CursorX+1224 && CursorY <= 355 && CursorY >= 11) begin
 			indigo_click_next = 1'b1;
 			IndigoY_next = CursorY;
 		end
@@ -401,7 +440,7 @@ begin:Violet_int_proc
 			violet_click_next = 1'b0;
 			VioletY_next = 9'd10;
 		end
-		else if (!r_click && CursorY >= -2*CursorX+956 && CursorY <= -2*CursorX+976 && CursorY <= 355 && CursorY >= 11) begin
+		else if (CursorY >= -2*CursorX+956 && CursorY <= -2*CursorX+976 && CursorY <= 355 && CursorY >= 11) begin
 			violet_click_next = 1'b1;
 			VioletY_next = CursorY;
 		end
