@@ -211,59 +211,59 @@ sine sine_wave (
 //    end
 //end
 
-always_comb begin
-    case (out)
-        6'b000001: 
-        begin
-            phase_increment = 1;   // SW0
-            harmonics = 0;
-        end
-        6'b000010: begin
-            phase_increment = 2;   // SW0
-            harmonics = 0;
-        end
-        6'b000100: begin
-            phase_increment = 3;   // SW0
-            harmonics = 0;
-        end
-        6'b001000: begin
-            phase_increment = 4;   // SW0
-            harmonics = 0;
-        end
-        6'b010000: begin
-            phase_increment = 5;   // SW0
-            harmonics = 0;
-        end
-        6'b100000: begin
-            phase_increment = 6;   // SW0
-            harmonics = 0;
-        end
-        default: phase_increment = 0;       // Default to 0 if no switch is active
-    endcase
-end
+//always_comb begin
+//    case (out)
+//        6'b000001: 
+//        begin
+//            phase_increment = 1;   // SW0
+//            harmonics = 0;
+//        end
+//        6'b000010: begin
+//            phase_increment = 2;   // SW0
+//            harmonics = 0;
+//        end
+//        6'b000100: begin
+//            phase_increment = 3;   // SW0
+//            harmonics = 0;
+//        end
+//        6'b001000: begin
+//            phase_increment = 4;   // SW0
+//            harmonics = 0;
+//        end
+//        6'b010000: begin
+//            phase_increment = 5;   // SW0
+//            harmonics = 0;
+//        end
+//        6'b100000: begin
+//            phase_increment = 6;   // SW0
+//            harmonics = 0;
+//        end
+//        default: phase_increment = 0;       // Default to 0 if no switch is active
+//    endcase
+//end
 
 always_comb begin
-    if(red_click)
+    if(red_click || (out == 6'b000001))
         begin
             phase_increment = 1;   // SW0
         end
-    else if (orange_click) 
+    else if (orange_click || (out == 6'b000010)) 
         begin
             phase_increment = 2;   // SW0
         end
-    else if (yellow_click) 
+    else if (yellow_click || (out == 6'b000100)) 
         begin
             phase_increment = 3;   // SW0
         end
-    else if (green_click) 
+    else if (green_click || (out == 6'b001000)) 
         begin
             phase_increment = 4;   // SW0
         end
-    else if (blue_click)
+    else if (blue_click || (out == 6'b010000))
         begin
             phase_increment = 5;   // SW0
         end
-    else if (indigo_click) 
+    else if (indigo_click || (out == 6'b100000)) 
         begin
             phase_increment = 6;   // SW0
         end
