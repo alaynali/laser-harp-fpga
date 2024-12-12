@@ -256,7 +256,6 @@ begin:Red_int_proc
 	red_int = 1'b0;
 	red_click_next = red_click;
 	RedY_next = RedY;
-
 	
 	if (!l_click && !r_click) begin
 		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184)// if (CursorY <= 348 && CursorY >= 3*CursorX-192 && CursorY >= -3*CursorX+870 && red_click)
@@ -271,7 +270,7 @@ begin:Red_int_proc
 			red_click_next= 1'b0;
 			RedY_next = 9'd10;
 		end
-		else if (JAB_0 || (l_click && CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11)) begin
+		if (JAB_0 || (l_click && CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11)) begin
 			red_click_next = 1'b1;
 			RedY_next = CursorY;
 		end
@@ -284,21 +283,23 @@ begin:Orange_int_proc
 	orange_click_next = orange_click;
 	OrangeY_next = OrangeY;
 
-	if (l_click || r_click) begin
+	if (JAB_1) begin
+		orange_click_next = 1'b1;
+		OrangeY_next = CursorY;
+	end
+	else if (l_click || r_click) begin
 	   if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206 || (r_click && CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)) begin
 			orange_click_next = 1'b0;
 			OrangeY_next = 9'd10;
-			orange_int = 1'b0;
 		end
 		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin
 			orange_click_next = 1'b1;
 			OrangeY_next = CursorY;
-			orange_int = 1'b0;
 		end
-		else begin
-			orange_int = 1'b0;
-		end
-		
+	end
+	else if (!JAB_1) begin
+		orange_click_next = 1'b0;
+		OrangeY_next = 9'd10;
 	end
 	else begin
 		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206) 
