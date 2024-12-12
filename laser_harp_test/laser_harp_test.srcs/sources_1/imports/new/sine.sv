@@ -1643,7 +1643,7 @@ always_ff @(posedge clk)
         sample_1 <= sine_lut_1st[phase_1];
         sample_2 <= sine_lut_2nd[phase_2];
         sample_3 <= sine_lut_3rd[phase_3];
-        phase_1 <= (phase_1 + phase_increment) % (RESOLUTION - 1);
+        phase_1 <= (phase_1 + phase_increment) & (RESOLUTION - 1);
         phase_2 <= (phase_2 + (phase_increment << 1))  & (RESOLUTION - 1);
         phase_3 <= (phase_3 + (((phase_increment << 1) + phase_increment)) >> 2) & (RESOLUTION - 1);
     end else

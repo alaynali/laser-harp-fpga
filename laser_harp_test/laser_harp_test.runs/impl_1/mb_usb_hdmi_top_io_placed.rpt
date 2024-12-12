@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date                      : Wed Dec 11 22:44:24 2024
+| Date                      : Wed Dec 11 22:53:42 2024
 | Host                      : MSI running 64-bit major release  (build 9200)
 | Command                   : report_io -file mb_usb_hdmi_top_io_placed.rpt
 | Design                    : mb_usb_hdmi_top
@@ -65,8 +65,8 @@ Table of Contents
 | B10        |                       | High Range | VCCO_16                      | VCCO        |             |      16 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | B11        |                       | High Range | IO_L14P_T2_SRCC_16           | User IO     |             |      16 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B12        |                       | High Range | VCCO_16                      | VCCO        |             |      16 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
-| B13        | SPKL                  | High Range | IO_L1P_T0_AD0P_15            | TRISTATE    | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
-| B14        | SPKR                  | High Range | IO_L2P_T0_AD8P_15            | TRISTATE    | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| B13        | SPKL                  | High Range | IO_L1P_T0_AD0P_15            | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| B14        | SPKR                  | High Range | IO_L2P_T0_AD8P_15            | OUTPUT      | LVCMOS33    |      15 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | B15        |                       | High Range | IO_L3P_T0_DQS_AD1P_15        | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | B16        | uart_rtl_0_rxd        | High Range | IO_L4P_T0_15                 | INPUT       | LVCMOS33    |      15 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | B17        |                       | High Range | IO_L7P_T1_AD2P_15            | User IO     |             |      15 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
