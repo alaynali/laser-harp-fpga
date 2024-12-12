@@ -127,6 +127,16 @@ begin
     endcase
 end
 
+logic sw_on;
+always_comb 
+begin
+	case (SW_s)
+		16'b0000000000000010 
+			|| 16'b0000000000000011	: sw_on = 1'b1;
+		default						: sw_on = 1'b0;
+	endcase
+end
+
 // read from ROM on negedge, set pixel on posedge
 assign negedge_vga_clk = ~vga_clk;
 
@@ -259,7 +269,7 @@ begin:Red_int_proc
 	red_click_next = red_click;
 	RedY_next = RedY;
 
-	if (SW_s[1]) begin
+	if (sw_on) begin
 		if (JAB_0) begin
 			red_click_next = 1'b1;
 			RedY_next = 240;
@@ -269,7 +279,7 @@ begin:Red_int_proc
 			RedY_next = 9'd10;
 		end 
 	end
-	else if (!SW_s[1]) begin
+	else if (!sw_on) begin
 		if (l_click || r_click) begin
 		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184 || (r_click && CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11)) begin
 				red_click_next = 1'b0;
