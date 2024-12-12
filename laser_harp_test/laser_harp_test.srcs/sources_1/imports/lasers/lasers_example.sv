@@ -13,6 +13,8 @@ module lasers_example (
 	input logic JAB_4, // blue
 	input logic JAB_5, // indigo
 
+	input logic [15:0] SW_s,
+
 	output logic [3:0] red, green, blue,
 	output logic red_click_out,
 
@@ -253,27 +255,40 @@ end
 
 always_comb
 begin:Red_int_proc
-	red_int = 1'b0;
-	red_click_next = red_click;
-	RedY_next = RedY;
 
-	if (l_click || r_click) begin
-	   if (CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184 || (r_click && CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11)) begin
+	if (SW_s[1]) begin
+		if (JAB_0) begin
+			red_click_next = 1'b1;
+			RedY_next = 240;
+		end
+		else begin
 			red_click_next = 1'b0;
 			RedY_next = 9'd10;
-		end
-		else if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11) begin
-			red_click_next = 1'b1;
-			RedY_next = CursorY;
-		end
+		end 
 	end
 	else begin
-		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184) 
-			red_int = 1'b0;
-		else if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11)
-			red_int = 1'b1;
-		else
-			red_int = 1'b0;
+		red_int = 1'b0;
+		red_click_next = red_click;
+		RedY_next = RedY;
+
+		if (l_click || r_click) begin
+		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184 || (r_click && CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11)) begin
+				red_click_next = 1'b0;
+				RedY_next = 9'd10;
+			end
+			else if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11) begin
+				red_click_next = 1'b1;
+				RedY_next = CursorY;
+			end
+		end
+		else begin
+			if (CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184) 
+				red_int = 1'b0;
+			else if (CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11)
+				red_int = 1'b1;
+			else
+				red_int = 1'b0;
+		end
 	end
 	
 	// if (!l_click && !r_click) begin
