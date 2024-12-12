@@ -176,18 +176,11 @@ logic indigo_click;
 logic violet_click;
 
     lasers_example screen(
-        .Reset(reeset_ah),
+        .Reset(reset_ah),
         .vga_clk(clk_25MHz),
         .DrawX(drawX),
         .DrawY(drawY),
         .blank(vde),
-        .JAB_0(JAB_0),
-        .JAB_1(JAB_1),
-        .JAB_2(JAB_2),
-        .JAB_3(JAB_3),
-        .JAB_4(JAB_4),
-        .JAB_5(JAB_5),
-        .SW_s(SW_s),
         .red(red),
         .green(green),
         .blue(blue),
@@ -218,13 +211,5 @@ logic violet_click;
         .probe0(keycode0_gpio[31:0]),
         .probe1(keycode1_gpio[31:0])
     );
-
-    logic [15:0] SW_s;
-    sync_debounce SW_sync [15:0] (
-		.clk  (clk), 
-
-		.d    (SW), 
-		.q    (SW_s)
-	);	
     
 endmodule
