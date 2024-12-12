@@ -264,22 +264,28 @@ end
 always_comb
 begin:Orange_int_proc
 	if (l_click || r_click) begin
-		if ( CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206 || (r_click && CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)) begin
-			orange_click_next= 1'b0;
+	   if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206 || (r_click && CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)) begin
+			orange_click_next = 1'b0;
 			OrangeY_next = 9'd10;
+			orange_int = 1'b0;
 		end
 		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin
 			orange_click_next = 1'b1;
 			OrangeY_next = CursorY;
+			orange_int = 1'b0;
 		end
+		else begin
+			orange_int = 1'b0;
+		end
+		
 	end
 	else begin
 		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206) 
 			orange_int = 1'b0;
-		if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)
-			orange_int = 1'b1;
+		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)
+			yellow_int = 1'b1;
 		else
-			orange_int = 1'b0;
+			yellow_int = 1'b0;
 	end
 end
 
