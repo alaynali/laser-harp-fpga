@@ -1,4 +1,4 @@
-22:46:31 **** Incremental Build of configuration Debug for project lw_usb ****
+23:01:17 **** Incremental Build of configuration Debug for project lw_usb ****
 make all 
 'Building file: ../src/lw_usb/MAX3421E.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -74,5 +74,5 @@ mb-size lw_usb.elf  |tee "lw_usb.elf.size"
 'Finished building: lw_usb.elf.size'
 ' '
 
-22:46:32 Build Finished (took 1s.295ms)
+23:01:18 Build Finished (took 1s.371ms)
 
