@@ -68,14 +68,14 @@ module sound(
     output logic SPKR,
     output logic SPKL,
     input  logic [15:0] SW,   // Switch input
-//    input logic red_click,
-//    input logic orange_click,
-//    input logic yellow_click,
-//    input logic green_click,
-//    input logic blue_click,
-//    input logic indigo_click,
-//    input logic violet_click
-    input logic [7:0] keycode
+    input logic red_click,
+    input logic orange_click,
+    input logic yellow_click,
+    input logic green_click,
+    input logic blue_click,
+    input logic indigo_click,
+    input logic violet_click
+//    input logic [7:0] keycode
 );
 
 logic [15:0] SW_s;
@@ -168,80 +168,72 @@ sine sine_wave (
 //    endcase
 //end
 
-logic flag;
-logic flag_next;
+//logic flag;
+//logic flag_next;
 
-always_ff @ (posedge clk) 
-begin
-    flag <= flag_next;  
-end
-
-always_comb begin
-    if (keycode == 8'b00000001)
-        begin
-           flag_next = 1'b1;   
-        end
-        else if (keycode == 8'b00000010)
-        begin
-           flag_next = 1'b0;
-        end   
-end 
-              
-always_comb begin
-    if (flag) 
-    begin
-         phase_increment = 1;   // SW0
-         harmonics = 0;  
-    end
-    else 
-    begin
-         phase_increment = 2;   // SW0
-    end
-end
-
-
+//always_ff @ (posedge clk) 
+//begin
+//    flag <= flag_next;  
+//end
 
 //always_comb begin
-//    if(red_click)
+//    if (keycode == 8'b00000001)
 //        begin
-//            phase_increment = 1;   // SW0
-//            harmonics = 0;
+//           flag_next = 1'b1;   
 //        end
-//    else if (orange_click) 
+//        else if (keycode == 8'b00000010)
 //        begin
-//            phase_increment = 2;   // SW0
-//            harmonics = 0;
-//        end
-//    else if (yellow_click) 
-//        begin
-//            phase_increment = 3;   // SW0
-//            harmonics = 0;
-//        end
-//    else if (green_click) 
-//        begin
-//            phase_increment = 4;   // SW0
-//            harmonics = 0;
-//        end
-//    else if (blue_click)
-//        begin
-//            phase_increment = 5;   // SW0
-//            harmonics = 0;
-//        end
-//    else if (indigo_click) 
-//        begin
-//            phase_increment = 6;   // SW0
-//            harmonics = 0;
-//        end
-//    else if (violet_click) 
-//        begin
-//            phase_increment = 7;   // SW0
-//            harmonics = 0;
-//        end
+//           flag_next = 1'b0;
+//        end   
+//end 
+              
+//always_comb begin
+//    if (flag) 
+//    begin
+//         phase_increment = 1;   // SW0
+//         harmonics = 0;  
+//    end
 //    else 
-//        begin 
-//            phase_increment = 0;  
-//        end     // Default to 0 if no switch is active
+//    begin
+//         phase_increment = 2;   // SW0
+//    end
 //end
+
+
+always_comb begin
+    if(red_click)
+        begin
+            phase_increment = 1;   // SW0
+        end
+    else if (orange_click) 
+        begin
+            phase_increment = 2;   // SW0
+        end
+    else if (yellow_click) 
+        begin
+            phase_increment = 3;   // SW0
+        end
+    else if (green_click) 
+        begin
+            phase_increment = 4;   // SW0
+        end
+    else if (blue_click)
+        begin
+            phase_increment = 5;   // SW0
+        end
+    else if (indigo_click) 
+        begin
+            phase_increment = 6;   // SW0
+        end
+    else if (violet_click) 
+        begin
+            phase_increment = 7;   // SW0
+        end
+    else 
+        begin 
+            phase_increment = 0;  
+        end     // Default to 0 if no switch is active
+end
 
 //WORKING OVERALL 
 

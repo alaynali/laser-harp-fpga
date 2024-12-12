@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Wed Dec 11 19:21:56 2024
+| Date         : Wed Dec 11 19:49:43 2024
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_methodology -file mb_usb_hdmi_top_methodology_drc_routed.rpt -pb mb_usb_hdmi_top_methodology_drc_routed.pb -rpx mb_usb_hdmi_top_methodology_drc_routed.rpx
 | Design       : mb_usb_hdmi_top
@@ -23,22 +23,22 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 289
+             Violations found: 274
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
 | TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree | 2          |
-| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 2          |
-| TIMING-7  | Critical Warning | No common node between related clocks              | 1          |
+| TIMING-6  | Critical Warning | No common primary clock between related clocks     | 3          |
+| TIMING-7  | Critical Warning | No common node between related clocks              | 2          |
 | TIMING-17 | Critical Warning | Non-clocked sequential cell                        | 20         |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin          | 2          |
 | DPIR-1    | Warning          | Asynchronous driver check                          | 96         |
-| LUTAR-1   | Warning          | LUT drives async reset alert                       | 5          |
+| LUTAR-1   | Warning          | LUT drives async reset alert                       | 4          |
 | PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 10         |
-| SYNTH-10  | Warning          | Wide multiplier                                    | 30         |
+| SYNTH-10  | Warning          | Wide multiplier                                    | 27         |
 | TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
 | TIMING-18 | Warning          | Missing input or output delay                      | 35         |
-| TIMING-20 | Warning          | Non-clocked latch                                  | 84         |
+| TIMING-20 | Warning          | Non-clocked latch                                  | 71         |
 | LATCH-1   | Advisory         | Existing latches in the design                     | 1          |
 +-----------+------------------+----------------------------------------------------+------------+
 
@@ -56,15 +56,25 @@ Related violations: <none>
 
 TIMING-6#1 Critical Warning
 No common primary clock between related clocks  
-The clocks clk_out1_mb_usb_clk_wiz_1_0 and clk_100 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_mb_usb_clk_wiz_1_0] -to [get_clocks clk_100]
+The clocks clk_out1_clk_wiz_0 and clk_100 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks clk_100]
 Related violations: <none>
 
 TIMING-6#2 Critical Warning
+No common primary clock between related clocks  
+The clocks clk_out1_mb_usb_clk_wiz_1_0 and clk_100 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_mb_usb_clk_wiz_1_0] -to [get_clocks clk_100]
+Related violations: <none>
+
+TIMING-6#3 Critical Warning
 No common primary clock between related clocks  
 The clocks clk_out1_mb_usb_clk_wiz_1_0 and clk_out1_clk_wiz_0 are related (timed together) but they have no common primary clock. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_mb_usb_clk_wiz_1_0] -to [get_clocks clk_out1_clk_wiz_0]
 Related violations: <none>
 
 TIMING-7#1 Critical Warning
+No common node between related clocks  
+The clocks clk_out1_clk_wiz_0 and clk_100 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_clk_wiz_0] -to [get_clocks clk_100]
+Related violations: <none>
+
+TIMING-7#2 Critical Warning
 No common node between related clocks  
 The clocks clk_out1_mb_usb_clk_wiz_1_0 and clk_100 are related (timed together) but they have no common node. The design could fail in hardware. To find a timing path between these clocks, run the following command: report_timing -from [get_clocks clk_out1_mb_usb_clk_wiz_1_0] -to [get_clocks clk_100]
 Related violations: <none>
@@ -661,25 +671,20 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell audio/flag_next_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) audio/flag_next_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#3 Warning
 LUT drives async reset alert  
-LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.force_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
-Related violations: <none>
-
-LUTAR-1#4 Warning
-LUT drives async reset alert  
 LUT cell mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_cmd_rst_i_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/microblaze_0/U0/MicroBlaze_Core_I/Area.Core/Implement_Debug_Logic.Master_Core.Debug_Area/Serial_Dbg_Intf.normal_stop_TClk_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#5 Warning
+LUTAR-1#4 Warning
 LUT drives async reset alert  
 LUT cell vga_to_hdmi/inst/encr/oserdes_m_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) vga_to_hdmi/inst/encg/dout_reg[9]/CLR,
 vga_to_hdmi/inst/encr/cnt_reg[1]/CLR, vga_to_hdmi/inst/encr/cnt_reg[2]/CLR,
@@ -698,52 +703,52 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X60Y4 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X63Y5 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X61Y3 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X61Y7 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X60Y2 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X61Y5 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X60Y6 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X61Y3 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X62Y7 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X60Y2 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X62Y5 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X60Y6 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X63Y7 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X60Y4 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X65Y11 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X65Y6 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X64Y9 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X64Y7 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X64Y11 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X64Y5 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 SYNTH-10#1 Warning
@@ -843,55 +848,40 @@ Related violations: <none>
 
 SYNTH-10#20 Warning
 Wide multiplier  
-Detected multiplier at screen/red4__17 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at screen/red4__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#21 Warning
 Wide multiplier  
-Detected multiplier at screen/red4__18 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at screen/red4__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#22 Warning
 Wide multiplier  
-Detected multiplier at screen/red4__19 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at screen/red4__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#23 Warning
 Wide multiplier  
-Detected multiplier at screen/red4__2 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at screen/red4__5 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#24 Warning
 Wide multiplier  
-Detected multiplier at screen/red4__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at screen/red4__6 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#25 Warning
 Wide multiplier  
-Detected multiplier at screen/red4__4 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Detected multiplier at screen/red4__7 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
 SYNTH-10#26 Warning
 Wide multiplier  
-Detected multiplier at screen/red4__5 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#27 Warning
-Wide multiplier  
-Detected multiplier at screen/red4__6 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#28 Warning
-Wide multiplier  
-Detected multiplier at screen/red4__7 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
-Related violations: <none>
-
-SYNTH-10#29 Warning
-Wide multiplier  
 Detected multiplier at screen/red4__8 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
 
-SYNTH-10#30 Warning
+SYNTH-10#27 Warning
 Wide multiplier  
 Detected multiplier at screen/red4__9 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
 Related violations: <none>
@@ -1078,427 +1068,362 @@ Related violations: <none>
 
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch audio/flag_next_reg cannot be properly analyzed as its control pin audio/flag_next_reg/G is not reached by a timing clock
+The latch screen/BlueY_next_reg[0] cannot be properly analyzed as its control pin screen/BlueY_next_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning
 Non-clocked latch  
-The latch screen/BlueY_next_reg[0] cannot be properly analyzed as its control pin screen/BlueY_next_reg[0]/G is not reached by a timing clock
+The latch screen/BlueY_next_reg[1] cannot be properly analyzed as its control pin screen/BlueY_next_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch screen/BlueY_next_reg[1] cannot be properly analyzed as its control pin screen/BlueY_next_reg[1]/G is not reached by a timing clock
+The latch screen/BlueY_next_reg[2] cannot be properly analyzed as its control pin screen/BlueY_next_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch screen/BlueY_next_reg[2] cannot be properly analyzed as its control pin screen/BlueY_next_reg[2]/G is not reached by a timing clock
+The latch screen/BlueY_next_reg[3] cannot be properly analyzed as its control pin screen/BlueY_next_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch screen/BlueY_next_reg[3] cannot be properly analyzed as its control pin screen/BlueY_next_reg[3]/G is not reached by a timing clock
+The latch screen/BlueY_next_reg[4] cannot be properly analyzed as its control pin screen/BlueY_next_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch screen/BlueY_next_reg[4] cannot be properly analyzed as its control pin screen/BlueY_next_reg[4]/G is not reached by a timing clock
+The latch screen/BlueY_next_reg[5] cannot be properly analyzed as its control pin screen/BlueY_next_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch screen/BlueY_next_reg[5] cannot be properly analyzed as its control pin screen/BlueY_next_reg[5]/G is not reached by a timing clock
+The latch screen/BlueY_next_reg[6] cannot be properly analyzed as its control pin screen/BlueY_next_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch screen/BlueY_next_reg[6] cannot be properly analyzed as its control pin screen/BlueY_next_reg[6]/G is not reached by a timing clock
+The latch screen/BlueY_next_reg[7] cannot be properly analyzed as its control pin screen/BlueY_next_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
-The latch screen/BlueY_next_reg[7] cannot be properly analyzed as its control pin screen/BlueY_next_reg[7]/G is not reached by a timing clock
+The latch screen/BlueY_next_reg[8] cannot be properly analyzed as its control pin screen/BlueY_next_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#10 Warning
 Non-clocked latch  
-The latch screen/BlueY_next_reg[8] cannot be properly analyzed as its control pin screen/BlueY_next_reg[8]/G is not reached by a timing clock
+The latch screen/BlueY_next_reg[9] cannot be properly analyzed as its control pin screen/BlueY_next_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#11 Warning
 Non-clocked latch  
-The latch screen/BlueY_next_reg[9] cannot be properly analyzed as its control pin screen/BlueY_next_reg[9]/G is not reached by a timing clock
+The latch screen/GreenY_next_reg[0] cannot be properly analyzed as its control pin screen/GreenY_next_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#12 Warning
 Non-clocked latch  
-The latch screen/GreenY_next_reg[0] cannot be properly analyzed as its control pin screen/GreenY_next_reg[0]/G is not reached by a timing clock
+The latch screen/GreenY_next_reg[1] cannot be properly analyzed as its control pin screen/GreenY_next_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#13 Warning
 Non-clocked latch  
-The latch screen/GreenY_next_reg[1] cannot be properly analyzed as its control pin screen/GreenY_next_reg[1]/G is not reached by a timing clock
+The latch screen/GreenY_next_reg[2] cannot be properly analyzed as its control pin screen/GreenY_next_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#14 Warning
 Non-clocked latch  
-The latch screen/GreenY_next_reg[2] cannot be properly analyzed as its control pin screen/GreenY_next_reg[2]/G is not reached by a timing clock
+The latch screen/GreenY_next_reg[3] cannot be properly analyzed as its control pin screen/GreenY_next_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#15 Warning
 Non-clocked latch  
-The latch screen/GreenY_next_reg[3] cannot be properly analyzed as its control pin screen/GreenY_next_reg[3]/G is not reached by a timing clock
+The latch screen/GreenY_next_reg[4] cannot be properly analyzed as its control pin screen/GreenY_next_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#16 Warning
 Non-clocked latch  
-The latch screen/GreenY_next_reg[4] cannot be properly analyzed as its control pin screen/GreenY_next_reg[4]/G is not reached by a timing clock
+The latch screen/GreenY_next_reg[5] cannot be properly analyzed as its control pin screen/GreenY_next_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#17 Warning
 Non-clocked latch  
-The latch screen/GreenY_next_reg[5] cannot be properly analyzed as its control pin screen/GreenY_next_reg[5]/G is not reached by a timing clock
+The latch screen/GreenY_next_reg[6] cannot be properly analyzed as its control pin screen/GreenY_next_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#18 Warning
 Non-clocked latch  
-The latch screen/GreenY_next_reg[6] cannot be properly analyzed as its control pin screen/GreenY_next_reg[6]/G is not reached by a timing clock
+The latch screen/GreenY_next_reg[7] cannot be properly analyzed as its control pin screen/GreenY_next_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#19 Warning
 Non-clocked latch  
-The latch screen/GreenY_next_reg[7] cannot be properly analyzed as its control pin screen/GreenY_next_reg[7]/G is not reached by a timing clock
+The latch screen/GreenY_next_reg[8] cannot be properly analyzed as its control pin screen/GreenY_next_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#20 Warning
 Non-clocked latch  
-The latch screen/GreenY_next_reg[8] cannot be properly analyzed as its control pin screen/GreenY_next_reg[8]/G is not reached by a timing clock
+The latch screen/GreenY_next_reg[9] cannot be properly analyzed as its control pin screen/GreenY_next_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#21 Warning
 Non-clocked latch  
-The latch screen/GreenY_next_reg[9] cannot be properly analyzed as its control pin screen/GreenY_next_reg[9]/G is not reached by a timing clock
+The latch screen/IndigoY_next_reg[0] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#22 Warning
 Non-clocked latch  
-The latch screen/IndigoY_next_reg[0] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[0]/G is not reached by a timing clock
+The latch screen/IndigoY_next_reg[1] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#23 Warning
 Non-clocked latch  
-The latch screen/IndigoY_next_reg[1] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[1]/G is not reached by a timing clock
+The latch screen/IndigoY_next_reg[2] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#24 Warning
 Non-clocked latch  
-The latch screen/IndigoY_next_reg[2] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[2]/G is not reached by a timing clock
+The latch screen/IndigoY_next_reg[3] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#25 Warning
 Non-clocked latch  
-The latch screen/IndigoY_next_reg[3] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[3]/G is not reached by a timing clock
+The latch screen/IndigoY_next_reg[4] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#26 Warning
 Non-clocked latch  
-The latch screen/IndigoY_next_reg[4] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[4]/G is not reached by a timing clock
+The latch screen/IndigoY_next_reg[5] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#27 Warning
 Non-clocked latch  
-The latch screen/IndigoY_next_reg[5] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[5]/G is not reached by a timing clock
+The latch screen/IndigoY_next_reg[6] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#28 Warning
 Non-clocked latch  
-The latch screen/IndigoY_next_reg[6] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[6]/G is not reached by a timing clock
+The latch screen/IndigoY_next_reg[7] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#29 Warning
 Non-clocked latch  
-The latch screen/IndigoY_next_reg[7] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[7]/G is not reached by a timing clock
+The latch screen/IndigoY_next_reg[8] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#30 Warning
 Non-clocked latch  
-The latch screen/IndigoY_next_reg[8] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[8]/G is not reached by a timing clock
+The latch screen/IndigoY_next_reg[9] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#31 Warning
 Non-clocked latch  
-The latch screen/IndigoY_next_reg[9] cannot be properly analyzed as its control pin screen/IndigoY_next_reg[9]/G is not reached by a timing clock
+The latch screen/RedY_next_reg[0] cannot be properly analyzed as its control pin screen/RedY_next_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#32 Warning
 Non-clocked latch  
-The latch screen/OrangeY_next_reg[0] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[0]/G is not reached by a timing clock
+The latch screen/RedY_next_reg[1] cannot be properly analyzed as its control pin screen/RedY_next_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#33 Warning
 Non-clocked latch  
-The latch screen/OrangeY_next_reg[1] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[1]/G is not reached by a timing clock
+The latch screen/RedY_next_reg[2] cannot be properly analyzed as its control pin screen/RedY_next_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#34 Warning
 Non-clocked latch  
-The latch screen/OrangeY_next_reg[2] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[2]/G is not reached by a timing clock
+The latch screen/RedY_next_reg[3] cannot be properly analyzed as its control pin screen/RedY_next_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#35 Warning
 Non-clocked latch  
-The latch screen/OrangeY_next_reg[3] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[3]/G is not reached by a timing clock
+The latch screen/RedY_next_reg[4] cannot be properly analyzed as its control pin screen/RedY_next_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#36 Warning
 Non-clocked latch  
-The latch screen/OrangeY_next_reg[4] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[4]/G is not reached by a timing clock
+The latch screen/RedY_next_reg[5] cannot be properly analyzed as its control pin screen/RedY_next_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#37 Warning
 Non-clocked latch  
-The latch screen/OrangeY_next_reg[5] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[5]/G is not reached by a timing clock
+The latch screen/RedY_next_reg[6] cannot be properly analyzed as its control pin screen/RedY_next_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#38 Warning
 Non-clocked latch  
-The latch screen/OrangeY_next_reg[6] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[6]/G is not reached by a timing clock
+The latch screen/RedY_next_reg[7] cannot be properly analyzed as its control pin screen/RedY_next_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#39 Warning
 Non-clocked latch  
-The latch screen/OrangeY_next_reg[7] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[7]/G is not reached by a timing clock
+The latch screen/RedY_next_reg[8] cannot be properly analyzed as its control pin screen/RedY_next_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#40 Warning
 Non-clocked latch  
-The latch screen/OrangeY_next_reg[8] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[8]/G is not reached by a timing clock
+The latch screen/RedY_next_reg[9] cannot be properly analyzed as its control pin screen/RedY_next_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#41 Warning
 Non-clocked latch  
-The latch screen/OrangeY_next_reg[9] cannot be properly analyzed as its control pin screen/OrangeY_next_reg[9]/G is not reached by a timing clock
+The latch screen/VioletY_next_reg[0] cannot be properly analyzed as its control pin screen/VioletY_next_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#42 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[0] cannot be properly analyzed as its control pin screen/RedY_next_reg[0]/G is not reached by a timing clock
+The latch screen/VioletY_next_reg[1] cannot be properly analyzed as its control pin screen/VioletY_next_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#43 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[1] cannot be properly analyzed as its control pin screen/RedY_next_reg[1]/G is not reached by a timing clock
+The latch screen/VioletY_next_reg[2] cannot be properly analyzed as its control pin screen/VioletY_next_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#44 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[2] cannot be properly analyzed as its control pin screen/RedY_next_reg[2]/G is not reached by a timing clock
+The latch screen/VioletY_next_reg[3] cannot be properly analyzed as its control pin screen/VioletY_next_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#45 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[3] cannot be properly analyzed as its control pin screen/RedY_next_reg[3]/G is not reached by a timing clock
+The latch screen/VioletY_next_reg[4] cannot be properly analyzed as its control pin screen/VioletY_next_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#46 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[4] cannot be properly analyzed as its control pin screen/RedY_next_reg[4]/G is not reached by a timing clock
+The latch screen/VioletY_next_reg[5] cannot be properly analyzed as its control pin screen/VioletY_next_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#47 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[5] cannot be properly analyzed as its control pin screen/RedY_next_reg[5]/G is not reached by a timing clock
+The latch screen/VioletY_next_reg[6] cannot be properly analyzed as its control pin screen/VioletY_next_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#48 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[6] cannot be properly analyzed as its control pin screen/RedY_next_reg[6]/G is not reached by a timing clock
+The latch screen/VioletY_next_reg[7] cannot be properly analyzed as its control pin screen/VioletY_next_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#49 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[7] cannot be properly analyzed as its control pin screen/RedY_next_reg[7]/G is not reached by a timing clock
+The latch screen/VioletY_next_reg[8] cannot be properly analyzed as its control pin screen/VioletY_next_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#50 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[8] cannot be properly analyzed as its control pin screen/RedY_next_reg[8]/G is not reached by a timing clock
+The latch screen/VioletY_next_reg[9] cannot be properly analyzed as its control pin screen/VioletY_next_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#51 Warning
 Non-clocked latch  
-The latch screen/RedY_next_reg[9] cannot be properly analyzed as its control pin screen/RedY_next_reg[9]/G is not reached by a timing clock
+The latch screen/YellowY_next_reg[0] cannot be properly analyzed as its control pin screen/YellowY_next_reg[0]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#52 Warning
 Non-clocked latch  
-The latch screen/VioletY_next_reg[0] cannot be properly analyzed as its control pin screen/VioletY_next_reg[0]/G is not reached by a timing clock
+The latch screen/YellowY_next_reg[1] cannot be properly analyzed as its control pin screen/YellowY_next_reg[1]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#53 Warning
 Non-clocked latch  
-The latch screen/VioletY_next_reg[1] cannot be properly analyzed as its control pin screen/VioletY_next_reg[1]/G is not reached by a timing clock
+The latch screen/YellowY_next_reg[2] cannot be properly analyzed as its control pin screen/YellowY_next_reg[2]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#54 Warning
 Non-clocked latch  
-The latch screen/VioletY_next_reg[2] cannot be properly analyzed as its control pin screen/VioletY_next_reg[2]/G is not reached by a timing clock
+The latch screen/YellowY_next_reg[3] cannot be properly analyzed as its control pin screen/YellowY_next_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#55 Warning
 Non-clocked latch  
-The latch screen/VioletY_next_reg[3] cannot be properly analyzed as its control pin screen/VioletY_next_reg[3]/G is not reached by a timing clock
+The latch screen/YellowY_next_reg[4] cannot be properly analyzed as its control pin screen/YellowY_next_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#56 Warning
 Non-clocked latch  
-The latch screen/VioletY_next_reg[4] cannot be properly analyzed as its control pin screen/VioletY_next_reg[4]/G is not reached by a timing clock
+The latch screen/YellowY_next_reg[5] cannot be properly analyzed as its control pin screen/YellowY_next_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#57 Warning
 Non-clocked latch  
-The latch screen/VioletY_next_reg[5] cannot be properly analyzed as its control pin screen/VioletY_next_reg[5]/G is not reached by a timing clock
+The latch screen/YellowY_next_reg[6] cannot be properly analyzed as its control pin screen/YellowY_next_reg[6]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#58 Warning
 Non-clocked latch  
-The latch screen/VioletY_next_reg[6] cannot be properly analyzed as its control pin screen/VioletY_next_reg[6]/G is not reached by a timing clock
+The latch screen/YellowY_next_reg[7] cannot be properly analyzed as its control pin screen/YellowY_next_reg[7]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#59 Warning
 Non-clocked latch  
-The latch screen/VioletY_next_reg[7] cannot be properly analyzed as its control pin screen/VioletY_next_reg[7]/G is not reached by a timing clock
+The latch screen/YellowY_next_reg[8] cannot be properly analyzed as its control pin screen/YellowY_next_reg[8]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#60 Warning
 Non-clocked latch  
-The latch screen/VioletY_next_reg[8] cannot be properly analyzed as its control pin screen/VioletY_next_reg[8]/G is not reached by a timing clock
+The latch screen/YellowY_next_reg[9] cannot be properly analyzed as its control pin screen/YellowY_next_reg[9]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#61 Warning
 Non-clocked latch  
-The latch screen/VioletY_next_reg[9] cannot be properly analyzed as its control pin screen/VioletY_next_reg[9]/G is not reached by a timing clock
+The latch screen/blue_click_next_reg cannot be properly analyzed as its control pin screen/blue_click_next_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#62 Warning
 Non-clocked latch  
-The latch screen/YellowY_next_reg[0] cannot be properly analyzed as its control pin screen/YellowY_next_reg[0]/G is not reached by a timing clock
+The latch screen/blue_int_reg cannot be properly analyzed as its control pin screen/blue_int_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#63 Warning
 Non-clocked latch  
-The latch screen/YellowY_next_reg[1] cannot be properly analyzed as its control pin screen/YellowY_next_reg[1]/G is not reached by a timing clock
+The latch screen/green_click_next_reg cannot be properly analyzed as its control pin screen/green_click_next_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#64 Warning
 Non-clocked latch  
-The latch screen/YellowY_next_reg[2] cannot be properly analyzed as its control pin screen/YellowY_next_reg[2]/G is not reached by a timing clock
+The latch screen/green_int_reg cannot be properly analyzed as its control pin screen/green_int_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#65 Warning
 Non-clocked latch  
-The latch screen/YellowY_next_reg[3] cannot be properly analyzed as its control pin screen/YellowY_next_reg[3]/G is not reached by a timing clock
+The latch screen/indigo_click_next_reg cannot be properly analyzed as its control pin screen/indigo_click_next_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#66 Warning
 Non-clocked latch  
-The latch screen/YellowY_next_reg[4] cannot be properly analyzed as its control pin screen/YellowY_next_reg[4]/G is not reached by a timing clock
+The latch screen/indigo_int_reg cannot be properly analyzed as its control pin screen/indigo_int_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#67 Warning
 Non-clocked latch  
-The latch screen/YellowY_next_reg[5] cannot be properly analyzed as its control pin screen/YellowY_next_reg[5]/G is not reached by a timing clock
+The latch screen/red_click_next_reg cannot be properly analyzed as its control pin screen/red_click_next_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#68 Warning
 Non-clocked latch  
-The latch screen/YellowY_next_reg[6] cannot be properly analyzed as its control pin screen/YellowY_next_reg[6]/G is not reached by a timing clock
+The latch screen/red_int_reg cannot be properly analyzed as its control pin screen/red_int_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#69 Warning
 Non-clocked latch  
-The latch screen/YellowY_next_reg[7] cannot be properly analyzed as its control pin screen/YellowY_next_reg[7]/G is not reached by a timing clock
+The latch screen/violet_click_next_reg cannot be properly analyzed as its control pin screen/violet_click_next_reg/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#70 Warning
 Non-clocked latch  
-The latch screen/YellowY_next_reg[8] cannot be properly analyzed as its control pin screen/YellowY_next_reg[8]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#71 Warning
-Non-clocked latch  
-The latch screen/YellowY_next_reg[9] cannot be properly analyzed as its control pin screen/YellowY_next_reg[9]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#72 Warning
-Non-clocked latch  
-The latch screen/blue_click_next_reg cannot be properly analyzed as its control pin screen/blue_click_next_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#73 Warning
-Non-clocked latch  
-The latch screen/blue_int_reg cannot be properly analyzed as its control pin screen/blue_int_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#74 Warning
-Non-clocked latch  
-The latch screen/green_click_next_reg cannot be properly analyzed as its control pin screen/green_click_next_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#75 Warning
-Non-clocked latch  
-The latch screen/green_int_reg cannot be properly analyzed as its control pin screen/green_int_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#76 Warning
-Non-clocked latch  
-The latch screen/indigo_click_next_reg cannot be properly analyzed as its control pin screen/indigo_click_next_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#77 Warning
-Non-clocked latch  
-The latch screen/indigo_int_reg cannot be properly analyzed as its control pin screen/indigo_int_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#78 Warning
-Non-clocked latch  
-The latch screen/orange_click_next_reg cannot be properly analyzed as its control pin screen/orange_click_next_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#79 Warning
-Non-clocked latch  
-The latch screen/orange_int_reg cannot be properly analyzed as its control pin screen/orange_int_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#80 Warning
-Non-clocked latch  
-The latch screen/red_click_next_reg cannot be properly analyzed as its control pin screen/red_click_next_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#81 Warning
-Non-clocked latch  
-The latch screen/red_int_reg cannot be properly analyzed as its control pin screen/red_int_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#82 Warning
-Non-clocked latch  
-The latch screen/violet_click_next_reg cannot be properly analyzed as its control pin screen/violet_click_next_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#83 Warning
-Non-clocked latch  
 The latch screen/violet_int_reg cannot be properly analyzed as its control pin screen/violet_int_reg/G is not reached by a timing clock
 Related violations: <none>
 
-TIMING-20#84 Warning
+TIMING-20#71 Warning
 Non-clocked latch  
 The latch screen/yellow_click_next_reg cannot be properly analyzed as its control pin screen/yellow_click_next_reg/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 84 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 71 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

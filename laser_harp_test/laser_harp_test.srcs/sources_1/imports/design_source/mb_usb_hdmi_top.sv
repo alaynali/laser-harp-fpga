@@ -69,14 +69,14 @@ module mb_usb_hdmi_top(
     .SPKR(SPKR),
     .SPKL(SPKL),
     .SW(SW),
-    .keycode(keycode1_gpio[7:0])
-//    .red_click(red_click),
-//    .orange_click(orange_click),
-//    .yellow_click(yellow_click),
-//    .green_click(green_click),
-//    .blue_click(blue_click),
-//    .indigo_click(indigo_click),
-//    .violet_click(violet_click)
+//    .keycode(keycode1_gpio[7:0])
+    .red_click(red_click),
+    .orange_click(orange_click),
+    .yellow_click(yellow_click),
+    .green_click(green_click),
+    .blue_click(blue_click),
+    .indigo_click(indigo_click),
+    .violet_click(violet_click)
     );
     
     //Keycode HEX drivers
