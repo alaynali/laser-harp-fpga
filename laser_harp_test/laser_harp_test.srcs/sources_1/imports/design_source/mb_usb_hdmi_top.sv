@@ -87,7 +87,7 @@ module mb_usb_hdmi_top(
     hex_driver HexA (
         .clk(Clk),
         .reset(reset_ah),
-        .in({keycode1_gpio[31:28], keycode1_gpio[27:24], keycode1_gpio[23:20], keycode1_gpio[19:16]}),
+        .in({SW_s[3:0], keycode1_gpio[27:24], keycode1_gpio[23:20], keycode1_gpio[19:16]}),
         .hex_seg(hex_segA),
         .hex_grid(hex_gridA)
     );
@@ -218,7 +218,7 @@ logic violet_click;
         .probe0(keycode0_gpio[31:0]),
         .probe1(keycode1_gpio[31:0])
     );
-    
+
     logic [15:0]	SW_s;
 
     sync_debounce SW_sync [15:0] (

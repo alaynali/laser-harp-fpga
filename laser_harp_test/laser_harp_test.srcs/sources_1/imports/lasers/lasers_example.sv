@@ -49,9 +49,6 @@ logic [3:0] bg_red, bg_green, bg_blue;
 
 logic negedge_vga_clk;
 
-logic [6:0] colors; // 0 if the color is being interrupted, 1 otherwise (default)
-assign colors = '{default:1'b1};
-
 int DistX, DistY, Size;
 assign DistX = DrawX - CursorX;
 assign DistY = DrawY - CursorY;
@@ -127,15 +124,15 @@ begin
     endcase
 end
 
-logic sw_on;
-always_comb 
-begin
-	case (SW_s)
-		16'b0000000000000010 
-			|| 16'b0000000000000011	: sw_on = 1'b1;
-		default						: sw_on = 1'b0;
-	endcase
-end
+// logic sw_on;
+// always_comb 
+// begin
+// 	case (SW_s)
+// 		16'b0000000000000010 
+// 			|| 16'b0000000000000011	: sw_on = 1'b1;
+// 		default						: sw_on = 1'b0;
+// 	endcase
+// end
 
 // read from ROM on negedge, set pixel on posedge
 assign negedge_vga_clk = ~vga_clk;
@@ -269,7 +266,7 @@ begin:Red_int_proc
 	red_click_next = red_click;
 	RedY_next = RedY;
 
-	if (sw_on) begin
+	if (SW_s[1]) begin
 		if (JAB_0) begin
 			red_click_next = 1'b1;
 			RedY_next = 240;
@@ -279,7 +276,7 @@ begin:Red_int_proc
 			RedY_next = 9'd10;
 		end 
 	end
-	else if (!sw_on) begin
+	else if (!SW_s[1]) begin
 		if (l_click || r_click) begin
 		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184 || (r_click && CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11)) begin
 				red_click_next = 1'b0;
@@ -326,25 +323,36 @@ begin:Orange_int_proc
 	orange_click_next = orange_click;
 	OrangeY_next = OrangeY;
 
-	if (l_click || r_click) begin
-	   if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206 || (r_click && CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)) begin
+	if (SW_s[1]) begin
+		if (JAB_1) begin
+			orange_click_next = 1'b1;
+			OrangeY_next = 240;
+		end
+		else begin
 			orange_click_next = 1'b0;
 			OrangeY_next = 9'd10;
 		end
-		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin
-			orange_click_next = 1'b1;
-			OrangeY_next = CursorY;
-		end
 	end
 	else begin
-		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206) 
-			orange_int = 1'b0;
-		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)
-			orange_int = 1'b1;
-		else
-			orange_int = 1'b0;
+		if (l_click || r_click) begin
+			if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206 || (r_click && CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)) begin
+				orange_click_next = 1'b0;
+				OrangeY_next = 9'd10;
+			end
+			else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin
+				orange_click_next = 1'b1;
+				OrangeY_next = CursorY;
+			end
+		end
+		else begin
+			if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206) 
+				orange_int = 1'b0;
+			else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)
+				orange_int = 1'b1;
+			else
+				orange_int = 1'b0;
+		end
 	end
-
 	// if (JAB_1) begin
 	// 	orange_click_next = 1'b1;
 	// 	OrangeY_next = CursorY;
@@ -393,7 +401,7 @@ begin:Yellow_int_proc
 	else begin
 		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 217 && CursorX <= 227) 
 			yellow_int = 1'b0;
-		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)
+		else if (CursorY >= 6 * CursorX - 1008 && CursorY <= 6 * CursorX - 948 && CursorY <= 355 && CursorY >= 11)
 			yellow_int = 1'b1;
 		else
 			yellow_int = 1'b0;
