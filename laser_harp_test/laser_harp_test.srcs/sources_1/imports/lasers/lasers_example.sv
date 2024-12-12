@@ -313,34 +313,38 @@ end
 
 always_comb
 begin:Yellow_int_proc
-	yellow_int = 1'b0;
-	yellow_click_next = yellow_click;
-	YellowY_next = YellowY;
-
-	if (l_click || r_click) begin
-	   if (CursorY >= 347 && CursorY <= 357 && CursorX >= 217 && CursorX <= 227 || (r_click && CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 355 && CursorY >= 11)) begin
-			yellow_click_next = 1'b0;
-			YellowY_next = 9'd10;
-			yellow_int = 1'b0;
-		end
-		else if (CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 355 && CursorY >= 11) begin
-			yellow_click_next = 1'b1;
-			YellowY_next = CursorY;
-			yellow_int = 1'b0;
-		end
-		else begin
-			yellow_int = 1'b0;
-		end
-		
-	end
-	else begin
-		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 217 && CursorX <= 227) 
-			yellow_int = 1'b0;
-		else if (CursorY >= 6*CursorX-1008 && CursorY <= 6*CursorX-948 && CursorY <= 355 && CursorY >= 11)
-			yellow_int = 1'b1;
-		else
-			yellow_int = 1'b0;
-	end
+	if (JAB_2) begin
+        // JAB_2 logic takes precedence
+        yellow_click_next = 1'b1;
+        YellowY_next = 240;
+        yellow_int = 1'b0;
+    end else if (l_click || r_click) begin
+        // Mouse click logic
+        if ((CursorY >= 347 && CursorY <= 357 && CursorX >= 217 && CursorX <= 227) ||
+            (r_click && CursorY >= 6 * CursorX - 1008 && CursorY <= 6 * CursorX - 948 &&
+            CursorY <= 355 && CursorY >= 11)) begin
+            yellow_click_next = 1'b0;
+            YellowY_next = 9'd10;
+            yellow_int = 1'b0;
+        end else if (CursorY >= 6 * CursorX - 1008 && CursorY <= 6 * CursorX - 948 &&
+                     CursorY <= 355 && CursorY >= 11) begin
+            yellow_click_next = 1'b1;
+            YellowY_next = CursorY;
+            yellow_int = 1'b0;
+        end else begin
+            yellow_int = 1'b0;
+        end
+    end else begin
+        // Default behavior when no JAB_2 or mouse clicks
+        if (CursorY >= 347 && CursorY <= 357 && CursorX >= 217 && CursorX <= 227) begin
+            yellow_int = 1'b0;
+        end else if (CursorY >= 6 * CursorX - 1008 && CursorY <= 6 * CursorX - 948 &&
+                     CursorY <= 355 && CursorY >= 11) begin
+            yellow_int = 1'b1;
+        end else begin
+            yellow_int = 1'b0;
+        end
+    end
 end
 
 always_comb
