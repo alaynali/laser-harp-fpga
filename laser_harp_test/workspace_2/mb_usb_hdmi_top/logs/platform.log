@@ -16385,3 +16385,949 @@ TRACE::2024-12-11.17:38:10::SCWMssOS::Checking the sw design at  C:/Users/estel/
 TRACE::2024-12-11.17:38:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
 
 TRACE::2024-12-11.17:38:10::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:49::SCWPlatform::Clearing the existing platform
+TRACE::2024-12-11.18:10:49::SCWSystem::Clearing the existing sysconfig
+TRACE::2024-12-11.18:10:49::SCWMssOS::Removing the swdes entry for  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:49::SCWSystem::Clearing the domains completed.
+TRACE::2024-12-11.18:10:49::SCWPlatform::Clearing the opened hw db.
+TRACE::2024-12-11.18:10:49::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:49::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:49::SCWPlatform:: Platform location is C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:10:49::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:49::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:49::SCWPlatform::Removing the HwDB with name C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:49::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:49::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:49::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:49::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:10:49::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:49::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:49::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-12-11.18:10:50::SCWPlatform::Opened new HwDB with name mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:50::SCWReader::Active system found as  mb_usb_hdmi_top
+TRACE::2024-12-11.18:10:50::SCWReader::Handling sysconfig mb_usb_hdmi_top
+TRACE::2024-12-11.18:10:50::SCWDomain::checking for install qemu data   : 
+TRACE::2024-12-11.18:10:50::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:10:50::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:50::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:50::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:10:50::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:10:50::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:50::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:50::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:10:50::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:10:50::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:50::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:50::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:10:50::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:10:50::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:50::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:50::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:10:50::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:50::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2024-12-11.18:10:50::SCWMssOS::No sw design opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:50::SCWMssOS::mss exists loading the mss file  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:50::SCWMssOS::Opened the sw design from mss  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:50::SCWMssOS::Adding the swdes entry C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2024-12-11.18:10:50::SCWMssOS::updating the scw layer about changes
+TRACE::2024-12-11.18:10:50::SCWMssOS::Opened the sw design.  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:50::SCWMssOS::Saving the mss changes C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:50::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2024-12-11.18:10:50::SCWMssOS::Completed writemss as part of save.
+TRACE::2024-12-11.18:10:50::SCWMssOS::Commit changes completed.
+TRACE::2024-12-11.18:10:50::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2024-12-11.18:10:50::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2024-12-11.18:10:50::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:10:50::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:50::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:50::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:50::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:50::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:10:50::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:50::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-11.18:10:50::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:50::SCWReader::No isolation master present  
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Platform location is C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:10:52::SCWMssOS::Doing hw sync for the mss in domain: standalone_microblaze_0
+TRACE::2024-12-11.18:10:52::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:52::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:52::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:10:52::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:52::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:52::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_22
+TRACE::2024-12-11.18:10:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:10:52::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:52::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-11.18:10:52::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:52::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:52::SCWPlatform::update - Opened existing hwdb mb_usb_hdmi_top_23
+TRACE::2024-12-11.18:10:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:10:52::SCWMssOS::Saving the mss changes C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:52::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2024-12-11.18:10:52::SCWMssOS::Completed writemss as part of save.
+TRACE::2024-12-11.18:10:52::SCWMssOS::Commit changes completed.
+TRACE::2024-12-11.18:10:52::SCWMssOS::Completed hw sync for the mss in domain: standalone_microblaze_0
+TRACE::2024-12-11.18:10:52::SCWMssOS::Removing the swdes entry for  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:52::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:52::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-12-11.18:10:52::SCWPlatform::Opened new HwDB with name mb_usb_hdmi_top_24
+TRACE::2024-12-11.18:10:52::SCWMssOS::Saving the mss changes C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:52::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2024-12-11.18:10:52::SCWMssOS::Writing the mss file completed C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:52::SCWMssOS::Commit changes completed.
+TRACE::2024-12-11.18:10:52::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:10:52::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:10:52::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_24
+TRACE::2024-12-11.18:10:52::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_24
+TRACE::2024-12-11.18:10:52::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:10:52::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:52::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-11.18:10:52::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:10:52::SCWWriter::formatted JSON is {
+	"platformName":	"mb_usb_hdmi_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"mb_usb_hdmi_top",
+	"platHandOff":	"C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/mb_usb_hdmi_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"mb_usb_hdmi_top",
+	"systems":	[{
+			"systemName":	"mb_usb_hdmi_top",
+			"systemDesc":	"mb_usb_hdmi_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"mb_usb_hdmi_top",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"304529987e879521ca977c68d163f3621",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2024-12-11.18:11:05::SCWPlatform::Started generating the artifacts platform mb_usb_hdmi_top
+TRACE::2024-12-11.18:11:05::SCWPlatform::Sanity checking of platform is completed
+LOG::2024-12-11.18:11:05::SCWPlatform::Started generating the artifacts for system configuration mb_usb_hdmi_top
+LOG::2024-12-11.18:11:05::SCWSystem::Checking the domain standalone_microblaze_0
+LOG::2024-12-11.18:11:05::SCWSystem::Not a boot domain 
+LOG::2024-12-11.18:11:05::SCWSystem::Started Processing the domain standalone_microblaze_0
+TRACE::2024-12-11.18:11:05::SCWDomain::Generating domain artifcats
+TRACE::2024-12-11.18:11:05::SCWMssOS::Generating standalone artifcats
+TRACE::2024-12-11.18:11:05::SCWMssOS:: Copying the user libraries. 
+TRACE::2024-12-11.18:11:05::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:11:05::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:11:05::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:11:05::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:11:05::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:11:05::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:11:05::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_24
+TRACE::2024-12-11.18:11:05::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_24
+TRACE::2024-12-11.18:11:05::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:11:05::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:11:05::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-11.18:11:05::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:11:05::SCWMssOS::Completed writing the mss file at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2024-12-11.18:11:05::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:11:06::SCWMssOS::bsp generated is stale removing and regenerating. 
+TRACE::2024-12-11.18:11:07::SCWMssOS::doing bsp build ... 
+TRACE::2024-12-11.18:11:07::SCWMssOS::System Command Ran  C: & cd  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp & make 
+TRACE::2024-12-11.18:11:07::SCWMssOS::make --no-print-directory seq_libs
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::'Finished building libraries sequentially.'
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::make -j 10 --no-print-directory par_libs
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::"Running Make include in microblaze_0/libsrc/bram_v4_8/src"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2024-12-11.18:11:07::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
+TRACE::2024-12-11.18:11:07::SCWMssOS::MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::"Running Make include in microblaze_0/libsrc/cpu_v2_16/src"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2024-12-11.18:11:07::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
+TRACE::2024-12-11.18:11:07::SCWMssOS::MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::"Running Make include in microblaze_0/libsrc/gpio_v4_9/src"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::make -C microblaze_0/libsrc/gpio_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2024-12-11.18:11:07::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
+TRACE::2024-12-11.18:11:07::SCWMssOS::MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::"Running Make include in microblaze_0/libsrc/intc_v3_15/src"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2024-12-11.18:11:07::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_C
+TRACE::2024-12-11.18:11:07::SCWMssOS::OMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::"Running Make include in microblaze_0/libsrc/spi_v4_9/src"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::make -C microblaze_0/libsrc/spi_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+TRACE::2024-12-11.18:11:07::SCWMssOS::_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COM
+TRACE::2024-12-11.18:11:07::SCWMssOS::PILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::"Running Make include in microblaze_0/libsrc/standalone_v8_0/src"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+TRACE::2024-12-11.18:11:07::SCWMssOS::OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EX
+TRACE::2024-12-11.18:11:07::SCWMssOS::TRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::"Running Make include in microblaze_0/libsrc/tmrctr_v4_9/src"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+TRACE::2024-12-11.18:11:07::SCWMssOS::LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_
+TRACE::2024-12-11.18:11:07::SCWMssOS::COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::"Running Make include in microblaze_0/libsrc/uartlite_v3_7/src"
+
+TRACE::2024-12-11.18:11:07::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+TRACE::2024-12-11.18:11:07::SCWMssOS::PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTR
+TRACE::2024-12-11.18:11:07::SCWMssOS::A_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::"Running Make libs in microblaze_0/libsrc/bram_v4_8/src"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+TRACE::2024-12-11.18:11:08::SCWMssOS::LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
+TRACE::2024-12-11.18:11:08::SCWMssOS::LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::"Running Make libs in microblaze_0/libsrc/cpu_v2_16/src"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+TRACE::2024-12-11.18:11:08::SCWMssOS::LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
+TRACE::2024-12-11.18:11:08::SCWMssOS::LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::"Running Make libs in microblaze_0/libsrc/gpio_v4_9/src"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::make -C microblaze_0/libsrc/gpio_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+TRACE::2024-12-11.18:11:08::SCWMssOS::LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
+TRACE::2024-12-11.18:11:08::SCWMssOS::LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::"Running Make libs in microblaze_0/libsrc/intc_v3_15/src"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+TRACE::2024-12-11.18:11:08::SCWMssOS::FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMP
+TRACE::2024-12-11.18:11:08::SCWMssOS::ILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::"Running Make libs in microblaze_0/libsrc/spi_v4_9/src"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::make -C microblaze_0/libsrc/spi_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_FL
+TRACE::2024-12-11.18:11:08::SCWMssOS::AGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPIL
+TRACE::2024-12-11.18:11:08::SCWMssOS::ER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::"Running Make libs in microblaze_0/libsrc/standalone_v8_0/src"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+TRACE::2024-12-11.18:11:08::SCWMssOS::ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA
+TRACE::2024-12-11.18:11:08::SCWMssOS::_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::"Running Make libs in microblaze_0/libsrc/tmrctr_v4_9/src"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+TRACE::2024-12-11.18:11:08::SCWMssOS::_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COM
+TRACE::2024-12-11.18:11:08::SCWMssOS::PILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::"Running Make libs in microblaze_0/libsrc/uartlite_v3_7/src"
+
+TRACE::2024-12-11.18:11:08::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2024-12-11.18:11:08::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_C
+TRACE::2024-12-11.18:11:08::SCWMssOS::OMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:11:09::SCWMssOS::"DEBUG NON_LTO_OBJECTS is ../../../lib/microblaze_interrupt_handler.o"
+
+TRACE::2024-12-11.18:11:10::SCWMssOS::'Finished building libraries parallelly.'
+
+TRACE::2024-12-11.18:11:10::SCWMssOS::make --no-print-directory archive
+
+TRACE::2024-12-11.18:11:10::SCWMssOS::mb-ar -r  microblaze_0/lib/libxil.a microblaze_0/lib/_exit.o microblaze_0/lib/errno.o microblaze_0/lib/fcntl.o microblaze_0/lib
+TRACE::2024-12-11.18:11:10::SCWMssOS::/hw_exception_handler.o microblaze_0/lib/inbyte.o microblaze_0/lib/microblaze_disable_dcache.o microblaze_0/lib/microblaze_disa
+TRACE::2024-12-11.18:11:10::SCWMssOS::ble_exceptions.o microblaze_0/lib/microblaze_disable_icache.o microblaze_0/lib/microblaze_disable_interrupts.o microblaze_0/lib
+TRACE::2024-12-11.18:11:10::SCWMssOS::/microblaze_enable_dcache.o microblaze_0/lib/microblaze_enable_exceptions.o microblaze_0/lib/microblaze_enable_icache.o microbl
+TRACE::2024-12-11.18:11:10::SCWMssOS::aze_0/lib/microblaze_enable_interrupts.o microblaze_0/lib/microblaze_exception_handler.o microblaze_0/lib/microblaze_flush_cach
+TRACE::2024-12-11.18:11:10::SCWMssOS::e_ext.o microblaze_0/lib/microblaze_flush_cache_ext_range.o microblaze_0/lib/microblaze_flush_dcache.o microblaze_0/lib/microbl
+TRACE::2024-12-11.18:11:10::SCWMssOS::aze_flush_dcache_range.o microblaze_0/lib/microblaze_init_dcache_range.o microblaze_0/lib/microblaze_init_icache_range.o microb
+TRACE::2024-12-11.18:11:10::SCWMssOS::laze_0/lib/microblaze_interrupt_handler.o microblaze_0/lib/microblaze_interrupts_g.o microblaze_0/lib/microblaze_invalidate_cac
+TRACE::2024-12-11.18:11:10::SCWMssOS::he_ext.o microblaze_0/lib/microblaze_invalidate_cache_ext_range.o microblaze_0/lib/microblaze_invalidate_dcache.o microblaze_0/
+TRACE::2024-12-11.18:11:10::SCWMssOS::lib/microblaze_invalidate_dcache_range.o microblaze_0/lib/microblaze_invalidate_icache.o microblaze_0/lib/microblaze_invalidate
+TRACE::2024-12-11.18:11:10::SCWMssOS::_icache_range.o microblaze_0/lib/microblaze_scrub.o microblaze_0/lib/microblaze_selftest.o microblaze_0/lib/microblaze_sleep.o 
+TRACE::2024-12-11.18:11:10::SCWMssOS::microblaze_0/lib/microblaze_update_dcache.o microblaze_0/lib/microblaze_update_icache.o microblaze_0/lib/outbyte.o microblaze_0
+TRACE::2024-12-11.18:11:10::SCWMssOS::/lib/print.o microblaze_0/lib/pvr.o microblaze_0/lib/xbram.o microblaze_0/lib/xbram_g.o microblaze_0/lib/xbram_intr.o microblaz
+TRACE::2024-12-11.18:11:10::SCWMssOS::e_0/lib/xbram_selftest.o microblaze_0/lib/xbram_sinit.o microblaze_0/lib/xgpio.o microblaze_0/lib/xgpio_extra.o microblaze_0/li
+TRACE::2024-12-11.18:11:10::SCWMssOS::b/xgpio_g.o microblaze_0/lib/xgpio_intr.o microblaze_0/lib/xgpio_selftest.o microblaze_0/lib/xgpio_sinit.o microblaze_0/lib/xil
+TRACE::2024-12-11.18:11:10::SCWMssOS::_assert.o microblaze_0/lib/xil_cache.o microblaze_0/lib/xil_clocking.o microblaze_0/lib/xil_exception.o microblaze_0/lib/xil_me
+TRACE::2024-12-11.18:11:10::SCWMssOS::m.o microblaze_0/lib/xil_misc_psreset_api.o microblaze_0/lib/xil_printf.o microblaze_0/lib/xil_sleepcommon.o microblaze_0/lib/x
+TRACE::2024-12-11.18:11:10::SCWMssOS::il_testcache.o microblaze_0/lib/xil_testio.o microblaze_0/lib/xil_testmem.o microblaze_0/lib/xil_util.o microblaze_0/lib/xintc.
+TRACE::2024-12-11.18:11:10::SCWMssOS::o microblaze_0/lib/xintc_g.o microblaze_0/lib/xintc_intr.o microblaze_0/lib/xintc_l.o microblaze_0/lib/xintc_options.o microbla
+TRACE::2024-12-11.18:11:10::SCWMssOS::ze_0/lib/xintc_selftest.o microblaze_0/lib/xinterrupt_wrap.o microblaze_0/lib/xio.o microblaze_0/lib/xplatform_info.o microblaz
+TRACE::2024-12-11.18:11:10::SCWMssOS::e_0/lib/xspi.o microblaze_0/lib/xspi_g.o microblaze_0/lib/xspi_options.o microblaze_0/lib/xspi_selftest.o microblaze_0/lib/xspi
+TRACE::2024-12-11.18:11:10::SCWMssOS::_sinit.o microblaze_0/lib/xspi_stats.o microblaze_0/lib/xtmrctr.o microblaze_0/lib/xtmrctr_g.o microblaze_0/lib/xtmrctr_intr.o 
+TRACE::2024-12-11.18:11:10::SCWMssOS::microblaze_0/lib/xtmrctr_l.o microblaze_0/lib/xtmrctr_options.o microblaze_0/lib/xtmrctr_selftest.o microblaze_0/lib/xtmrctr_si
+TRACE::2024-12-11.18:11:10::SCWMssOS::nit.o microblaze_0/lib/xtmrctr_stats.o microblaze_0/lib/xuartlite.o microblaze_0/lib/xuartlite_g.o microblaze_0/lib/xuartlite_i
+TRACE::2024-12-11.18:11:10::SCWMssOS::ntr.o microblaze_0/lib/xuartlite_l.o microblaze_0/lib/xuartlite_selftest.o microblaze_0/lib/xuartlite_sinit.o microblaze_0/lib/
+TRACE::2024-12-11.18:11:10::SCWMssOS::xuartlite_stats.o
+
+TRACE::2024-12-11.18:11:10::SCWMssOS::'Finished building libraries'
+
+TRACE::2024-12-11.18:11:10::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2024-12-11.18:11:10::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2024-12-11.18:11:10::SCWSystem::Completed Processing the domain standalone_microblaze_0
+LOG::2024-12-11.18:11:10::SCWSystem::Completed Processing the sysconfig mb_usb_hdmi_top
+LOG::2024-12-11.18:11:10::SCWPlatform::Completed generating the artifacts for system configuration mb_usb_hdmi_top
+TRACE::2024-12-11.18:11:10::SCWPlatform::Started preparing the platform 
+TRACE::2024-12-11.18:11:10::SCWSystem::Writing the bif file for system config mb_usb_hdmi_top
+TRACE::2024-12-11.18:11:10::SCWSystem::dir created 
+TRACE::2024-12-11.18:11:10::SCWSystem::Writing the bif 
+TRACE::2024-12-11.18:11:10::SCWPlatform::Started writing the spfm file 
+TRACE::2024-12-11.18:11:10::SCWPlatform::Started writing the xpfm file 
+TRACE::2024-12-11.18:11:10::SCWPlatform::Completed generating the platform
+TRACE::2024-12-11.18:11:10::SCWMssOS::Saving the mss changes C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:11:10::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2024-12-11.18:11:10::SCWMssOS::Writing the mss file completed C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:11:10::SCWMssOS::Commit changes completed.
+TRACE::2024-12-11.18:11:10::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:11:10::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:11:10::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:11:10::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:11:10::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:11:10::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:11:10::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_24
+TRACE::2024-12-11.18:11:10::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_24
+TRACE::2024-12-11.18:11:10::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:11:10::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:11:10::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-11.18:11:10::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:11:10::SCWWriter::formatted JSON is {
+	"platformName":	"mb_usb_hdmi_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"mb_usb_hdmi_top",
+	"platHandOff":	"C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/mb_usb_hdmi_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"mb_usb_hdmi_top",
+	"systems":	[{
+			"systemName":	"mb_usb_hdmi_top",
+			"systemDesc":	"mb_usb_hdmi_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"mb_usb_hdmi_top",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"304529987e879521ca977c68d163f362",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2024-12-11.18:11:10::SCWPlatform::updated the xpfm file.
+TRACE::2024-12-11.18:11:11::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:11:11::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:11:11::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:11:11::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:11:11::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:11:11::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:11:11::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_24
+TRACE::2024-12-11.18:11:11::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_24
+TRACE::2024-12-11.18:11:11::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:11:11::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:11:11::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-11.18:11:11::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:03::SCWPlatform::Clearing the existing platform
+TRACE::2024-12-11.18:28:03::SCWSystem::Clearing the existing sysconfig
+TRACE::2024-12-11.18:28:03::SCWMssOS::Removing the swdes entry for  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:03::SCWSystem::Clearing the domains completed.
+TRACE::2024-12-11.18:28:03::SCWPlatform::Clearing the opened hw db.
+TRACE::2024-12-11.18:28:03::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:03::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:03::SCWPlatform:: Platform location is C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:03::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:03::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:03::SCWPlatform::Removing the HwDB with name C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:03::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:03::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:03::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:03::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:03::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:03::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:03::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-12-11.18:28:04::SCWPlatform::Opened new HwDB with name mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:04::SCWReader::Active system found as  mb_usb_hdmi_top
+TRACE::2024-12-11.18:28:04::SCWReader::Handling sysconfig mb_usb_hdmi_top
+TRACE::2024-12-11.18:28:04::SCWDomain::checking for install qemu data   : 
+TRACE::2024-12-11.18:28:04::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:04::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:04::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:04::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:04::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:04::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:04::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:04::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:04::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:04::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:04::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:04::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:04::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:04::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:04::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:04::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:04::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:04::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2024-12-11.18:28:04::SCWMssOS::No sw design opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:04::SCWMssOS::mss exists loading the mss file  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:04::SCWMssOS::Opened the sw design from mss  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:04::SCWMssOS::Adding the swdes entry C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2024-12-11.18:28:04::SCWMssOS::updating the scw layer about changes
+TRACE::2024-12-11.18:28:04::SCWMssOS::Opened the sw design.  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:04::SCWMssOS::Saving the mss changes C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:04::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2024-12-11.18:28:04::SCWMssOS::Completed writemss as part of save.
+TRACE::2024-12-11.18:28:04::SCWMssOS::Commit changes completed.
+TRACE::2024-12-11.18:28:04::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2024-12-11.18:28:04::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2024-12-11.18:28:04::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:04::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:04::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:04::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:04::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:04::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-11.18:28:04::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:04::SCWReader::No isolation master present  
+TRACE::2024-12-11.18:28:05::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:05::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:05::SCWPlatform:: Platform location is C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa
+TRACE::2024-12-11.18:28:05::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:05::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:06::SCWMssOS::Doing hw sync for the mss in domain: standalone_microblaze_0
+TRACE::2024-12-11.18:28:06::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:06::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:06::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:06::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:06::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:06::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:06::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:06::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_26
+TRACE::2024-12-11.18:28:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:06::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:06::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-11.18:28:06::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:06::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa
+TRACE::2024-12-11.18:28:06::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/tempdsa/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:06::SCWPlatform::update - Opened existing hwdb mb_usb_hdmi_top_27
+TRACE::2024-12-11.18:28:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:06::SCWMssOS::Saving the mss changes C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:06::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2024-12-11.18:28:06::SCWMssOS::Completed writemss as part of save.
+TRACE::2024-12-11.18:28:06::SCWMssOS::Commit changes completed.
+TRACE::2024-12-11.18:28:06::SCWMssOS::Completed hw sync for the mss in domain: standalone_microblaze_0
+TRACE::2024-12-11.18:28:06::SCWMssOS::Removing the swdes entry for  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:06::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:06::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:06::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-12-11.18:28:06::SCWPlatform::Opened new HwDB with name mb_usb_hdmi_top_28
+TRACE::2024-12-11.18:28:06::SCWMssOS::Saving the mss changes C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:06::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2024-12-11.18:28:06::SCWMssOS::Writing the mss file completed C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:06::SCWMssOS::Commit changes completed.
+TRACE::2024-12-11.18:28:06::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:06::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:06::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:06::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_28
+TRACE::2024-12-11.18:28:06::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_28
+TRACE::2024-12-11.18:28:06::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:06::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:06::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-11.18:28:06::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:06::SCWWriter::formatted JSON is {
+	"platformName":	"mb_usb_hdmi_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"mb_usb_hdmi_top",
+	"platHandOff":	"C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/mb_usb_hdmi_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"mb_usb_hdmi_top",
+	"systems":	[{
+			"systemName":	"mb_usb_hdmi_top",
+			"systemDesc":	"mb_usb_hdmi_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"mb_usb_hdmi_top",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"304529987e879521ca977c68d163f3621",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2024-12-11.18:28:12::SCWPlatform::Started generating the artifacts platform mb_usb_hdmi_top
+TRACE::2024-12-11.18:28:12::SCWPlatform::Sanity checking of platform is completed
+LOG::2024-12-11.18:28:12::SCWPlatform::Started generating the artifacts for system configuration mb_usb_hdmi_top
+LOG::2024-12-11.18:28:12::SCWSystem::Checking the domain standalone_microblaze_0
+LOG::2024-12-11.18:28:12::SCWSystem::Not a boot domain 
+LOG::2024-12-11.18:28:12::SCWSystem::Started Processing the domain standalone_microblaze_0
+TRACE::2024-12-11.18:28:12::SCWDomain::Generating domain artifcats
+TRACE::2024-12-11.18:28:12::SCWMssOS::Generating standalone artifcats
+TRACE::2024-12-11.18:28:12::SCWMssOS:: Copying the user libraries. 
+TRACE::2024-12-11.18:28:12::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:12::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:12::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:12::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:12::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:12::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:12::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_28
+TRACE::2024-12-11.18:28:12::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_28
+TRACE::2024-12-11.18:28:12::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:12::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:12::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-11.18:28:12::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:12::SCWMssOS::Completed writing the mss file at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2024-12-11.18:28:12::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:12::SCWMssOS::bsp generated is stale removing and regenerating. 
+TRACE::2024-12-11.18:28:14::SCWMssOS::doing bsp build ... 
+TRACE::2024-12-11.18:28:14::SCWMssOS::System Command Ran  C: & cd  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp & make 
+TRACE::2024-12-11.18:28:14::SCWMssOS::make --no-print-directory seq_libs
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::'Finished building libraries sequentially.'
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::make -j 10 --no-print-directory par_libs
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::"Running Make include in microblaze_0/libsrc/bram_v4_8/src"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2024-12-11.18:28:14::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
+TRACE::2024-12-11.18:28:14::SCWMssOS::MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::"Running Make include in microblaze_0/libsrc/cpu_v2_16/src"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2024-12-11.18:28:14::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
+TRACE::2024-12-11.18:28:14::SCWMssOS::MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::"Running Make include in microblaze_0/libsrc/gpio_v4_9/src"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::make -C microblaze_0/libsrc/gpio_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2024-12-11.18:28:14::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
+TRACE::2024-12-11.18:28:14::SCWMssOS::MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::"Running Make include in microblaze_0/libsrc/intc_v3_15/src"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2024-12-11.18:28:14::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_C
+TRACE::2024-12-11.18:28:14::SCWMssOS::OMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::"Running Make include in microblaze_0/libsrc/spi_v4_9/src"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::make -C microblaze_0/libsrc/spi_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+TRACE::2024-12-11.18:28:14::SCWMssOS::_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COM
+TRACE::2024-12-11.18:28:14::SCWMssOS::PILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::"Running Make include in microblaze_0/libsrc/standalone_v8_0/src"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+TRACE::2024-12-11.18:28:14::SCWMssOS::OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EX
+TRACE::2024-12-11.18:28:14::SCWMssOS::TRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::"Running Make include in microblaze_0/libsrc/tmrctr_v4_9/src"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+TRACE::2024-12-11.18:28:14::SCWMssOS::LER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_
+TRACE::2024-12-11.18:28:14::SCWMssOS::COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::"Running Make include in microblaze_0/libsrc/uartlite_v3_7/src"
+
+TRACE::2024-12-11.18:28:14::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+TRACE::2024-12-11.18:28:14::SCWMssOS::PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTR
+TRACE::2024-12-11.18:28:14::SCWMssOS::A_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::"Running Make libs in microblaze_0/libsrc/bram_v4_8/src"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+TRACE::2024-12-11.18:28:15::SCWMssOS::LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
+TRACE::2024-12-11.18:28:15::SCWMssOS::LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::"Running Make libs in microblaze_0/libsrc/cpu_v2_16/src"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+TRACE::2024-12-11.18:28:15::SCWMssOS::LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
+TRACE::2024-12-11.18:28:15::SCWMssOS::LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::"Running Make libs in microblaze_0/libsrc/gpio_v4_9/src"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::make -C microblaze_0/libsrc/gpio_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_F
+TRACE::2024-12-11.18:28:15::SCWMssOS::LAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPI
+TRACE::2024-12-11.18:28:15::SCWMssOS::LER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::"Running Make libs in microblaze_0/libsrc/intc_v3_15/src"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_
+TRACE::2024-12-11.18:28:15::SCWMssOS::FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMP
+TRACE::2024-12-11.18:28:15::SCWMssOS::ILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::"Running Make libs in microblaze_0/libsrc/spi_v4_9/src"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::make -C microblaze_0/libsrc/spi_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_FL
+TRACE::2024-12-11.18:28:15::SCWMssOS::AGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COMPIL
+TRACE::2024-12-11.18:28:15::SCWMssOS::ER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::"Running Make libs in microblaze_0/libsrc/standalone_v8_0/src"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+TRACE::2024-12-11.18:28:15::SCWMssOS::ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA
+TRACE::2024-12-11.18:28:15::SCWMssOS::_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::"Running Make libs in microblaze_0/libsrc/tmrctr_v4_9/src"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+TRACE::2024-12-11.18:28:15::SCWMssOS::_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_COM
+TRACE::2024-12-11.18:28:15::SCWMssOS::PILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::"Running Make libs in microblaze_0/libsrc/uartlite_v3_7/src"
+
+TRACE::2024-12-11.18:28:15::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2024-12-11.18:28:15::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_C
+TRACE::2024-12-11.18:28:15::SCWMssOS::OMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2024-12-11.18:28:16::SCWMssOS::"DEBUG NON_LTO_OBJECTS is ../../../lib/microblaze_interrupt_handler.o"
+
+TRACE::2024-12-11.18:28:17::SCWMssOS::'Finished building libraries parallelly.'
+
+TRACE::2024-12-11.18:28:17::SCWMssOS::make --no-print-directory archive
+
+TRACE::2024-12-11.18:28:17::SCWMssOS::mb-ar -r  microblaze_0/lib/libxil.a microblaze_0/lib/_exit.o microblaze_0/lib/errno.o microblaze_0/lib/fcntl.o microblaze_0/lib
+TRACE::2024-12-11.18:28:17::SCWMssOS::/hw_exception_handler.o microblaze_0/lib/inbyte.o microblaze_0/lib/microblaze_disable_dcache.o microblaze_0/lib/microblaze_disa
+TRACE::2024-12-11.18:28:17::SCWMssOS::ble_exceptions.o microblaze_0/lib/microblaze_disable_icache.o microblaze_0/lib/microblaze_disable_interrupts.o microblaze_0/lib
+TRACE::2024-12-11.18:28:17::SCWMssOS::/microblaze_enable_dcache.o microblaze_0/lib/microblaze_enable_exceptions.o microblaze_0/lib/microblaze_enable_icache.o microbl
+TRACE::2024-12-11.18:28:17::SCWMssOS::aze_0/lib/microblaze_enable_interrupts.o microblaze_0/lib/microblaze_exception_handler.o microblaze_0/lib/microblaze_flush_cach
+TRACE::2024-12-11.18:28:17::SCWMssOS::e_ext.o microblaze_0/lib/microblaze_flush_cache_ext_range.o microblaze_0/lib/microblaze_flush_dcache.o microblaze_0/lib/microbl
+TRACE::2024-12-11.18:28:17::SCWMssOS::aze_flush_dcache_range.o microblaze_0/lib/microblaze_init_dcache_range.o microblaze_0/lib/microblaze_init_icache_range.o microb
+TRACE::2024-12-11.18:28:17::SCWMssOS::laze_0/lib/microblaze_interrupt_handler.o microblaze_0/lib/microblaze_interrupts_g.o microblaze_0/lib/microblaze_invalidate_cac
+TRACE::2024-12-11.18:28:17::SCWMssOS::he_ext.o microblaze_0/lib/microblaze_invalidate_cache_ext_range.o microblaze_0/lib/microblaze_invalidate_dcache.o microblaze_0/
+TRACE::2024-12-11.18:28:17::SCWMssOS::lib/microblaze_invalidate_dcache_range.o microblaze_0/lib/microblaze_invalidate_icache.o microblaze_0/lib/microblaze_invalidate
+TRACE::2024-12-11.18:28:17::SCWMssOS::_icache_range.o microblaze_0/lib/microblaze_scrub.o microblaze_0/lib/microblaze_selftest.o microblaze_0/lib/microblaze_sleep.o 
+TRACE::2024-12-11.18:28:17::SCWMssOS::microblaze_0/lib/microblaze_update_dcache.o microblaze_0/lib/microblaze_update_icache.o microblaze_0/lib/outbyte.o microblaze_0
+TRACE::2024-12-11.18:28:17::SCWMssOS::/lib/print.o microblaze_0/lib/pvr.o microblaze_0/lib/xbram.o microblaze_0/lib/xbram_g.o microblaze_0/lib/xbram_intr.o microblaz
+TRACE::2024-12-11.18:28:17::SCWMssOS::e_0/lib/xbram_selftest.o microblaze_0/lib/xbram_sinit.o microblaze_0/lib/xgpio.o microblaze_0/lib/xgpio_extra.o microblaze_0/li
+TRACE::2024-12-11.18:28:17::SCWMssOS::b/xgpio_g.o microblaze_0/lib/xgpio_intr.o microblaze_0/lib/xgpio_selftest.o microblaze_0/lib/xgpio_sinit.o microblaze_0/lib/xil
+TRACE::2024-12-11.18:28:17::SCWMssOS::_assert.o microblaze_0/lib/xil_cache.o microblaze_0/lib/xil_clocking.o microblaze_0/lib/xil_exception.o microblaze_0/lib/xil_me
+TRACE::2024-12-11.18:28:17::SCWMssOS::m.o microblaze_0/lib/xil_misc_psreset_api.o microblaze_0/lib/xil_printf.o microblaze_0/lib/xil_sleepcommon.o microblaze_0/lib/x
+TRACE::2024-12-11.18:28:17::SCWMssOS::il_testcache.o microblaze_0/lib/xil_testio.o microblaze_0/lib/xil_testmem.o microblaze_0/lib/xil_util.o microblaze_0/lib/xintc.
+TRACE::2024-12-11.18:28:17::SCWMssOS::o microblaze_0/lib/xintc_g.o microblaze_0/lib/xintc_intr.o microblaze_0/lib/xintc_l.o microblaze_0/lib/xintc_options.o microbla
+TRACE::2024-12-11.18:28:17::SCWMssOS::ze_0/lib/xintc_selftest.o microblaze_0/lib/xinterrupt_wrap.o microblaze_0/lib/xio.o microblaze_0/lib/xplatform_info.o microblaz
+TRACE::2024-12-11.18:28:17::SCWMssOS::e_0/lib/xspi.o microblaze_0/lib/xspi_g.o microblaze_0/lib/xspi_options.o microblaze_0/lib/xspi_selftest.o microblaze_0/lib/xspi
+TRACE::2024-12-11.18:28:17::SCWMssOS::_sinit.o microblaze_0/lib/xspi_stats.o microblaze_0/lib/xtmrctr.o microblaze_0/lib/xtmrctr_g.o microblaze_0/lib/xtmrctr_intr.o 
+TRACE::2024-12-11.18:28:17::SCWMssOS::microblaze_0/lib/xtmrctr_l.o microblaze_0/lib/xtmrctr_options.o microblaze_0/lib/xtmrctr_selftest.o microblaze_0/lib/xtmrctr_si
+TRACE::2024-12-11.18:28:17::SCWMssOS::nit.o microblaze_0/lib/xtmrctr_stats.o microblaze_0/lib/xuartlite.o microblaze_0/lib/xuartlite_g.o microblaze_0/lib/xuartlite_i
+TRACE::2024-12-11.18:28:17::SCWMssOS::ntr.o microblaze_0/lib/xuartlite_l.o microblaze_0/lib/xuartlite_selftest.o microblaze_0/lib/xuartlite_sinit.o microblaze_0/lib/
+TRACE::2024-12-11.18:28:17::SCWMssOS::xuartlite_stats.o
+
+TRACE::2024-12-11.18:28:17::SCWMssOS::'Finished building libraries'
+
+TRACE::2024-12-11.18:28:17::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2024-12-11.18:28:17::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2024-12-11.18:28:17::SCWSystem::Completed Processing the domain standalone_microblaze_0
+LOG::2024-12-11.18:28:17::SCWSystem::Completed Processing the sysconfig mb_usb_hdmi_top
+LOG::2024-12-11.18:28:17::SCWPlatform::Completed generating the artifacts for system configuration mb_usb_hdmi_top
+TRACE::2024-12-11.18:28:17::SCWPlatform::Started preparing the platform 
+TRACE::2024-12-11.18:28:17::SCWSystem::Writing the bif file for system config mb_usb_hdmi_top
+TRACE::2024-12-11.18:28:17::SCWSystem::dir created 
+TRACE::2024-12-11.18:28:17::SCWSystem::Writing the bif 
+TRACE::2024-12-11.18:28:17::SCWPlatform::Started writing the spfm file 
+TRACE::2024-12-11.18:28:17::SCWPlatform::Started writing the xpfm file 
+TRACE::2024-12-11.18:28:17::SCWPlatform::Completed generating the platform
+TRACE::2024-12-11.18:28:17::SCWMssOS::Saving the mss changes C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:17::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2024-12-11.18:28:17::SCWMssOS::Writing the mss file completed C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:17::SCWMssOS::Commit changes completed.
+TRACE::2024-12-11.18:28:17::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:17::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:17::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:17::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:17::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:17::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:17::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_28
+TRACE::2024-12-11.18:28:17::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_28
+TRACE::2024-12-11.18:28:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:17::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:17::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-11.18:28:17::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:17::SCWWriter::formatted JSON is {
+	"platformName":	"mb_usb_hdmi_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"mb_usb_hdmi_top",
+	"platHandOff":	"C:/Users/estel/laser-harp-fpga/laser_harp_test/mb_usb_hdmi_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/mb_usb_hdmi_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"mb_usb_hdmi_top",
+	"systems":	[{
+			"systemName":	"mb_usb_hdmi_top",
+			"systemDesc":	"mb_usb_hdmi_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"mb_usb_hdmi_top",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"304529987e879521ca977c68d163f362",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2024-12-11.18:28:17::SCWPlatform::updated the xpfm file.
+TRACE::2024-12-11.18:28:18::SCWPlatform::Trying to open the hw design at C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:18::SCWPlatform::DSA given C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:18::SCWPlatform::DSA absoulate path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:18::SCWPlatform::DSA directory C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw
+TRACE::2024-12-11.18:28:18::SCWPlatform:: Platform Path C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa
+TRACE::2024-12-11.18:28:18::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-11.18:28:18::SCWPlatform::Trying to set the existing hwdb with name mb_usb_hdmi_top_28
+TRACE::2024-12-11.18:28:18::SCWPlatform::Opened existing hwdb mb_usb_hdmi_top_28
+TRACE::2024-12-11.18:28:18::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-11.18:28:18::SCWMssOS::Checking the sw design at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-11.18:28:18::SCWMssOS::DEBUG:  swdes dump  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-11.18:28:18::SCWMssOS::Sw design exists and opened at  C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/microblaze_0/standalone_microblaze_0/bsp/system.mss

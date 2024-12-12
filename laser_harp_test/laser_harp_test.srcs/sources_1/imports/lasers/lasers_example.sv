@@ -510,7 +510,7 @@ always_ff @ (posedge vga_clk) begin
 	   indigo_click <= indigo_click_next;
 	   violet_click <= violet_click_next;
 
-	   orange_int <= orange_int_next
+	   orange_int <= orange_int_next;
 
 	    if ((cursor_on == 1'b1)) begin 
 			// or import cursor palette
