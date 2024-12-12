@@ -43,14 +43,12 @@ module mb_usb_hdmi_top(
     
     input logic [15:0] SW,
     
-    input logic JA1_P,
-	input logic JA1_N,
-	input logic JA2_P,
-	input logic JA2_N,
-	input logic JA3_P,
-	input logic JA3_N,
-	input logic JA4_P,
-	input logic JA4_N   
+    input logic JAB_0,
+	input logic JAB_1,
+	input logic JAB_2,
+	input logic JAB_3,
+	input logic JAB_4,
+	input logic JAB_5 
 );
     
     logic [31:0] keycode0_gpio, keycode1_gpio;
@@ -76,7 +74,13 @@ module mb_usb_hdmi_top(
     .green_click(green_click),
     .blue_click(blue_click),
     .indigo_click(indigo_click),
-    .violet_click(violet_click)
+    .violet_click(violet_click),
+    .JAB_0(JAB_0),
+	.JAB_1(JAB_1),
+	.JAB_2(JAB_2),
+	.JAB_3(JAB_3),
+	.JAB_4(JAB_4),
+	.JAB_5(JAB_5)
     );
     
     //Keycode HEX drivers

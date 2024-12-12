@@ -283,9 +283,9 @@ begin:Orange_int_proc
 		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206) 
 			orange_int = 1'b0;
 		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)
-			yellow_int = 1'b1;
+		    orange_int = 1'b1;
 		else
-			yellow_int = 1'b0;
+			orange_int = 1'b0;
 	end
 end
 

@@ -74,13 +74,25 @@ module sound(
     input logic green_click,
     input logic blue_click,
     input logic indigo_click,
-    input logic violet_click
+    input logic violet_click,
+    input logic JAB_0,
+	input logic JAB_1,
+	input logic JAB_2,
+	input logic JAB_3,
+	input logic JAB_4,
+	input logic JAB_5
 //    input logic [7:0] keycode
 );
 
 logic [15:0] SW_s;
 integer phase_increment;	
 logic harmonics;
+
+logic [5:0]	out;
+
+always_ff @(posedge clk)begin
+    out <= {JAB_5,JAB_4,JAB_3,JAB_2,JAB_1, JAB_0}; 
+end	
 
 sync_debounce SW_sync [15:0] (
 		.clk  (clk), 
@@ -199,6 +211,36 @@ sine sine_wave (
 //    end
 //end
 
+always_comb begin
+    case (out)
+        6'b000001: 
+        begin
+            phase_increment = 1;   // SW0
+            harmonics = 0;
+        end
+        6'b000010: begin
+            phase_increment = 2;   // SW0
+            harmonics = 0;
+        end
+        6'b000100: begin
+            phase_increment = 3;   // SW0
+            harmonics = 0;
+        end
+        6'b001000: begin
+            phase_increment = 4;   // SW0
+            harmonics = 0;
+        end
+        6'b010000: begin
+            phase_increment = 5;   // SW0
+            harmonics = 0;
+        end
+        6'b100000: begin
+            phase_increment = 6;   // SW0
+            harmonics = 0;
+        end
+        default: phase_increment = 0;       // Default to 0 if no switch is active
+    endcase
+end
 
 always_comb begin
     if(red_click)
