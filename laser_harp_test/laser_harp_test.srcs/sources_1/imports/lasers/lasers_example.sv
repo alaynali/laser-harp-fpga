@@ -279,23 +279,23 @@ begin:Orange_int_proc
 
 	if (l_click || r_click) begin
 		if ( CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206 || (r_click && CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)) begin
-			red_click_next= 1'b0;
-			RedY_next = 9'd10;
+			orange_click_next= 1'b0;
+			OrangeY_next = 9'd10;
 		end
 		else if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11) begin
-			red_click_next = 1'b1;
-			RedY_next = CursorY;
+			orange_click_next = 1'b1;
+			OrangeY_next = CursorY;
 		end
 	end
 	else begin
-		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206) begin
-			red_int = 1'b0;
+		if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206) 
+			orange_int = 1'b0;
 		if (CursorY >= 3*CursorX-264 && CursorY <= 3*CursorX-234 && CursorY <= 355 && CursorY >= 11)
-			red_int = 1'b1;
+			orange_int = 1'b1;
 		else
-			red_int = 1'b0;
+			orange_int = 1'b0;
 	end
-
+end
 	// if (CursorY >= 347 && CursorY <= 357 && CursorX >= 196 && CursorX <= 206 && orange_click) begin // carrot
 	// 	if (r_click) begin // reset
 	// 		orange_click_next = 1'b0;
@@ -367,7 +367,7 @@ begin:Orange_int_proc
 //		else
 //			orange_int = 1'b0;
 //	end
-end
+
 
 always_comb
 begin:Yellow_int_proc
@@ -529,7 +529,7 @@ always_ff @ (posedge vga_clk) begin
 	   indigo_click <= indigo_click_next;
 	   violet_click <= violet_click_next;
 
-	   orange_int <= orange_int_next;
+	   // orange_int <= orange_int_next;
 
 	    if ((cursor_on == 1'b1)) begin 
 			// or import cursor palette
