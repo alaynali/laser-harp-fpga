@@ -1,5 +1,0 @@
-
-*** Running vivado
-    with args -log mb_usb_hdmi_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source mb_usb_hdmi_top.tcl -notrace
-
-

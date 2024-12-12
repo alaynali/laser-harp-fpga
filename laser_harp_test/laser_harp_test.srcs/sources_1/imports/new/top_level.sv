@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-(*use_dsp="yes"*)
+//(*use_dsp="yes"*)
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -246,38 +246,38 @@ sine sine_wave (
 //end
 
 always_comb begin
-    if(red_click || (out == 6'b000001))
+    if(red_click )//|| (out == 6'b000001))
         begin
 //            phase_increment = 1;   // SW0
             resolution = 382;   // SW0
             phase_increment = 2;   // SW0
             harmonics = 0;
         end
-    else if (orange_click || (out == 6'b000010)) 
+    else if (orange_click)// || (out == 6'b000010)) 
         begin
             resolution = 340;   // SW0
             phase_increment = 2;   // SW0
             harmonics = 0;
         end
-    else if (yellow_click || (out == 6'b000100)) 
+    else if (yellow_click )//|| (out == 6'b000100)) 
         begin
             resolution = 303;   // SW0
             phase_increment = 2;   // SW0
             harmonics = 0;
         end
-    else if (green_click || (out == 6'b001000)) 
+    else if (green_click )//|| (out == 6'b001000)) 
         begin
             resolution = 288;   // SW0
             phase_increment = 2;   // SW0
             harmonics = 0;
         end
-    else if (blue_click || (out == 6'b010000))
+    else if (blue_click )//|| (out == 6'b010000))
         begin
            resolution = 255;   // SW0
            phase_increment = 2;   // SW0
            harmonics = 0;
         end
-    else if (indigo_click || (out == 6'b100000)) 
+    else if (indigo_click )//|| (out == 6'b100000)) 
         begin
             resolution = 227;   // SW0
             phase_increment = 2;   // SW0
