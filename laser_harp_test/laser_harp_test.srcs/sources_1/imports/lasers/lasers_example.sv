@@ -336,6 +336,10 @@ begin:Yellow_int_proc
         end
     end else begin
         // Default behavior when no JAB_2 or mouse clicks
+		if (!JAB_2) begin
+			yellow_click_next = 1'b0;
+            YellowY_next = 9'd10;
+		end
         if (CursorY >= 347 && CursorY <= 357 && CursorX >= 217 && CursorX <= 227) begin
             yellow_int = 1'b0;
         end else if (CursorY >= 6 * CursorX - 1008 && CursorY <= 6 * CursorX - 948 &&
