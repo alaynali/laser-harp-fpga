@@ -1,284 +1,0 @@
-Data_For_RDAFlowver5.0
-	top level”{
-mb_usb_hdmi_topÜ
-LinkDesign_BlackboxesB
--mb_block_i/microblaze_0_local_memory/lmb_brammb_usb_lmb_bram_0B
- mb_block_i/microblaze_0_axi_intcmb_usb_microblaze_0_axi_intc_0*
-mb_block_i/clk_wiz_1mb_usb_clk_wiz_1_04
-mb_block_i/axi_uartlite_0mb_usb_axi_uartlite_0_0B
--mb_block_i/microblaze_0_local_memory/dlmb_v10mb_usb_dlmb_v10_0B
--mb_block_i/microblaze_0_local_memory/ilmb_v10mb_usb_ilmb_v10_0
-screen/backgroundbg_rom8
-mb_block_i/gpio_usb_keycodemb_usb_gpio_usb_keycode_0V
-7mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlrmb_usb_ilmb_bram_if_cntlr_0<
-mb_block_i/rst_clk_wiz_1_100Mmb_usb_rst_clk_wiz_1_100M_0
-vga_to_hdmi	hdmi_tx_08
-'mb_block_i/microblaze_0_axi_periph/xbarmb_usb_xbar_0V
-7mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlrmb_usb_dlmb_bram_if_cntlr_00
-mb_block_i/gpio_usb_rstmb_usb_gpio_usb_rst_0"
-mb_block_i/mdm_1mb_usb_mdm_1_0&
-mb_block_i/spi_usbmb_usb_spi_usb_00
-mb_block_i/gpio_usb_intmb_usb_gpio_usb_int_02
-mb_block_i/timer_usb_aximb_usb_timer_usb_axi_0
-clk_wiz	clk_wiz_00
-mb_block_i/microblaze_0mb_usb_microblaze_0_0
-ilaila_0ú?
-synthFileNamesJ
-10DC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_SINGLE_MACRO.vhdG
-11AC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_TDP_MACRO.vhdK
-12EC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/COUNTER_LOAD_MACRO.vhdI
-13CC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/COUNTER_TC_MACRO.vhdI
-14CC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/EQ_COMPARE_MACRO.vhdF
-20@C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/ADDSUB_MACRO.vM
-15GC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/FIFO_DUALCLOCK_MACRO.vhdH
-21BC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SDP_MACRO.vH
-16BC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/FIFO_SYNC_MACRO.vhdK
-22EC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.vC
-17=C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/MACC_MACRO.vhdC
-18=C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/MULT_MACRO.vhdH
-23BC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_TDP_MACRO.vG
-19AC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/ADDMACC_MACRO.vL
-24FC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/COUNTER_LOAD_MACRO.vJ
-25DC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/COUNTER_TC_MACRO.vD
-30>C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/MULT_MACRO.v
-NumFileNames81J
-26DC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/EQ_COMPARE_MACRO.vJ
-31DC:/Xilinx/Vivado/2022.2/data/vhdl/src/unisims/retarget/MULT18X18.vhd=
-18C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_VCOMP.vhdN
-27HC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/FIFO_DUALCLOCK_MACRO.vK
-32EC:/Xilinx/Vivado/2022.2/data/vhdl/src/unisims/retarget/MULT18X18S.vhd<
-27C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_VPKG.vhdI
-28CC:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/FIFO_SYNC_MACRO.v@
-33:C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:
-35C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.vD
-29>C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/MACC_MACRO.vB
-34<C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv=
-48C:/Xilinx/Vivado/2022.2/scripts/rt/data/internal_cells.vF
-35@C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.svf
-40`C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/new/cursor_impl.sv3
-5.C:/Xilinx/Vivado/2022.2/scripts/rt/data/BUFT.v{
-36uC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/VGA_controller.svv
-41pC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/Images/bg/bg/bg_palette.svF
-6AC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/unimacro_VCOMP.vhdw
-37qC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/hex_driver.svt
-42nC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/lasers/lasers_palette.svE
-7@C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/ADDMACC_MACRO.vhd|
-38vC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.svg
-43aC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/sine.svD
-8?C:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/ADDSUB_MACRO.vhdt
-39nC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/lasers/lasers_example.svp
-44jC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/sync_debounce.sv”
-50C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_ilmb_bram_if_cntlr_0_stub.vF
-9AC:/Xilinx/Vivado/2022.2/data/vhdl/src/unimacro/BRAM_SDP_MACRO.vhdl
-45fC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.srcs/sources_1/imports/new/top_level.svŠ
-51ƒC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_lmb_bram_0_stub.vŽ
-46‡C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_microblaze_0_0_stub.v…
-52C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_xbar_0_stub.vŠ
-47ƒC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_dlmb_v10_0_stub.v—
-53C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_microblaze_0_axi_intc_0_stub.vŠ
-48ƒC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_ilmb_v10_0_stub.v‡
-54€C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_mdm_1_0_stub.v”
-49C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_dlmb_bram_if_cntlr_0_stub.v’
-60‹C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_gpio_usb_keycode_0_stub.v‹
-55„C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_clk_wiz_1_0_stub.v
-61ˆC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_timer_usb_axi_0_stub.v”
-56C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_rst_clk_wiz_1_100M_0_stub.v‰
-62‚C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_spi_usb_0_stub.v
-57‰C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_axi_uartlite_0_0_stub.v}
-63wC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/ila_0_stub.vŽ
-58‡C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_gpio_usb_rst_0_stub.v
-64{C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/hdmi_tx_0_stub.vŽ
-59‡C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/mb_usb_gpio_usb_int_0_stub.v7
-701C:/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd
-65{C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/clk_wiz_0_stub.vg
-71aC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/1993/src/std_1164.vhd~
-66xC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/.Xil/Vivado-24280-MSI/realtime/bg_rom_stub.vg
-72aC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/1993/src/standard.vhdk
-67ec:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/synth/mb_usb.vj
-73dC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/1993/src/numeric_std.vhd…
-68c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.ve
-74_C:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/1993/src/textio.vhd
-69‰c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/bd/mb_usb/ip/mb_usb_xlconcat_0_0/synth/mb_usb_xlconcat_0_0.vg
-80aC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/1993/src/syn_unsi.vhdg
-75aC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/1993/src/timing_p.vhdg
-76aC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/1993/src/timing_b.vhdg
-77aC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/1993/src/prmtvs_p.vhdg
-78aC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/1993/src/prmtvs_b.vhdg
-79aC:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.runs/synth_1/1993/src/syn_arit.vhdÏ	
-
-synthStatsH
-dspWideMultUnderpipelined
-L218
-Mnullname
-F39	
-Ored4T
-dspWideMultUnderpipelined
-L384
-Mnullname
-F39
-Oblue_click_next7G
-dspWideMultUnderpipelined
-L89
-Mnullname
-F39	
-Ored6V
-dspWideMultUnderpipelined
-L409
-Mnullname
-F39
-Oindigo_click_next7G
-dspWideMultUnderpipelined
-L94
-Mnullname
-F39	
-Ored6V
-dspWideMultUnderpipelined
-L434
-Mnullname
-F39
-Oviolet_click_next7G
-dspWideMultUnderpipelined
-L99
-Mnullname
-F39	
-Ored6G
-dspWideMultUnderpipelined
-L60
-Mnullname
-F39	
-Ored3G
-dspWideMultUnderpipelined
-L60
-Mnullname
-F39	
-Ored3H
-dspWideMultUnderpipelined
-L218
-Mnullname
-F39	
-Ored3H
-dspWideMultUnderpipelined
-L248
-Mnullname
-F39	
-Ored4H
-dspWideMultUnderpipelined
-L243
-Mnullname
-F39	
-Ored4H
-dspWideMultUnderpipelined
-L238
-Mnullname
-F39	
-Ored4H
-dspWideMultUnderpipelined
-L233
-Mnullname
-F39	
-Ored4H
-dspWideMultUnderpipelined
-L228
-Mnullname
-F39	
-Ored4H
-dspWideMultUnderpipelined
-L223
-Mnullname
-F39	
-Ored4ï
-ElaboratedNamesForRQSÕ
-DSP_RAMD
-385050: {screen/red5_i__3} {screen/red5_i__4} {screen/red6_i__0} „
-65540{ {HexA/hex_i} {HexA/hex_i__0} {HexA/hex_i__1} {HexA/hex_i__2} {HexB/hex_i} {HexB/hex_i__0} {HexB/hex_i__1} {HexB/hex_i__2} ,
-331805" {cursor/Cursor_Y_Motion_next2_i} G
-913434= {screen/red3_i__24} {screen/red4_i__17} {screen/red5_i__15} F
-303130< {screen/red5_i__13} {screen/red5_i__14} {screen/red6_i__3} )
-6774786 {audio/sine_wave/counter0_i} M
-389149C {cursor/Cursor_X_Motion_next0_i} {cursor/Cursor_X_Motion_next1_i} )
-6750210 {audio/sine_wave/phase_23_i} )
-167963 {screen/bg_palette/palette_i} c
-1572890X {screen/blue_click_next5_i__0} {screen/blue_click_next6_i} {screen/blue_click_next7_i} `
-1101850U {screen/red_click_next5_i__0} {screen/red_click_next6_i} {screen/red_click_next7_i} >
-4055304 {screen/red5_i} {screen/red5_i__0} {screen/red6_i} /
-360477% {cursor/Cursor_X_Motion_next2_i__0} F
-6754306; {audio/sine_wave/phase_34_i} {audio/sine_wave/phase_35_i} 
-393241 {vga/vs3_i} E
-974874; {screen/red3_i__18} {screen/red4_i__8} {screen/red5_i__8} D
-364570: {screen/red5_i__6} {screen/red5_i__7} {screen/red6_i__1} i
-1675290^ {screen/indigo_click_next5_i__0} {screen/indigo_click_next6_i} {screen/indigo_click_next7_i} $
-409629 {cursor/Cursor_X_next_i} 
-339993 {vga/hs3_i} M
-339997C {cursor/Cursor_Y_Motion_next0_i} {cursor/Cursor_Y_Motion_next1_i} /
-315421% {cursor/Cursor_Y_Motion_next2_i__0} i
-1208346^ {screen/orange_click_next5_i__0} {screen/orange_click_next6_i} {screen/orange_click_next7_i} i
-1777690^ {screen/violet_click_next5_i__0} {screen/violet_click_next6_i} {screen/violet_click_next7_i} *
-3530754 {audio/sine_wave/sample_10_i} F
-1015834; {screen/red3_i__14} {screen/red4_i__1} {screen/red5_i__1} 
-274457 {vga/vc0_i} $
-413725 {cursor/Cursor_Y_next_i} [
-245786Q {screen/red2_i__33} {screen/red2_i__34} {screen/red3_i__27} {screen/red3_i__28} *
-5660674 {audio/sine_wave/sample_30_i} *
-4595714 {audio/sine_wave/sample_20_i} 
-221210 {screen/DistX_i} i
-1339418^ {screen/yellow_click_next5_i__0} {screen/yellow_click_next6_i} {screen/yellow_click_next7_i} F
-954394< {screen/red3_i__20} {screen/red4_i__11} {screen/red5_i__9} 
-249881 {vga/vc_i__0} 
-225306 {screen/DistY_i} 1
-442394' {screen/l_click_i} {screen/r_click_i} G
-933914= {screen/red3_i__22} {screen/red4_i__14} {screen/red5_i__12} ò
-126979ç {audio/SW_sync[0]/counter0_i} {audio/SW_sync[10]/counter0_i} {audio/SW_sync[11]/counter0_i} {audio/SW_sync[12]/counter0_i} {audio/SW_sync[13]/counter0_i} {audio/SW_sync[14]/counter0_i} {audio/SW_sync[15]/counter0_i} {audio/SW_sync[1]/counter0_i} {audio/SW_sync[2]/counter0_i} {audio/SW_sync[3]/counter0_i} {audio/SW_sync[4]/counter0_i} {audio/SW_sync[5]/counter0_i} {audio/SW_sync[6]/counter0_i} {audio/SW_sync[7]/counter0_i} {audio/SW_sync[8]/counter0_i} {audio/SW_sync[9]/counter0_i} F
-323610< {screen/red5_i__10} {screen/red5_i__11} {screen/red6_i__2} m
-892954c {screen/red2_i__32} {screen/red3_i__26} {screen/red4_i__2} {screen/red4_i__20} {screen/red5_i__2} /
-225284% {HexA/counter0_i} {HexB/counter0_i} F
-282650< {screen/red5_i__16} {screen/red5_i__17} {screen/red6_i__4} @
-67993625 {audio/sine_wave/outR1_i} {audio/sine_wave/outR2_i} ,
-380957" {cursor/Cursor_X_Motion_next2_i} 
-286745 {vga/hc0_i} :
-5488900 {screen/rom_address0_i} {screen/rom_address_i} )
-6746114 {audio/sine_wave/phase_13_i} E
-995354; {screen/red3_i__16} {screen/red4_i__5} {screen/red5_i__5} Ó
-blackBoxInfo<
-mb_block_i/rst_clk_wiz_1_100Mmb_usb_rst_clk_wiz_1_100M_0
-vga_to_hdmi	hdmi_tx_08
-'mb_block_i/microblaze_0_axi_periph/xbarmb_usb_xbar_0V
-7mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlrmb_usb_dlmb_bram_if_cntlr_00
-mb_block_i/gpio_usb_rstmb_usb_gpio_usb_rst_0"
-mb_block_i/mdm_1mb_usb_mdm_1_0&
-mb_block_i/spi_usbmb_usb_spi_usb_00
-mb_block_i/gpio_usb_intmb_usb_gpio_usb_int_02
-mb_block_i/timer_usb_aximb_usb_timer_usb_axi_0
-clk_wiz	clk_wiz_00
-mb_block_i/microblaze_0mb_usb_microblaze_0_0
-ilaila_0B
--mb_block_i/microblaze_0_local_memory/lmb_brammb_usb_lmb_bram_0B
- mb_block_i/microblaze_0_axi_intcmb_usb_microblaze_0_axi_intc_0*
-mb_block_i/clk_wiz_1mb_usb_clk_wiz_1_04
-mb_block_i/axi_uartlite_0mb_usb_axi_uartlite_0_0B
--mb_block_i/microblaze_0_local_memory/dlmb_v10mb_usb_dlmb_v10_0B
--mb_block_i/microblaze_0_local_memory/ilmb_v10mb_usb_ilmb_v10_0
-screen/backgroundbg_rom8
-mb_block_i/gpio_usb_keycodemb_usb_gpio_usb_keycode_0V
-7mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlrmb_usb_ilmb_bram_if_cntlr_0Š
-synth_design
-isIncremental0
-Runtime0
-Threads used2^
-argsV-verilog_define default::[not_specified] -top  mb_usb_hdmi_top -part  xc7s50csga324-1 
-resynthPerc0.00
-Cputime0
-blackBoxPercinf
-	directive 
-synth_design_metrics$
-mismatchedAddSubOperatorWidths-1
-lowMaxFanout-1
-NumUnregisteredPorts0
-caseNotFullNoDefault-1
-	smallSrls-1
-srlsWithResetLogic-1
-shallowRAMWithAttribute-1
-hierMFO0
-bigRAMs-1
-NetsWithMixedFanouts-1
-DSPsWithKeep0
-RQS_Results
