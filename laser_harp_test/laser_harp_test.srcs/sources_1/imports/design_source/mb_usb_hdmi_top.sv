@@ -87,7 +87,7 @@ module mb_usb_hdmi_top(
     hex_driver HexA (
         .clk(Clk),
         .reset(reset_ah),
-        .in({SW_s[3:0], keycode1_gpio[27:24], keycode1_gpio[23:20], keycode1_gpio[19:16]}),
+        .in({SW[3:0], keycode1_gpio[27:24], keycode1_gpio[23:20], keycode1_gpio[19:16]}),
         .hex_seg(hex_segA),
         .hex_grid(hex_gridA)
     );
