@@ -1907,3 +1907,86 @@ connect -url tcp:127.0.0.1:3121
 ----------------End of Script----------------
 
 20:48:32 ERROR : couldn't open "C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit": no such file or directory
+20:49:19 DEBUG : Logs will be stored at 'C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/IDE.log'.
+20:49:20 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\estel\laser-harp-fpga\laser_harp_test\workspace_2\temp_xsdb_launch_script.tcl
+20:49:23 INFO  : Registering command handlers for Vitis TCF services
+20:49:23 INFO  : XSCT server has started successfully.
+20:49:23 INFO  : Platform repository initialization has completed.
+20:49:26 INFO  : Successfully done setting XSCT server connection channel  
+20:49:26 INFO  : plnx-install-location is set to ''
+20:49:26 INFO  : Successfully done query RDI_DATADIR 
+20:49:26 INFO  : Successfully done setting workspace for the tool. 
+20:49:38 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+20:49:50 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+20:49:50 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+20:49:51 INFO  : Checking for BSP changes to sync application flags for project 'lw_usb'...
+20:49:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:49:57 INFO  : Jtag cable 'RealDigital Boo 887100000004A' is selected.
+20:49:57 INFO  : 'jtag frequency' command is executed.
+20:49:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:49:57 ERROR : couldn't open "C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit": no such file or directory
+20:49:57 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit": no such file or directory
+20:49:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:49:57 ERROR : couldn't open "C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit": no such file or directory
+20:50:14 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+20:50:24 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+20:50:24 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+20:50:25 INFO  : Checking for BSP changes to sync application flags for project 'lw_usb'...
+20:50:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:50:30 INFO  : Jtag cable 'RealDigital Boo 887100000004A' is selected.
+20:50:30 INFO  : 'jtag frequency' command is executed.
+20:50:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:50:30 ERROR : couldn't open "C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit": no such file or directory
+20:50:30 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: couldn't open "C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit": no such file or directory
+20:50:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:50:30 ERROR : couldn't open "C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit": no such file or directory
+20:51:49 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+20:52:08 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+20:52:08 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+20:52:09 INFO  : Checking for BSP changes to sync application flags for project 'lw_usb'...
+20:52:11 INFO  : The hardware specification used by project 'lw_usb' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:52:11 INFO  : The file 'C:\Users\estel\laser-harp-fpga\laser_harp_test\workspace_2\lw_usb\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+20:52:11 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\estel\laser-harp-fpga\laser_harp_test\workspace_2\lw_usb\_ide\bitstream' in project 'lw_usb'.
+20:52:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:52:14 INFO  : Jtag cable 'RealDigital Boo 887100000004A' is selected.
+20:52:14 INFO  : 'jtag frequency' command is executed.
+20:52:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:52:15 INFO  : Device configured successfully with "C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:52:15 INFO  : Context for processor 'microblaze_0' is selected.
+20:52:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:52:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:52:16 INFO  : Context for processor 'microblaze_0' is selected.
+20:52:16 INFO  : System reset is completed.
+20:52:19 INFO  : 'after 3000' command is executed.
+20:52:19 INFO  : Context for processor 'microblaze_0' is selected.
+20:52:19 INFO  : The application 'C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/lw_usb/Debug/lw_usb.elf' is downloaded to processor 'microblaze_0'.
+20:52:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000004A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/lw_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/estel/laser-harp-fpga/laser_harp_test/workspace_2/lw_usb/Debug/lw_usb.elf
+----------------End of Script----------------
+
+20:52:19 INFO  : Context for processor 'microblaze_0' is selected.
+20:52:19 INFO  : 'con' command is executed.
+20:52:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:52:19 INFO  : Disconnected from the channel tcfchan#2.
