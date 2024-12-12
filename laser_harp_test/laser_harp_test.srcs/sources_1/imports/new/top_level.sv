@@ -203,31 +203,31 @@ sine sine_wave (
 always_comb begin
     if(red_click)
         begin
-            phase_increment = 10;   // SW0
+            phase_increment = 1;   // SW0
         end
     else if (orange_click) 
         begin
-            phase_increment = 15;   // SW0
+            phase_increment = 2;   // SW0
         end
     else if (yellow_click) 
         begin
-            phase_increment = 20;   // SW0
+            phase_increment = 3;   // SW0
         end
     else if (green_click) 
         begin
-            phase_increment = 25;   // SW0
+            phase_increment = 4;   // SW0
         end
     else if (blue_click)
         begin
-            phase_increment = 30;   // SW0
+            phase_increment = 5;   // SW0
         end
     else if (indigo_click) 
         begin
-            phase_increment = 35;   // SW0
+            phase_increment = 6;   // SW0
         end
     else if (violet_click) 
         begin
-            phase_increment = 40;   // SW0
+            phase_increment = 7;   // SW0
         end
     else 
         begin 
