@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date         : Thu Dec 12 17:08:31 2024
+| Date         : Thu Dec 12 17:48:30 2024
 | Host         : MSI running 64-bit major release  (build 9200)
 | Command      : report_methodology -file mb_usb_hdmi_top_methodology_drc_routed.rpt -pb mb_usb_hdmi_top_methodology_drc_routed.pb -rpx mb_usb_hdmi_top_methodology_drc_routed.rpx
 | Design       : mb_usb_hdmi_top
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 301
+             Violations found: 401
 +-----------+------------------+----------------------------------------------------+------------+
 | Rule      | Severity         | Description                                        | Violations |
 +-----------+------------------+----------------------------------------------------+------------+
@@ -37,9 +37,9 @@ Table of Contents
 | PDRC-190  | Warning          | Suboptimally placed synchronized register chain    | 10         |
 | SYNTH-10  | Warning          | Wide multiplier                                    | 30         |
 | TIMING-9  | Warning          | Unknown CDC Logic                                  | 1          |
-| TIMING-16 | Warning          | Large setup violation                              | 64         |
+| TIMING-16 | Warning          | Large setup violation                              | 161        |
 | TIMING-18 | Warning          | Missing input or output delay                      | 57         |
-| TIMING-20 | Warning          | Non-clocked latch                                  | 9          |
+| TIMING-20 | Warning          | Non-clocked latch                                  | 12         |
 | LATCH-1   | Advisory         | Existing latches in the design                     | 1          |
 +-----------+------------------+----------------------------------------------------+------------+
 
@@ -704,52 +704,52 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X60Y34 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[0] in site SLICE_X63Y40 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X58Y35 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[1] in site SLICE_X65Y40 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X59Y35 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[2] in site SLICE_X64Y41 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X58Y37 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_reg[3] in site SLICE_X62Y41 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD2/stat_reg_1_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X61Y30 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[0] in site SLICE_X63Y44 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X61Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[1] in site SLICE_X62Y43 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X60Y31 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_reg[2] in site SLICE_X63Y42 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD3/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X64Y30 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[0] in site SLICE_X58Y58 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X65Y32 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[1] in site SLICE_X56Y54 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X64Y33 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_reg[2] in site SLICE_X58Y55 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_STAT/stat_reg_1_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 SYNTH-10#1 Warning
@@ -909,322 +909,807 @@ Related violations: <none>
 
 TIMING-16#1 Warning
 Large setup violation  
-There is a large setup violation of -78.473 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[0]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -18.426 ns between audio/sine_wave/sample_3rd_reg/CLKARDCLK (clocked by clk_100) and audio/sine_wave/outR_reg/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#2 Warning
 Large setup violation  
-There is a large setup violation of -78.626 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[0]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -77.887 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[0]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#3 Warning
 Large setup violation  
-There is a large setup violation of -78.650 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[1]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.064 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[1]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#4 Warning
 Large setup violation  
-There is a large setup violation of -78.803 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[2]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.224 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[2]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#5 Warning
 Large setup violation  
-There is a large setup violation of -78.803 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[1]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.284 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[3]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#6 Warning
 Large setup violation  
-There is a large setup violation of -78.863 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[3]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.415 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[4]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#7 Warning
 Large setup violation  
-There is a large setup violation of -78.956 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[2]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.436 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[6]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#8 Warning
 Large setup violation  
-There is a large setup violation of -78.996 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[4]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.526 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[5]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#9 Warning
 Large setup violation  
-There is a large setup violation of -79.016 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[3]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -78.862 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[7]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#10 Warning
 Large setup violation  
-There is a large setup violation of -79.107 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[5]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.105 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[0]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#11 Warning
 Large setup violation  
-There is a large setup violation of -79.149 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[4]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.237 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[8]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#12 Warning
 Large setup violation  
-There is a large setup violation of -79.150 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[6]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.253 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[10]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#13 Warning
 Large setup violation  
-There is a large setup violation of -79.165 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[6]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.272 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[0]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#14 Warning
 Large setup violation  
-There is a large setup violation of -79.254 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[7]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.282 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[1]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#15 Warning
 Large setup violation  
-There is a large setup violation of -79.260 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[5]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.327 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[11]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#16 Warning
 Large setup violation  
-There is a large setup violation of -79.261 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[7]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.348 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[9]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#17 Warning
 Large setup violation  
-There is a large setup violation of -79.631 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[8]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.349 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[12]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#18 Warning
 Large setup violation  
-There is a large setup violation of -79.697 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[10]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.398 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[14]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#19 Warning
 Large setup violation  
-There is a large setup violation of -79.728 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[8]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.435 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[2]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#20 Warning
 Large setup violation  
-There is a large setup violation of -79.742 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[9]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.449 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[1]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#21 Warning
 Large setup violation  
-There is a large setup violation of -79.744 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[10]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.458 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[15]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#22 Warning
 Large setup violation  
-There is a large setup violation of -79.759 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[11]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.460 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[13]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#23 Warning
 Large setup violation  
-There is a large setup violation of -79.818 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[11]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.470 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[0]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#24 Warning
 Large setup violation  
-There is a large setup violation of -79.839 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[9]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.495 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[3]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#25 Warning
 Large setup violation  
-There is a large setup violation of -79.985 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[12]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.606 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[16]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#26 Warning
 Large setup violation  
-There is a large setup violation of -80.035 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[12]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.622 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[18]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#27 Warning
 Large setup violation  
-There is a large setup violation of -80.096 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[13]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.629 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[4]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#28 Warning
 Large setup violation  
-There is a large setup violation of -80.120 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[14]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.645 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[6]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#29 Warning
 Large setup violation  
-There is a large setup violation of -80.146 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[13]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.647 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[1]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#30 Warning
 Large setup violation  
-There is a large setup violation of -80.168 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[14]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.696 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[19]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#31 Warning
 Large setup violation  
-There is a large setup violation of -80.179 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[15]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.717 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[17]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#32 Warning
 Large setup violation  
-There is a large setup violation of -80.330 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[15]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.719 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[7]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#33 Warning
 Large setup violation  
-There is a large setup violation of -80.547 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[16]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.720 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[20]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#34 Warning
 Large setup violation  
-There is a large setup violation of -80.563 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[18]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.736 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[22]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#35 Warning
 Large setup violation  
-There is a large setup violation of -80.637 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[19]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.740 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[5]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#36 Warning
 Large setup violation  
-There is a large setup violation of -80.658 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[17]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.764 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[2]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#37 Warning
 Large setup violation  
-There is a large setup violation of -80.663 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[20]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.800 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[2]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#38 Warning
 Large setup violation  
-There is a large setup violation of -80.679 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[22]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.810 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[23]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#39 Warning
 Large setup violation  
-There is a large setup violation of -80.706 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[16]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.824 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[3]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#40 Warning
 Large setup violation  
-There is a large setup violation of -80.722 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[18]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.831 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[21]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#41 Warning
 Large setup violation  
-There is a large setup violation of -80.753 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[23]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.833 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[24]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#42 Warning
 Large setup violation  
-There is a large setup violation of -80.774 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[21]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.849 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[26]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#43 Warning
 Large setup violation  
-There is a large setup violation of -80.778 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[24]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.860 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[3]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#44 Warning
 Large setup violation  
-There is a large setup violation of -80.794 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[26]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.923 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[27]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#45 Warning
 Large setup violation  
-There is a large setup violation of -80.796 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[19]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.944 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[25]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#46 Warning
 Large setup violation  
-There is a large setup violation of -80.817 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[17]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.945 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[28]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#47 Warning
 Large setup violation  
-There is a large setup violation of -80.849 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[20]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.958 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[4]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#48 Warning
 Large setup violation  
-There is a large setup violation of -80.865 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[22]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -79.961 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[30]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#49 Warning
 Large setup violation  
-There is a large setup violation of -80.868 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[27]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.035 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[31]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#50 Warning
 Large setup violation  
-There is a large setup violation of -80.889 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[25]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.049 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[8]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#51 Warning
 Large setup violation  
-There is a large setup violation of -80.892 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[28]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.056 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_4th_reg[29]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#52 Warning
 Large setup violation  
-There is a large setup violation of -80.908 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[30]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.069 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[5]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#53 Warning
 Large setup violation  
-There is a large setup violation of -80.939 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[23]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.124 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[4]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#54 Warning
 Large setup violation  
-There is a large setup violation of -80.960 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[21]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.160 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[9]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#55 Warning
 Large setup violation  
-There is a large setup violation of -80.963 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[24]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.177 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[6]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#56 Warning
 Large setup violation  
-There is a large setup violation of -80.979 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[26]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.258 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[10]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#57 Warning
 Large setup violation  
-There is a large setup violation of -80.982 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[31]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.265 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[5]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#58 Warning
 Large setup violation  
-There is a large setup violation of -81.003 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[29]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.281 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[7]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#59 Warning
 Large setup violation  
-There is a large setup violation of -81.053 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[27]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.318 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[11]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#60 Warning
 Large setup violation  
-There is a large setup violation of -81.074 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[25]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.452 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[12]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#61 Warning
 Large setup violation  
-There is a large setup violation of -81.077 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[28]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.473 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[14]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#62 Warning
 Large setup violation  
-There is a large setup violation of -81.093 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[30]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.542 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[15]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#63 Warning
 Large setup violation  
-There is a large setup violation of -81.167 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[31]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.552 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[8]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-16#64 Warning
 Large setup violation  
-There is a large setup violation of -81.188 ns between audio/out_reg[3]_replica/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[29]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+There is a large setup violation of -80.563 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[13]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#65 Warning
+Large setup violation  
+There is a large setup violation of -80.589 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[0]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#66 Warning
+Large setup violation  
+There is a large setup violation of -80.597 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[6]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#67 Warning
+Large setup violation  
+There is a large setup violation of -80.663 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[9]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#68 Warning
+Large setup violation  
+There is a large setup violation of -80.697 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[10]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#69 Warning
+Large setup violation  
+There is a large setup violation of -80.701 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[7]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#70 Warning
+Large setup violation  
+There is a large setup violation of -80.766 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[1]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#71 Warning
+Large setup violation  
+There is a large setup violation of -80.801 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[11]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#72 Warning
+Large setup violation  
+There is a large setup violation of -80.811 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[16]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#73 Warning
+Large setup violation  
+There is a large setup violation of -80.827 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[18]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#74 Warning
+Large setup violation  
+There is a large setup violation of -80.901 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[19]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#75 Warning
+Large setup violation  
+There is a large setup violation of -80.919 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[2]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#76 Warning
+Large setup violation  
+There is a large setup violation of -80.923 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[17]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#77 Warning
+Large setup violation  
+There is a large setup violation of -80.926 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[20]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#78 Warning
+Large setup violation  
+There is a large setup violation of -80.942 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[22]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#79 Warning
+Large setup violation  
+There is a large setup violation of -80.979 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[3]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#80 Warning
+Large setup violation  
+There is a large setup violation of -81.016 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[23]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#81 Warning
+Large setup violation  
+There is a large setup violation of -81.037 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[21]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#82 Warning
+Large setup violation  
+There is a large setup violation of -81.055 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[8]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#83 Warning
+Large setup violation  
+There is a large setup violation of -81.071 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[10]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#84 Warning
+Large setup violation  
+There is a large setup violation of -81.077 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[12]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#85 Warning
+Large setup violation  
+There is a large setup violation of -81.112 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[4]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#86 Warning
+Large setup violation  
+There is a large setup violation of -81.118 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[24]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#87 Warning
+Large setup violation  
+There is a large setup violation of -81.128 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[6]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#88 Warning
+Large setup violation  
+There is a large setup violation of -81.134 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[26]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#89 Warning
+Large setup violation  
+There is a large setup violation of -81.145 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[11]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#90 Warning
+Large setup violation  
+There is a large setup violation of -81.166 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[9]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#91 Warning
+Large setup violation  
+There is a large setup violation of -81.167 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[12]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#92 Warning
+Large setup violation  
+There is a large setup violation of -81.183 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[14]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#93 Warning
+Large setup violation  
+There is a large setup violation of -81.188 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[13]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#94 Warning
+Large setup violation  
+There is a large setup violation of -81.202 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[7]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#95 Warning
+Large setup violation  
+There is a large setup violation of -81.203 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[14]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#96 Warning
+Large setup violation  
+There is a large setup violation of -81.208 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[27]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#97 Warning
+Large setup violation  
+There is a large setup violation of -81.223 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[5]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#98 Warning
+Large setup violation  
+There is a large setup violation of -81.229 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[25]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#99 Warning
+Large setup violation  
+There is a large setup violation of -81.233 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[28]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#100 Warning
+Large setup violation  
+There is a large setup violation of -81.242 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[8]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#101 Warning
+Large setup violation  
+There is a large setup violation of -81.249 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[30]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#102 Warning
+Large setup violation  
+There is a large setup violation of -81.263 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[15]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#103 Warning
+Large setup violation  
+There is a large setup violation of -81.278 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[13]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#104 Warning
+Large setup violation  
+There is a large setup violation of -81.323 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[31]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#105 Warning
+Large setup violation  
+There is a large setup violation of -81.344 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_2nd_reg[29]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#106 Warning
+Large setup violation  
+There is a large setup violation of -81.353 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[9]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#107 Warning
+Large setup violation  
+There is a large setup violation of -81.398 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[16]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#108 Warning
+Large setup violation  
+There is a large setup violation of -81.414 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[18]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#109 Warning
+Large setup violation  
+There is a large setup violation of -81.454 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[15]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#110 Warning
+Large setup violation  
+There is a large setup violation of -81.488 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[19]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#111 Warning
+Large setup violation  
+There is a large setup violation of -81.509 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[17]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#112 Warning
+Large setup violation  
+There is a large setup violation of -81.521 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[20]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#113 Warning
+Large setup violation  
+There is a large setup violation of -81.532 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[10]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#114 Warning
+Large setup violation  
+There is a large setup violation of -81.537 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[22]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#115 Warning
+Large setup violation  
+There is a large setup violation of -81.611 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[23]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#116 Warning
+Large setup violation  
+There is a large setup violation of -81.632 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[21]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#117 Warning
+Large setup violation  
+There is a large setup violation of -81.633 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[24]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#118 Warning
+Large setup violation  
+There is a large setup violation of -81.636 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[11]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#119 Warning
+Large setup violation  
+There is a large setup violation of -81.649 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[26]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#120 Warning
+Large setup violation  
+There is a large setup violation of -81.723 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[27]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#121 Warning
+Large setup violation  
+There is a large setup violation of -81.744 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[25]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#122 Warning
+Large setup violation  
+There is a large setup violation of -81.746 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[28]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#123 Warning
+Large setup violation  
+There is a large setup violation of -81.762 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[30]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#124 Warning
+Large setup violation  
+There is a large setup violation of -81.829 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[16]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#125 Warning
+Large setup violation  
+There is a large setup violation of -81.836 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[31]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#126 Warning
+Large setup violation  
+There is a large setup violation of -81.845 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[18]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#127 Warning
+Large setup violation  
+There is a large setup violation of -81.857 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_5th_reg[29]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#128 Warning
+Large setup violation  
+There is a large setup violation of -81.905 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[12]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#129 Warning
+Large setup violation  
+There is a large setup violation of -81.919 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[19]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#130 Warning
+Large setup violation  
+There is a large setup violation of -81.921 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[14]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#131 Warning
+Large setup violation  
+There is a large setup violation of -81.940 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[17]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#132 Warning
+Large setup violation  
+There is a large setup violation of -81.943 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[20]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#133 Warning
+Large setup violation  
+There is a large setup violation of -81.959 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[22]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#134 Warning
+Large setup violation  
+There is a large setup violation of -81.995 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[15]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#135 Warning
+Large setup violation  
+There is a large setup violation of -82.016 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[13]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#136 Warning
+Large setup violation  
+There is a large setup violation of -82.033 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[23]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#137 Warning
+Large setup violation  
+There is a large setup violation of -82.054 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[21]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#138 Warning
+Large setup violation  
+There is a large setup violation of -82.087 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[16]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#139 Warning
+Large setup violation  
+There is a large setup violation of -82.103 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[18]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#140 Warning
+Large setup violation  
+There is a large setup violation of -82.115 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[24]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#141 Warning
+Large setup violation  
+There is a large setup violation of -82.131 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[26]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#142 Warning
+Large setup violation  
+There is a large setup violation of -82.177 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[19]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#143 Warning
+Large setup violation  
+There is a large setup violation of -82.198 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[17]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#144 Warning
+Large setup violation  
+There is a large setup violation of -82.201 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[20]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#145 Warning
+Large setup violation  
+There is a large setup violation of -82.205 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[27]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#146 Warning
+Large setup violation  
+There is a large setup violation of -82.217 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[22]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#147 Warning
+Large setup violation  
+There is a large setup violation of -82.226 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[25]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#148 Warning
+Large setup violation  
+There is a large setup violation of -82.227 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[28]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#149 Warning
+Large setup violation  
+There is a large setup violation of -82.243 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[30]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#150 Warning
+Large setup violation  
+There is a large setup violation of -82.291 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[23]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#151 Warning
+Large setup violation  
+There is a large setup violation of -82.312 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[21]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#152 Warning
+Large setup violation  
+There is a large setup violation of -82.315 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[24]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#153 Warning
+Large setup violation  
+There is a large setup violation of -82.317 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[31]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#154 Warning
+Large setup violation  
+There is a large setup violation of -82.331 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[26]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#155 Warning
+Large setup violation  
+There is a large setup violation of -82.338 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_3rd_reg[29]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#156 Warning
+Large setup violation  
+There is a large setup violation of -82.405 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[27]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#157 Warning
+Large setup violation  
+There is a large setup violation of -82.426 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[25]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#158 Warning
+Large setup violation  
+There is a large setup violation of -82.534 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[28]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#159 Warning
+Large setup violation  
+There is a large setup violation of -82.550 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[30]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#160 Warning
+Large setup violation  
+There is a large setup violation of -82.624 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[31]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#161 Warning
+Large setup violation  
+There is a large setup violation of -82.645 ns between audio/out_reg[0]/C (clocked by clk_100) and audio/sine_wave/phase_fun_reg[29]/D (clocked by clk_100). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
 Related violations: <none>
 
 TIMING-18#1 Warning
@@ -1529,37 +2014,52 @@ Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch audio/resolution_reg[3] cannot be properly analyzed as its control pin audio/resolution_reg[3]/G is not reached by a timing clock
+The latch audio/resolution_reg[2]_rep cannot be properly analyzed as its control pin audio/resolution_reg[2]_rep/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch audio/resolution_reg[4] cannot be properly analyzed as its control pin audio/resolution_reg[4]/G is not reached by a timing clock
+The latch audio/resolution_reg[3] cannot be properly analyzed as its control pin audio/resolution_reg[3]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#6 Warning
 Non-clocked latch  
-The latch audio/resolution_reg[5] cannot be properly analyzed as its control pin audio/resolution_reg[5]/G is not reached by a timing clock
+The latch audio/resolution_reg[4] cannot be properly analyzed as its control pin audio/resolution_reg[4]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#7 Warning
 Non-clocked latch  
-The latch audio/resolution_reg[6] cannot be properly analyzed as its control pin audio/resolution_reg[6]/G is not reached by a timing clock
+The latch audio/resolution_reg[4]_rep cannot be properly analyzed as its control pin audio/resolution_reg[4]_rep/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#8 Warning
 Non-clocked latch  
-The latch audio/resolution_reg[7] cannot be properly analyzed as its control pin audio/resolution_reg[7]/G is not reached by a timing clock
+The latch audio/resolution_reg[5] cannot be properly analyzed as its control pin audio/resolution_reg[5]/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#9 Warning
 Non-clocked latch  
+The latch audio/resolution_reg[6] cannot be properly analyzed as its control pin audio/resolution_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch audio/resolution_reg[7] cannot be properly analyzed as its control pin audio/resolution_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
 The latch audio/resolution_reg[8] cannot be properly analyzed as its control pin audio/resolution_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch audio/resolution_reg[8]_rep cannot be properly analyzed as its control pin audio/resolution_reg[8]_rep/G is not reached by a timing clock
 Related violations: <none>
 
 LATCH-1#1 Advisory
 Existing latches in the design  
-There are 9 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+There are 12 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
 Related violations: <none>
 
 

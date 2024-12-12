@@ -546,7 +546,7 @@ begin:Indigo_int_proc
 		end
 		else begin
 			indigo_click_next = 1'b0;
-			YellowY_next = 9'd10;
+			IndigoY_next = 9'd10;
 		end
 	end
 	else begin

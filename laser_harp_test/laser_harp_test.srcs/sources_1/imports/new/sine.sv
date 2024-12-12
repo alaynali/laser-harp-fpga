@@ -1609,13 +1609,13 @@ always_ff @(posedge clk)
         sample_fun <= sine_lut_fun[phase_fun];
         sample_2nd <= sine_lut_2nd[phase_2nd];
         sample_3rd <= sine_lut_3rd[phase_3rd];
-//        sample_4th <= sine_lut_4th[phase_4th];
-//        sample_5th <= sine_lut_5th[phase_5th];
+        sample_4th <= sine_lut_4th[phase_4th];
+        sample_5th <= sine_lut_5th[phase_5th];
         phase_fun <= (phase_fun + phase_increment) % resolution;
         phase_2nd <= (phase_2nd + 2*phase_increment) % resolution;
         phase_3rd <= (phase_3rd + 3*phase_increment) % resolution;
-//        phase_4th <= (phase_4th + 4*phase_increment) % resolution;
-//        phase_5th <= (phase_5th + 5*phase_increment) % resolution;
+        phase_4th <= (phase_4th + 4*phase_increment) % resolution;
+        phase_5th <= (phase_5th + 5*phase_increment) % resolution;
     end else
         counter <= counter + 1;
 	
@@ -1623,8 +1623,8 @@ always_ff @(posedge clk)
 begin
     if (harmonics)
         begin
-        outR <= (counter < (sample_fun + sample_2nd/2 + sample_3rd/3));
-    	outL <= (counter < (sample_fun + sample_2nd/2 + sample_3rd/3));
+         outR <= (counter < (sample_fun + sample_2nd/2 + sample_3rd/3 + sample_4th/5 + sample_5th/10));
+    	 outL <= (counter < (sample_fun + sample_2nd/2 + sample_3rd/3 + sample_4th/5 + sample_5th/10));
 //            outR <= (counter < (sample_1 + sample_2/2 + sample_3/3));
 //            outL <= (counter < (sample_1 + sample_2/2 + sample_3/3));
         end
