@@ -219,7 +219,7 @@ logic violet_click;
         .probe1(keycode1_gpio[31:0])
     );
     
-    logic [5:0]	SW_s;
+    logic [15:0]	SW_s;
 
     sync_debounce SW_sync [15:0] (
 		.clk  (clk), 
