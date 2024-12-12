@@ -43,6 +43,7 @@ module sound(
 logic [15:0] SW_s;
 integer phase_increment;	
 logic harmonics;
+integer resolution;
 
 logic [5:0]	out;
 
@@ -62,37 +63,55 @@ sine sine_wave (
     .outR(SPKR),
     .outL(SPKL),
     .phase_increment(phase_increment),
-    .harmonics(harmonics)
+    .harmonics(harmonics),
+    .resolution(resolution)
 );
+
+always_comb begin
+    case(SW_s)
+        16'b0000000000000001:
+            begin
+                harmonics = 1;
+            end
+        default: harmonics = 0;
+    endcase
+end
 
 always_comb begin
     if(red_click || (out == 6'b000001))
         begin
-            phase_increment = 1;   // SW0
+            phase_increment = 2;   // SW0
+            resolution = 382;
         end
     else if (orange_click || (out == 6'b000010)) 
         begin
             phase_increment = 2;   // SW0
+            resolution = 340;
         end
     else if (yellow_click || (out == 6'b000100)) 
         begin
-            phase_increment = 3;   // SW0
+            phase_increment = 2;   // SW0
+            resolution = 302;
         end
     else if (green_click || (out == 6'b001000)) 
         begin
-            phase_increment = 4;   // SW0
+            phase_increment = 2;   // SW0
+            resolution = 288;
         end
     else if (blue_click || (out == 6'b010000))
         begin
-            phase_increment = 5;   // SW0
+            phase_increment = 2;   // SW0
+            resolution = 255;
         end
     else if (indigo_click || (out == 6'b100000)) 
         begin
-            phase_increment = 6;   // SW0
+            phase_increment = 2;   // SW0
+            resolution = 227;
         end
     else if (violet_click) 
         begin
-            phase_increment = 7;   // SW0
+            phase_increment = 2;   // SW0
+            resolution = 202;
         end
     else 
         begin 
