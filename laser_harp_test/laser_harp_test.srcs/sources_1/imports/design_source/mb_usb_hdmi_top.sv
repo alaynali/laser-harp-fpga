@@ -172,6 +172,7 @@ logic indigo_click;
 logic violet_click;
 
     lasers_example screen(
+        .Reset(reeset_ah),
         .vga_clk(clk_25MHz),
         .DrawX(drawX),
         .DrawY(drawY),
