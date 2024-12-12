@@ -5,15 +5,27 @@ module lasers_example (
 	input logic blank,
 	input  logic [9:0] CursorX, CursorY, CursorS,
 	input logic [7:0] btn_keycode,
+
+	input logic JAB_0, // red
+	input logic JAB_1, // orange
+	input logic JAB_2, // yellow
+	input logic JAB_3, // green
+	input logic JAB_4, // blue
+	input logic JAB_5, // indigo
+
 	output logic [3:0] red, green, blue,
 	output logic red_click_out,
-  output logic orange_click_out,
-  output logic yellow_click_out,
-  output logic green_click_out,
-  output logic blue_click_out,
-  output logic indigo_click_out,
-  output logic violet_click_out
+
+	output logic orange_click_out,
+	output logic yellow_click_out,
+	output logic green_click_out,
+	output logic blue_click_out,
+	output logic indigo_click_out,
+	output logic violet_click_out
 );
+
+// JAB_5,JAB_4,JAB_3,JAB_2,JAB_1, JAB_0
+// indigo , ..					   red
 
 logic cursor_on;
 
@@ -245,6 +257,14 @@ begin:Red_int_proc
 	red_click_next = red_click;
 	RedY_next = RedY;
 
+	if (JAB_0) begin
+		red_click_next = 1'b1;
+		RedY_next = 240;
+	end
+	else begin
+		red_click_next= 1'b0;
+		RedY_next = 9'd10;
+	end
 	if (l_click || r_click) begin
 		if ( CursorY >= 347 && CursorY <= 357 && CursorX >= 174 && CursorX <= 184 || (r_click && CursorY >= 2*CursorX-16 && CursorY <= 2*CursorX+4 && CursorY <= 355 && CursorY >= 11)) begin // if (CursorY <= 348 && CursorY >= 3*CursorX-192 && CursorY >= -3*CursorX+870 && red_click) begin 
 			red_click_next= 1'b0;
