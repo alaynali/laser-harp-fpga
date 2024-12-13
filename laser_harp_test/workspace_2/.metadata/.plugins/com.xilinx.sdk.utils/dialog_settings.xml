@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<item key="scw_hwspec" value="C:\Users\estel\laser-harp-fpga\laser_harp_test"/>
+	<item key="scw_hwspec_file_selection" value="C:\Users\kryst\ece385\laser-harp-fpga\laser_harp_test"/>
 </section>

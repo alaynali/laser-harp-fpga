@@ -23,7 +23,10 @@ module lasers_example (
 	output logic green_click_out,
 	output logic blue_click_out,
 	output logic indigo_click_out,
-	output logic violet_click_out
+	output logic violet_click_out,
+	
+	output logic [15:0] count,
+	output logic [9:0] AnimationY
 );
 
 // JAB_5,JAB_4,JAB_3,JAB_2,JAB_1, JAB_0
@@ -604,9 +607,26 @@ end
 // 	else
 // 		color_on = 1'b1;
 // end
+logic [9:0] AnimationY;
+logic AnimationDone;
+logic [9:0] AnimationY_next;
+logic [15:0] count;
+logic [5:0] cycle;
+
+always_comb begin
+    AnimationY_next = AnimationY;
+    AnimationDone = 1'b0;
+    
+    if (count == 16'b0011111111111111) begin
+        AnimationY_next = AnimationY - 10'b0000000001;
+    end
+    if (AnimationY <= 10'b0000001010) begin
+        AnimationDone = 1'b1;
+    end
+end
 
 always_ff @ (posedge vga_clk) begin
-	if (Reset) begin
+	if (SW[2] || Reset) begin
 		red_click <= 1'b0;
 		orange_click <= 1'b0;
 		yellow_click <= 1'b0;
@@ -622,6 +642,9 @@ always_ff @ (posedge vga_clk) begin
 		BlueY <= 9'd10;
 		IndigoY <= 9'd10;
 		VioletY <= 9'd10;
+		
+		AnimationY <= 10'b0101100011; // = 355 = 0101100011
+		count <= 16'd0;
 	end
 	else begin
 		red <= 4'h0;
@@ -644,194 +667,315 @@ always_ff @ (posedge vga_clk) begin
 		indigo_click <= indigo_click_next;
 		violet_click <= violet_click_next;
 		
+	    AnimationY <= AnimationY_next;
+	    
+	    if (!AnimationDone) begin
+//            if (cycle == 6'b111111) begin
+//               count <= count + 16'b0000000000000001;
+//               cycle <= 6'b000000;
+//            end
+//            else if (count == 16'b0100000000000000) begin
+//               count <= 16'b0000000000000000;
+//               cycle <= cycle + 6'b000001;
+//            end
+//            else 
+//               cycle <= cycle + 6'b000001;
+//               count <= count;
+            if (count == 16'b0111111111111111) 
+                count <= 16'b0000000000000000;
+            else
+                count <= count + 16'b0000000000000001;
+	    end
+	
+//	    if (count == 16'b0111111111111111)
+//	       count <= 16'b0;
+//	    else if (AnimationDone)
+//	       count <= 16'b0;
+//	    else
+//	       count <= count + 1'b1;
+
 		if (blank) begin  // This is when the non-blanking interval begins
-
-		// orange_int <= orange_int_next;
-
-			if ((cursor_on == 1'b1)) begin 
-				// or import cursor palette
-				red <= 4'hf;
-				green <= 4'hf;
-				blue <= 4'hf;
-			end    
-			else begin
-				// roygbiv: {4'hF, 4'h3, 4'h3}, {4'hF, 4'h9, 4'h4}, {4'hF, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h3, 4'hB, 4'hF}, {4'h0, 4'h4, 4'hA}, {4'h5, 4'h1, 4'hE}
-				// translucent roygbiv: {4'h7, 4'h1, 4'h1}, {4'h8, 4'h5, 4'h3}, {4'h7, 4'h6, 4'h2}, {4'h3, 4'h6, 4'h2}, {4'h1, 4'h5, 4'h7}, {4'h0, 4'h2, 4'h5}, {4'h2, 4'h0, 4'h7},
-				// bright roygbiv: {4'hF, 4'h9, 4'h9}, {4'hF, 4'hC, 4'hA}, {4'hF, 4'hE, 4'h9}, {4'hB, 4'hF, 4'h9}, {4'hA, 4'hD, 4'hF}, {4'h6, 4'h8, 4'hA}, {4'hB, 4'hA, 4'hE}
-				// carrot
-				if (red_click && RedCarrot_on) begin
-						red <= 4'hf;
-						green <= 4'h9;
-						blue <= 4'h9;
-				end
-				else if (red_on) begin
-					// no color
-					if (red_click && DrawY < RedY) begin
-						red <= bg_red;
-						green <= bg_green;
-						blue <= bg_blue;
-					end
-					// dim color
-					else if ((red_int && (DrawY < CursorY)) || (red_int && red_click && DrawY > RedY)) begin
-						red <= 4'h7;
-						green <= 4'h1;
-						blue <= 4'h1;
-					end
-					// normal color
-					else begin  // ((!red_int || DrawY > CursorY)) 
-						red <= 4'hF;
-						green <= 4'h3;
-						blue <= 4'h3;
-					end
-				end	
-				// carrot
-				else if (orange_click && OrangeCarrot_on) begin
-						red <= 4'hf;
-						green <= 4'hc;
-						blue <= 4'ha;
-				end
-				else if (orange_on) begin
-					// no color
-					if (orange_click && DrawY < OrangeY) begin
-						red <= bg_red;
-						green <= bg_green;
-						blue <= bg_blue;
-					end
-					// dim color
-					else if ((orange_int && (DrawY < CursorY)) || (orange_int && orange_click && DrawY > OrangeY)) begin
-						red <= 4'h8;
-						green <= 4'h5;
-						blue <= 4'h3;
-					end
-					// normal color
-					else begin
-						red <= 4'hF;
-						green <= 4'h9;
-						blue <= 4'h4;
-					end
-				end	
-				// carrot
-				else if (yellow_click && YellowCarrot_on) begin
-					red <= 4'hf;
-					green <= 4'he;
-					blue <= 4'h9;
-				end
-				else if (yellow_on) begin
-					// no color
-					if (yellow_click && DrawY < YellowY) begin
-						red <= bg_red;
-						green <= bg_green;
-						blue <= bg_blue;
-					end
-					// dim color
-					else if ((yellow_int && (DrawY < CursorY)) || (yellow_int && yellow_click && DrawY > YellowY)) begin
-						red <= 4'h7;
-						green <= 4'h6;
-						blue <= 4'h2;
-					end
-					// normal color
-					else begin
-						red <= 4'hF;
-						green <= 4'hD;
-						blue <= 4'h5;
-					end
-				end	
-				else if (green_click && GreenCarrot_on) begin
-					red <= 4'hB;
-					green <= 4'hF;
-					blue <= 4'h9;
-				end
-				else if (green_on) begin
-					if (green_click && DrawY < GreenY) begin
-						red <= bg_red;
-						green <= bg_green;
-						blue <= bg_blue;
-					end
-					// dim color
-					else if ((green_int && (DrawY < CursorY)) || (green_int && green_click && DrawY > GreenY)) begin
-						red <= 4'h3;
-						green <= 4'h6;
-						blue <= 4'h2;
-					end
-					// normal color
-					else begin
-						red <= 4'h7;
-						green <= 4'hD;
-						blue <= 4'h5;
-					end
-				end	
-				else if (blue_click && BlueCarrot_on) begin
-					red <= 4'hA;
-					green <= 4'hD;
-					blue <= 4'hF;
-				end
-				else if (blue_on) begin
-					if (blue_click && DrawY < BlueY) begin
-						red <= bg_red;
-						green <= bg_green;
-						blue <= bg_blue;
-					end
-					else if ((blue_int && (DrawY < CursorY)) || (blue_int && blue_click && DrawY > BlueY)) begin
-						red <= 4'h1;
-						green <= 4'h5;
-						blue <= 4'h7;
-					end
-					else begin
-						red <= 4'h3;
-						green <= 4'hB;
-						blue <= 4'hF;
-					end
-				end	
-				else if (indigo_click && IndigoCarrot_on) begin
-					red <= 4'h6;
-					green <= 4'h8;
-					blue <= 4'hA;
-				end
-				else if (indigo_on) begin
-					if (indigo_click && DrawY < IndigoY) begin
-						red <= bg_red;
-						green <= bg_green;
-						blue <= bg_blue;
-					end
-					else if ((indigo_int && (DrawY < CursorY)) || (indigo_int && indigo_click && DrawY > IndigoY)) begin
-						red <= 4'h0;
-						green <= 4'h2;
-						blue <= 4'h5;
-					end
-					else begin
-						red <= 4'h0;
-						green <= 4'h4;
-						blue <= 4'hA;
-					end
-				end	
-				else if (violet_click && VioletCarrot_on) begin
-					red <= 4'hB;
-					green <= 4'hA;
-					blue <= 4'hE;
-				end
-				else if (violet_on) begin
-					if (violet_click && DrawY < VioletY) begin
-						red <= bg_red;
-						green <= bg_green;
-						blue <= bg_blue;
-					end
-					else if ((violet_int && (DrawY < CursorY)) || (violet_int && violet_click && DrawY > VioletY)) begin
-						red <= 4'h2;
-						green <= 4'h0;
-						blue <= 4'h7;
-					end
-					else begin
-						red <= 4'h5;
-						green <= 4'h1;
-						blue <= 4'hE;
-					end
-				end	
-				else begin // not drawing lasers
-					red <= bg_red;
-					green <= bg_green;
-					blue <= bg_blue;
-				end
-			end
+			if (!AnimationDone) begin
+               if (red_on) begin
+                   if (DrawY < AnimationY) begin
+                       red <= bg_red;
+                       blue <= bg_blue;
+                       green <= bg_green;
+                   end
+                   else begin
+                       red <= 4'hF;
+                       green <= 4'h3;
+                       blue <= 4'h3;
+                   end
+               end
+               else if (orange_on) begin
+                   if (DrawY < AnimationY) begin
+                       red <= bg_red;
+                       blue <= bg_blue;
+                       green <= bg_green;
+                   end
+                   else begin
+                       red <= 4'hF;
+                       green <= 4'h9;
+                       blue <= 4'h4;
+                   end
+               end
+               else if (yellow_on) begin
+                   if (DrawY < AnimationY) begin
+                       red <= bg_red;
+                       blue <= bg_blue;
+                       green <= bg_green;
+                   end
+                   else begin
+                       red <= 4'hF;
+                       green <= 4'hD;
+                       blue <= 4'h5;
+                   end
+               end
+               else if (green_on) begin
+                   if (DrawY < AnimationY) begin
+                       red <= bg_red;
+                       blue <= bg_blue;
+                       green <= bg_green;
+                   end
+                   else begin
+                       red <= 4'h7;
+                       green <= 4'hD;
+                       blue <= 4'h5;
+                   end
+               end
+               else if (blue_on) begin
+                   if (DrawY < AnimationY) begin
+                       red <= bg_red;
+                       blue <= bg_blue;
+                       green <= bg_green;
+                   end
+                   else begin
+                       red <= 4'h3;
+                       green <= 4'hB;
+                       blue <= 4'hF;
+                   end
+               end
+               else if (indigo_on) begin
+                   if (DrawY < AnimationY) begin
+                       red <= bg_red;
+                       blue <= bg_blue;
+                       green <= bg_green;
+                   end
+                   else begin
+                       red <= 4'h0;
+                       green <= 4'h4;
+                       blue <= 4'hA;
+                   end
+               end
+               else if (violet_on) begin
+                   if (DrawY < AnimationY) begin
+                       red <= bg_red;
+                       blue <= bg_blue;
+                       green <= bg_green;
+                   end
+                   else begin
+                       red <= 4'h5;
+                       green <= 4'h1;
+                       blue <= 4'hE;
+                   end
+               end
+               else begin
+                   red <= bg_red;
+                   blue <= bg_blue;
+                   green <= bg_green;
+               end
+            end
+            
+            else begin
+    
+            // orange_int <= orange_int_next;
+    
+                if ((cursor_on == 1'b1)) begin 
+                    // or import cursor palette
+                    red <= 4'hf;
+                    green <= 4'hf;
+                    blue <= 4'hf;
+                end    
+                else begin
+                    // roygbiv: {4'hF, 4'h3, 4'h3}, {4'hF, 4'h9, 4'h4}, {4'hF, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h7, 4'hD, 4'h5}, {4'h3, 4'hB, 4'hF}, {4'h0, 4'h4, 4'hA}, {4'h5, 4'h1, 4'hE}
+                    // translucent roygbiv: {4'h7, 4'h1, 4'h1}, {4'h8, 4'h5, 4'h3}, {4'h7, 4'h6, 4'h2}, {4'h3, 4'h6, 4'h2}, {4'h1, 4'h5, 4'h7}, {4'h0, 4'h2, 4'h5}, {4'h2, 4'h0, 4'h7},
+                    // bright roygbiv: {4'hF, 4'h9, 4'h9}, {4'hF, 4'hC, 4'hA}, {4'hF, 4'hE, 4'h9}, {4'hB, 4'hF, 4'h9}, {4'hA, 4'hD, 4'hF}, {4'h6, 4'h8, 4'hA}, {4'hB, 4'hA, 4'hE}
+                    // carrot
+                    if (red_click && RedCarrot_on) begin
+                            red <= 4'hf;
+                            green <= 4'h9;
+                            blue <= 4'h9;
+                    end
+                    else if (red_on) begin
+                        // no color
+                        if (red_click && DrawY < RedY) begin
+                            red <= bg_red;
+                            green <= bg_green;
+                            blue <= bg_blue;
+                        end
+                        // dim color
+                        else if ((red_int && (DrawY < CursorY)) || (red_int && red_click && DrawY > RedY)) begin
+                            red <= 4'h7;
+                            green <= 4'h1;
+                            blue <= 4'h1;
+                        end
+                        // normal color
+                        else begin  // ((!red_int || DrawY > CursorY)) 
+                            red <= 4'hF;
+                            green <= 4'h3;
+                            blue <= 4'h3;
+                        end
+                    end	
+                    // carrot
+                    else if (orange_click && OrangeCarrot_on) begin
+                            red <= 4'hf;
+                            green <= 4'hc;
+                            blue <= 4'ha;
+                    end
+                    else if (orange_on) begin
+                        // no color
+                        if (orange_click && DrawY < OrangeY) begin
+                            red <= bg_red;
+                            green <= bg_green;
+                            blue <= bg_blue;
+                        end
+                        // dim color
+                        else if ((orange_int && (DrawY < CursorY)) || (orange_int && orange_click && DrawY > OrangeY)) begin
+                            red <= 4'h8;
+                            green <= 4'h5;
+                            blue <= 4'h3;
+                        end
+                        // normal color
+                        else begin
+                            red <= 4'hF;
+                            green <= 4'h9;
+                            blue <= 4'h4;
+                        end
+                    end	
+                    // carrot
+                    else if (yellow_click && YellowCarrot_on) begin
+                        red <= 4'hf;
+                        green <= 4'he;
+                        blue <= 4'h9;
+                    end
+                    else if (yellow_on) begin
+                        // no color
+                        if (yellow_click && DrawY < YellowY) begin
+                            red <= bg_red;
+                            green <= bg_green;
+                            blue <= bg_blue;
+                        end
+                        // dim color
+                        else if ((yellow_int && (DrawY < CursorY)) || (yellow_int && yellow_click && DrawY > YellowY)) begin
+                            red <= 4'h7;
+                            green <= 4'h6;
+                            blue <= 4'h2;
+                        end
+                        // normal color
+                        else begin
+                            red <= 4'hF;
+                            green <= 4'hD;
+                            blue <= 4'h5;
+                        end
+                    end	
+                    else if (green_click && GreenCarrot_on) begin
+                        red <= 4'hB;
+                        green <= 4'hF;
+                        blue <= 4'h9;
+                    end
+                    else if (green_on) begin
+                        if (green_click && DrawY < GreenY) begin
+                            red <= bg_red;
+                            green <= bg_green;
+                            blue <= bg_blue;
+                        end
+                        // dim color
+                        else if ((green_int && (DrawY < CursorY)) || (green_int && green_click && DrawY > GreenY)) begin
+                            red <= 4'h3;
+                            green <= 4'h6;
+                            blue <= 4'h2;
+                        end
+                        // normal color
+                        else begin
+                            red <= 4'h7;
+                            green <= 4'hD;
+                            blue <= 4'h5;
+                        end
+                    end	
+                    else if (blue_click && BlueCarrot_on) begin
+                        red <= 4'hA;
+                        green <= 4'hD;
+                        blue <= 4'hF;
+                    end
+                    else if (blue_on) begin
+                        if (blue_click && DrawY < BlueY) begin
+                            red <= bg_red;
+                            green <= bg_green;
+                            blue <= bg_blue;
+                        end
+                        else if ((blue_int && (DrawY < CursorY)) || (blue_int && blue_click && DrawY > BlueY)) begin
+                            red <= 4'h1;
+                            green <= 4'h5;
+                            blue <= 4'h7;
+                        end
+                        else begin
+                            red <= 4'h3;
+                            green <= 4'hB;
+                            blue <= 4'hF;
+                        end
+                    end	
+                    else if (indigo_click && IndigoCarrot_on) begin
+                        red <= 4'h6;
+                        green <= 4'h8;
+                        blue <= 4'hA;
+                    end
+                    else if (indigo_on) begin
+                        if (indigo_click && DrawY < IndigoY) begin
+                            red <= bg_red;
+                            green <= bg_green;
+                            blue <= bg_blue;
+                        end
+                        else if ((indigo_int && (DrawY < CursorY)) || (indigo_int && indigo_click && DrawY > IndigoY)) begin
+                            red <= 4'h0;
+                            green <= 4'h2;
+                            blue <= 4'h5;
+                        end
+                        else begin
+                            red <= 4'h0;
+                            green <= 4'h4;
+                            blue <= 4'hA;
+                        end
+                    end	
+                    else if (violet_click && VioletCarrot_on) begin
+                        red <= 4'hB;
+                        green <= 4'hA;
+                        blue <= 4'hE;
+                    end
+                    else if (violet_on) begin
+                        if (violet_click && DrawY < VioletY) begin
+                            red <= bg_red;
+                            green <= bg_green;
+                            blue <= bg_blue;
+                        end
+                        else if ((violet_int && (DrawY < CursorY)) || (violet_int && violet_click && DrawY > VioletY)) begin
+                            red <= 4'h2;
+                            green <= 4'h0;
+                            blue <= 4'h7;
+                        end
+                        else begin
+                            red <= 4'h5;
+                            green <= 4'h1;
+                            blue <= 4'hE;
+                        end
+                    end	
+                    else begin // not drawing lasers
+                        red <= bg_red;
+                        green <= bg_green;
+                        blue <= bg_blue;
+                    end
+                end
+            end
 		end
 	end
 end

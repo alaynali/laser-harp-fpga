@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Tue Dec 10 19:42:39 2024
+-- Date        : Tue Dec 10 19:42:38 2024
 -- Host        : MSI running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               c:/Users/estel/laser-harp-fpga/laser_harp_test/laser_harp_test.gen/sources_1/ip/bg_rom/bg_rom_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top bg_rom -prefix
+--               bg_rom_ bg_rom_stub.vhdl
 -- Design      : bg_rom
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s50csga324-1

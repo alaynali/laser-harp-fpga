@@ -87,7 +87,7 @@ module mb_usb_hdmi_top(
     hex_driver HexA (
         .clk(Clk),
         .reset(reset_ah),
-        .in({SW[3:0], keycode1_gpio[27:24], keycode1_gpio[23:20], keycode1_gpio[19:16]}),
+        .in({SW[3:0], {2'b0, AnimationY[9:8]}, AnimationY[7:4], AnimationY[3:0]}),// keycode1_gpio[27:24], keycode1_gpio[23:20], keycode1_gpio[19:16]}),
         .hex_seg(hex_segA),
         .hex_grid(hex_gridA)
     );
@@ -95,7 +95,7 @@ module mb_usb_hdmi_top(
     hex_driver HexB (
         .clk(Clk),
         .reset(reset_ah),
-        .in({keycode1_gpio[15:12], keycode1_gpio[11:8], keycode1_gpio[7:4], keycode1_gpio[3:0]}),
+        .in({count[15:12], count[11:8], count[7:4], count[3:0]}),
         .hex_seg(hex_segB),
         .hex_grid(hex_gridB)
     );
@@ -174,6 +174,8 @@ logic green_click;
 logic blue_click;
 logic indigo_click;
 logic violet_click;
+logic [15:0] count;
+logic [9:0] AnimationY;
 
     lasers_example screen(
         .Reset(reset_ah),
@@ -187,7 +189,7 @@ logic violet_click;
         .JAB_3(JAB_3),
         .JAB_4(JAB_4),
         .JAB_5(JAB_5),
-        .SW(SW),
+        .SW(SW_s),
         .red(red),
         .green(green),
         .blue(blue),
@@ -201,7 +203,10 @@ logic violet_click;
         .green_click_out(green_click),
         .blue_click_out(blue_click),
         .indigo_click_out(indigo_click),
-        .violet_click_out(violet_click)
+        .violet_click_out(violet_click),
+        
+        .count(count),
+        .AnimationY(AnimationY)
     );
     
     cursor_impl cursor(
@@ -222,7 +227,7 @@ logic violet_click;
     logic [15:0]	SW_s;
 
     sync_debounce SW_sync [15:0] (
-		.clk  (clk), 
+		.clk  (Clk), 
 
 		.d    (SW), 
 		.q    (SW_s)
